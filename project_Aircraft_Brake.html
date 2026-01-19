@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aircraft Brake System | Slimane Aouanouk</title>
+
+  <!-- Core styles and icon fonts -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="favicon.ico?v=3" type="image/x-icon" />
+
+  <style>
+    /* Page-specific layout elements */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .project-banner {
+      position: relative;
+      height: 350px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      margin-bottom: 30px;
+      background: #000;
+    }
+
+    .project-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+
+    .project-banner-content {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      z-index: 2;
+      padding-right: 20px;
+    }
+
+    .pdf-embed {
+      width: 100%;
+      height: 80vh;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- App layout: fixed sidebar + main content -->
+  <div class="app-layout">
+
+    <aside class="sidebar slide-up">
+      <div class="profile-section">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <span class="logo-text">SA.</span>
+        </a>
+        <span class="role-text">Graduate Engineering Student<br>Arts et Métiers</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="projects.html" class="nav-item active">
+          <i class="fas fa-code-branch"></i> Projects
+        </a>
+        <a href="resume.html" class="nav-item">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+        <a href="academics.html" class="nav-item">
+          <i class="fas fa-graduation-cap"></i> Academics
+        </a>
+        <a href="experience.html" class="nav-item">
+          <i class="fas fa-briefcase"></i> Experience
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+          <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank"
+             style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#38bdf8'"
+             onmouseout="this.style.color='#94a3b8'">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:aouanoukslim@gmail.com"
+             style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#38bdf8'"
+             onmouseout="this.style.color='#94a3b8'">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+
+      <!-- Back to projects grid -->
+      <div class="slide-up delay-1" style="margin-bottom: 20px;">
+        <a href="projects.html" style="color: #94a3b8; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#38bdf8'" onmouseout="this.style.color='#94a3b8'">
+          <i class="fas fa-arrow-left"></i> RETURN TO MATRIX
+        </a>
+      </div>
+
+      <!-- Hero banner -->
+      <div class="project-banner slide-up delay-1">
+        <img src="Case_Study_pdf/Airplane_Break2.pdf" alt="Light aircraft brake system" />
+        <div class="project-banner-content">
+          <h1 style="font-size: 2.5rem; margin: 0; color: #fff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Aircraft Brake System</h1>
+      <p style="margin: 10px 0 0 0; color: #070707; max-width: 700px;">
+        <strong>Complete brake system design for a light aircraft wheel with compact packaging, safety, and maintainability.</strong>
+      </p>
+        </div>
+      </div>
+
+      <div class="content-grid">
+
+        <div class="col-8 glass-panel slide-up delay-2">
+          <h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px;">
+            <i class="fas fa-info-circle" style="color: #38bdf8; margin-right: 10px;"></i> Mission Overview
+          </h2>
+          <p>
+            Student engineering project focused on designing a full brake system for a light aircraft wheel.
+            The scope covered the functional architecture, CAD integration, and key engineering checks without repeating full calculations.
+          </p>
+          <p style="margin-top: 15px; color: #e2e8f0;">
+            <strong>Objective:</strong> deliver a compact, safe, and fully dismantlable assembly, from wheel pivot and bearings to disc, pads,
+            floating caliper, key interface, and aircraft attachment.
+          </p>
+
+        </div>
+
+        <div class="col-4 glass-panel slide-up delay-2">
+          <h3 style="margin-bottom: 20px; color: #94a3b8; font-size: 0.9rem;">// TOOLS AND VALIDATIONS</h3>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>Fusion 360 (CAD)</span>
+              <i class="fas fa-cube" style="color: #38bdf8;"></i>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>Excel calculation sheets</span>
+              <i class="fas fa-table" style="color: #f59e0b;"></i>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>SKF/SNR bearings + std fasteners</span>
+              <i class="fas fa-cogs" style="color: #10b981;"></i>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>Shaft RDM + thermal checks</span>
+              <i class="fas fa-chart-line" style="color: #e879f9;"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full case study embedded PDF -->
+        <div class="col-12 glass-panel slide-up delay-3" style="padding: 15px;">
+          <h2 style="margin-bottom: 20px;">Case Study PDF</h2>
+          <iframe class="pdf-embed" src="Case_Study_pdf/Airplane_Break.pdf" title="Aircraft Brake System Case Study"></iframe>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+/* style.css - Version 2.0 "Cyber-Dashboard" (Refonte Totale) */
+
+:root {
+  /* Palette (Conservée mais structurée en variables pour faire pro) */
+  --bg-dark: #0f172a;
+  --bg-panel: #1e293b;
+  --accent-cyan: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
+  --text-main: #cbd5e1;
+  --text-bright: #f8fafc;
+  --border-dim: rgba(255, 255, 255, 0.08);
+  
+  /* Dimensions structurelles */
+  --sidebar-width: 280px;
+  --transition-speed: 0.3s;
+}
+
+/* === RESET & BASE === */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-main);
+  overflow-x: hidden;
+  /* Nouveau : Custom Scrollbar native */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-cyan) var(--bg-dark);
+}
+
+/* Scrollbar Webkit (Chrome/Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-cyan);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-speed) ease;
+}
+
+/* === NOUVELLE STRUCTURE : SIDEBAR LAYOUT === */
+/* On casse le container centré classique */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* -- 1. SIDEBAR (Menu Gauche) -- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--bg-panel);
+  border-right: 1px solid var(--border-dim);
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 100;
+  /* Ombre portée subtile vers la droite */
+  box-shadow: 5px 0 30px rgba(0,0,0,0.2);
+}
+
+.profile-section {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  letter-spacing: -1px;
+  line-height: 1;
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.role-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Navigation Verticale */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 12px;
+  color: var(--text-main);
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item i {
+  margin-right: 15px;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+/* Effet Hover sophistiqué */
+.nav-item:hover, .nav-item.active {
+  background: var(--accent-glow);
+  color: var(--accent-cyan);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateX(5px); /* Petit décalage vers la droite */
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--accent-cyan);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.nav-item.active::before {
+  opacity: 1;
+}
+
+.sidebar-footer {
+  font-size: 0.75rem;
+  color: #64748b;
+  border-top: 1px solid var(--border-dim);
+  padding-top: 20px;
+}
+
+/* -- 2. MAIN CONTENT (Zone Droite) -- */
+.main-content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 60px 80px; /* Marges asymétriques larges */
+  background-image: radial-gradient(circle at 10% 10%, rgba(56, 189, 248, 0.03) 0%, transparent 40%);
+}
+
+/* En-têtes de section revisités */
+.page-header {
+  margin-bottom: 60px;
+  border-bottom: 1px solid var(--border-dim);
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0;
+}
+
+.page-subtitle {
+  color: var(--accent-cyan);
+  font-family: 'Courier New', monospace; /* Touche Tech */
+  font-size: 0.9rem;
+}
+
+/* === GRILLE DE CONTENU (GRID) === */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+/* Classes utilitaires pour la grille */
+.col-12 { grid-column: span 12; }
+.col-8  { grid-column: span 8; }
+.col-6  { grid-column: span 6; }
+.col-4  { grid-column: span 4; }
+
+/* === NOUVEAUX CARDS (Style "Glass Panels") === */
+.glass-panel {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px); /* Effet verre dépoli */
+  border: 1px solid var(--border-dim);
+  border-radius: 4px; /* ANGLES VIFS pour casser l'ancien style arrondi */
+  padding: 30px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.glass-panel:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+}
+
+/* Typographie interne */
+h2, h3 {
+  color: var(--text-bright);
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.8;
+  color: #94a3b8;
+}
+
+/* === PROJETS (Refonte Grille) === */
+/* On abandonne le scroll horizontal pour une grille masonry ou standard */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.project-card-new {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  /* Pas de border-radius, style brutaliste */
+}
+
+.project-img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card-new:hover .project-img-container img {
+  transform: scale(1.1);
+}
+
+.project-body {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-stack-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  background: transparent;
+  border: 1px solid #334155;
+  color: #94a3b8;
+}
+
+.action-link {
+  margin-top: auto;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-link::after {
+  content: '→';
+  transition: transform 0.2s;
+}
+
+.action-link:hover::after {
+  transform: translateX(5px);
+}
+
+/* === PDF VIEWERS & IFRAMES === */
+.pdf-container-new {
+  width: 100%;
+  height: 500px;
+  border: 1px solid var(--border-dim);
+  background: #000;
+}
+
+/* === ANIMATIONS (Subtiles et rapides) === */
+.slide-up {
+  animation: slideUp 0.6s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Décalage des animations pour effet cascade */
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+
+/* === RESPONSIVE (Mobile) === */
+@media (max-width: 1024px) {
+  .app-layout { flex-direction: column; }
+  
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    flex-direction: row;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid var(--border-dim);
+  }
+  
+  .nav-links {
+    flex-direction: row;
+    display: none; /* Menu burger à implémenter ou simplifier */
+  }
+  
+  /* Version simple mobile : liens horizontaux scrollables */
+  .nav-links.mobile-visible {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 30px 20px;
+  }
+  
+  .content-grid { display: block; }
+  .col-8, .col-6, .col-4 { margin-bottom: 30px; }
+
+  
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Engineering Projects | Slimane Aouanouk</title>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="favicon.ico?v=3" type="image/x-icon" />
+
+  <style>
+    /* === ANIMATIONS DES CARTES PROJETS === */
+    .project-card-new {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      backface-visibility: hidden;
+    }
+
+    .project-card-new:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
+      border-color: rgba(56, 189, 248, 0.5);
+    }
+
+    .project-card-new .project-img-container img {
+      transition: transform 0.5s ease;
+    }
+
+    .project-card-new:hover .project-img-container img {
+      transform: scale(1.03);
+    }
+
+    /* === STYLE DU LIEN (TEXTE SEULEMENT) === */
+    .action-link {
+        transition: color 0.3s ease, transform 0.2s ease;
+        text-decoration: none;
+        
+        /* COULEUR PAR DÉFAUT : Gris */
+        color: #94a3b8; 
+        
+        /* SUPPRESSION TOTALE DES BORDURES/FONDS */
+        border: none !important;
+        background: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+        
+        padding: 5px 0;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    /* Règle : Quand on survole la CARTE, le TEXTE devient BLEU */
+    .project-card-new:hover .action-link,
+    .glass-panel:hover .action-link {
+        color: #38bdf8 !important; /* Texte Bleu Cyan */
+    }
+
+    /* Règle : Au survol direct du LIEN */
+    .action-link:hover {
+        color: #60a5fa !important;
+    }
+
+    /* Effet au CLIC */
+    .action-link:active {
+        transform: scale(0.95);
+        color: #38bdf8 !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app-layout">
+
+    <aside class="sidebar slide-up">
+      <div class="profile-section">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <span class="logo-text">SA.</span>
+        </a>
+        <span class="role-text">Graduate Engineering Student<br>Arts et Métiers</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="projects.html" class="nav-item active">
+          <i class="fas fa-code-branch"></i> Projects
+        </a>
+        <a href="resume.html" class="nav-item">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+        <a href="academics.html" class="nav-item">
+          <i class="fas fa-graduation-cap"></i> Academics
+        </a>
+        <a href="experience.html" class="nav-item">
+          <i class="fas fa-briefcase"></i> Experience
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+          <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank" 
+             style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#38bdf8'" 
+             onmouseout="this.style.color='#94a3b8'">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:aouanoukslim@gmail.com" 
+             style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#38bdf8'" 
+             onmouseout="this.style.color='#94a3b8'">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      
+      <header class="page-header slide-up delay-1">
+        <div>
+          <h1 class="page-title">Project Matrix</h1>
+          <p style="color: #94a3b8; margin-top: 5px; font-size: 1rem; max-width: 650px;">
+            A selection of my most representative engineering projects, spanning data engineering, artificial intelligence, and mechanical systems.
+          </p>
+        </div>
+      </header>
+
+      <!-- PJT Data AI -->
+
+      <section class="slide-up delay-2" style="margin-bottom: 50px;">
+        <div class="glass-panel"
+             style="
+               display: flex;
+               flex-direction: column;
+               gap: 35px;
+               border-left: 4px solid #38bdf8;
+               transition: all 0.3s ease;
+             ">
+
+          <!-- === TITLE === -->
+          <h2 style="font-size: 2.2rem; color: #f8fafc;">
+            Smart Workshop · Data & AI
+          </h2>
+
+          <!-- === VIDEO (BELOW TITLE) === -->
+          <div style="
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            position: relative;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            background: #000;
+            padding: 6px;
+          ">
+
+            <video
+              src="Videos/Video_Presentation.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                background: #000;
+              ">
+            </video>
+
+            <!-- Subtle grid overlay -->
+            <div style="
+              position: absolute;
+              inset: 0;
+              background-image:
+                linear-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+              background-size: 40px 40px;
+              pointer-events: none;
+            ">
+            </div>
+
+          </div>
+
+          <!-- === TEXT CONTENT === -->
+          <div style="max-width: 900px;">
+            <p style="margin-bottom: 20px; font-size: 1.05rem; color: #cbd5e1;">
+              Design of a <strong>smart FabLab workshop</strong> built around a
+              <strong>structured data pipeline</strong> and a
+              <strong>fully local AI system</strong>.
+              The project focuses on <strong>data engineering</strong> (SQL databases, pandas, Jupyter)
+              and <strong>Text-to-SQL querying</strong> using a locally deployed LLM via Ollama,
+              following an <strong>Industry 4.0</strong> approach.
+            </p>
+
+            <div class="tech-stack-row" style="margin-bottom: 30px;">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">SQL</span>
+              <span class="tech-badge">pandas</span>
+              <span class="tech-badge">Jupyter</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">Data Engineering</span>
+              <span class="tech-badge">Local AI (Ollama)</span>
+            </div>
+          </div>
+
+          <a href="project_PJT_AI.html" class="action-link">
+            <i class="fas fa-microchip" style="margin-right: 10px;"></i>
+            View Case Study
+          </a>
+        </div>
+      </section>
+
+      <div class="projects-grid slide-up delay-3">
+
+
+      <!-- Project: FANUC -->
+      <article class="project-card-new">
+        <div class="project-img-container">
+          <img src="img/View_Fanuc.png" alt="FANUC robotic pouring cell" />
+        </div>
+
+        <div class="project-body">
+          <span class="page-subtitle" style="font-size: 0.8rem;">
+            // INDUSTRIAL ROBOTICS · AUTOMATION
+          </span>
+
+          <h3 style="margin-top: 10px; font-size: 1.3rem;">
+            FANUC Robotic Casting Cell
+          </h3>
+
+          <p style="font-size: 0.9rem; flex-grow: 1;">
+            Design of a FANUC robotic pouring cell for safe and automated foundry operations.
+          </p>
+
+          <div class="tech-stack-row">
+            <span class="tech-badge">Industrial Robotics</span>
+            <span class="tech-badge">FANUC</span>
+            <span class="tech-badge">System Design</span>
+          </div>
+
+          <a href="project_FANUC.html" class="action-link">View Case Study</a>
+        </div>
+      </article>
+
+      <!-- Project: Aircraft Brake System -->
+
+      <article class="project-card-new">
+        <div class="project-img-container">
+          <img src="img/frein_avion1.jpg" alt="Aircraft Brake System" />
+        </div>
+
+        <div class="project-body">
+          <span class="page-subtitle" style="font-size: 0.8rem;">
+            // MECHANICAL SYSTEMS
+          </span>
+
+          <h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Aircraft Brake System
+          </h3>
+
+          <p style="font-size: 0.9rem; flex-grow: 1;">
+            Aircraft brake system design covering CAD modeling, sizing, and energy dissipation.
+          </p>
+
+          <div class="tech-stack-row">
+            <span class="tech-badge">CAD</span>
+            <span class="tech-badge">Mechanical Design</span>
+            <span class="tech-badge">Energy Dissipation</span>
+            <span class="tech-badge">Safety Analysis</span>
+          </div>
+
+          <a href="project_Aircraft_Brake.html" class="action-link">View Case Study</a>
+        </div>
+      </article>
+
+       <!-- project Shoulder Implant  --> 
+
+        <!-- <article class="project-card-new">
+          <div class="project-img-container">
+            <img src="img/prothese.png" alt="Prosthesis" />
+          </div>
+          <div class="project-body">
+            <span class="page-subtitle" style="font-size: 0.8rem;">// BIOTECH</span>
+            <h3 style="margin-top: 10px; font-size: 1.3rem;">Shoulder Implant Opt.</h3>
+            <p style="font-size: 0.9rem; flex-grow: 1;">
+              Finite Element Analysis (FEA) of the glenoid component. Analyzed contact mechanics to prevent loosening.
+            </p>
+            <div class="tech-stack-row">
+              <span class="tech-badge">FEM Analysis</span>
+              <span class="tech-badge">Biomechanics</span>
+            </div>
+            <a href="#" class="action-link">View Case Study</a>
+          </div>
+        </article> -->
+
+      <!-- Project: Ball Impact Dynamics -->
+
+      <article class="project-card-new">
+        <div class="project-img-container">
+          <img src="img/View_TIPE.png" alt="Ball impact experimental setup" />
+        </div>
+
+        <div class="project-body">
+          <span class="page-subtitle" style="font-size: 0.8rem;">
+            // PHYSICS · EXPERIMENTAL MECHANICS
+          </span>
+
+          <h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Ball Impact Dynamics
+          </h3>
+
+          <p style="font-size: 0.9rem; flex-grow: 1;">
+            Experimental analysis of ball–foot impact mechanics using a controlled test bench.
+          </p>
+
+          <div class="tech-stack-row">
+            <span class="tech-badge">Experimental Physics</span>
+            <span class="tech-badge">Impact Mechanics</span>
+            <span class="tech-badge">Video Analysis</span>
+            <span class="tech-badge">Modeling</span>
+          </div>
+
+          <a href="project_TIPE.html" class="action-link">View Case Study</a>
+        </div>
+      </article>
+
+      <!-- Project: F1 in Schools – Mini Formula 1 Car -->
+      <article class="project-card-new">
+        <div class="project-img-container">
+          <img src="img/F1_img1.png" alt="F1 in Schools – Mini Formula 1 Car" />
+        </div>
+
+        <div class="project-body">
+          <span class="page-subtitle" style="font-size: 0.8rem;">
+            // MECHANICAL DESIGN · MANUFACTURING
+          </span>
+
+          <h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Mini Formula 1 Car
+          </h3>
+
+          <p style="font-size: 0.9rem; flex-grow: 1;">
+            End-to-end design and manufacturing of a miniature Formula 1 car for a 20 m race.
+          </p>
+
+          <div class="tech-stack-row">
+            <span class="tech-badge">CAD</span>
+            <span class="tech-badge">CFD (Basics)</span>
+            <span class="tech-badge">CNC Machining</span>
+            <span class="tech-badge">Manufacturing</span>
+          </div>
+          <a href="project_F1.html" class="action-link">View Case Study</a>
+        </div>
+      </article>
+
+
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

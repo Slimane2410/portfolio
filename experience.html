@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experience | Slimane Aouanouk</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="favicon.ico?v=3" type="image/x-icon" />
+
+  <style>
+    /* === STYLE DES PANNEAUX INTERACTIFS (SANS PHOTO) === */
+    a.featured-card-link {
+        display: block; 
+        text-decoration: none;
+        cursor: default;
+        outline: none;
+        position: relative;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        
+        /* Style de base "Glass Panel" */
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding: 30px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* === EFFET HALO BLEU AU SURVOL === */
+    a.featured-card-link:hover {
+        /* Soulèvement + Léger Zoom global */
+        transform: translateY(-5px) scale(1.02);
+        
+        /* Halo lumineux bleu cyan diffus */
+        box-shadow: 
+            0 0 20px rgba(56, 189, 248, 0.2), 
+            0 0 10px rgba(56, 189, 248, 0.4), 
+            0 10px 40px -10px rgba(0,0,0,0.5) !important;
+            
+        /* Bordure légèrement plus visible */
+        border-color: rgba(56, 189, 248, 0.5);
+        z-index: 50;
+    }
+
+    /* Typographie interne */
+    .exp-title {
+        font-size: 1.5rem; 
+        color: #f8fafc; 
+        margin: 10px 0 5px 0;
+        font-weight: 700;
+    }
+    .exp-role {
+        color: #38bdf8; /* Cyan pour le rôle */
+        font-family: 'Courier Prime', monospace;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        display: block;
+    }
+    .exp-desc {
+        font-size: 0.95rem; 
+        color: #cbd5e1; 
+        line-height: 1.6;
+        flex-grow: 1; 
+        margin-bottom: 20px;
+    }
+    
+    /* En-tête de carte (Badge et Date) */
+    .card-header {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center;
+        margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="app-layout">
+
+    <aside class="sidebar slide-up">
+      <div class="profile-section">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <span class="logo-text">SA.</span>
+        </a>
+        <span class="role-text">Graduate Engineering Student<br>Arts et Métiers</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="projects.html" class="nav-item">
+          <i class="fas fa-code-branch"></i> Projects
+        </a>
+        <a href="resume.html" class="nav-item">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+        <a href="academics.html" class="nav-item">
+          <i class="fas fa-graduation-cap"></i> Academics
+        </a>
+        <a href="experience.html" class="nav-item active">
+          <i class="fas fa-briefcase"></i> Experience
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+<a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/"
+   target="_blank"
+   style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
+   onmouseover="this.style.color='#38bdf8'"
+   onmouseout="this.style.color='#94a3b8'">
+  <i class="fab fa-linkedin"></i>
+</a>
+<a href="mailto:aouanoukslim@gmail.com"
+   style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
+   onmouseover="this.style.color='#38bdf8'"
+   onmouseout="this.style.color='#94a3b8'">
+  <i class="fas fa-envelope"></i>
+</a>
+        </div>
+        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      
+      <header class="page-header slide-up delay-1">
+        <div>
+          <h1 class="page-title">Experience</h1>
+          <p style="color: #94a3b8; margin-top: 5px; font-size: 1rem; max-width: 650px;">
+            Bridging technical engineering with hands-on industrial application through strategic internships and leadership roles.
+          </p>
+        </div>
+      </header>
+
+      <div class="content-grid">
+
+        <div class="col-12 slide-up delay-2">
+          <a class="featured-card-link">
+            <div class="card-header">
+              <span class="tech-badge" style="background: rgba(30, 64, 175, 0.2); color: #60a5fa; border: none;">Data-Driven Mechanical Engineering</span>
+              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Feb 2026</span>
+            </div>
+            
+            <h2 class="exp-title">Data-Driven Reduced-Order Mechanical Model</h2>
+            <span class="exp-role">Research-Oriented Engineering Project — Arts et Métiers ParisTech</span>
+            
+            <p class="exp-desc">
+  Conducted a semester-long research-oriented engineering project aimed at supporting an academic laboratory in exploring <strong>data-driven reduced-order modeling</strong> for simple mechanical systems (mass–spring–damper / beam under excitation). Generated simulated datasets, performed preprocessing and feature engineering, applied <strong>PCA</strong> for dimensionality reduction, and trained predictive models to reproduce the system’s dynamic behavior. The project connects mechanical engineering fundamentals with data science and machine learning within a simplified digital-twin research framework.
+</p>
+            
+            <div class="tech-stack-row">
+  <span class="tech-badge">Data-Driven Modeling</span>
+  <span class="tech-badge">Mechanical Systems</span>
+  <span class="tech-badge">PCA</span>
+  <span class="tech-badge">Predictive Modeling</span>
+</div>
+          </a>
+        </div>
+
+        <div class="col-6 slide-up delay-3">
+          <a class="featured-card-link">
+            <div class="card-header">
+<span class="tech-badge" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8; border: none;">
+  Worker Internship
+</span>              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">June 2025 — July 2025</span>
+            </div>
+            
+            <h3 class="exp-title">Société de Rénovation Parisienne (SRP)</h3>
+
+<span class="exp-role">Worker Internship — Heavy Renovation Construction Site</span>
+
+<p class="exp-desc">
+  Hands-on worker internship on a heavy renovation construction site.
+  Involved in daily on-site operations, material handling, safety procedures,
+  and coordination with skilled workers. This experience provided direct exposure
+  to <strong>real-world execution constraints</strong> and the realities of
+  translating engineering plans into field implementation.
+</p>
+
+<div class="tech-stack-row">
+  <span class="tech-badge">Site Operations</span>
+  <span class="tech-badge">Safety</span>
+  <span class="tech-badge">Teamwork</span>
+</div>
+          </a>
+        </div>
+
+        <div class="col-6 slide-up delay-3">
+          <a class="featured-card-link">
+            <div class="card-header">
+              <span class="tech-badge" style="background: rgba(245, 158, 11, 0.1); color: #fbbf24; border: none;">Leadership</span>
+              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">May 2025 — Present</span>
+            </div>
+            
+            <h3 class="exp-title">Arts et Métiers</h3>
+            <span class="exp-role">Student Tutoring Coordinator</span>
+            
+            <p class="exp-desc">
+              Organized tutoring sessions and exam reviews for undergraduates. Coordinated a team of <strong>volunteer tutors</strong> and managed a shared academic repository of 5,000+ documents.
+            </p>
+            
+            <div class="tech-stack-row">
+              <span class="tech-badge">Management</span>
+              <span class="tech-badge">Mentoring</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 slide-up delay-4">
+          <a class="featured-card-link">
+            <div class="card-header">
+              <span class="tech-badge" style="background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: none;">Operations &amp; Organization</span>
+              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Summer 2022</span>
+            </div>
+
+            <h3 class="exp-title">Independent Artist</h3>
+            <span class="exp-role">Document Archiving Assistant</span>
+
+            <p class="exp-desc">
+              Organized and archived a large volume of administrative documents for an independent artist. Designed a custom filing system using labeled storage boxes and sorted documents in chronological order to improve accessibility, traceability, and long-term organization.
+            </p>
+
+            <div class="tech-stack-row">
+              <span class="tech-badge">Document Management</span>
+              <span class="tech-badge">Organization</span>
+              <span class="tech-badge">Process Design</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 slide-up delay-4">
+          <a class="featured-card-link">
+            <div class="card-header">
+              <span class="tech-badge" style="background: rgba(16, 185, 129, 0.1); color: #34d399; border: none;">Academic Volunteering</span>
+              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Sept 2022 — Present</span>
+            </div>
+            
+            <h3 class="exp-title">Volunteer Tutor</h3>
+            <span class="exp-role">Middle &amp; Preparatory School Students</span>
+            
+            <p class="exp-desc">
+              Provided ongoing academic support to middle and preparatory school students in <strong>mathematics, physics, and engineering sciences</strong>. Focused on strengthening conceptual understanding, improving problem-solving structure, and developing effective study methods and learning autonomy.
+            </p>
+            
+            <div class="tech-stack-row">
+              <span class="tech-badge">STEM Tutoring</span>
+              <span class="tech-badge">Academic Support</span>
+              <span class="tech-badge">Mentoring</span>
+              <span class="tech-badge">Study Methods</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-6 slide-up delay-4">
+          <a class="featured-card-link">
+            <div class="card-header">
+              <span class="tech-badge" style="background: rgba(71, 85, 105, 0.3); color: #cbd5e1; border: none;">Broadcast & Media</span>
+              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Winter 2018</span>
+            </div>
+            
+            <h3 class="exp-title">France Télévisions</h3>
+            <span class="exp-role">Observation Intern — Sound Engineering</span>
+            
+            <p class="exp-desc">
+  Assisted a sound engineer during live TV productions, handling microphones, mixers, and audio interfaces. Applied mic placement techniques, helped resolve background noise issues, and collaborated with production crews. Explored professional mixing tools (EQ, compression) and industry-standard software.
+</p>
+            
+            <div class="tech-stack-row">
+  <span class="tech-badge">Live Production</span>
+  <span class="tech-badge">Audio Engineering</span>
+  <span class="tech-badge">Mixing Tools</span>
+</div>
+          </a>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
