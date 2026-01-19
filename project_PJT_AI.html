@@ -59,6 +59,32 @@
       border: 1px solid rgba(56, 189, 248, 0.2);
       background: #000;
     }
+
+    .excel-embed {
+      width: 100%;
+      height: 70vh;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .excel-preview {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .video-embed {
+      width: 100%;
+      height: 70vh;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: #000;
+      display: block;
+    }
   </style>
 </head>
 
@@ -175,6 +201,37 @@
         <div class="col-12 glass-panel slide-up delay-3" style="padding: 15px;">
           <h2 style="margin-bottom: 20px;">Case Study PDF</h2>
           <iframe class="pdf-embed" src="Case_Study_pdf/PJT_AI.pdf" title="Smart Workshop Data and AI Case Study"></iframe>
+        </div>
+
+        <!-- Test plan Excel viewer -->
+        <div class="col-12 glass-panel slide-up delay-3" style="padding: 15px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+            <h2 style="margin: 0;">Test Plan (Excel)</h2>
+            <a href="Data_PJT_AI/Tests/Plan_de_tests_LLM_SQL_Streamlit_v3.xlsx"
+               download="Plan_de_tests_LLM_SQL_Streamlit_v3.xlsx"
+               class="tech-badge"
+               style="text-decoration: none; font-size: 0.85rem; padding: 10px 18px; border-color: #38bdf8; color: #38bdf8; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s; background: rgba(56, 189, 248, 0.05);">
+              <i class="fas fa-file-excel"></i> DOWNLOAD XLSX
+            </a>
+          </div>
+          <div class="excel-embed">
+            <img class="excel-preview" src="Data_PJT_AI/Tests/img_excel.png" alt="Test plan Excel preview" />
+          </div>
+        </div>
+
+        <!-- Mind map PDF -->
+        <div class="col-12 glass-panel slide-up delay-3" style="padding: 15px;">
+          <h2 style="margin-bottom: 20px;">Mind Map</h2>
+          <iframe class="pdf-embed" src="Data_PJT_AI/Mind_Map/MindMap_Projet.pdf" title="Mind Map Project PDF"></iframe>
+        </div>
+
+        <!-- Presentation video -->
+        <div class="col-12 glass-panel slide-up delay-3" style="padding: 15px;">
+          <h2 style="margin-bottom: 20px;">Presentation Video</h2>
+          <video class="video-embed" controls preload="metadata">
+            <source src="Videos/Video_Presentation.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
       </div>
