@@ -153,6 +153,28 @@ a {
   opacity: 1;
 }
 
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-dim);
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--text-main);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle i {
+  color: var(--accent-cyan);
+}
+
+.sidebar.mobile-collapsed .nav-links {
+  display: none !important;
+}
+
 .sidebar-footer {
   font-size: 0.75rem;
   color: #64748b;
@@ -354,8 +376,9 @@ p {
   .nav-links {
     flex-direction: row;
     flex-wrap: wrap;
-    display: flex;
+    display: flex !important;
     gap: 10px;
+    width: 100%;
   }
   
   /* Version simple mobile : liens horizontaux scrollables */
@@ -373,6 +396,10 @@ p {
 
   .nav-item:hover, .nav-item.active {
     transform: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
   }
 
   .main-content {

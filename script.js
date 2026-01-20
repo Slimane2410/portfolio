@@ -17,6 +17,31 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
+  // 1b. Menu mobile : bouton pour afficher/masquer la navigation
+  const sidebar = document.querySelector('.sidebar');
+  const navContainer = document.querySelector('.nav-links');
+  if (sidebar && navContainer && !sidebar.querySelector('.mobile-menu-toggle')) {
+    const menuButton = document.createElement('button');
+    menuButton.type = 'button';
+    menuButton.className = 'mobile-menu-toggle';
+    menuButton.setAttribute('aria-expanded', 'true');
+    menuButton.innerHTML = '<i class="fas fa-bars"></i> Menu';
+
+    menuButton.addEventListener('click', () => {
+      const isCollapsed = sidebar.classList.toggle('mobile-collapsed');
+      menuButton.setAttribute('aria-expanded', String(!isCollapsed));
+    });
+
+    sidebar.insertBefore(menuButton, navContainer);
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1024) {
+        sidebar.classList.remove('mobile-collapsed');
+        menuButton.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
+
   // 2. OBSERVATEUR D'INTERSECTION (ANIMATIONS)
   // Déclenche l'animation 'active' quand un élément .reveal entre dans l'écran
   const observerOptions = {
