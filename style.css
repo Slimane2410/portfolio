@@ -342,16 +342,20 @@ p {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 20px;
-    flex-direction: row;
-    align-items: center;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    justify-content: flex-start;
     border-right: none;
     border-bottom: 1px solid var(--border-dim);
   }
   
   .nav-links {
     flex-direction: row;
-    display: none; /* Menu burger à implémenter ou simplifier */
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
   }
   
   /* Version simple mobile : liens horizontaux scrollables */
@@ -361,13 +365,81 @@ p {
     padding-bottom: 10px;
   }
 
+  .nav-item {
+    flex: 1 1 calc(50% - 10px);
+    justify-content: center;
+    padding: 12px 14px;
+  }
+
+  .nav-item:hover, .nav-item.active {
+    transform: none;
+  }
+
   .main-content {
     margin-left: 0;
-    padding: 30px 20px;
+    padding: 32px 24px;
   }
   
   .content-grid { display: block; }
-  .col-8, .col-6, .col-4 { margin-bottom: 30px; }
+  .col-8, .col-6, .col-4 { margin-bottom: 24px; }
+}
 
-  
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-new {
+    height: auto;
+  }
+
+  .project-img-container {
+    height: 180px;
+  }
+
+  .main-content {
+    padding: 24px 16px;
+  }
+
+  .sidebar {
+    padding: 20px 16px;
+  }
+
+  .glass-panel {
+    padding: 20px;
+  }
+
+  .main-content .project-banner {
+    height: 220px;
+  }
+
+  .main-content .project-banner-content {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    padding-right: 0;
+  }
+
+  .project-banner-content h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .project-banner-content p {
+    font-size: 0.95rem !important;
+    max-width: 100% !important;
+  }
+
+  .main-content .pdf-embed {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-item {
+    flex: 1 1 100%;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
 }
