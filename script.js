@@ -93,6 +93,9 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // Petit clin d'oeil console pour faire pro
   console.log("%c SYSTEM ONLINE %c Slimane Aouanouk Portfolio Loaded ", "background: #38bdf8; color: #000; padding: 5px; font-weight: bold;", "background: #1e293b; color: #38bdf8; padding: 5px;");
+
+  // 4. BARRE DE SCROLL VERTICALE (style OpenAI-like)
+  initScrollNavigator();
 });
 
 /* === FONCTIONS GLOBALES (Appelées par le HTML) === */
@@ -128,4 +131,102 @@ function closeLightbox() {
   if(lightbox) {
     lightbox.style.display = "none";
   }
+}
+
+function initScrollNavigator() {
+  if (window.matchMedia("(max-width: 900px)").matches) return;
+
+  if (document.querySelector(".scroll-nav")) return;
+
+  const nav = document.createElement("div");
+  nav.className = "scroll-nav";
+  nav.setAttribute("aria-label", "Scroll navigator");
+  nav.setAttribute("role", "scrollbar");
+
+  const thumb = document.createElement("div");
+  thumb.className = "scroll-nav-thumb";
+  nav.appendChild(thumb);
+  document.body.appendChild(nav);
+
+  let dragging = false;
+  let dragOffsetY = 0;
+  let thumbHeight = 48;
+
+  function getMaxScroll() {
+    return Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function updateThumb() {
+    const maxScroll = getMaxScroll();
+    if (maxScroll <= 1) {
+      nav.style.opacity = "0";
+      nav.style.pointerEvents = "none";
+      return;
+    }
+
+    nav.style.opacity = "1";
+    nav.style.pointerEvents = "auto";
+    const trackHeight = nav.clientHeight;
+    const ratio = window.innerHeight / document.documentElement.scrollHeight;
+    thumbHeight = clamp(Math.round(trackHeight * ratio), 48, trackHeight);
+
+    const maxTop = Math.max(0, trackHeight - thumbHeight);
+    const scrollRatio = window.scrollY / maxScroll;
+    const top = maxTop * scrollRatio;
+
+    thumb.style.height = `${thumbHeight}px`;
+    thumb.style.top = `${top}px`;
+    nav.setAttribute("aria-valuemin", "0");
+    nav.setAttribute("aria-valuemax", String(maxScroll));
+    nav.setAttribute("aria-valuenow", String(Math.round(window.scrollY)));
+  }
+
+  function moveToClientY(clientY, centerThumb) {
+    const rect = nav.getBoundingClientRect();
+    const trackHeight = rect.height;
+    const maxTop = Math.max(0, trackHeight - thumbHeight);
+    const rawTop = centerThumb
+      ? clientY - rect.top - thumbHeight / 2
+      : clientY - rect.top - dragOffsetY;
+    const top = clamp(rawTop, 0, maxTop);
+    const progress = maxTop > 0 ? top / maxTop : 0;
+    const targetY = progress * getMaxScroll();
+    window.scrollTo({ top: targetY, behavior: "auto" });
+  }
+
+  thumb.addEventListener("pointerdown", (event) => {
+    dragging = true;
+    thumb.classList.add("dragging");
+    dragOffsetY = event.clientY - thumb.getBoundingClientRect().top;
+    thumb.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  });
+
+  thumb.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
+    moveToClientY(event.clientY, false);
+  });
+
+  thumb.addEventListener("pointerup", () => {
+    dragging = false;
+    thumb.classList.remove("dragging");
+  });
+
+  thumb.addEventListener("pointercancel", () => {
+    dragging = false;
+    thumb.classList.remove("dragging");
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target === thumb) return;
+    moveToClientY(event.clientY, true);
+  });
+
+  window.addEventListener("scroll", updateThumb, { passive: true });
+  window.addEventListener("resize", updateThumb);
+  updateThumb();
 }

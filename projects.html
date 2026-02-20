@@ -14,9 +14,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Engineering Projects | Slimane Aouanouk</title>
   
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="favicon.ico?v=3" type="image/x-icon" />
 
@@ -30,7 +30,7 @@
     .project-card-new:hover {
       transform: translateY(-7px);
       box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
-      border-color: rgba(56, 189, 248, 0.5);
+      border-color: #c7ced8;
     }
 
     .project-card-new .project-img-container img {
@@ -47,7 +47,7 @@
         text-decoration: none;
         
         /* COULEUR PAR DÉFAUT : Gris */
-        color: #94a3b8; 
+        color: #596170; 
         
         /* SUPPRESSION TOTALE DES BORDURES/FONDS */
         border: none !important;
@@ -64,18 +64,18 @@
     /* Règle : Quand on survole la CARTE, le TEXTE devient BLEU */
     .project-card-new:hover .action-link,
     .glass-panel:hover .action-link {
-        color: #38bdf8 !important; /* Texte Bleu Cyan */
+        color: #111827 !important;
     }
 
     /* Règle : Au survol direct du LIEN */
     .action-link:hover {
-        color: #60a5fa !important;
+        color: #2b3545 !important;
     }
 
     /* Effet au CLIC */
     .action-link:active {
         transform: scale(0.95);
-        color: #38bdf8 !important;
+        color: #111827 !important;
         background: transparent !important;
         border: none !important;
         outline: none !important;
@@ -83,7 +83,7 @@
   </style>
 </head>
 
-<body>
+<body class="homepage">
 
   <div class="app-layout">
 
@@ -116,15 +116,15 @@
       <div class="sidebar-footer">
         <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
           <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank" 
-             style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
-             onmouseover="this.style.color='#38bdf8'" 
-             onmouseout="this.style.color='#94a3b8'">
+             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#111827'" 
+             onmouseout="this.style.color='#7a8595'">
             <i class="fab fa-linkedin"></i>
           </a>
           <a href="mailto:aouanoukslim@gmail.com" 
-             style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
-             onmouseover="this.style.color='#38bdf8'" 
-             onmouseout="this.style.color='#94a3b8'">
+             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#111827'" 
+             onmouseout="this.style.color='#7a8595'">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -200,7 +200,7 @@
 
           <!-- === TEXT CONTENT === -->
           <div style="max-width: 900px;">
-            <p style="margin-bottom: 20px; font-size: 1.05rem; color: #cbd5e1;">
+            <p class="project-lead" style="margin-bottom: 20px; font-size: 1.05rem; color: #334155;">
               Design of a <strong>smart FabLab workshop</strong> built around a
               <strong>structured data pipeline</strong> and a
               <strong>fully local AI system</strong>.
@@ -378,6 +378,6 @@
     </main>
   </div>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

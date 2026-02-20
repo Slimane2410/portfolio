@@ -14,9 +14,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Experience | Slimane Aouanouk</title>
 
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" href="favicon.ico?v=3" type="image/x-icon" />
 
@@ -31,12 +31,10 @@
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         
         /* Style de base "Glass Panel" */
-        background: rgba(15, 23, 42, 0.6);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: #ffffff;
+        border: 1px solid #d9dee5;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
+        border-radius: 12px;
         padding: 30px;
         height: 100%;
         display: flex;
@@ -44,39 +42,31 @@
         justify-content: space-between;
     }
 
-    /* === EFFET HALO BLEU AU SURVOL === */
+    /* === HOVER MINIMAL NEUTRE === */
     a.featured-card-link:hover {
-        /* Soulèvement + Léger Zoom global */
-        transform: translateY(-5px) scale(1.02);
-        
-        /* Halo lumineux bleu cyan diffus */
-        box-shadow: 
-            0 0 20px rgba(56, 189, 248, 0.2), 
-            0 0 10px rgba(56, 189, 248, 0.4), 
-            0 10px 40px -10px rgba(0,0,0,0.5) !important;
-            
-        /* Bordure légèrement plus visible */
-        border-color: rgba(56, 189, 248, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(16, 24, 40, 0.10) !important;
+        border-color: #c7ced8;
         z-index: 50;
     }
 
     /* Typographie interne */
     .exp-title {
         font-size: 1.5rem; 
-        color: #f8fafc; 
+        color: #111827;
         margin: 10px 0 5px 0;
         font-weight: 700;
     }
     .exp-role {
-        color: #38bdf8; /* Cyan pour le rôle */
-        font-family: 'Courier Prime', monospace;
+        color: #2b3545;
+        font-family: 'Inter', sans-serif;
         font-size: 0.9rem;
         margin-bottom: 15px;
         display: block;
     }
     .exp-desc {
         font-size: 0.95rem; 
-        color: #cbd5e1; 
+        color: #596170;
         line-height: 1.6;
         flex-grow: 1; 
         margin-bottom: 20px;
@@ -92,7 +82,7 @@
   </style>
 </head>
 
-<body>
+<body class="homepage">
 
   <div class="app-layout">
 
@@ -126,15 +116,15 @@
         <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
 <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/"
    target="_blank"
-   style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
-   onmouseover="this.style.color='#38bdf8'"
-   onmouseout="this.style.color='#94a3b8'">
+   style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+   onmouseover="this.style.color='#111827'"
+   onmouseout="this.style.color='#7a8595'">
   <i class="fab fa-linkedin"></i>
 </a>
 <a href="mailto:aouanoukslim@gmail.com"
-   style="color: #94a3b8; font-size: 1.3rem; transition: color 0.3s;"
-   onmouseover="this.style.color='#38bdf8'"
-   onmouseout="this.style.color='#94a3b8'">
+   style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+   onmouseover="this.style.color='#111827'"
+   onmouseout="this.style.color='#7a8595'">
   <i class="fas fa-envelope"></i>
 </a>
         </div>
@@ -302,6 +292,6 @@ The mathematical model is translated into a full <strong>Python-based simulation
     </main>
   </div>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
