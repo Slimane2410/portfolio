@@ -1,1 +1,4 @@
 .DS_Store
+.mplcache/
+__pycache__/
+plot_p1_650c_t5.py
