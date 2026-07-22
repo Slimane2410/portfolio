@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Trajectory optimization and collision avoidance for autonomous systems, from variational planning to measured rover experiments."
+    />
+    <meta name="theme-color" content="#f2f0e9" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Trajectory Optimization for Autonomous Systems</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <div class="language-dialog" data-language-dialog role="dialog" aria-modal="true" aria-labelledby="language-dialog-title">
+      <div class="language-dialog-card">
+        <span class="language-dialog-kicker">PACO / 01</span>
+        <h2 id="language-dialog-title">Choose your language</h2>
+        <p>Le site est également disponible en français.</p>
+        <div class="language-dialog-actions">
+          <button class="language-choice is-active" type="button" data-language-choice="en">English <small>Default</small></button>
+          <button class="language-choice" type="button" data-language-choice="fr">Français <small>Version française</small></button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="Back to top">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M7 29.5 18.2 8h8.3L15.3 29.5H7Z" />
+            <path d="M22.2 29.5 27.7 19H33l-5.5 10.5h-5.3Z" />
+          </svg>
+          <span>Trajectory<br />Optimization</span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-button>
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span>
+        </button>
+
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation" data-nav>
+          <a href="#method">Method</a>
+          <a href="#validation">Validation</a>
+          <a href="#system">System</a>
+          <a href="#team">Team</a>
+        </nav>
+
+        <div class="header-tools">
+          <div class="language-switcher" aria-label="Language selector">
+            <button type="button" class="is-active" data-language="en" aria-pressed="true">EN</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-language="fr" aria-pressed="false">FR</button>
+          </div>
+          <a class="header-status" href="#validation">
+            <span></span> Fixed-obstacle validated
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="top" class="hero">
+        <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+        <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span>Autonomous systems</span> · Research showcase</p>
+            <h1>From mathematical<br />optimization to<br /><em>measured motion.</em></h1>
+            <p class="hero-lede">
+              We compute collision-aware trajectories, adapt them to what the system observes,
+              and quantify the gap between a plan and a real rover in motion.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#pipeline">Explore the method <span aria-hidden="true">↓</span></a>
+              <a class="text-link" href="#validation">See the evidence <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-context">
+              <span>Arts et Métiers</span>
+              <i></i>
+              <span>CNRS@CREATE · Singapore</span>
+            </div>
+          </div>
+
+          <figure class="hero-media reveal" data-delay="1">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              poster="assets/images/fixed_obstacle_geometry_v01.jpg"
+              aria-label="Concept preview of a rover curving around a fixed obstacle"
+            >
+              <source src="assets/video/hero_rover_curve_v01.mp4" type="video/mp4" />
+            </video>
+            <div class="media-shade"></div>
+            <figcaption class="media-caption">
+              <span class="concept-label">Concept preview</span>
+              <span>Temporary media · replace with trial 15 footage</span>
+            </figcaption>
+            <div class="trajectory-overlay" aria-hidden="true">
+              <svg viewBox="0 0 620 660" preserveAspectRatio="none">
+                <path class="trajectory-ghost" d="M95 570 C145 420 178 340 308 310 C425 285 450 160 540 88" />
+                <path class="trajectory-live" d="M95 570 C145 420 178 340 308 310 C425 285 450 160 540 88" />
+                <circle cx="95" cy="570" r="7" />
+                <circle class="goal-dot" cx="540" cy="88" r="8" />
+              </svg>
+            </div>
+          </figure>
+        </div>
+
+        <div class="container metrics-strip reveal" aria-label="Key validation metrics">
+          <article>
+            <strong><span data-count="1.163">1.163</span><small> cm</small></strong>
+            <p>Mean lateral RMSE</p>
+            <span>fixed-obstacle trials</span>
+          </article>
+          <article>
+            <strong><span data-count="3.282">3.282</span><small> cm</small></strong>
+            <p>Mean final error</p>
+            <span>two directions</span>
+          </article>
+          <article>
+            <strong><span data-count="12.299">12.299</span><small> cm</small></strong>
+            <p>Worst real clearance</p>
+            <span>positive safety margin</span>
+          </article>
+          <article>
+            <strong><span data-count="342">342</span><small>/342</small></strong>
+            <p>ArUco detections</p>
+            <span>across final trials</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="intro section" aria-labelledby="challenge-title">
+        <div class="container intro-grid">
+          <div class="section-index reveal">01 <span></span> The challenge</div>
+          <div class="intro-statement reveal">
+            <h2 id="challenge-title">
+              A path is easy to draw.<br />A safe trajectory must also be <em>feasible, reactive, and measurable.</em>
+            </h2>
+          </div>
+          <div class="intro-aside reveal">
+            <p>
+              An autonomous system has to connect a fixed start to a fixed goal while respecting obstacles,
+              boundaries, velocity, acceleration, and imperfect knowledge of moving agents.
+            </p>
+            <p>
+              The hard part is not producing a curve. It is building a chain that remains coherent from the
+              mathematical objective to the physical experiment.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pipeline" class="pipeline section section-dark" aria-labelledby="pipeline-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-index section-index-light">02 <span></span> End-to-end pipeline</div>
+              <h2 id="pipeline-title">One continuous chain.<br />Seven verifiable steps.</h2>
+            </div>
+            <p>
+              Select a step to move from problem definition to measured physical validation.
+            </p>
+          </div>
+
+          <div class="pipeline-visual reveal" data-pipeline>
+            <div class="pipeline-line" aria-hidden="true"><span data-pipeline-progress></span></div>
+            <div class="pipeline-steps">
+              <button class="pipeline-step is-active" type="button" data-step="0">
+                <span>01</span><i></i><strong>Define</strong><small>start, goal, limits</small>
+              </button>
+              <button class="pipeline-step" type="button" data-step="1">
+                <span>02</span><i></i><strong>Initialize</strong><small>candidate paths</small>
+              </button>
+              <button class="pipeline-step" type="button" data-step="2">
+                <span>03</span><i></i><strong>Optimize</strong><small>static nominal</small>
+              </button>
+              <button class="pipeline-step" type="button" data-step="3">
+                <span>04</span><i></i><strong>Correct</strong><small>causal dynamics</small>
+              </button>
+              <button class="pipeline-step" type="button" data-step="4">
+                <span>05</span><i></i><strong>Track</strong><small>wheel commands</small>
+              </button>
+              <button class="pipeline-step" type="button" data-step="5">
+                <span>06</span><i></i><strong>Observe</strong><small>camera to meters</small>
+              </button>
+              <button class="pipeline-step" type="button" data-step="6">
+                <span>07</span><i></i><strong>Measure</strong><small>plan versus reality</small>
+              </button>
+            </div>
+            <div class="pipeline-detail" aria-live="polite">
+              <p class="pipeline-detail-kicker" data-step-kicker>Problem definition</p>
+              <h3 data-step-title>Encode the mission, not just the geometry.</h3>
+              <p data-step-copy>Start and goal are fixed. Obstacles, walls, speed, and acceleration become explicit costs or constraints.</p>
+              <div class="pipeline-mini-map" aria-hidden="true">
+                <span class="map-start"></span><span class="map-obstacle"></span><span class="map-goal"></span>
+                <svg viewBox="0 0 300 130"><path d="M20 108 C90 95 96 25 164 32 S225 105 280 20" /></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="method" class="method section" aria-labelledby="method-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-index">03 <span></span> The method</div>
+              <h2 id="method-title">Plan globally.<br />Respond locally.</h2>
+            </div>
+            <p>
+              The architecture separates what can be optimized in advance from what must be handled causally at runtime.
+            </p>
+          </div>
+
+          <div class="phase-grid">
+            <article class="phase-card phase-lagrange reveal">
+              <div class="phase-number">A</div>
+              <p class="eyebrow">Variational planning · static scene</p>
+              <h3>The nominal phase</h3>
+              <p class="phase-lede">
+                Generate candidates, minimize a discretized action, and produce a smooth reference path around known fixed obstacles.
+              </p>
+              <div class="phase-diagram" aria-hidden="true">
+                <span class="phase-start"></span><span class="phase-block"></span><span class="phase-goal"></span>
+                <svg viewBox="0 0 500 220">
+                  <path class="candidate candidate-one" d="M35 175 C170 210 315 30 465 50" />
+                  <path class="candidate candidate-two" d="M35 175 C160 75 310 200 465 50" />
+                  <path class="nominal" d="M35 175 C140 145 195 65 285 65 S390 90 465 50" />
+                </svg>
+              </div>
+              <ul class="phase-points">
+                <li><span>Input</span> Known geometry and dynamic limits</li>
+                <li><span>Output</span> Time-parameterized nominal trajectory</li>
+                <li><span>Tools</span> SciPy action minimization or direct Euler–Lagrange residuals</li>
+              </ul>
+            </article>
+
+            <article class="phase-card phase-newton reveal" data-delay="1">
+              <div class="phase-number">B</div>
+              <p class="eyebrow">Force dynamics · current observation</p>
+              <h3>The causal correction phase</h3>
+              <p class="phase-lede">
+                Follow the nominal path while attraction, repulsion, and damping modify the current motion when a mobile agent is observed.
+              </p>
+              <div class="phase-diagram newton-diagram" aria-hidden="true">
+                <span class="phase-start"></span><span class="mobile-agent"></span><span class="phase-goal"></span>
+                <svg viewBox="0 0 500 220">
+                  <path class="nominal nominal-muted" d="M35 175 C150 125 305 110 465 50" />
+                  <path class="corrected" d="M35 175 C155 125 200 185 300 150 S390 70 465 50" />
+                </svg>
+              </div>
+              <ul class="phase-points">
+                <li><span>Input</span> Nominal reference and current mobile state</li>
+                <li><span>Output</span> Locally corrected trajectory</li>
+                <li><span>Update</span> Semi-implicit Euler, Verlet, or Jones variant</li>
+              </ul>
+            </article>
+          </div>
+
+          <aside class="naming-note reveal">
+            <span>Important distinction</span>
+            <p>
+              “Newton” refers here to <strong>Newtonian force dynamics</strong> used by the local corrector.
+              It is not Newton–Raphson optimization. The physical fixed-obstacle trials followed the nominal trajectory with a differential-wheel controller.
+            </p>
+          </aside>
+
+          <details class="technical-disclosure reveal">
+            <summary>
+              <span><small>Technical layer</small> Open the mathematical core</span>
+              <i aria-hidden="true"></i>
+            </summary>
+            <div class="equation-grid">
+              <article class="equation-card">
+                <span>01 · Stationarity</span>
+                <h3>Variational action</h3>
+                <div class="equation" aria-label="Action S of x equals the integral of L of x, x dot, t, with Euler-Lagrange stationarity">
+                  <i>𝒮</i>[x] = ∫<sub>0</sub><sup>T</sup> L(x, ẋ, t) dt
+                  <br /><small>d/dt (∂L/∂ẋ) − ∂L/∂x = 0</small>
+                </div>
+                <p>Fixed endpoints turn trajectory generation into a stationarity problem over the path between them.</p>
+              </article>
+              <article class="equation-card">
+                <span>02 · Safety</span>
+                <h3>Compact obstacle potential</h3>
+                <div class="equation equation-small" aria-label="Obstacle potential is active inside an influence radius">
+                  V<sub>obs</sub>(d) = α(1/d − 1/d<sub>0</sub>)²
+                  <br /><small>for d &lt; d<sub>0</sub>, otherwise 0</small>
+                </div>
+                <p>The cost rises inside an influence radius and stays inactive farther away.</p>
+              </article>
+              <article class="equation-card">
+                <span>03 · Runtime</span>
+                <h3>Damped force dynamics</h3>
+                <div class="equation equation-small" aria-label="Mass times acceleration plus damping equals goal, obstacle, and mobile forces">
+                  mẍ + ξẋ = F<sub>goal</sub> + F<sub>obs</sub> + F<sub>mobile</sub>
+                </div>
+                <p>Attraction keeps the goal and nominal path relevant; repulsion and damping manage local correction.</p>
+              </article>
+            </div>
+            <div class="assumption-row">
+              <span>2D planar motion</span><span>fixed start and goal</span><span>bounded velocity</span><span>bounded acceleration</span><span>current-state mobile observation</span>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="solvers section section-tint" aria-labelledby="solvers-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-index">04 <span></span> Numerical strategies</div>
+              <h2 id="solvers-title">Different solvers answer<br />different questions.</h2>
+            </div>
+            <p>
+              The comparison is an engineering tool, not a single leaderboard. Speed, convergence, trajectory quality, and robustness must be read together.
+            </p>
+          </div>
+
+          <div class="solver-table reveal" role="table" aria-label="Solver comparison">
+            <div class="solver-row solver-head" role="row">
+              <span role="columnheader">Strategy</span><span role="columnheader">What it solves</span><span role="columnheader">Best use</span><span role="columnheader">Observed trade-off</span>
+            </div>
+            <div class="solver-row" role="row">
+              <strong role="cell"><i class="solver-dot dot-blue"></i>SciPy variational</strong>
+              <span role="cell">Discretized action minimization with analytic gradient</span>
+              <span role="cell">High-quality nominal planning</span>
+              <span role="cell"><b>2.548 s</b> median in a two-scenario exploratory benchmark</span>
+            </div>
+            <div class="solver-row" role="row">
+              <strong role="cell"><i class="solver-dot dot-orange"></i>Direct Euler–Lagrange</strong>
+              <span role="cell">Stationarity residual through root or least-squares methods</span>
+              <span role="cell">Numerical formulation studies</span>
+              <span role="cell">Faster campaigns, but convergence remained scenario-sensitive</span>
+            </div>
+            <div class="solver-row" role="row">
+              <strong role="cell"><i class="solver-dot dot-gray"></i>Straight-line baseline</strong>
+              <span role="cell">No nominal optimization</span>
+              <span role="cell">Ablation and runtime baseline</span>
+              <span role="cell"><b>0.0048 s</b> median, without the same planning capability</span>
+            </div>
+          </div>
+          <p class="benchmark-note reveal">
+            Benchmark values above cover only two scenarios with shared controller coefficients. They support diagnosis, not a definitive solver ranking.
+          </p>
+        </div>
+      </section>
+
+      <section id="validation" class="validation section" aria-labelledby="validation-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-index">05 <span></span> Evidence</div>
+              <h2 id="validation-title">What is actually validated?</h2>
+            </div>
+            <p>
+              Every claim is tagged by evidence level. Simulation, software tests, measured motion, and complete physical validation are not interchangeable.
+            </p>
+          </div>
+
+          <div class="validation-status-grid reveal">
+            <article class="validation-status status-complete">
+              <span class="status-icon">✓</span>
+              <div><small>Physical · complete in tested domain</small><h3>Fixed-obstacle avoidance</h3><p>Two final runs, opposite directions, safe stop and target reached.</p></div>
+            </article>
+            <article class="validation-status status-complete">
+              <span class="status-icon">✓</span>
+              <div><small>Physical · complete</small><h3>Metric perception chain</h3><p>Camera, homography, ArUco tracking, coordinates, and control connected.</p></div>
+            </article>
+            <article class="validation-status status-sim">
+              <span class="status-icon">S</span>
+              <div><small>Simulation · demonstrated</small><h3>Dynamic &amp; multi-agent cases</h3><p>Causal local correction evaluated with fixed and moving agents.</p></div>
+            </article>
+            <article class="validation-status status-partial">
+              <span class="status-icon">↗</span>
+              <div><small>Physical · partial</small><h3>Moving-agent avoidance</h3><p>Detection, commands, and safety stop work; full arrival remains open.</p></div>
+            </article>
+          </div>
+
+          <div class="evidence-feature reveal">
+            <div class="evidence-copy">
+              <p class="eyebrow"><span>Trials 14 &amp; 15</span> · July 15, 2026</p>
+              <h3>The strongest proof is repeatable, bidirectional, and measured.</h3>
+              <p>
+                The rover followed a curved nominal trajectory around a fixed obstacle in both directions. Both trials reached the target and ended with a safe stop.
+              </p>
+              <dl class="evidence-stats">
+                <div><dt>2 / 2</dt><dd>successful final runs</dd></div>
+                <div><dt>6.291°</dt><dd>mean orientation RMSE</dd></div>
+                <div><dt>0</dt><dd>lost ArUco detections</dd></div>
+              </dl>
+              <div class="trial-tabs" role="tablist" aria-label="Select validation figure">
+                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/trial_15_forward_metrics.png" data-alt="Trial 15 forward run validation charts" data-caption="Trial 15 · forward fixed-obstacle run · measured data">Trial 15 · Forward</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/trial_14_return_metrics.png" data-alt="Trial 14 return run validation charts" data-caption="Trial 14 · return fixed-obstacle run · measured data">Trial 14 · Return</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/smooth_tracking_comparison.png" data-alt="Comparison between stop-and-turn and smooth tracking" data-caption="Separate smooth quasi-straight tracking experiment">Smooth tracking</button>
+              </div>
+            </div>
+            <figure class="evidence-figure">
+              <div class="evidence-image-shell">
+                <img data-validation-figure src="assets/figures/trial_15_forward_metrics.png" alt="Trial 15 forward run validation charts" />
+              </div>
+              <figcaption><span class="evidence-label">Measured evidence</span><span data-figure-caption>Trial 15 · forward fixed-obstacle run · measured data</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="trial-video-pair reveal" aria-label="Temporary video slots for final trials 14 and 15">
+            <figure>
+              <video controls muted playsinline poster="assets/images/fixed_obstacle_geometry_v01.jpg">
+                <source src="assets/video/validation_trial_15_forward_v01.mp4" type="video/mp4" />
+              </video>
+              <figcaption><span><b>Trial 15</b> · forward fixed-obstacle run</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+            <figure>
+              <video controls muted playsinline poster="assets/images/arena_overview_v01.jpg">
+                <source src="assets/video/validation_trial_14_return_v01.mp4" type="video/mp4" />
+              </video>
+              <figcaption><span><b>Trial 14</b> · return fixed-obstacle run</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+          </div>
+
+          <details class="technical-disclosure evidence-disclosure reveal">
+            <summary>
+              <span><small>Experimental layer</small> Open the validation matrix and metric scope</span>
+              <i aria-hidden="true"></i>
+            </summary>
+            <div class="matrix-wrap">
+              <table class="validation-matrix">
+                <thead><tr><th>Capability</th><th>Evidence</th><th>Status</th><th>Scope</th></tr></thead>
+                <tbody>
+                  <tr><td>Nominal trajectory generation</td><td>Software tests + simulation</td><td><span class="pill pill-green">Validated</span></td><td>2D scenarios in repository</td></tr>
+                  <tr><td>Fixed-obstacle physical tracking</td><td>Trials 14–15</td><td><span class="pill pill-green">Validated</span></td><td>Documented arena and profiles</td></tr>
+                  <tr><td>Smooth continuous tracking</td><td>Trials 29–30</td><td><span class="pill pill-green">Validated</span></td><td>Quasi-straight segments, no obstacle</td></tr>
+                  <tr><td>Causal moving-agent correction</td><td>Simulation + physical integration</td><td><span class="pill pill-amber">Partial</span></td><td>No complete physical arrival</td></tr>
+                  <tr><td>Multi-agent avoidance</td><td>Simulation</td><td><span class="pill pill-blue">Simulation</span></td><td>Not physically demonstrated</td></tr>
+                  <tr><td>Aerial drone deployment</td><td>None</td><td><span class="pill pill-gray">Not claimed</span></td><td>Physical platform is a rover</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="scope-note">
+              The smooth-tracking metrics (0.283 cm mean lateral RMSE; 0.985 cm mean final error) come from a separate obstacle-free experiment and are intentionally not merged with the fixed-obstacle KPI.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section id="system" class="system section section-dark" aria-labelledby="system-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-index section-index-light">06 <span></span> Physical system</div>
+              <h2 id="system-title">Pixels become meters.<br />Meters become motion.</h2>
+            </div>
+            <p>
+              The experimental chain closes the loop between planning, perception, wheel commands, and measured trajectory error.
+            </p>
+          </div>
+
+          <div class="system-grid">
+            <figure class="system-photo reveal">
+              <img src="assets/images/camera_arena_setup_v01.jpg" alt="Concept preview of the overhead camera and rover test arena" />
+              <figcaption><span class="concept-label">Concept preview</span> Temporary setup photograph</figcaption>
+            </figure>
+            <div class="system-chain reveal" data-delay="1">
+              <ol>
+                <li><span>01</span><div><strong>Basler camera</strong><small>1500 × 1200 monochrome frames</small></div></li>
+                <li><span>02</span><div><strong>Homography</strong><small>pixel coordinates → arena coordinates</small></div></li>
+                <li><span>03</span><div><strong>ArUco tracking</strong><small>rover, obstacle, and reference markers</small></div></li>
+                <li><span>04</span><div><strong>Differential control</strong><small>trajectory error → wheel commands</small></div></li>
+                <li><span>05</span><div><strong>Validation log</strong><small>clearance, RMSE, stop, final gap</small></div></li>
+              </ol>
+              <div class="chain-proof"><span>30 fps</span><p>900 / 900 frames captured in 30-second Ethernet tests on both Mac and Raspberry Pi.</p></div>
+            </div>
+          </div>
+
+          <div class="tracking-panel reveal">
+            <div class="tracking-copy">
+              <p class="eyebrow"><span>Instrumented observation</span></p>
+              <h3>Every physical claim starts with a traceable measurement.</h3>
+              <p>Corner markers define the arena. IDs identify the rover and obstacle. The rectified view turns image measurements into a common metric frame.</p>
+            </div>
+            <figure>
+              <img src="assets/figures/aruco_tracking_annotated.png" alt="Annotated camera frame showing ArUco markers in the rover test arena" />
+              <figcaption><span class="evidence-label">Repository evidence</span> Annotated preflight frame</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="media-section section" aria-labelledby="media-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-index">07 <span></span> The experiment, at a glance</div>
+              <h2 id="media-title">A complete visual system,<br />ready for the final footage.</h2>
+            </div>
+            <p>
+              Temporary assets already use their final filenames. Replace a file with the real shot and the page updates without layout changes.
+            </p>
+          </div>
+          <div class="media-mosaic">
+            <figure class="mosaic-wide reveal">
+              <video controls muted playsinline poster="assets/images/arena_overview_v01.jpg">
+                <source src="assets/video/validation_fixed_obstacle_full_v01.mp4" type="video/mp4" />
+              </video>
+              <figcaption><span><b>V02</b> Full fixed-obstacle run</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+            <figure class="reveal" data-delay="1">
+              <img src="assets/images/rover_aruco_v01.jpg" alt="Concept preview close-up of the rover and its fiducial marker" />
+              <figcaption><span>Rover + fiducial marker</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+            <figure class="reveal" data-delay="2">
+              <img src="assets/images/system_chain_v01.jpg" alt="Concept preview of the computer-to-rover system chain" />
+              <figcaption><span>Software-to-hardware chain</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+          </div>
+          <div class="media-video-row">
+            <figure class="reveal">
+              <video controls muted playsinline poster="assets/figures/aruco_tracking_annotated.png">
+                <source src="assets/video/tracking_aruco_metric_v01.mp4" type="video/mp4" />
+              </video>
+              <figcaption><span><b>V03</b> Metric ArUco tracking</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+            <figure class="reveal" data-delay="1">
+              <video controls muted playsinline poster="assets/figures/simulation_lagrange_newton_source.png">
+                <source src="assets/video/simulation_lagrange_newton_v01.mp4" type="video/mp4" />
+              </video>
+              <figcaption><span><b>V04</b> Nominal to causal correction</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+            <figure class="reveal" data-delay="2">
+              <video controls muted playsinline poster="assets/images/system_chain_v01.jpg">
+                <source src="assets/video/screen_to_rover_handoff_v01.mp4" type="video/mp4" />
+              </video>
+              <figcaption><span><b>V05</b> Screen-to-rover handoff</span><span class="concept-label">Concept preview</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="limits section section-tint" aria-labelledby="limits-title">
+        <div class="container limits-grid">
+          <div>
+            <div class="section-index reveal">08 <span></span> Current boundary</div>
+            <h2 id="limits-title" class="reveal">Validated where measured.<br /><em>Explicit where incomplete.</em></h2>
+          </div>
+          <div class="limits-list">
+            <article class="reveal"><span aria-hidden="true">01</span><div><h3>Moving-agent completion</h3><p>The rover receives corrected commands and can stop safely, but a repeatable full avoidance run to the goal is still required.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">02</span><div><h3>Multi-agent transfer</h3><p>Multi-agent behavior is demonstrated in simulation only. Physical deployment would require synchronized state estimation and repeated trials.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">03</span><div><h3>Benchmark breadth</h3><p>Solver timing comparisons remain exploratory. A larger, frozen scenario suite is needed for a general performance claim.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="team section" aria-labelledby="team-title">
+        <div class="container">
+          <div class="team-intro reveal">
+            <div class="section-index">09 <span></span> People &amp; context</div>
+            <h2 id="team-title">A research project built<br />between France and Singapore.</h2>
+            <p>
+              The work began in January under Prof. Francisco Chinesta and continued during a summer internship at CNRS@CREATE in Singapore, with technical supervision from Amine Ammar.
+            </p>
+          </div>
+          <div class="team-grid reveal">
+            <article>
+              <span>Student researcher</span>
+              <h3>Slimane<br /><strong>AOUANOUK</strong></h3>
+              <p>Trajectory optimization, simulation, physical integration, and validation.</p>
+              <a class="team-link" href="https://slimane2410.github.io/portfolio" target="_blank" rel="noopener noreferrer" aria-label="Visit Slimane Aouanouk's portfolio (opens in a new tab)">
+                <span>Portfolio</span><span aria-hidden="true">↗</span>
+              </a>
+            </article>
+            <article>
+              <span>Student researcher</span>
+              <h3>Mathis<br /><strong>BENCHIKH</strong></h3>
+              <p>Trajectory optimization, simulation, physical integration, and validation.</p>
+              <a class="team-link" href="https://www.linkedin.com/in/mathis-benchikh-968475348?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_ios" target="_blank" rel="noopener noreferrer" aria-label="Visit Mathis Benchikh's LinkedIn profile (opens in a new tab)">
+                <span>LinkedIn</span><span aria-hidden="true">↗</span>
+              </a>
+            </article>
+            <article>
+              <span>Technical supervisor</span>
+              <h3>Amine<br /><strong>AMMAR</strong></h3>
+              <p>Technical guidance and internship supervision.</p>
+              <a class="team-link" href="https://www.amineammar.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Amine Ammar's personal website (opens in a new tab)">
+                <span>Personal website</span><span aria-hidden="true">↗</span>
+              </a>
+            </article>
+            <article>
+              <span>Research supervisor</span>
+              <h3>Prof. Francisco<br /><strong>CHINESTA</strong></h3>
+              <p>Research direction and original project supervision.</p>
+              <a class="team-link" href="https://www.researchgate.net/profile/Francisco-Chinesta" target="_blank" rel="noopener noreferrer" aria-label="Visit Prof. Francisco Chinesta's ResearchGate profile (opens in a new tab)">
+                <span>ResearchGate</span><span aria-hidden="true">↗</span>
+              </a>
+            </article>
+          </div>
+          <div class="timeline reveal">
+            <div><span>January 2026</span><strong>Research initiated</strong><p>Problem formulation and numerical foundations with Prof. Francisco Chinesta.</p></div>
+            <i aria-hidden="true"></i>
+            <div><span>Summer 2026</span><strong>Physical integration</strong><p>Camera, rover control, experimental campaigns, and validation at CNRS@CREATE.</p></div>
+            <i aria-hidden="true"></i>
+            <div><span>August 1, 2026</span><strong>Research showcase</strong><p>A concise record of the method, evidence, and remaining boundary.</p></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div>
+          <svg class="footer-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M7 29.5 18.2 8h8.3L15.3 29.5H7Z" /><path d="M22.2 29.5 27.7 19H33l-5.5 10.5h-5.3Z" /></svg>
+          <h2>Trajectory Optimization<br />for Autonomous Systems</h2>
+          <p>Collision-aware planning, causal correction, and measured physical validation.</p>
+        </div>
+        <div class="institution-logos" aria-label="Partner institutions">
+          <a href="https://artsetmetiers.fr/en" target="_blank" rel="noreferrer" aria-label="Arts et Métiers Institute of Technology website">
+            <img src="assets/logos/arts-et-metiers-en.jpg" alt="Arts et Métiers Institute of Technology" />
+          </a>
+          <a href="https://www.cnrsatcreate.cnrs.fr/" target="_blank" rel="noreferrer" aria-label="CNRS at CREATE website">
+            <img src="assets/logos/cnrs-at-create.png" alt="CNRS at CREATE Singapore" />
+          </a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>Internal research showcase · 2026</span>
+        <span>Experimental claims scoped to repository evidence</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
