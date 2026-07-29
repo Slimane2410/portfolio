@@ -361,7 +361,11 @@ p {
 }
 
 .research-featured-image {
-  object-position: center 25%;
+  object-position: center 68%;
+}
+
+.system-chain-featured-image {
+  object-position: center 68%;
 }
 
 .project-body {
@@ -509,6 +513,10 @@ p {
 
   .project-featured-image {
     object-position: center center;
+  }
+
+  .system-chain-featured-image {
+    object-position: center 68%;
   }
 
   .project-featured-overlay {
