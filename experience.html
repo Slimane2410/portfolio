@@ -154,25 +154,26 @@
           <a class="featured-card-link">
             <div class="card-header">
               <span class="tech-badge" style="background: rgba(30, 64, 175, 0.2); color: #60a5fa; border: none;">Data-Driven Mechanical Engineering</span>
-              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Jan 2026 — Present</span>
+              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Jan 2026 — Present · Paris &amp; Singapore</span>
             </div>
             
             <h2 class="exp-title">Trajectory Optimization for Autonomous Drone Systems (PIMM Lab)</h2>
-            <span class="exp-role">Research-Oriented Engineering Project — Supervised by Prof. Francisco Chinesta — 2026</span>
+            <span class="exp-role">Research Project at PIMM Lab, Paris · Research Internship at CNRS@CREATE, Singapore (June–August 2026)</span>
 
             <p class="exp-desc">
-Semester-long research project conducted at <strong>PIMM Laboratory</strong> under the supervision of <strong>Professor Francisco Chinesta</strong>, focused on <strong>energy-aware trajectory optimization for autonomous drones</strong> operating in dynamic and multi-agent environments.  
+Initiated in <strong>Paris</strong> at the <strong>PIMM Laboratory</strong> under the supervision of <strong>Professor Francisco Chinesta</strong>, this research project develops <strong>collision-aware trajectory optimization</strong> methods for autonomous systems operating around fixed and moving obstacles. From <strong>June to August 2026</strong>, the work continued through a research internship at <strong>CNRS@CREATE in Singapore</strong>, with technical supervision from <strong>Amine Ammar</strong>.
 
-The project consists in formulating and implementing a <strong>variational optimization framework</strong> based on <strong>Euler–Lagrange equations</strong> to compute optimal trajectories minimizing a custom <strong>energy-driven cost function</strong> integrating velocity, acceleration, battery discharge dynamics, aerodynamic drag, and collision avoidance constraints.  
+The approach combines a <strong>variational planner</strong> based on the <strong>Euler–Lagrange equations</strong> with a causal, Newtonian dynamics-based corrector that adapts the nominal path to observed obstacles and agents. Developed first in Python simulation, the complete planning–perception–control chain was then transferred to an instrumented rover platform in Singapore, using camera calibration, ArUco tracking, and differential-wheel control to measure trajectory accuracy, clearance, and repeatability.
 
-The mathematical model is translated into a full <strong>Python-based simulation framework</strong>, including 2D dynamic simulations, obstacle repulsion fields, and multi-agent interactions. The long-term objective is the construction of a <strong>hybrid digital twin</strong> of the drone system, combining physics-based modeling with <strong>physics-informed neural networks</strong> to approximate complex cost functions and enable real-time adaptive planning.
+The experimental campaign validated fixed-obstacle avoidance in both directions and continuous trajectory tracking, while moving-agent and multi-agent extensions remain under development. These theoretical, numerical, and experimental results are currently being consolidated into a <strong>research publication in preparation</strong>, with the longer-term objective of transferring the framework from ground-based validation to autonomous drone systems.
 </p>
 
             <div class="tech-stack-row">
               <span class="tech-badge">Python</span>
-              <span class="tech-badge">Euler–Lagrange Optimization</span>
-              <span class="tech-badge">Digital Twin</span>
-              <span class="tech-badge">Physics-Informed Neural Networks</span>
+              <span class="tech-badge">Trajectory Optimization</span>
+              <span class="tech-badge">Computer Vision</span>
+              <span class="tech-badge">Experimental Validation</span>
+              <span class="tech-badge">Research Publication</span>
             </div>
           </a>
         </div>
