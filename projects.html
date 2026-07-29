@@ -85,6 +85,34 @@
         border: none !important;
         outline: none !important;
     }
+
+    /* Subtle cue that the featured research project is clickable */
+    .project-featured:hover .project-featured-link,
+    .project-featured:focus-within .project-featured-link {
+        color: #ffffff !important;
+        animation: research-link-pulse 0.85s ease-in-out infinite alternate;
+    }
+
+    @keyframes research-link-pulse {
+        from {
+            opacity: 0.58;
+            transform: translateX(0);
+            text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(4px);
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .project-featured:hover .project-featured-link,
+        .project-featured:focus-within .project-featured-link {
+            animation: none;
+            text-decoration: underline;
+        }
+    }
   </style>
 </head>
 
@@ -151,7 +179,7 @@
       <!-- Featured Project: Trajectory Optimization for Autonomous Systems -->
 
       <section class="slide-up delay-2" style="margin-bottom: 50px;">
-        <article class="glass-panel project-featured">
+        <article id="trajectory-optimization" class="glass-panel project-featured">
           <img
             class="project-featured-image system-chain-featured-image"
             src="paco-showcase/assets/images/system_chain_v01.jpg"
