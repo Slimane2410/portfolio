@@ -5,10 +5,11 @@
     "Skip to content": "Aller au contenu",
     "Toggle navigation": "Afficher la navigation",
     "Method": "Méthode",
+    "Calibration": "Calibration",
     "Validation": "Validation",
     "System": "Système",
     "Team": "Équipe",
-    "Fixed-obstacle validated": "Obstacle fixe validé",
+    "Anti-collision validated": "Anti-collision validé",
     "Autonomous systems": "Systèmes autonomes",
     "Research showcase": "Vitrine de recherche",
     "From mathematical": "De l’optimisation",
@@ -17,17 +18,72 @@
     "We compute collision-aware trajectories, adapt them to what the system observes,\n              and quantify the gap between a plan and a real rover in motion.": "Nous calculons des trajectoires tenant compte des collisions, les adaptons aux observations du système et quantifions l’écart entre un plan et le déplacement réel d’un rover.",
     "Explore the method": "Explorer la méthode",
     "See the evidence": "Voir les résultats",
-    "Concept preview": "Aperçu conceptuel",
-    "Temporary media": "Média temporaire",
-    "replace with trial 15 footage": "à remplacer par les images de l’essai 15",
-    "Mean lateral RMSE": "RMSE latérale moyenne",
-    "fixed-obstacle trials": "essais avec obstacle fixe",
+    "Physical · validated": "Physique · validé",
+    "Physical · complete": "Physique · complet",
+    "· mother rover among moving robots": "· rover mère parmi des robots mobiles",
+    "· avoidance of a moving robot": "· évitement d’un robot mobile",
+    "· safe and ≤ 10 cm from target": "· sûr et à moins de 10 cm de la cible",
+    "· 6 independent agents": "· 6 agents indépendants",
+    "Runs reaching the goal": "Essais atteignant l’objectif",
+    "with moving robots in the arena": "avec des robots mobiles dans l’arène",
+    "across those runs": "sur ces essais",
+    "Two-agent runs": "Essais à deux agents",
+    "two moving robots at once": "deux robots mobiles simultanés",
+    "ArUco detection": "Détection ArUco",
+    "over 5,688 logged frames": "sur 5 688 images enregistrées",
+    "validated": "validé",
+    "Moving-agent avoidance": "Évitement d’agent mobile",
+    "The rover detects moving robots, deviates around them, and still reaches its goal.": "Le rover détecte les robots mobiles, les contourne et atteint malgré tout son objectif.",
+    "Fixed-obstacle avoidance": "Évitement d’obstacle fixe",
+    "Fixed columns avoided in the same runs, with the same causal corrector.": "Colonnes fixes évitées dans les mêmes essais, avec le même correcteur causal.",
+    "Partial · in progress": "Partiel · en cours",
+    "Predictive digital twin": "Jumeau numérique prédictif",
+    "The twin predicts arrival well, but not yet the full path taken.": "Le jumeau prédit bien l’arrivée, mais pas encore tout le trajet parcouru.",
+    "Anti-collision campaign": "Campagne anti-collision",
+    "July 30, 2026": "30 juillet 2026",
+    "The rover now avoids moving robots — and still arrives.": "Le rover évite désormais des robots mobiles — et arrive quand même.",
+    "Across the final campaign the rover shared its arena with one or two independently moving robots plus fixed columns. It leaves its nominal path to open a gap, then closes back onto the goal. Every run below is a physical run, logged frame by frame.": "Lors de la campagne finale, le rover a partagé son arène avec un ou deux robots se déplaçant de façon indépendante, en plus des colonnes fixes. Il quitte sa trajectoire nominale pour créer un écart, puis revient vers l’objectif. Chaque essai ci-dessous est un essai physique, enregistré image par image.",
+    "runs reached the goal with moving agents present": "essais ont atteint l’objectif en présence d’agents mobiles",
+    "mean final distance to target (max 7.9)": "distance finale moyenne à la cible (max 7,9)",
+    "runs with two simultaneous moving agents": "essais avec deux agents mobiles simultanés",
+    "One moving agent": "Un agent mobile",
+    "Two moving agents": "Deux agents mobiles",
+    "Digital twin": "Jumeau numérique",
+    "One moving agent crossing the path · measured vs simulated · goal reached": "Un agent mobile traversant la trajectoire · mesuré vs simulé · objectif atteint",
+    "Two simultaneous moving agents · measured vs simulated · goal reached": "Deux agents mobiles simultanés · mesuré vs simulé · objectif atteint",
+    "Simulated versus measured arrival point across 21 paired runs": "Point d’arrivée simulé et mesuré sur 21 essais appariés",
+    "Multi-agent run": "Essai multi-agents",
+    "mother rover among moving robots": "rover mère parmi des robots mobiles",
+    "Close pass": "Passage rapproché",
+    "avoidance of a moving robot": "évitement d’un robot mobile",
+    "Fixed-obstacle physical avoidance": "Évitement physique d’obstacle fixe",
+    "Phase 6.10 campaign": "Campagne Phase 6.10",
+    "Moving-agent physical avoidance": "Évitement physique d’agent mobile",
+    "23 runs, 30 July 2026": "23 essais, 30 juillet 2026",
+    "1–2 moving robots, 2 × 2 m arena": "1 à 2 robots mobiles, arène de 2 × 2 m",
+    "Two simultaneous moving agents": "Deux agents mobiles simultanés",
+    "9 runs, all reached goal": "9 essais, tous ont atteint l’objectif",
+    "Same corrector, no retuning": "Même correcteur, sans réglage supplémentaire",
+    "Decentralized multi-agent (6 robots)": "Multi-agents décentralisé (6 robots)",
+    "23 paired sim/real runs": "23 essais appariés simulation/réel",
+    "Arrival predicted; path not yet": "Arrivée prédite ; trajet pas encore",
+    "Clearance is measured edge-to-edge between the conservative bounding discs used by the controller (rover radius 0.13 m), not between the physical chassis outlines. A small negative value therefore means the two safety discs overlapped, not that the robots touched. On the 12 runs where both the moving-agent and fixed-obstacle clearances stayed strictly positive for the whole run, the smallest measured margin was 3.0 cm and the mean was 25.8 cm.": "Le dégagement est mesuré bord à bord entre les disques englobants conservateurs utilisés par le contrôleur (rayon rover de 0,13 m), et non entre les contours physiques des châssis. Une petite valeur négative signifie donc que les deux disques de sécurité se chevauchent, pas que les robots se sont touchés. Sur les 12 essais où les dégagements vis-à-vis de l’agent mobile et de l’obstacle fixe sont restés strictement positifs pendant tout l’essai, la marge mesurée la plus faible était de 3,0 cm et la moyenne de 25,8 cm.",
+    "Of the 23 runs, one ended on a safety stop when a marker was momentarily lost near an agent, and one hit the duration limit — both are the safety layer behaving as designed, not collisions. Percentages describe this single campaign in one arena with one hardware setup; they are not a general reliability figure.": "Sur les 23 essais, un s’est terminé par un arrêt de sécurité lorsqu’un marqueur a été momentanément perdu près d’un agent, et un autre a atteint la limite de durée — dans les deux cas la couche de sécurité s’est comportée comme prévu, il ne s’agit pas de collisions. Les pourcentages décrivent cette seule campagne, dans une arène et avec un montage matériel uniques ; ce n’est pas une mesure générale de fiabilité.",
+    "Avoidance is validated.": "L’évitement est validé.",
+    "Prediction is what comes next.": "La prédiction est l’étape suivante.",
+    "The twin already predicts where the rover stops to within about a centimetre, but not the path it takes to get there. Closing that gap — modelling wheel slip, latency, and contact more faithfully — is the next major step.": "Le jumeau prédit déjà à environ un centimètre près l’endroit où le rover s’arrête, mais pas le trajet qu’il emprunte pour y arriver. Combler cet écart — en modélisant plus fidèlement le glissement des roues, la latence et les contacts — constitue la prochaine étape majeure.",
+    "Predictive control and learning": "Commande prédictive et apprentissage",
+    "The corrector reacts to the present state only. Model predictive control and learning-based policies would let the rover anticipate where a moving agent is heading instead of responding once it is close.": "Le correcteur ne réagit qu’à l’état présent. La commande prédictive par modèle (MPC) et des politiques fondées sur l’apprentissage permettraient au rover d’anticiper la direction d’un agent mobile au lieu de réagir une fois celui-ci proche.",
+    "Better nominal planning": "Meilleure planification nominale",
+    "The nominal path comes from a local variational solve that depends on its initialization. Graph search such as A* — used to seed or replace that stage — should give a more reliable global route before the causal layer refines it.": "Le chemin nominal provient d’une résolution variationnelle locale qui dépend de son initialisation. Une recherche sur graphe telle que A* — pour amorcer ou remplacer cette étape — devrait fournir un itinéraire global plus fiable avant que la couche causale ne l’affine.",
+    "Scale and benchmark breadth": "Passage à l’échelle et étendue du benchmark",
+    "Decentralized avoidance is validated physically for two moving agents and in simulation for six. Larger fleets, and a frozen scenario suite for solver comparison, remain to be done.": "L’évitement décentralisé est validé physiquement pour deux agents mobiles et en simulation pour six. Des flottes plus grandes, ainsi qu’un ensemble de scénarios figé pour comparer les solveurs, restent à réaliser.",
+    "Full arena run": "Essai complet dans l’arène",
+    "This scenario runs the same causal correction algorithm independently inside all six agents at once, with no central coordinator. The physical runs above validated this logic on one controlled rover among two moving robots; the simulation shows it extends to a fully decentralized swarm where every agent avoids every other.": "Ce scénario exécute le même algorithme de correction causale indépendamment dans chacun des six agents à la fois, sans coordinateur central. Les essais physiques ci-dessus ont validé cette logique sur un rover piloté parmi deux robots mobiles ; la simulation montre qu’elle s’étend à un essaim entièrement décentralisé où chaque agent évite tous les autres.",
+    "Field footage": "Prise réelle",
+    "Mother rover in the test arena, alongside parasite rovers and fixed obstacles": "Rover mère dans l’arène d’essai, aux côtés des rovers parasites et des obstacles fixes",
     "Mean final error": "Erreur finale moyenne",
-    "two directions": "deux directions",
-    "Worst real clearance": "Dégagement réel minimal",
-    "positive safety margin": "marge de sécurité positive",
     "ArUco detections": "Détections ArUco",
-    "across final trials": "sur les essais finaux",
     "The challenge": "Le défi",
     "A path is easy to draw.": "Un chemin est facile à tracer.",
     "A safe trajectory must also be": "Une trajectoire sûre doit aussi être",
@@ -77,7 +133,7 @@
     "Important distinction": "Distinction importante",
     "“Newton” refers here to": "« Newton » désigne ici la",
     "Newtonian force dynamics": "dynamique newtonienne des forces",
-    "used by the local corrector.\n              It is not Newton–Raphson optimization. The physical fixed-obstacle trials followed the nominal trajectory with a differential-wheel controller.": "utilisée par le correcteur local. Il ne s’agit pas de l’optimisation de Newton–Raphson. Les essais physiques avec obstacle fixe ont suivi la trajectoire nominale à l’aide d’un contrôleur à roues différentielles.",
+    "used by the local corrector.\n              It is not Newton–Raphson optimization. In the physical runs this corrector is what steers the rover around moving robots and fixed obstacles, on top of a differential-wheel controller.": "utilisée par le correcteur local. Il ne s’agit pas de l’optimisation de Newton–Raphson. Dans les essais physiques, c’est ce correcteur qui pilote le rover autour des robots mobiles et des obstacles fixes, au-dessus d’un contrôleur à roues différentielles.",
     "Technical layer": "Couche technique",
     "Open the mathematical core": "Ouvrir le cœur mathématique",
     "Stationarity": "Stationnarité",
@@ -113,35 +169,66 @@
     "Ablation and runtime baseline": "Référence d’ablation et de temps d’exécution",
     "median, without the same planning capability": "médiane, sans la même capacité de planification",
     "Benchmark values above cover only two scenarios with shared controller coefficients. They support diagnosis, not a definitive solver ranking.": "Les valeurs ci-dessus ne couvrent que deux scénarios avec des coefficients de contrôleur partagés. Elles aident au diagnostic, pas à établir un classement définitif des solveurs.",
+    "Auto-calibration campaign": "Campagne d’auto-calibration",
+    "Twelve pairs, calibrated": "Douze couples, calibrés",
+    "separately, at scale.": "séparément, à grande échelle.",
+    "Each of the four nominal generators above pairs with three causal controllers. Every pair searches its own seven-coefficient space — never inheriting another pair's gains — then is compared under one criterion: safe and within 10 cm of the goal. A companion report covers the full protocol; this section summarizes its five figures.": "Chacun des quatre générateurs nominaux ci-dessus est associé aux trois contrôleurs causaux. Chaque couple explore son propre espace de sept coefficients — sans jamais hériter des gains d’un autre couple — puis est comparé selon un seul critère : sûr et à moins de 10 cm de l’objectif. Un rapport complémentaire détaille l’ensemble du protocole ; cette section en résume les cinq figures.",
+    "Solver × controller pairs": "Couples solveur × contrôleur",
+    "4 nominal generators, 3 causal controllers": "4 générateurs nominaux, 3 contrôleurs causaux",
+    "Planned runs": "Essais planifiés",
+    "across the 12 campaigns": "sur les 12 campagnes",
+    "Final-zone D3.2 runs": "Essais de la zone finale D3.2",
+    "6,300 profiles × 16 scenarios": "6 300 profils × 16 scénarios",
+    "Cumulative campaign time": "Temps de campagne cumulé",
+    "if run sequentially": "si exécuté séquentiellement",
+    "Joint success": "Succès conjoint",
+    "SciPy leads both readings; Full Newton stays safe but rarely arrives.": "SciPy domine les deux lectures ; Full Newton reste sûr mais atteint rarement la cible.",
+    "Across the full D3.2 zone, SciPy + Initial leads with 50.84% joint success. Restricted to each pair's top 4 profiles and widened to 10 held-out scenarios, SciPy + Verlet edges ahead at 65.38%. Full Newton — the ablation with no nominal phase at all — reaches up to 96% collision-free runs and as little as 3.85% joint success: it stays safe by stalling short of the goal, not by reaching it.": "Sur toute la zone D3.2, SciPy + Initial domine avec 50,84 % de succès conjoint. En se limitant aux 4 meilleurs profils de chaque couple et en élargissant à 10 scénarios hors calibration, SciPy + Verlet passe légèrement devant avec 65,38 %. Full Newton — l’ablation sans aucune phase nominale — atteint jusqu’à 96 % de runs sans collision, pour seulement 3,85 % de succès conjoint : il reste sûr en s’arrêtant avant la cible, pas en l’atteignant bien.",
+    "best full-zone joint success · SciPy + Initial": "meilleur succès conjoint sur la zone complète · SciPy + Initial",
+    "best top-4 joint success · SciPy + Verlet": "meilleur succès conjoint du top 4 · SciPy + Verlet",
+    "Full Newton + Initial/Verlet, despite 96% safety": "Full Newton + Initial/Verlet, malgré 96 % de sécurité",
+    "Full zone": "Zone complète",
+    "Outcome breakdown": "Décomposition des résultats",
+    "Generalization": "Généralisation",
+    "Threshold sensitivity": "Sensibilité au seuil",
+    "Full D3.2 zone · all profiles per pair · 16 calibration scenarios": "Zone D3.2 complète · tous les profils par couple · 16 scénarios de calibration",
+    "Reading the figures": "Lecture des figures",
+    "Axis and legend labels are in French, matching the source report:": "Les libellés des axes et de la légende sont en français, comme dans le rapport source :",
+    "is safe,": "signifie sûr,",
+    "is target-reached,": "signifie cible atteinte,",
+    "is joint success, and": "signifie succès conjoint, et",
+    "is the straight-line nominal called “Line” elsewhere on this page.": "est le nominal en ligne droite appelé « Line » ailleurs sur cette page.",
+    "Methodology": "Méthodologie",
+    "Open the calibration protocol, full ranking, and limits": "Ouvrir le protocole de calibration, le classement complet et les limites",
+    "Coefficients are searched in three stages — a broad Latin Hypercube sweep, a refined search recentered on the best region, then a tighter final D3.2 search — over seven parameters: attraction and damping gains, mobile/static/border repulsion, perception radius, and lookahead time. A scenario with a collision-free rate under 15% after Broad is quarantined from scoring but kept running, and is reinstated once it clears 50% then 80%. Nine pairs use the": "Les coefficients sont recherchés en trois étapes — un balayage Latin Hypercube large, une recherche affinée recentrée sur la meilleure région, puis une recherche finale D3.2 plus resserrée — sur sept paramètres : gains d’attraction et d’amortissement, répulsions mobile/statique/bords, rayon de perception et temps de lookahead. Un scénario dont le taux sans collision est inférieur à 15 % après Broad est mis en quarantaine du score mais continue d’être exécuté, puis réintégré une fois qu’il atteint 50 % puis 80 %. Neuf couples utilisent le budget",
+    "budget; the three Line-based pairs use": "; les trois couples fondés sur Line utilisent",
+    ", giving Line more sampled profiles in its D3.2 zone (900 versus 400).": ", ce qui donne à Line plus de profils échantillonnés dans sa zone D3.2 (900 contre 400).",
+    "Pair": "Couple",
+    "Zone: safe / target / joint": "Zone : sûr / cible / conjoint",
+    "Top 4: safe / target / joint": "Top 4 : sûr / cible / conjoint",
+    "Joint, calib.": "Conjoint, calib.",
+    "Joint, held-out": "Conjoint, hors cal.",
+    "Duration": "Durée",
+    "These percentages are frequencies over a finite set of profiles and scenarios, not probabilities with a confidence interval — each pair is evaluated once, not repeated across independent random seeds. Full Newton's low joint success reflects a progression failure (safe but far from the goal), not primarily a safety failure; Jones controllers trade the opposite way, converting more of their safety margin into unsafe events through a very stiff 1/d¹³ repulsion law.": "Ces pourcentages sont des fréquences sur un ensemble fini de profils et de scénarios, pas des probabilités assorties d’un intervalle de confiance — chaque couple est évalué une seule fois, sans répétition sur plusieurs graines aléatoires indépendantes. Le faible succès conjoint de Full Newton traduit surtout un défaut de progression (sûr mais loin de la cible), pas principalement un défaut de sécurité ; les contrôleurs Jones échangent l’inverse, convertissant une part de leur marge de sécurité en événements non sûrs à cause d’une loi de répulsion en 1/d¹³ très raide.",
+    "Open the full report (PDF, French)": "Ouvrir le rapport complet (PDF, en français)",
     "Evidence": "Résultats",
     "What is actually validated?": "Qu’est-ce qui est réellement validé ?",
     "Every claim is tagged by evidence level. Simulation, software tests, measured motion, and complete physical validation are not interchangeable.": "Chaque affirmation est associée à un niveau de preuve. Simulation, tests logiciels, mouvement mesuré et validation physique complète ne sont pas interchangeables.",
     "Physical": "Physique",
     "complete in tested domain": "complet dans le domaine testé",
-    "Fixed-obstacle avoidance": "Évitement d’obstacle fixe",
-    "Two final runs, opposite directions, safe stop and target reached.": "Deux essais finaux, dans des directions opposées, arrêt sûr et objectif atteint.",
     "complete": "complet",
     "Metric perception chain": "Chaîne de perception métrique",
     "Camera, homography, ArUco tracking, coordinates, and control connected.": "Caméra, homographie, suivi ArUco, coordonnées et commande connectés.",
-    "demonstrated": "démontré",
-    "Dynamic & multi-agent cases": "Cas dynamiques et multi-agents",
-    "Causal local correction evaluated with fixed and moving agents.": "Correction locale causale évaluée avec des agents fixes et mobiles.",
     "partial": "partiel",
-    "Moving-agent avoidance": "Évitement d’agent mobile",
-    "Detection, commands, and safety stop work; full arrival remains open.": "La détection, les commandes et l’arrêt de sécurité fonctionnent ; l’arrivée complète reste à démontrer.",
-    "The strongest proof is repeatable, bidirectional, and measured.": "La preuve la plus solide est répétable, bidirectionnelle et mesurée.",
-    "The rover followed a curved nominal trajectory around a fixed obstacle in both directions. Both trials reached the target and ended with a safe stop.": "Le rover a suivi une trajectoire nominale incurvée autour d’un obstacle fixe dans les deux directions. Les deux essais ont atteint l’objectif et se sont terminés par un arrêt sûr.",
-    "successful final runs": "essais finaux réussis",
-    "mean orientation RMSE": "RMSE d’orientation moyenne",
-    "lost ArUco detections": "détections ArUco perdues",
-    "Trial 15": "Essai 15",
-    "Forward": "Aller",
-    "Trial 14": "Essai 14",
-    "Return": "Retour",
-    "Smooth tracking": "Suivi lisse",
     "Measured evidence": "Résultats mesurés",
-    "forward fixed-obstacle run": "essai aller avec obstacle fixe",
-    "return fixed-obstacle run": "essai retour avec obstacle fixe",
+    "Multi-agent simulation": "Simulation multi-agents",
+    "6 independent agents": "6 agents indépendants",
+    "Every robot runs its own collision-avoidance brain.": "Chaque robot exécute son propre cerveau d’évitement de collision.",
+    "This scenario runs the same causal correction algorithm independently inside all six agents at once, with no central coordinator. The physical trials above tested one rover; this simulation shows the same local logic scales to a decentralized multi-robot swarm.": "Ce scénario exécute le même algorithme de correction causale indépendamment dans chacun des six agents à la fois, sans coordinateur central. Les essais physiques ci-dessus n’ont testé qu’un seul rover ; cette simulation montre que la même logique locale s’étend à un essaim multi-robots décentralisé.",
+    "independent agents": "agents indépendants",
+    "minimum Newton-phase clearance": "dégagement minimal en phase Newton",
+    "max final gap to target": "écart final maximal à la cible",
+    "6-robot decentralized anti-collision": "Anti-collision décentralisée à 6 robots",
     "Experimental layer": "Couche expérimentale",
     "Open the validation matrix and metric scope": "Ouvrir la matrice de validation et le périmètre des métriques",
     "Capability": "Capacité",
@@ -151,29 +238,19 @@
     "Software tests + simulation": "Tests logiciels + simulation",
     "Validated": "Validé",
     "2D scenarios in repository": "Scénarios 2D du dépôt",
-    "Fixed-obstacle physical tracking": "Suivi physique avec obstacle fixe",
-    "Trials 14–15": "Essais 14–15",
     "Documented arena and profiles": "Arène et profils documentés",
-    "Smooth continuous tracking": "Suivi continu lisse",
-    "Trials 29–30": "Essais 29–30",
-    "Quasi-straight segments, no obstacle": "Segments quasi rectilignes, sans obstacle",
-    "Causal moving-agent correction": "Correction causale d’agent mobile",
-    "Simulation + physical integration": "Simulation + intégration physique",
     "Partial": "Partiel",
-    "No complete physical arrival": "Aucune arrivée physique complète",
-    "Multi-agent avoidance": "Évitement multi-agents",
     "Simulation": "Simulation",
     "Not physically demonstrated": "Non démontré physiquement",
     "Aerial drone deployment": "Déploiement de drone aérien",
     "None": "Aucune",
     "Not claimed": "Non revendiqué",
     "Physical platform is a rover": "La plateforme physique est un rover",
-    "The smooth-tracking metrics (0.283 cm mean lateral RMSE; 0.985 cm mean final error) come from a separate obstacle-free experiment and are intentionally not merged with the fixed-obstacle KPI.": "Les métriques de suivi lisse (RMSE latérale moyenne de 0,283 cm ; erreur finale moyenne de 0,985 cm) proviennent d’une expérience distincte sans obstacle et ne sont volontairement pas fusionnées avec l’indicateur de l’obstacle fixe.",
     "Physical system": "Système physique",
     "Pixels become meters.": "Les pixels deviennent des mètres.",
     "Meters become motion.": "Les mètres deviennent du mouvement.",
     "The experimental chain closes the loop between planning, perception, wheel commands, and measured trajectory error.": "La chaîne expérimentale ferme la boucle entre planification, perception, commandes des roues et erreur de trajectoire mesurée.",
-    "Temporary setup photograph": "Photographie temporaire de l’installation",
+    "Overhead camera feed, raw and annotated": "Flux de la caméra zénithale, brut et annoté",
     "Basler camera": "Caméra Basler",
     "monochrome frames": "images monochromes",
     "pixel coordinates → arena coordinates": "coordonnées pixel → coordonnées de l’arène",
@@ -190,23 +267,14 @@
     "Annotated preflight frame": "Image de prévol annotée",
     "The experiment, at a glance": "L’expérience en un coup d’œil",
     "A complete visual system,": "Un système visuel complet,",
-    "ready for the final footage.": "prêt pour les images finales.",
-    "Temporary assets already use their final filenames. Replace a file with the real shot and the page updates without layout changes.": "Les médias temporaires utilisent déjà leurs noms de fichiers finaux. Remplacez un fichier par la prise réelle et la page se met à jour sans changement de mise en page.",
-    "Full fixed-obstacle run": "Essai complet avec obstacle fixe",
+    "captured from the arena.": "capturé depuis l’arène.",
+    "Video, photographs, and simulation renders spanning the perception, control, and hardware chain — from raw camera frames to the rover in the arena.": "Vidéos, photographies et rendus de simulation couvrant la chaîne de perception, de commande et matérielle — des images brutes de la caméra jusqu’au rover dans l’arène.",
     "Rover + fiducial marker": "Rover + marqueur fiduciaire",
     "Software-to-hardware chain": "Chaîne logiciel-matériel",
     "Metric ArUco tracking": "Suivi ArUco métrique",
     "Nominal to causal correction": "Du nominal à la correction causale",
     "Screen-to-rover handoff": "Transfert de l’écran au rover",
     "Current boundary": "Limites actuelles",
-    "Validated where measured.": "Validé là où c’est mesuré.",
-    "Explicit where incomplete.": "Explicite là où c’est incomplet.",
-    "Moving-agent completion": "Finalisation avec agent mobile",
-    "The rover receives corrected commands and can stop safely, but a repeatable full avoidance run to the goal is still required.": "Le rover reçoit des commandes corrigées et peut s’arrêter en sécurité, mais un évitement complet et reproductible jusqu’à l’objectif reste nécessaire.",
-    "Multi-agent transfer": "Transfert multi-agents",
-    "Multi-agent behavior is demonstrated in simulation only. Physical deployment would require synchronized state estimation and repeated trials.": "Le comportement multi-agents est démontré uniquement en simulation. Un déploiement physique nécessiterait une estimation d’état synchronisée et des essais répétés.",
-    "Benchmark breadth": "Étendue du benchmark",
-    "Solver timing comparisons remain exploratory. A larger, frozen scenario suite is needed for a general performance claim.": "Les comparaisons de temps des solveurs restent exploratoires. Un ensemble de scénarios plus vaste et figé est nécessaire pour une affirmation générale de performance.",
     "People & context": "Personnes et contexte",
     "A research project built": "Un projet de recherche construit",
     "between France and Singapore.": "entre la France et Singapour.",
@@ -217,6 +285,8 @@
     "Technical guidance and internship supervision.": "Accompagnement technique et supervision de stage.",
     "Research supervisor": "Directeur de recherche",
     "Research direction and original project supervision.": "Direction scientifique et supervision du projet initial.",
+    "Research advisor": "Conseiller scientifique",
+    "Scientific contributions, technical exchanges, and guidance throughout the project, alongside Prof. Francisco Chinesta.": "Contributions scientifiques, échanges techniques et accompagnement tout au long du projet, en collaboration avec le Pr Francisco Chinesta.",
     "Personal website": "Site personnel",
     "January 2026": "Janvier 2026",
     "Research initiated": "Recherche initiée",
@@ -224,7 +294,7 @@
     "Summer 2026": "Été 2026",
     "Physical integration": "Intégration physique",
     "Camera, rover control, experimental campaigns, and validation at CNRS@CREATE.": "Caméra, commande du rover, campagnes expérimentales et validation au CNRS@CREATE.",
-    "August 1, 2026": "1er août 2026",
+    "Late August 2026": "Fin août 2026",
     "Research showcase": "Vitrine de recherche",
     "A concise record of the method, evidence, and remaining boundary.": "Un aperçu concis de la méthode, des preuves et des limites restantes.",
     "Trajectory Optimization": "Optimisation de trajectoire",
@@ -270,18 +340,25 @@
       ".menu-button .sr-only": { textContent: language === "fr" ? "Afficher la navigation" : "Toggle navigation" },
       "[data-nav]": { "aria-label": language === "fr" ? "Navigation principale" : "Primary navigation" },
       ".language-switcher": { "aria-label": language === "fr" ? "Sélecteur de langue" : "Language selector" },
-      ".hero-media video": { "aria-label": language === "fr" ? "Aperçu conceptuel d’un rover contournant un obstacle fixe" : "Concept preview of a rover curving around a fixed obstacle" },
+      ".hero-media video": { "aria-label": language === "fr" ? "Rover mère dans l’arène d’essai, aux côtés des rovers parasites et des obstacles fixes" : "Mother rover in the test arena, alongside parasite rovers and fixed obstacles" },
       ".metrics-strip": { "aria-label": language === "fr" ? "Indicateurs clés de validation" : "Key validation metrics" },
       ".solver-table": { "aria-label": language === "fr" ? "Comparaison des solveurs" : "Solver comparison" },
-      ".trial-tabs": { "aria-label": language === "fr" ? "Sélectionner une figure de validation" : "Select validation figure" },
-      ".trial-video-pair": { "aria-label": language === "fr" ? "Emplacements vidéo temporaires des essais finaux 14 et 15" : "Temporary video slots for final trials 14 and 15" },
-      ".system-photo img": { alt: language === "fr" ? "Aperçu conceptuel de la caméra zénithale et de l’arène d’essai du rover" : "Concept preview of the overhead camera and rover test arena" },
+      "#validation .trial-tabs": { "aria-label": language === "fr" ? "Sélectionner une figure de validation" : "Select validation figure" },
+      "#calibration .trial-tabs": { "aria-label": language === "fr" ? "Sélectionner une figure de calibration" : "Select calibration figure" },
+      ".calibration-stats": { "aria-label": language === "fr" ? "Périmètre de la campagne de calibration" : "Calibration campaign scope" },
+      ".trial-video-pair": { "aria-label": language === "fr" ? "Enregistrements vidéo des essais physiques anti-collision" : "Video recordings of the physical anti-collision runs" },
+      ".sim-spotlight": { "aria-label": language === "fr" ? "Simulation d’anti-collision à six agents" : "Six-agent anti-collision simulation" },
       ".tracking-panel img": { alt: language === "fr" ? "Image caméra annotée montrant les marqueurs ArUco dans l’arène d’essai du rover" : "Annotated camera frame showing ArUco markers in the rover test arena" },
+      ".media-video-row .tracking-pair img:nth-child(1)": { alt: language === "fr" ? "Image brute de la caméra zénithale de l’arène du rover" : "Raw overhead camera frame of the rover arena" },
+      ".media-video-row .tracking-pair img:nth-child(2)": { alt: language === "fr" ? "Même image avec les identifiants et coordonnées de suivi ArUco annotés" : "Same frame with ArUco tracking IDs and coordinates annotated" },
+      ".system-photo .tracking-pair img:nth-child(1)": { alt: language === "fr" ? "Image brute de la caméra zénithale de l’arène du rover et de l’obstacle" : "Raw overhead camera frame of the rover and obstacle arena" },
+      ".system-photo .tracking-pair img:nth-child(2)": { alt: language === "fr" ? "Même image avec les identifiants ArUco, coordonnées et homographie superposés" : "Same frame with ArUco tracking IDs, coordinates, and homography overlaid" },
       ".institution-logos": { "aria-label": language === "fr" ? "Institutions partenaires" : "Partner institutions" },
       ".team-grid article:nth-child(1) .team-link": { "aria-label": language === "fr" ? "Visiter le portfolio de Slimane Aouanouk (s’ouvre dans un nouvel onglet)" : "Visit Slimane Aouanouk's portfolio (opens in a new tab)" },
       ".team-grid article:nth-child(2) .team-link": { "aria-label": language === "fr" ? "Visiter le profil LinkedIn de Mathis Benchikh (s’ouvre dans un nouvel onglet)" : "Visit Mathis Benchikh's LinkedIn profile (opens in a new tab)" },
       ".team-grid article:nth-child(3) .team-link": { "aria-label": language === "fr" ? "Visiter le site personnel d’Amine Ammar (s’ouvre dans un nouvel onglet)" : "Visit Amine Ammar's personal website (opens in a new tab)" },
-      ".team-grid article:nth-child(4) .team-link": { "aria-label": language === "fr" ? "Visiter le profil ResearchGate du Pr Francisco Chinesta (s’ouvre dans un nouvel onglet)" : "Visit Prof. Francisco Chinesta's ResearchGate profile (opens in a new tab)" }
+      ".team-grid article:nth-child(4) .team-link": { "aria-label": language === "fr" ? "Visiter le profil ResearchGate du Pr Francisco Chinesta (s’ouvre dans un nouvel onglet)" : "Visit Prof. Francisco Chinesta's ResearchGate profile (opens in a new tab)" },
+      ".team-grid article:nth-child(5) .team-link": { "aria-label": language === "fr" ? "Visiter le profil LinkedIn de Sebastian Rodriguez Iturra (s’ouvre dans un nouvel onglet)" : "Visit Sebastian Rodriguez Iturra's LinkedIn profile (opens in a new tab)" }
     };
 
     Object.entries(values).forEach(([selector, attributes]) => {
@@ -421,36 +498,38 @@
     step.addEventListener("click", () => setPipelineStep(Number(step.dataset.step)));
   });
 
-  const trialTabs = [...document.querySelectorAll("[data-figure]")];
-  const validationFigure = document.querySelector("[data-validation-figure]");
-  const figureCaption = document.querySelector("[data-figure-caption]");
+  document.querySelectorAll("[data-tabs]").forEach((scope) => {
+    const tabs = [...scope.querySelectorAll("[data-figure]")];
+    const figureEl = scope.querySelector("[data-validation-figure]");
+    const captionEl = scope.querySelector("[data-figure-caption]");
 
-  const selectFigure = (button) => {
-    trialTabs.forEach((tab) => {
-      const isActive = tab === button;
-      tab.classList.toggle("is-active", isActive);
-      tab.setAttribute("aria-selected", String(isActive));
-      tab.tabIndex = isActive ? 0 : -1;
-    });
-    if (!validationFigure) return;
-    validationFigure.classList.add("is-changing");
-    window.setTimeout(() => {
-      validationFigure.src = button.dataset.figure ?? "";
-      validationFigure.alt = button.dataset.alt ?? "Validation figure";
-      if (figureCaption) figureCaption.textContent = button.dataset.caption ?? "";
-      validationFigure.classList.remove("is-changing");
-    }, reducedMotion ? 0 : 160);
-  };
+    const selectFigure = (button) => {
+      tabs.forEach((tab) => {
+        const isActive = tab === button;
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-selected", String(isActive));
+        tab.tabIndex = isActive ? 0 : -1;
+      });
+      if (!figureEl) return;
+      figureEl.classList.add("is-changing");
+      window.setTimeout(() => {
+        figureEl.src = button.dataset.figure ?? "";
+        figureEl.alt = button.dataset.alt ?? "Validation figure";
+        if (captionEl) captionEl.textContent = button.dataset.caption ?? "";
+        figureEl.classList.remove("is-changing");
+      }, reducedMotion ? 0 : 160);
+    };
 
-  trialTabs.forEach((button, index) => {
-    button.addEventListener("click", () => selectFigure(button));
-    button.addEventListener("keydown", (event) => {
-      if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
-      event.preventDefault();
-      const direction = event.key === "ArrowRight" ? 1 : -1;
-      const nextIndex = (index + direction + trialTabs.length) % trialTabs.length;
-      trialTabs[nextIndex].focus();
-      selectFigure(trialTabs[nextIndex]);
+    tabs.forEach((button, index) => {
+      button.addEventListener("click", () => selectFigure(button));
+      button.addEventListener("keydown", (event) => {
+        if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+        event.preventDefault();
+        const direction = event.key === "ArrowRight" ? 1 : -1;
+        const nextIndex = (index + direction + tabs.length) % tabs.length;
+        tabs[nextIndex].focus();
+        selectFigure(tabs[nextIndex]);
+      });
     });
   });
 
