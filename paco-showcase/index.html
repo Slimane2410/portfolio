@@ -46,6 +46,7 @@
 
         <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation" data-nav>
           <a href="#method">Method</a>
+          <a href="#calibration">Calibration</a>
           <a href="#validation">Validation</a>
           <a href="#system">System</a>
           <a href="#team">Team</a>
@@ -58,7 +59,7 @@
             <button type="button" data-language="fr" aria-pressed="false">FR</button>
           </div>
           <a class="header-status" href="#validation">
-            <span></span> Fixed-obstacle validated
+            <span></span> Anti-collision validated
           </a>
         </div>
       </div>
@@ -94,46 +95,38 @@
               loop
               playsinline
               poster="assets/images/fixed_obstacle_geometry_v01.jpg"
-              aria-label="Concept preview of a rover curving around a fixed obstacle"
+              aria-label="Mother rover in the test arena, alongside parasite rovers and fixed obstacles"
             >
               <source src="assets/video/hero_rover_curve_v01.mp4" type="video/mp4" />
             </video>
             <div class="media-shade"></div>
             <figcaption class="media-caption">
-              <span class="concept-label">Concept preview</span>
-              <span>Temporary media · replace with trial 15 footage</span>
+              <span class="evidence-label">Field footage</span>
+              <span>Mother rover in the test arena, alongside parasite rovers and fixed obstacles</span>
             </figcaption>
-            <div class="trajectory-overlay" aria-hidden="true">
-              <svg viewBox="0 0 620 660" preserveAspectRatio="none">
-                <path class="trajectory-ghost" d="M95 570 C145 420 178 340 308 310 C425 285 450 160 540 88" />
-                <path class="trajectory-live" d="M95 570 C145 420 178 340 308 310 C425 285 450 160 540 88" />
-                <circle cx="95" cy="570" r="7" />
-                <circle class="goal-dot" cx="540" cy="88" r="8" />
-              </svg>
-            </div>
           </figure>
         </div>
 
         <div class="container metrics-strip reveal" aria-label="Key validation metrics">
           <article>
-            <strong><span data-count="1.163">1.163</span><small> cm</small></strong>
-            <p>Mean lateral RMSE</p>
-            <span>fixed-obstacle trials</span>
+            <strong><span data-count="21">21</span><small>/23</small></strong>
+            <p>Runs reaching the goal</p>
+            <span>with moving robots in the arena</span>
           </article>
           <article>
-            <strong><span data-count="3.282">3.282</span><small> cm</small></strong>
+            <strong><span data-count="7.12">7.12</span><small> cm</small></strong>
             <p>Mean final error</p>
-            <span>two directions</span>
+            <span>across those runs</span>
           </article>
           <article>
-            <strong><span data-count="12.299">12.299</span><small> cm</small></strong>
-            <p>Worst real clearance</p>
-            <span>positive safety margin</span>
+            <strong><span data-count="9">9</span><small>/9</small></strong>
+            <p>Two-agent runs</p>
+            <span>two moving robots at once</span>
           </article>
           <article>
-            <strong><span data-count="342">342</span><small>/342</small></strong>
-            <p>ArUco detections</p>
-            <span>across final trials</span>
+            <strong><span data-count="99.95">99.95</span><small> %</small></strong>
+            <p>ArUco detection</p>
+            <span>over 5,688 logged frames</span>
           </article>
         </div>
       </section>
@@ -270,7 +263,7 @@
             <span>Important distinction</span>
             <p>
               “Newton” refers here to <strong>Newtonian force dynamics</strong> used by the local corrector.
-              It is not Newton–Raphson optimization. The physical fixed-obstacle trials followed the nominal trajectory with a differential-wheel controller.
+              It is not Newton–Raphson optimization. In the physical runs this corrector is what steers the rover around moving robots and fixed obstacles, on top of a differential-wheel controller.
             </p>
           </aside>
 
@@ -355,11 +348,118 @@
         </div>
       </section>
 
+      <section id="calibration" class="calibration section" aria-labelledby="calibration-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="section-index">05 <span></span> Auto-calibration campaign</div>
+              <h2 id="calibration-title">Twelve pairs, calibrated<br />separately, at scale.</h2>
+            </div>
+            <p>
+              Each of the four nominal generators above pairs with three causal controllers. Every pair searches its own seven-coefficient space — never inheriting another pair's gains — then is compared under one criterion: safe and within 10 cm of the goal. A companion report covers the full protocol; this section summarizes its five figures.
+            </p>
+          </div>
+
+          <div class="metrics-strip calibration-stats reveal" aria-label="Calibration campaign scope">
+            <article>
+              <strong>12</strong>
+              <p>Solver × controller pairs</p>
+              <span>4 nominal generators, 3 causal controllers</span>
+            </article>
+            <article>
+              <strong>367,374</strong>
+              <p>Planned runs</p>
+              <span>across the 12 campaigns</span>
+            </article>
+            <article>
+              <strong>100,800</strong>
+              <p>Final-zone D3.2 runs</p>
+              <span>6,300 profiles × 16 scenarios</span>
+            </article>
+            <article>
+              <strong>77h 32min</strong>
+              <p>Cumulative campaign time</p>
+              <span>if run sequentially</span>
+            </article>
+          </div>
+
+          <div class="evidence-feature calibration-feature reveal" data-tabs>
+            <div class="evidence-copy">
+              <p class="eyebrow"><span>Joint success</span> · safe and ≤ 10 cm from target</p>
+              <h3>SciPy leads both readings; Full Newton stays safe but rarely arrives.</h3>
+              <p>
+                Across the full D3.2 zone, SciPy + Initial leads with 50.84% joint success. Restricted to each pair's top 4 profiles and widened to 10 held-out scenarios, SciPy + Verlet edges ahead at 65.38%. Full Newton — the ablation with no nominal phase at all — reaches up to 96% collision-free runs and as little as 3.85% joint success: it stays safe by stalling short of the goal, not by reaching it.
+              </p>
+              <dl class="evidence-stats">
+                <div><dt>50.84%</dt><dd>best full-zone joint success · SciPy + Initial</dd></div>
+                <div><dt>65.38%</dt><dd>best top-4 joint success · SciPy + Verlet</dd></div>
+                <div><dt>3.85%</dt><dd>Full Newton + Initial/Verlet, despite 96% safety</dd></div>
+              </dl>
+              <div class="trial-tabs" role="tablist" aria-label="Select calibration figure">
+                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/calibration_final_zone_rates.png" data-alt="Bar chart of safe, target-reached, and joint-success rates for all D3.2 profiles per solver-controller pair" data-caption="Full D3.2 zone · all profiles per pair · 16 calibration scenarios">Full zone</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_top4_rates.png" data-alt="Bar chart of safe, target-reached, and joint-success rates for the top 4 profiles per pair" data-caption="Top 4 profiles per pair · 26 scenarios, 16 calibration plus 10 held-out">Top 4</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_outcome_decomposition.png" data-alt="Horizontal stacked bars decomposing top-4 outcomes into complete success, safe but off-target, and unsafe" data-caption="Exclusive outcome shares for the top-4 runs · complete success, safe but off-target, unsafe">Outcome breakdown</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_generalization.png" data-alt="Scatter plot comparing top-4 joint success on calibration scenarios versus held-out scenarios" data-caption="Top-4 joint success on the 16 calibration scenarios versus the 10 held-out scenarios">Generalization</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_threshold_sensitivity.png" data-alt="Line chart of top-4 joint success as the target tolerance relaxes from 0 to 100 centimeters" data-caption="Top-4 joint success as the target tolerance relaxes from 0 to 100 cm">Threshold sensitivity</button>
+              </div>
+            </div>
+            <figure class="evidence-figure">
+              <div class="evidence-image-shell">
+                <img data-validation-figure src="assets/figures/calibration_final_zone_rates.png" alt="Bar chart of safe, target-reached, and joint-success rates for all D3.2 profiles per solver-controller pair" />
+              </div>
+              <figcaption><span class="evidence-label">Repository evidence</span><span data-figure-caption>Full D3.2 zone · all profiles per pair · 16 calibration scenarios</span></figcaption>
+            </figure>
+          </div>
+
+          <aside class="naming-note reveal">
+            <span>Reading the figures</span>
+            <p>
+              Axis and legend labels are in French, matching the source report: <strong>Sans collision</strong> is safe, <strong>Cible</strong> is target-reached, <strong>Succès conjoint</strong> is joint success, and <strong>Ligne</strong> is the straight-line nominal called “Line” elsewhere on this page.
+            </p>
+          </aside>
+
+          <details class="technical-disclosure evidence-disclosure reveal">
+            <summary>
+              <span><small>Methodology</small> Open the calibration protocol, full ranking, and limits</span>
+              <i aria-hidden="true"></i>
+            </summary>
+            <p class="scope-note">
+              Coefficients are searched in three stages — a broad Latin Hypercube sweep, a refined search recentered on the best region, then a tighter final D3.2 search — over seven parameters: attraction and damping gains, mobile/static/border repulsion, perception radius, and lookahead time. A scenario with a collision-free rate under 15% after Broad is quarantined from scoring but kept running, and is reinstated once it clears 50% then 80%. Nine pairs use the <code>long</code> budget; the three Line-based pairs use <code>very_long</code>, giving Line more sampled profiles in its D3.2 zone (900 versus 400).
+            </p>
+            <div class="matrix-wrap">
+              <table class="validation-matrix">
+                <thead><tr><th>Pair</th><th>Budget</th><th>n zone</th><th>Zone: safe / target / joint</th><th>Top 4: safe / target / joint</th><th>Joint, calib.</th><th>Joint, held-out</th><th>Duration</th></tr></thead>
+                <tbody>
+                  <tr><td>SciPy + Verlet</td><td>long</td><td>400</td><td>72.44 / 57.61 / 48.30</td><td>76.92 / 69.23 / <b>65.38</b></td><td>62.50</td><td>70.00</td><td>18h 47m</td></tr>
+                  <tr><td>SciPy + Initial</td><td>long</td><td>400</td><td>72.62 / 64.94 / <b>50.84</b></td><td>80.77 / 72.12 / 63.46</td><td>59.38</td><td>70.00</td><td>18h 28m</td></tr>
+                  <tr><td>Line + Initial</td><td>very_long</td><td>900</td><td>77.89 / 49.30 / 39.38</td><td>88.46 / 52.88 / 48.08</td><td>46.88</td><td>50.00</td><td>0h 50m</td></tr>
+                  <tr><td>Euler–Lagrange + Verlet</td><td>long</td><td>400</td><td>62.50 / 50.00 / 37.50</td><td>65.38 / 55.77 / 42.31</td><td>37.50</td><td>50.00</td><td>5h 53m</td></tr>
+                  <tr><td>Euler–Lagrange + Initial</td><td>long</td><td>400</td><td>63.83 / 44.72 / 30.25</td><td>68.27 / 41.35 / 31.73</td><td>23.44</td><td>45.00</td><td>5h 33m</td></tr>
+                  <tr><td>Line + Verlet</td><td>very_long</td><td>900</td><td>77.95 / 33.69 / 29.95</td><td>84.62 / 30.77 / 29.81</td><td>20.31</td><td>45.00</td><td>1h 25m</td></tr>
+                  <tr><td>Line + Jones</td><td>very_long</td><td>900</td><td>77.19 / 18.65 / 18.51</td><td>74.04 / 22.12 / 20.19</td><td>18.75</td><td>22.50</td><td>0h 53m</td></tr>
+                  <tr><td>SciPy + Jones</td><td>long</td><td>400</td><td>37.23 / 42.33 / 11.30</td><td>49.04 / 41.35 / 18.27</td><td>10.94</td><td>30.00</td><td>18h 28m</td></tr>
+                  <tr><td>Euler–Lagrange + Jones</td><td>long</td><td>400</td><td>43.27 / 33.66 / 5.33</td><td>53.85 / 37.50 / 16.35</td><td>6.25</td><td>32.50</td><td>5h 30m</td></tr>
+                  <tr><td>Full Newton + Jones</td><td>long</td><td>400</td><td><b>89.69</b> / 6.19 / 5.97</td><td>90.38 / 9.62 / 9.62</td><td>6.25</td><td>15.00</td><td>0h 31m</td></tr>
+                  <tr><td>Full Newton + Initial</td><td>long</td><td>400</td><td>85.80 / 22.58 / 16.38</td><td><b>96.15</b> / 7.69 / 3.85</td><td>6.25</td><td>0.00</td><td>0h 29m</td></tr>
+                  <tr><td>Full Newton + Verlet</td><td>long</td><td>400</td><td>85.14 / 21.83 / 15.56</td><td><b>96.15</b> / 7.69 / 3.85</td><td>6.25</td><td>0.00</td><td>0h 45m</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="scope-note">
+              These percentages are frequencies over a finite set of profiles and scenarios, not probabilities with a confidence interval — each pair is evaluated once, not repeated across independent random seeds. Full Newton's low joint success reflects a progression failure (safe but far from the goal), not primarily a safety failure; Jones controllers trade the opposite way, converting more of their safety margin into unsafe events through a very stiff 1/d¹³ repulsion law.
+            </p>
+            <p class="scope-note">
+              <a class="text-link" href="assets/reports/rapport_comparaison_solveurs_controleurs.pdf" target="_blank" rel="noopener noreferrer">Open the full report (PDF, French) <span aria-hidden="true">↗</span></a>
+            </p>
+          </details>
+        </div>
+      </section>
+
       <section id="validation" class="validation section" aria-labelledby="validation-title">
         <div class="container">
           <div class="section-head reveal">
             <div>
-              <div class="section-index">05 <span></span> Evidence</div>
+              <div class="section-index">06 <span></span> Evidence</div>
               <h2 id="validation-title">What is actually validated?</h2>
             </div>
             <p>
@@ -370,60 +470,83 @@
           <div class="validation-status-grid reveal">
             <article class="validation-status status-complete">
               <span class="status-icon">✓</span>
-              <div><small>Physical · complete in tested domain</small><h3>Fixed-obstacle avoidance</h3><p>Two final runs, opposite directions, safe stop and target reached.</p></div>
+              <div><small>Physical · validated</small><h3>Moving-agent avoidance</h3><p>The rover detects moving robots, deviates around them, and still reaches its goal.</p></div>
+            </article>
+            <article class="validation-status status-complete">
+              <span class="status-icon">✓</span>
+              <div><small>Physical · validated</small><h3>Fixed-obstacle avoidance</h3><p>Fixed columns avoided in the same runs, with the same causal corrector.</p></div>
             </article>
             <article class="validation-status status-complete">
               <span class="status-icon">✓</span>
               <div><small>Physical · complete</small><h3>Metric perception chain</h3><p>Camera, homography, ArUco tracking, coordinates, and control connected.</p></div>
             </article>
-            <article class="validation-status status-sim">
-              <span class="status-icon">S</span>
-              <div><small>Simulation · demonstrated</small><h3>Dynamic &amp; multi-agent cases</h3><p>Causal local correction evaluated with fixed and moving agents.</p></div>
-            </article>
             <article class="validation-status status-partial">
               <span class="status-icon">↗</span>
-              <div><small>Physical · partial</small><h3>Moving-agent avoidance</h3><p>Detection, commands, and safety stop work; full arrival remains open.</p></div>
+              <div><small>Partial · in progress</small><h3>Predictive digital twin</h3><p>The twin predicts arrival well, but not yet the full path taken.</p></div>
             </article>
           </div>
 
-          <div class="evidence-feature reveal">
+          <div class="evidence-feature reveal" data-tabs>
             <div class="evidence-copy">
-              <p class="eyebrow"><span>Trials 14 &amp; 15</span> · July 15, 2026</p>
-              <h3>The strongest proof is repeatable, bidirectional, and measured.</h3>
+              <p class="eyebrow"><span>Anti-collision campaign</span> · July 30, 2026</p>
+              <h3>The rover now avoids moving robots — and still arrives.</h3>
               <p>
-                The rover followed a curved nominal trajectory around a fixed obstacle in both directions. Both trials reached the target and ended with a safe stop.
+                Across the final campaign the rover shared its arena with one or two independently moving robots plus fixed columns. It leaves its nominal path to open a gap, then closes back onto the goal. Every run below is a physical run, logged frame by frame.
               </p>
               <dl class="evidence-stats">
-                <div><dt>2 / 2</dt><dd>successful final runs</dd></div>
-                <div><dt>6.291°</dt><dd>mean orientation RMSE</dd></div>
-                <div><dt>0</dt><dd>lost ArUco detections</dd></div>
+                <div><dt>21 / 23</dt><dd>runs reached the goal with moving agents present</dd></div>
+                <div><dt>7.1 cm</dt><dd>mean final distance to target (max 7.9)</dd></div>
+                <div><dt>9 / 9</dt><dd>runs with two simultaneous moving agents</dd></div>
               </dl>
               <div class="trial-tabs" role="tablist" aria-label="Select validation figure">
-                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/trial_15_forward_metrics.png" data-alt="Trial 15 forward run validation charts" data-caption="Trial 15 · forward fixed-obstacle run · measured data">Trial 15 · Forward</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/trial_14_return_metrics.png" data-alt="Trial 14 return run validation charts" data-caption="Trial 14 · return fixed-obstacle run · measured data">Trial 14 · Return</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/smooth_tracking_comparison.png" data-alt="Comparison between stop-and-turn and smooth tracking" data-caption="Separate smooth quasi-straight tracking experiment">Smooth tracking</button>
+                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/anticollision_single_agent.png" data-alt="Arena view and clearance timeline for a physical run avoiding one moving agent" data-caption="One moving agent crossing the path · measured vs simulated · goal reached">One moving agent</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/anticollision_dual_agent.png" data-alt="Arena view and clearance timeline for a physical run avoiding two moving agents" data-caption="Two simultaneous moving agents · measured vs simulated · goal reached">Two moving agents</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/anticollision_twin_vs_real.png" data-alt="Scatter plot comparing simulated and measured final distance to goal across 21 paired runs" data-caption="Simulated versus measured arrival point across 21 paired runs">Digital twin</button>
               </div>
             </div>
             <figure class="evidence-figure">
               <div class="evidence-image-shell">
-                <img data-validation-figure src="assets/figures/trial_15_forward_metrics.png" alt="Trial 15 forward run validation charts" />
+                <img data-validation-figure src="assets/figures/anticollision_single_agent.png" alt="Arena view and clearance timeline for a physical run avoiding one moving agent" />
               </div>
-              <figcaption><span class="evidence-label">Measured evidence</span><span data-figure-caption>Trial 15 · forward fixed-obstacle run · measured data</span></figcaption>
+              <figcaption><span class="evidence-label">Measured evidence</span><span data-figure-caption>One moving agent crossing the path · measured vs simulated · goal reached</span></figcaption>
             </figure>
           </div>
 
-          <div class="trial-video-pair reveal" aria-label="Temporary video slots for final trials 14 and 15">
+          <div class="trial-video-pair reveal" aria-label="Video recordings of the physical anti-collision runs">
             <figure>
               <video controls muted playsinline poster="assets/images/fixed_obstacle_geometry_v01.jpg">
-                <source src="assets/video/validation_trial_15_forward_v01.mp4" type="video/mp4" />
+                <source src="assets/video/anticollision_multi_agent_v01.mp4" type="video/mp4" />
               </video>
-              <figcaption><span><b>Trial 15</b> · forward fixed-obstacle run</span><span class="concept-label">Concept preview</span></figcaption>
+              <figcaption><span><b>Multi-agent run</b> · mother rover among moving robots</span><span class="evidence-label">Measured evidence</span></figcaption>
             </figure>
             <figure>
               <video controls muted playsinline poster="assets/images/arena_overview_v01.jpg">
-                <source src="assets/video/validation_trial_14_return_v01.mp4" type="video/mp4" />
+                <source src="assets/video/anticollision_moving_agent_v01.mp4" type="video/mp4" />
               </video>
-              <figcaption><span><b>Trial 14</b> · return fixed-obstacle run</span><span class="concept-label">Concept preview</span></figcaption>
+              <figcaption><span><b>Close pass</b> · avoidance of a moving robot</span><span class="evidence-label">Measured evidence</span></figcaption>
+            </figure>
+          </div>
+
+          <div class="sim-spotlight reveal" aria-label="Six-agent anti-collision simulation">
+            <div class="sim-copy">
+              <p class="eyebrow"><span>Multi-agent simulation</span> · 6 independent agents</p>
+              <h3>Every robot runs its own collision-avoidance brain.</h3>
+              <p>
+                This scenario runs the same causal correction algorithm independently inside all six agents at once, with no central coordinator. The physical runs above validated this logic on one controlled rover among two moving robots; the simulation shows it extends to a fully decentralized swarm where every agent avoids every other.
+              </p>
+              <dl class="evidence-stats">
+                <div><dt>6</dt><dd>independent agents</dd></div>
+                <div><dt>0.15 m</dt><dd>minimum Newton-phase clearance</dd></div>
+                <div><dt>0.03 m</dt><dd>max final gap to target</dd></div>
+              </dl>
+            </div>
+            <figure class="sim-figure">
+              <div class="sim-video-shell">
+                <video controls muted playsinline poster="assets/images/anticollision_6robot_v01.jpg">
+                  <source src="assets/video/phase5_bis.1_solver_scipy_test_anticollision_1.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figcaption><span class="sim-label">Simulation</span><span>6-robot decentralized anti-collision</span></figcaption>
             </figure>
           </div>
 
@@ -437,16 +560,20 @@
                 <thead><tr><th>Capability</th><th>Evidence</th><th>Status</th><th>Scope</th></tr></thead>
                 <tbody>
                   <tr><td>Nominal trajectory generation</td><td>Software tests + simulation</td><td><span class="pill pill-green">Validated</span></td><td>2D scenarios in repository</td></tr>
-                  <tr><td>Fixed-obstacle physical tracking</td><td>Trials 14–15</td><td><span class="pill pill-green">Validated</span></td><td>Documented arena and profiles</td></tr>
-                  <tr><td>Smooth continuous tracking</td><td>Trials 29–30</td><td><span class="pill pill-green">Validated</span></td><td>Quasi-straight segments, no obstacle</td></tr>
-                  <tr><td>Causal moving-agent correction</td><td>Simulation + physical integration</td><td><span class="pill pill-amber">Partial</span></td><td>No complete physical arrival</td></tr>
-                  <tr><td>Multi-agent avoidance</td><td>Simulation</td><td><span class="pill pill-blue">Simulation</span></td><td>Not physically demonstrated</td></tr>
+                  <tr><td>Fixed-obstacle physical avoidance</td><td>Phase 6.10 campaign</td><td><span class="pill pill-green">Validated</span></td><td>Documented arena and profiles</td></tr>
+                  <tr><td>Moving-agent physical avoidance</td><td>23 runs, 30 July 2026</td><td><span class="pill pill-green">Validated</span></td><td>1–2 moving robots, 2 × 2 m arena</td></tr>
+                  <tr><td>Two simultaneous moving agents</td><td>9 runs, all reached goal</td><td><span class="pill pill-green">Validated</span></td><td>Same corrector, no retuning</td></tr>
+                  <tr><td>Decentralized multi-agent (6 robots)</td><td>Simulation</td><td><span class="pill pill-blue">Simulation</span></td><td>Not physically demonstrated</td></tr>
+                  <tr><td>Predictive digital twin</td><td>23 paired sim/real runs</td><td><span class="pill pill-amber">Partial</span></td><td>Arrival predicted; path not yet</td></tr>
                   <tr><td>Aerial drone deployment</td><td>None</td><td><span class="pill pill-gray">Not claimed</span></td><td>Physical platform is a rover</td></tr>
                 </tbody>
               </table>
             </div>
             <p class="scope-note">
-              The smooth-tracking metrics (0.283 cm mean lateral RMSE; 0.985 cm mean final error) come from a separate obstacle-free experiment and are intentionally not merged with the fixed-obstacle KPI.
+              Clearance is measured edge-to-edge between the conservative bounding discs used by the controller (rover radius 0.13 m), not between the physical chassis outlines. A small negative value therefore means the two safety discs overlapped, not that the robots touched. On the 12 runs where both the moving-agent and fixed-obstacle clearances stayed strictly positive for the whole run, the smallest measured margin was 3.0 cm and the mean was 25.8 cm.
+            </p>
+            <p class="scope-note">
+              Of the 23 runs, one ended on a safety stop when a marker was momentarily lost near an agent, and one hit the duration limit — both are the safety layer behaving as designed, not collisions. Percentages describe this single campaign in one arena with one hardware setup; they are not a general reliability figure.
             </p>
           </details>
         </div>
@@ -456,7 +583,7 @@
         <div class="container">
           <div class="section-head reveal">
             <div>
-              <div class="section-index section-index-light">06 <span></span> Physical system</div>
+              <div class="section-index section-index-light">07 <span></span> Physical system</div>
               <h2 id="system-title">Pixels become meters.<br />Meters become motion.</h2>
             </div>
             <p>
@@ -466,8 +593,11 @@
 
           <div class="system-grid">
             <figure class="system-photo reveal">
-              <img src="assets/images/camera_arena_setup_v01.jpg" alt="Concept preview of the overhead camera and rover test arena" />
-              <figcaption><span class="concept-label">Concept preview</span> Temporary setup photograph</figcaption>
+              <div class="tracking-pair">
+                <img src="assets/images/Brut_tracking_aruco_metric_v01.jpg" alt="Raw overhead camera frame of the rover and obstacle arena" />
+                <img src="assets/images/tracking_aruco_metric_v01.jpg" alt="Same frame with ArUco tracking IDs, coordinates, and homography overlaid" />
+              </div>
+              <figcaption><span class="evidence-label">Field footage</span> Overhead camera feed, raw and annotated</figcaption>
             </figure>
             <div class="system-chain reveal" data-delay="1">
               <ol>
@@ -499,11 +629,11 @@
         <div class="container">
           <div class="section-head reveal">
             <div>
-              <div class="section-index">07 <span></span> The experiment, at a glance</div>
-              <h2 id="media-title">A complete visual system,<br />ready for the final footage.</h2>
+              <div class="section-index">08 <span></span> The experiment, at a glance</div>
+              <h2 id="media-title">A complete visual system,<br />captured from the arena.</h2>
             </div>
             <p>
-              Temporary assets already use their final filenames. Replace a file with the real shot and the page updates without layout changes.
+              Video, photographs, and simulation renders spanning the perception, control, and hardware chain — from raw camera frames to the rover in the arena.
             </p>
           </div>
           <div class="media-mosaic">
@@ -511,35 +641,36 @@
               <video controls muted playsinline poster="assets/images/arena_overview_v01.jpg">
                 <source src="assets/video/validation_fixed_obstacle_full_v01.mp4" type="video/mp4" />
               </video>
-              <figcaption><span><b>V02</b> Full fixed-obstacle run</span><span class="concept-label">Concept preview</span></figcaption>
+              <figcaption><span><b>V02</b> Full arena run</span><span class="evidence-label">Measured evidence</span></figcaption>
             </figure>
             <figure class="reveal" data-delay="1">
-              <img src="assets/images/rover_aruco_v01.jpg" alt="Concept preview close-up of the rover and its fiducial marker" />
-              <figcaption><span>Rover + fiducial marker</span><span class="concept-label">Concept preview</span></figcaption>
+              <img src="assets/images/rover_aruco_v01.jpg" alt="Close-up of the rover and its fiducial marker" />
+              <figcaption><span>Rover + fiducial marker</span></figcaption>
             </figure>
             <figure class="reveal" data-delay="2">
-              <img src="assets/images/system_chain_v01.jpg" alt="Concept preview of the computer-to-rover system chain" />
-              <figcaption><span>Software-to-hardware chain</span><span class="concept-label">Concept preview</span></figcaption>
+              <img src="assets/images/system_chain_v01.jpg" alt="The computer-to-rover system chain" />
+              <figcaption><span>Software-to-hardware chain</span></figcaption>
             </figure>
           </div>
           <div class="media-video-row">
             <figure class="reveal">
-              <video controls muted playsinline poster="assets/figures/aruco_tracking_annotated.png">
-                <source src="assets/video/tracking_aruco_metric_v01.mp4" type="video/mp4" />
-              </video>
-              <figcaption><span><b>V03</b> Metric ArUco tracking</span><span class="concept-label">Concept preview</span></figcaption>
+              <div class="tracking-pair">
+                <img src="assets/images/Brut_tracking_aruco_metric_v01.jpg" alt="Raw overhead camera frame of the rover arena" />
+                <img src="assets/images/tracking_aruco_metric_v01.jpg" alt="Same frame with ArUco tracking IDs and coordinates annotated" />
+              </div>
+              <figcaption><span><b>V03</b> Metric ArUco tracking</span><span class="evidence-label">Field footage</span></figcaption>
             </figure>
             <figure class="reveal" data-delay="1">
               <video controls muted playsinline poster="assets/figures/simulation_lagrange_newton_source.png">
                 <source src="assets/video/simulation_lagrange_newton_v01.mp4" type="video/mp4" />
               </video>
-              <figcaption><span><b>V04</b> Nominal to causal correction</span><span class="concept-label">Concept preview</span></figcaption>
+              <figcaption><span><b>V04</b> Nominal to causal correction</span><span class="sim-label">Simulation</span></figcaption>
             </figure>
             <figure class="reveal" data-delay="2">
               <video controls muted playsinline poster="assets/images/system_chain_v01.jpg">
                 <source src="assets/video/screen_to_rover_handoff_v01.mp4" type="video/mp4" />
               </video>
-              <figcaption><span><b>V05</b> Screen-to-rover handoff</span><span class="concept-label">Concept preview</span></figcaption>
+              <figcaption><span><b>V05</b> Screen-to-rover handoff</span><span class="evidence-label">Field footage</span></figcaption>
             </figure>
           </div>
         </div>
@@ -548,13 +679,14 @@
       <section class="limits section section-tint" aria-labelledby="limits-title">
         <div class="container limits-grid">
           <div>
-            <div class="section-index reveal">08 <span></span> Current boundary</div>
-            <h2 id="limits-title" class="reveal">Validated where measured.<br /><em>Explicit where incomplete.</em></h2>
+            <div class="section-index reveal">09 <span></span> Current boundary</div>
+            <h2 id="limits-title" class="reveal">Avoidance is validated.<br /><em>Prediction is what comes next.</em></h2>
           </div>
           <div class="limits-list">
-            <article class="reveal"><span aria-hidden="true">01</span><div><h3>Moving-agent completion</h3><p>The rover receives corrected commands and can stop safely, but a repeatable full avoidance run to the goal is still required.</p></div></article>
-            <article class="reveal"><span aria-hidden="true">02</span><div><h3>Multi-agent transfer</h3><p>Multi-agent behavior is demonstrated in simulation only. Physical deployment would require synchronized state estimation and repeated trials.</p></div></article>
-            <article class="reveal"><span aria-hidden="true">03</span><div><h3>Benchmark breadth</h3><p>Solver timing comparisons remain exploratory. A larger, frozen scenario suite is needed for a general performance claim.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">01</span><div><h3>Predictive digital twin</h3><p>The twin already predicts where the rover stops to within about a centimetre, but not the path it takes to get there. Closing that gap — modelling wheel slip, latency, and contact more faithfully — is the next major step.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">02</span><div><h3>Predictive control and learning</h3><p>The corrector reacts to the present state only. Model predictive control and learning-based policies would let the rover anticipate where a moving agent is heading instead of responding once it is close.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">03</span><div><h3>Better nominal planning</h3><p>The nominal path comes from a local variational solve that depends on its initialization. Graph search such as A* — used to seed or replace that stage — should give a more reliable global route before the causal layer refines it.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">04</span><div><h3>Scale and benchmark breadth</h3><p>Decentralized avoidance is validated physically for two moving agents and in simulation for six. Larger fleets, and a frozen scenario suite for solver comparison, remain to be done.</p></div></article>
           </div>
         </div>
       </section>
@@ -562,7 +694,7 @@
       <section id="team" class="team section" aria-labelledby="team-title">
         <div class="container">
           <div class="team-intro reveal">
-            <div class="section-index">09 <span></span> People &amp; context</div>
+            <div class="section-index">10 <span></span> People &amp; context</div>
             <h2 id="team-title">A research project built<br />between France and Singapore.</h2>
             <p>
               The work began in January under Prof. Francisco Chinesta and continued during a summer internship at CNRS@CREATE in Singapore, with technical supervision from Amine Ammar.
@@ -601,13 +733,21 @@
                 <span>ResearchGate</span><span aria-hidden="true">↗</span>
               </a>
             </article>
+            <article>
+              <span>Research advisor</span>
+              <h3>Sebastian<br /><strong>RODRIGUEZ ITURRA</strong></h3>
+              <p>Scientific contributions, technical exchanges, and guidance throughout the project, alongside Prof. Francisco Chinesta.</p>
+              <a class="team-link" href="https://www.linkedin.com/in/sebastian-rodriguez-iturra-ph-d-045544b7/?locale=en" target="_blank" rel="noopener noreferrer" aria-label="Visit Sebastian Rodriguez Iturra's LinkedIn profile (opens in a new tab)">
+                <span>LinkedIn</span><span aria-hidden="true">↗</span>
+              </a>
+            </article>
           </div>
           <div class="timeline reveal">
             <div><span>January 2026</span><strong>Research initiated</strong><p>Problem formulation and numerical foundations with Prof. Francisco Chinesta.</p></div>
             <i aria-hidden="true"></i>
             <div><span>Summer 2026</span><strong>Physical integration</strong><p>Camera, rover control, experimental campaigns, and validation at CNRS@CREATE.</p></div>
             <i aria-hidden="true"></i>
-            <div><span>August 1, 2026</span><strong>Research showcase</strong><p>A concise record of the method, evidence, and remaining boundary.</p></div>
+            <div><span>Late August 2026</span><strong>Research showcase</strong><p>A concise record of the method, evidence, and remaining boundary.</p></div>
           </div>
         </div>
       </section>
