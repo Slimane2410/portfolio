@@ -5,17 +5,28 @@ All data is read directly from the logged Phase 6.10 runs:
   outputs/camera/simulations_Phase6/<run>/  paired simulation for the same scenario
 """
 import csv
+import base64
 import json
 import math
 import os
+import sys
 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.backends.backend_agg import FigureCanvasAgg
+from matplotlib.figure import Figure
 from matplotlib.patches import Circle
 
-ROOT = "/Users/slimaneaouanouk/Desktop/PJT_Paco/Code/trajectory-optimization-drone"
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 OUT = os.path.join(ROOT, "paco-showcase/assets/figures")
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
+from trajopt.simulation.scenario_dashboard import (  # noqa: E402
+    _phase6_10_comparison_plot_data_url,
+)
 
 # Site palette (from styles.css)
 INK = "#101828"
@@ -144,7 +155,8 @@ def draw_arena(ax, sim, nominal, rows, summary, title):
     nom = sim.get("nominal_points_m") or []
     if nom:
         ax.plot([p[0] for p in nom], [p[1] for p in nom], color=INK_SOFT, lw=1.6,
-                ls=(0, (4, 3)), alpha=0.75, zorder=4, label="Nominal plan (offline)")
+                ls=(0, (4, 3)), alpha=0.75, zorder=4,
+                label="Nominal plan (offline)")
 
     # Simulated trajectory (digital twin)
     pts = sim.get("points_m") or []
@@ -153,7 +165,8 @@ def draw_arena(ax, sim, nominal, rows, summary, title):
                 alpha=0.9, zorder=5, label="Simulated (digital twin)")
 
     # Measured trajectory
-    ax.plot(xs, ys, color=ORANGE, lw=2.8, zorder=6, label="Measured (real rover)")
+    ax.plot(xs, ys, color=ORANGE, lw=2.8, zorder=6,
+            label="Measured (real rover)")
 
     # The encounter: where the rover was when it came closest to an agent
     enc = encounter_moment(rows)
@@ -180,7 +193,8 @@ def draw_arena(ax, sim, nominal, rows, summary, title):
     sx, sy = scen["start_m"]
     gx, gy = scen["goal_m"]
     ax.plot(sx, sy, "o", color=INK, ms=9, zorder=8, label="Start")
-    ax.plot(gx, gy, "*", color=ORANGE, ms=17, zorder=8, mec=INK, mew=0.6, label="Goal")
+    ax.plot(gx, gy, "*", color=ORANGE, ms=17, zorder=8, mec=INK, mew=0.6,
+            label="Goal")
 
     # Shade the corridor between the plan and what the rover actually did
     if nom and xs:
@@ -213,41 +227,18 @@ def draw_arena(ax, sim, nominal, rows, summary, title):
     ax.set_title(title, fontsize=12.5, fontweight="bold", pad=12)
 
 
-def draw_clearance(ax, rows, summary):
-    _, _, ts, clr = real_path(rows)
-    ax.plot(ts, clr, color=ORANGE, lw=2.2, label="Measured clearance to nearest moving agent")
-    ax.axhline(0.0, color=RED, lw=1.4, ls="--", alpha=0.85, label="Contact threshold (0 m)")
-    mn = summary.get("min_mobile_clearance_m")
-    if mn is not None and ts:
-        ax.annotate(f"min {mn*100:.1f} cm",
-                    xy=(ts[min(range(len(clr)), key=lambda i: clr[i] if not math.isnan(clr[i]) else 9e9)], mn),
-                    xytext=(0.62, 0.16), textcoords="axes fraction",
-                    color=INK, fontsize=10.5, fontweight="bold",
-                    arrowprops=dict(arrowstyle="->", color=INK_SOFT, lw=1.2))
-    ax.set_xlabel("time [s]")
-    ax.set_ylabel("edge-to-edge clearance [m]")
-    ax.grid(True, color=LINE, lw=0.6, alpha=0.7)
-    ax.legend(loc="upper right", frameon=True, fontsize=9.5, facecolor="white",
-              edgecolor=LINE)
-    ax.set_title("Safety margin during the avoidance manoeuvre",
-                 fontsize=12.5, fontweight="bold", pad=12)
-
-
-def build(run_dir, sim_dir, h, outfile, title, subtitle):
+def build(run_dir, sim_dir, h, outfile, title):
     sim, summary, nominal, rows = load(run_dir, sim_dir, h)
-    fig, axes = plt.subplots(1, 2, figsize=(15.2, 6.6),
-                             gridspec_kw={"width_ratios": [1.0, 1.12]})
-    draw_arena(axes[0], sim, nominal, rows, summary, title)
-    draw_clearance(axes[1], rows, summary)
+    fig, ax = plt.subplots(figsize=(8.15, 8.0))
+    draw_arena(ax, sim, nominal, rows, summary, title)
 
-    handles, labels = axes[0].get_legend_handles_labels()
-    axes[0].legend(handles, labels, loc="upper center", bbox_to_anchor=(0.5, -0.13),
-                   ncol=3, frameon=False, fontsize=9.5)
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(handles, labels, loc="upper center", bbox_to_anchor=(0.5, -0.14),
+              ncol=3, frameon=False, fontsize=9.2)
 
-    fig.suptitle(subtitle, y=0.985, fontsize=10.5, color=INK_SOFT)
-    fig.tight_layout(rect=[0, 0, 1, 0.955])
+    fig.subplots_adjust(left=0.12, right=0.97, top=0.92, bottom=0.25)
     path = os.path.join(OUT, outfile)
-    fig.savefig(path, dpi=150, bbox_inches="tight", facecolor="white")
+    fig.savefig(path, dpi=150, facecolor="white")
     plt.close(fig)
 
     print(f"wrote {outfile}")
@@ -257,19 +248,142 @@ def build(run_dir, sim_dir, h, outfile, title, subtitle):
           f"sim goal {sim['metrics']['final_goal_distance_m']*100:.1f} cm")
 
 
+def build_dashboard_comparison(run_dir, sim_dir, h, outfile):
+    """Export the exact comparison renderer used by the Phase 6.10 dashboard."""
+    sim, _summary, _nominal, rows = load(run_dir, sim_dir, h)
+    xs, ys, _times, _clearances = real_path(rows)
+    comparison = {
+        "experiment_id": f"dashboard_phase6_10_{h}",
+        "nominal_points": sim.get("nominal_points_m") or [],
+        "simulation_points": sim.get("points_m") or [],
+        "real_points": list(zip(xs, ys)),
+        "simulation_mobile_paths": sim.get("mobile_paths_m") or {},
+        "real_mobile_paths": mobile_tracks(rows),
+        "scenario": sim["scenario"],
+    }
+
+    # The dashboard plot uses Matplotlib's native defaults.
+    matplotlib.rcdefaults()
+    data_url = _phase6_10_comparison_plot_data_url(
+        comparison,
+        distance_unit="cm",
+    )
+    encoded = data_url.split(",", 1)[1]
+    path = os.path.join(OUT, outfile)
+    with open(path, "wb") as handle:
+        handle.write(base64.b64decode(encoded))
+    print(f"wrote {outfile} with the native Phase 6.10 dashboard renderer")
+
+
+def build_mobile_clearance(run_dir, sim_dir, h, outfile):
+    """Plot the logged edge-to-edge clearance to the closest mobile rover."""
+    _sim, summary, _nominal, rows = load(run_dir, sim_dir, h)
+    samples = []
+    for row in rows:
+        if row.get("event") != "phase6_10_command":
+            continue
+        try:
+            elapsed_s = float(row["elapsed_s"])
+            clearance_cm = float(row["min_mobile_clearance_m"]) * 100.0
+        except (KeyError, TypeError, ValueError):
+            continue
+        samples.append((elapsed_s, clearance_cm))
+    if not samples:
+        raise RuntimeError(f"No mobile-clearance samples found for {h}")
+
+    samples.sort(key=lambda sample: sample[0])
+    times = np.asarray([sample[0] for sample in samples])
+    clearances = np.asarray([sample[1] for sample in samples])
+    minimum_index = int(np.argmin(clearances))
+    minimum_time = float(times[minimum_index])
+    minimum_clearance = float(clearances[minimum_index])
+
+    matplotlib.rcdefaults()
+    figure = Figure(figsize=(9.4, 7.0), layout="constrained")
+    FigureCanvasAgg(figure)
+    axis = figure.add_subplot(1, 1, 1)
+    axis.plot(
+        times,
+        clearances,
+        color="#e8590c",
+        linewidth=2.2,
+        label="Marge mobile mesurée",
+    )
+    axis.axhline(
+        0.0,
+        color="#dc2626",
+        linestyle="--",
+        linewidth=1.6,
+        label="Seuil de contact",
+    )
+    axis.scatter(
+        [minimum_time],
+        [minimum_clearance],
+        color="#dc2626",
+        s=42,
+        zorder=4,
+    )
+    axis.annotate(
+        f"minimum : {minimum_clearance:.1f} cm",
+        xy=(minimum_time, minimum_clearance),
+        xytext=(0.58, 0.18),
+        textcoords="axes fraction",
+        arrowprops={"arrowstyle": "->", "color": "#475467", "linewidth": 1.2},
+        bbox={
+            "boxstyle": "round,pad=0.35",
+            "facecolor": "white",
+            "edgecolor": "#d0d5dd",
+        },
+        fontsize=10,
+        fontweight="bold",
+    )
+    axis.set(
+        xlabel="temps [s]",
+        ylabel="marge de sécurité mobile [cm]",
+        title=(
+            "Phase 6.10 - marge de sécurité mobile - "
+            f"dashboard_phase6_10_{h}"
+        ),
+    )
+    axis.grid(True, color="#d0d5dd")
+    axis.legend(loc="best")
+    axis.margins(x=0.02)
+
+    path = os.path.join(OUT, outfile)
+    figure.savefig(path, format="png", dpi=140)
+    print(
+        f"wrote {outfile} from {len(samples)} logged samples "
+        f"(minimum {summary['min_mobile_clearance_m'] * 100.0:.1f} cm)"
+    )
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
 
-    build("20260730_131056_dashboard_phase6_10_ba91ef91fd",
-          "20260730_131017_phase6_10_dashboard_phase6_10_ba91ef91fd",
-          "ba91ef91fd",
+    build("20260729_161351_dashboard_phase6_10_dc63e50a60",
+          "20260729_161341_phase6_10_dashboard_phase6_10_dc63e50a60",
+          "dc63e50a60",
           "anticollision_single_agent.png",
-          "Arena view \u2014 one moving agent crossing the path",
-          "Physical run, 30 July 2026 \u00b7 one moving agent (1.30 m of travel) + two fixed obstacles \u00b7 goal reached")
+          "Arena view — one moving agent crossing the path")
 
-    build("20260730_135101_dashboard_phase6_10_3363478e9e",
-          "20260730_135101_phase6_10_dashboard_phase6_10_3363478e9e",
-          "3363478e9e",
+    build("20260731_185745_dashboard_phase6_10_d5418229b1",
+          "20260731_185745_phase6_10_dashboard_phase6_10_d5418229b1",
+          "d5418229b1",
           "anticollision_dual_agent.png",
-          "Arena view \u2014 two simultaneous moving agents",
-          "Physical run, 30 July 2026 \u00b7 the rover leaves its plan by 82 cm to clear a crossing agent \u00b7 goal reached")
+          "Arena view — two simultaneous moving agents")
+
+    latest_run = "20260731_190044_dashboard_phase6_10_cbd2abb020"
+    latest_sim = "20260731_190044_phase6_10_dashboard_phase6_10_cbd2abb020"
+    latest_hash = "cbd2abb020"
+    build_dashboard_comparison(
+        latest_run,
+        latest_sim,
+        latest_hash,
+        "phase6_10_cbd2abb020_comparison.png",
+    )
+    build_mobile_clearance(
+        latest_run,
+        latest_sim,
+        latest_hash,
+        "phase6_10_cbd2abb020_mobile_clearance.png",
+    )

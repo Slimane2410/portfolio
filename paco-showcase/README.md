@@ -14,7 +14,7 @@ Then open `http://localhost:4173`.
 
 ## Media replacement workflow
 
-All videos have been replaced with real footage. The ArUco tracking video slot (`tracking_aruco_metric_v01.mp4`) no longer exists; it was replaced by a raw/annotated photo pair (`Brut_tracking_aruco_metric_v01.jpg` and `tracking_aruco_metric_v01.jpg`) shown side by side, reused in both the media gallery and the physical-system section. A new simulation video, `assets/video/phase5_bis.1_solver_scipy_test_anticollision_1.mp4`, documents a 6-robot decentralized anti-collision scenario and is featured in its own spotlight block in the Validation section.
+All videos have been replaced with real footage. The ArUco tracking video slot (`tracking_aruco_metric_v01.mp4`) no longer exists; V03 now shows the annotated repository frame `assets/figures/aruco_tracking_annotated.png`, while the physical-system section keeps the raw/annotated photo pair (`Brut_tracking_aruco_metric_v01.jpg` and `tracking_aruco_metric_v01.jpg`). A new simulation video, `assets/video/phase5_bis.1_solver_scipy_test_anticollision_1.mp4`, documents a 6-robot decentralized anti-collision scenario and is featured in its own spotlight block in the Validation section.
 
 The page no longer displays a visible "Concept preview" label anywhere (removed at the site owner's request). The following photographs are still AI-generated placeholders, not real photographs, even though they are shown without any visual flag — replace them in place using exactly the same filenames when real shots are available:
 
