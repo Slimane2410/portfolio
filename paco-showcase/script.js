@@ -384,6 +384,18 @@
   const header = document.querySelector("[data-header]");
   const menuButton = document.querySelector("[data-menu-button]");
   const navigation = document.querySelector("[data-nav]");
+  const mobileNavigation = window.matchMedia("(max-width: 1040px)");
+  const navigationAnchor = document.createComment("primary-navigation");
+
+  navigation?.before(navigationAnchor);
+
+  const moveNavigationToOverlay = () => {
+    if (mobileNavigation.matches && navigation?.parentElement !== document.body) document.body.append(navigation);
+  };
+
+  const restoreNavigation = () => {
+    if (navigationAnchor.parentNode && navigation?.parentElement === document.body) navigationAnchor.after(navigation);
+  };
 
   const updateHeader = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 20);
@@ -397,10 +409,12 @@
     menuButton.setAttribute("aria-expanded", "false");
     navigation.classList.remove("is-open");
     document.body.classList.remove("menu-open");
+    restoreNavigation();
   };
 
   menuButton?.addEventListener("click", () => {
     const shouldOpen = menuButton.getAttribute("aria-expanded") !== "true";
+    if (shouldOpen) moveNavigationToOverlay();
     menuButton.setAttribute("aria-expanded", String(shouldOpen));
     navigation?.classList.toggle("is-open", shouldOpen);
     document.body.classList.toggle("menu-open", shouldOpen);
