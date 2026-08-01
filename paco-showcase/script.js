@@ -12,10 +12,10 @@
     "Anti-collision validated": "Anti-collision validé",
     "Autonomous systems": "Systèmes autonomes",
     "Research showcase": "Vitrine de recherche",
-    "From mathematical": "De l’optimisation",
-    "optimization to": "mathématique au",
-    "measured motion.": "mouvement mesuré.",
-    "We compute collision-aware trajectories, adapt them to what the system observes,\n              and quantify the gap between a plan and a real rover in motion.": "Nous calculons des trajectoires tenant compte des collisions, les adaptons aux observations du système et quantifions l’écart entre un plan et le déplacement réel d’un rover.",
+    "From the optimized": "De la trajectoire",
+    "trajectory to": "optimisée au",
+    "real motion.": "mouvement réel.",
+    "Our system enables the robot to navigate autonomously, identify obstacles in its\n              environment, and correct its trajectory in real time to reach its target.": "Notre système permet au robot de se déplacer en autonomie, d’identifier les obstacles dans son environnement et de corriger sa trajectoire en temps réel pour atteindre sa cible.",
     "Explore the method": "Explorer la méthode",
     "See the evidence": "Voir les résultats",
     "Physical · validated": "Physique · validé",
@@ -41,7 +41,7 @@
     "The twin predicts arrival well, but not yet the full path taken.": "Le jumeau prédit bien l’arrivée, mais pas encore tout le trajet parcouru.",
     "Anti-collision campaign": "Campagne anti-collision",
     "July 30, 2026": "30 juillet 2026",
-    "The rover now avoids moving robots — and still arrives.": "Le rover évite désormais des robots mobiles — et arrive quand même.",
+    "The rover now avoids moving robots — and still reaches its target.": "Le rover évite désormais des robots mobiles — et arrive quand même à sa cible.",
     "Across the final campaign the rover shared its arena with one or two independently moving robots plus fixed columns. It leaves its nominal path to open a gap, then closes back onto the goal. Every run below is a physical run, logged frame by frame.": "Lors de la campagne finale, le rover a partagé son arène avec un ou deux robots se déplaçant de façon indépendante, en plus des colonnes fixes. Il quitte sa trajectoire nominale pour créer un écart, puis revient vers l’objectif. Chaque essai ci-dessous est un essai physique, enregistré image par image.",
     "runs reached the goal with moving agents present": "essais ont atteint l’objectif en présence d’agents mobiles",
     "mean final distance to target (max 7.9)": "distance finale moyenne à la cible (max 7,9)",
@@ -49,8 +49,12 @@
     "One moving agent": "Un agent mobile",
     "Two moving agents": "Deux agents mobiles",
     "Digital twin": "Jumeau numérique",
-    "One moving agent crossing the path · measured vs simulated · goal reached": "Un agent mobile traversant la trajectoire · mesuré vs simulé · objectif atteint",
-    "Two simultaneous moving agents · measured vs simulated · goal reached": "Deux agents mobiles simultanés · mesuré vs simulé · objectif atteint",
+    "Real / simulation": "Réel / simulation",
+    "Mobile safety clearance": "Marge de sécurité mobile",
+    "Latest Phase 6.10 run · two moving agents · real/simulation comparison · 31 July 2026": "Dernier essai Phase 6.10 · deux agents mobiles · comparaison réel/simulation · 31 juillet 2026",
+    "Latest Phase 6.10 run · logged mobile safety clearance · 31 July 2026": "Dernier essai Phase 6.10 · marge de sécurité mobile issue du log · 31 juillet 2026",
+    "Validated run · one moving agent · real/simulation comparison · 29 July 2026": "Essai validé · un agent mobile · comparaison réel/simulation · 29 juillet 2026",
+    "Validated run · two moving agents · real/simulation comparison · 31 July 2026": "Essai validé · deux agents mobiles · comparaison réel/simulation · 31 juillet 2026",
     "Simulated versus measured arrival point across 21 paired runs": "Point d’arrivée simulé et mesuré sur 21 essais appariés",
     "Multi-agent run": "Essai multi-agents",
     "mother rover among moving robots": "rover mère parmi des robots mobiles",
@@ -85,12 +89,10 @@
     "Mean final error": "Erreur finale moyenne",
     "ArUco detections": "Détections ArUco",
     "The challenge": "Le défi",
-    "A path is easy to draw.": "Un chemin est facile à tracer.",
-    "A safe trajectory must also be": "Une trajectoire sûre doit aussi être",
-    "feasible, reactive, and measurable.": "réalisable, réactive et mesurable.",
+    "Calculating an optimal trajectory is not enough.": "Calculer une trajectoire optimale ne suffit pas.",
+    "It must adapt in real time and work in the real world.": "Elle doit s’adapter en temps réel et fonctionner dans le monde réel.",
     "An autonomous system has to connect a fixed start to a fixed goal while respecting obstacles,\n              boundaries, velocity, acceleration, and imperfect knowledge of moving agents.": "Un système autonome doit relier un départ fixe à un objectif fixe tout en respectant les obstacles, les limites, la vitesse, l’accélération et une connaissance imparfaite des agents mobiles.",
     "The hard part is not producing a curve. It is building a chain that remains coherent from the\n              mathematical objective to the physical experiment.": "La difficulté n’est pas de produire une courbe. Elle consiste à construire une chaîne cohérente, de l’objectif mathématique à l’expérience physique.",
-    "End-to-end pipeline": "Chaîne complète",
     "One continuous chain.": "Une chaîne continue.",
     "Seven verifiable steps.": "Sept étapes vérifiables.",
     "Select a step to move from problem definition to measured physical validation.": "Sélectionnez une étape pour passer de la définition du problème à la validation physique mesurée.",
@@ -117,7 +119,7 @@
     "The nominal phase": "La phase nominale",
     "Generate candidates, minimize a discretized action, and produce a smooth reference path around known fixed obstacles.": "Générer des candidates, minimiser une action discrétisée et produire un chemin de référence lisse autour d’obstacles fixes connus.",
     "Input": "Entrée",
-    "Known geometry and dynamic limits": "Géométrie connue et limites dynamiques",
+    "Static environment and target only": "Environnement statique et cible uniquement",
     "Output": "Sortie",
     "Time-parameterized nominal trajectory": "Trajectoire nominale paramétrée dans le temps",
     "Tools": "Outils",
@@ -127,13 +129,9 @@
     "The causal correction phase": "La phase de correction causale",
     "Follow the nominal path while attraction, repulsion, and damping modify the current motion when a mobile agent is observed.": "Suivre le chemin nominal pendant que l’attraction, la répulsion et l’amortissement modifient le mouvement courant lorsqu’un agent mobile est observé.",
     "Nominal reference and current mobile state": "Référence nominale et état mobile courant",
-    "Locally corrected trajectory": "Trajectoire corrigée localement",
+    "Trajectory corrected locally at every instant": "Trajectoire corrigée localement à chaque instant",
     "Update": "Mise à jour",
-    "Semi-implicit Euler, Verlet, or Jones variant": "Euler semi-implicite, Verlet ou variante de Jones",
-    "Important distinction": "Distinction importante",
-    "“Newton” refers here to": "« Newton » désigne ici la",
-    "Newtonian force dynamics": "dynamique newtonienne des forces",
-    "used by the local corrector.\n              It is not Newton–Raphson optimization. In the physical runs this corrector is what steers the rover around moving robots and fixed obstacles, on top of a differential-wheel controller.": "utilisée par le correcteur local. Il ne s’agit pas de l’optimisation de Newton–Raphson. Dans les essais physiques, c’est ce correcteur qui pilote le rover autour des robots mobiles et des obstacles fixes, au-dessus d’un contrôleur à roues différentielles.",
+    "Semi-implicit Euler, Verlet, or Lennard-Jones variant": "Euler semi-implicite, Verlet ou variante de Lennard-Jones",
     "Technical layer": "Couche technique",
     "Open the mathematical core": "Ouvrir le cœur mathématique",
     "Stationarity": "Stationnarité",
@@ -160,15 +158,17 @@
     "Observed trade-off": "Compromis observé",
     "Discretized action minimization with analytic gradient": "Minimisation d’action discrétisée avec gradient analytique",
     "High-quality nominal planning": "Planification nominale de haute qualité",
-    "median in a two-scenario exploratory benchmark": "médiane dans un benchmark exploratoire à deux scénarios",
+    "Longer campaigns for greater precision": "Campagnes plus longues pour une meilleure précision",
     "Stationarity residual through root or least-squares methods": "Résidu de stationnarité par méthodes de racines ou moindres carrés",
-    "Numerical formulation studies": "Études de formulation numérique",
+    "Low-complexity problems": "Problèmes à faible complexité",
     "Faster campaigns, but convergence remained scenario-sensitive": "Campagnes plus rapides, mais convergence sensible au scénario",
     "Straight-line baseline": "Référence en ligne droite",
     "No nominal optimization": "Aucune optimisation nominale",
     "Ablation and runtime baseline": "Référence d’ablation et de temps d’exécution",
-    "median, without the same planning capability": "médiane, sans la même capacité de planification",
-    "Benchmark values above cover only two scenarios with shared controller coefficients. They support diagnosis, not a definitive solver ranking.": "Les valeurs ci-dessus ne couvrent que deux scénarios avec des coefficients de contrôleur partagés. Elles aident au diagnostic, pas à établir un classement définitif des solveurs.",
+    "Ease of computation for a low-quality reference": "Facilité de calcul pour une référence de faible qualité",
+    "Fully causal Newtonian dynamics without a nominal trajectory": "Dynamique newtonienne entièrement causale sans trajectoire nominale",
+    "Nominal-planning ablation baseline": "Référence d’ablation sans planification nominale",
+    "High safety but limited progress toward the target": "Sécurité élevée mais progression limitée vers la cible",
     "Auto-calibration campaign": "Campagne d’auto-calibration",
     "Twelve pairs, calibrated": "Douze couples, calibrés",
     "separately, at scale.": "séparément, à grande échelle.",
@@ -177,13 +177,15 @@
     "4 nominal generators, 3 causal controllers": "4 générateurs nominaux, 3 contrôleurs causaux",
     "Planned runs": "Essais planifiés",
     "across the 12 campaigns": "sur les 12 campagnes",
-    "Final-zone D3.2 runs": "Essais de la zone finale D3.2",
+    "367,374": "367 374",
+    "100,800": "100 800",
+    "Final-zone runs": "Essais de la zone finale",
     "6,300 profiles × 16 scenarios": "6 300 profils × 16 scénarios",
     "Cumulative campaign time": "Temps de campagne cumulé",
     "if run sequentially": "si exécuté séquentiellement",
     "Joint success": "Succès conjoint",
     "SciPy leads both readings; Full Newton stays safe but rarely arrives.": "SciPy domine les deux lectures ; Full Newton reste sûr mais atteint rarement la cible.",
-    "Across the full D3.2 zone, SciPy + Initial leads with 50.84% joint success. Restricted to each pair's top 4 profiles and widened to 10 held-out scenarios, SciPy + Verlet edges ahead at 65.38%. Full Newton — the ablation with no nominal phase at all — reaches up to 96% collision-free runs and as little as 3.85% joint success: it stays safe by stalling short of the goal, not by reaching it.": "Sur toute la zone D3.2, SciPy + Initial domine avec 50,84 % de succès conjoint. En se limitant aux 4 meilleurs profils de chaque couple et en élargissant à 10 scénarios hors calibration, SciPy + Verlet passe légèrement devant avec 65,38 %. Full Newton — l’ablation sans aucune phase nominale — atteint jusqu’à 96 % de runs sans collision, pour seulement 3,85 % de succès conjoint : il reste sûr en s’arrêtant avant la cible, pas en l’atteignant bien.",
+    "Across the full final zone, SciPy + Initial leads with 50.84% joint success. Restricted to each pair's top 4 profiles and widened to 10 held-out scenarios, SciPy + Verlet edges ahead at 65.38%. Full Newton — the ablation with no nominal phase at all — reaches up to 96% collision-free runs and as little as 3.85% joint success: it stays safe by stalling short of the goal, not by reaching it.": "Sur toute la zone finale, SciPy + Initial domine avec 50,84 % de succès conjoint. En se limitant aux 4 meilleurs profils de chaque couple et en élargissant à 10 scénarios hors calibration, SciPy + Verlet passe légèrement devant avec 65,38 %. Full Newton — l’ablation sans aucune phase nominale — atteint jusqu’à 96 % de runs sans collision, pour seulement 3,85 % de succès conjoint : il reste sûr en s’arrêtant avant la cible, pas en l’atteignant bien.",
     "best full-zone joint success · SciPy + Initial": "meilleur succès conjoint sur la zone complète · SciPy + Initial",
     "best top-4 joint success · SciPy + Verlet": "meilleur succès conjoint du top 4 · SciPy + Verlet",
     "Full Newton + Initial/Verlet, despite 96% safety": "Full Newton + Initial/Verlet, malgré 96 % de sécurité",
@@ -191,18 +193,22 @@
     "Outcome breakdown": "Décomposition des résultats",
     "Generalization": "Généralisation",
     "Threshold sensitivity": "Sensibilité au seuil",
-    "Full D3.2 zone · all profiles per pair · 16 calibration scenarios": "Zone D3.2 complète · tous les profils par couple · 16 scénarios de calibration",
+    "Choose a figure — the graph updates when clicked": "Choisissez une figure — le graphique se met à jour au clic",
+    "Full final zone · all profiles per pair · 16 calibration scenarios": "Zone finale complète · tous les profils par couple · 16 scénarios de calibration",
+    "Top 4 profiles per pair · 26 scenarios, 16 calibration plus 10 held-out": "Top 4 des profils par couple · 26 scénarios, dont 16 de calibration et 10 hors calibration",
+    "Exclusive outcome shares for the top-4 runs · complete success, safe but off-target, unsafe": "Répartition exclusive des résultats du top 4 · succès complet, sûr mais hors cible, non sûr",
+    "Top-4 joint success on the 16 calibration scenarios versus the 10 held-out scenarios": "Succès conjoint du top 4 sur les 16 scénarios de calibration face aux 10 scénarios hors calibration",
+    "Top-4 joint success as the target tolerance relaxes from 0 to 100 cm": "Succès conjoint du top 4 lorsque la tolérance à la cible passe de 0 à 100 cm",
+    "Full screen": "Plein écran",
     "Reading the figures": "Lecture des figures",
-    "Axis and legend labels are in French, matching the source report:": "Les libellés des axes et de la légende sont en français, comme dans le rapport source :",
-    "is safe,": "signifie sûr,",
-    "is target-reached,": "signifie cible atteinte,",
-    "is joint success, and": "signifie succès conjoint, et",
-    "is the straight-line nominal called “Line” elsewhere on this page.": "est le nominal en ligne droite appelé « Line » ailleurs sur cette page.",
+    ": the trial ended without any collision;": " : l’essai s’est terminé sans aucune collision,",
+    ": the robot reaches the target within the tolerance threshold;": " : le robot atteint la cible sous le seuil de tolérance,",
+    ": the robot reaches the target without any collision.": " : le robot atteint la cible sans aucune collision.",
     "Methodology": "Méthodologie",
     "Open the calibration protocol, full ranking, and limits": "Ouvrir le protocole de calibration, le classement complet et les limites",
-    "Coefficients are searched in three stages — a broad Latin Hypercube sweep, a refined search recentered on the best region, then a tighter final D3.2 search — over seven parameters: attraction and damping gains, mobile/static/border repulsion, perception radius, and lookahead time. A scenario with a collision-free rate under 15% after Broad is quarantined from scoring but kept running, and is reinstated once it clears 50% then 80%. Nine pairs use the": "Les coefficients sont recherchés en trois étapes — un balayage Latin Hypercube large, une recherche affinée recentrée sur la meilleure région, puis une recherche finale D3.2 plus resserrée — sur sept paramètres : gains d’attraction et d’amortissement, répulsions mobile/statique/bords, rayon de perception et temps de lookahead. Un scénario dont le taux sans collision est inférieur à 15 % après Broad est mis en quarantaine du score mais continue d’être exécuté, puis réintégré une fois qu’il atteint 50 % puis 80 %. Neuf couples utilisent le budget",
+    "Coefficients are searched in three stages — a broad Latin Hypercube sweep, a refined search recentered on the best region, then a tighter final-zone search — over seven parameters: attraction and damping gains, mobile/static/border repulsion, perception radius, and lookahead time. A scenario with a collision-free rate under 15% after Broad is quarantined from scoring but kept running, and is reinstated once it clears 50% then 80%. Nine pairs use the": "Les coefficients sont recherchés en trois étapes — un balayage Latin Hypercube large, une recherche affinée recentrée sur la meilleure région, puis une recherche plus resserrée dans la zone finale — sur sept paramètres : gains d’attraction et d’amortissement, répulsions mobile/statique/bords, rayon de perception et temps de lookahead. Un scénario dont le taux sans collision est inférieur à 15 % après Broad est mis en quarantaine du score mais continue d’être exécuté, puis réintégré une fois qu’il atteint 50 % puis 80 %. Neuf couples utilisent le budget",
     "budget; the three Line-based pairs use": "; les trois couples fondés sur Line utilisent",
-    ", giving Line more sampled profiles in its D3.2 zone (900 versus 400).": ", ce qui donne à Line plus de profils échantillonnés dans sa zone D3.2 (900 contre 400).",
+    ", giving Line more sampled profiles in its final zone (900 versus 400).": ", ce qui donne à Line plus de profils échantillonnés dans sa zone finale (900 contre 400).",
     "Pair": "Couple",
     "Zone: safe / target / joint": "Zone : sûr / cible / conjoint",
     "Top 4: safe / target / joint": "Top 4 : sûr / cible / conjoint",
@@ -220,7 +226,6 @@
     "Metric perception chain": "Chaîne de perception métrique",
     "Camera, homography, ArUco tracking, coordinates, and control connected.": "Caméra, homographie, suivi ArUco, coordonnées et commande connectés.",
     "partial": "partiel",
-    "Measured evidence": "Résultats mesurés",
     "Multi-agent simulation": "Simulation multi-agents",
     "6 independent agents": "6 agents indépendants",
     "Every robot runs its own collision-avoidance brain.": "Chaque robot exécute son propre cerveau d’évitement de collision.",
@@ -250,7 +255,7 @@
     "Pixels become meters.": "Les pixels deviennent des mètres.",
     "Meters become motion.": "Les mètres deviennent du mouvement.",
     "The experimental chain closes the loop between planning, perception, wheel commands, and measured trajectory error.": "La chaîne expérimentale ferme la boucle entre planification, perception, commandes des roues et erreur de trajectoire mesurée.",
-    "Overhead camera feed, raw and annotated": "Flux de la caméra zénithale, brut et annoté",
+    "Overhead camera feed, raw and annotated": "Flux de la caméra vue du dessus, brut et annoté",
     "Basler camera": "Caméra Basler",
     "monochrome frames": "images monochromes",
     "pixel coordinates → arena coordinates": "coordonnées pixel → coordonnées de l’arène",
@@ -260,11 +265,7 @@
     "Validation log": "Journal de validation",
     "clearance, RMSE, stop, final gap": "dégagement, RMSE, arrêt, écart final",
     "900 / 900 frames captured in 30-second Ethernet tests on both Mac and Raspberry Pi.": "900 / 900 images capturées lors de tests Ethernet de 30 secondes sur Mac et Raspberry Pi.",
-    "Instrumented observation": "Observation instrumentée",
-    "Every physical claim starts with a traceable measurement.": "Chaque affirmation physique commence par une mesure traçable.",
-    "Corner markers define the arena. IDs identify the rover and obstacle. The rectified view turns image measurements into a common metric frame.": "Les marqueurs d’angle définissent l’arène. Les identifiants repèrent le rover et l’obstacle. La vue rectifiée transforme les mesures d’image en un repère métrique commun.",
     "Repository evidence": "Preuve du dépôt",
-    "Annotated preflight frame": "Image de prévol annotée",
     "The experiment, at a glance": "L’expérience en un coup d’œil",
     "A complete visual system,": "Un système visuel complet,",
     "captured from the arena.": "capturé depuis l’arène.",
@@ -305,16 +306,6 @@
     "Back to top": "Retour en haut"
   }));
 
-  const frenchPipelineContent = [
-    { kicker: "Définition du problème", title: "Encoder la mission, pas seulement la géométrie.", copy: "Le départ et l’objectif sont fixes. Obstacles, murs, vitesse et accélération deviennent des coûts ou contraintes explicites." },
-    { kicker: "Génération de candidates", title: "Donner à l’optimiseur plusieurs points de départ utiles.", copy: "Des courbes paramétriques initialisent la recherche numérique. Elles réduisent la dépendance à une initialisation arbitraire et révèlent différents choix d’homotopie." },
-    { kicker: "Optimisation nominale", title: "Construire une référence lisse dans la scène connue.", copy: "La phase statique minimise un objectif variationnel discrétisé et renvoie une trajectoire paramétrée dans le temps autour d’obstacles fixes." },
-    { kicker: "Correction locale causale", title: "Réagir uniquement aux informations disponibles maintenant.", copy: "Attraction, répulsion et amortissement modifient le mouvement courant lorsque des agents mobiles entrent dans le voisinage de perception, sans anticiper leur futur." },
-    { kicker: "Suivi différentiel", title: "Transformer l’erreur de trajectoire en mouvement des roues.", copy: "Un contrôleur physique suit la référence nominale, gère l’orientation et garantit un arrêt sûr du rover." },
-    { kicker: "Perception métrique", title: "Transformer les pixels en un repère physique partagé.", copy: "Une caméra zénithale, une homographie et des marqueurs ArUco estiment les poses du rover et des obstacles dans les coordonnées de l’arène." },
-    { kicker: "Validation mesurée", title: "Comparer le chemin planifié à ce qui s’est réellement passé.", copy: "Les journaux quantifient l’erreur latérale, l’erreur d’orientation, l’écart final, le dégagement, la détection des marqueurs, les arrêts de sécurité et le résultat de l’essai." }
-  ];
-
   const sourceText = new WeakMap();
   const sourceAttributes = new WeakMap();
   let activeLanguage = "en";
@@ -345,12 +336,11 @@
       ".solver-table": { "aria-label": language === "fr" ? "Comparaison des solveurs" : "Solver comparison" },
       "#validation .trial-tabs": { "aria-label": language === "fr" ? "Sélectionner une figure de validation" : "Select validation figure" },
       "#calibration .trial-tabs": { "aria-label": language === "fr" ? "Sélectionner une figure de calibration" : "Select calibration figure" },
+      "[data-fullscreen-figure]": { "aria-label": language === "fr" ? "Afficher la figure active en plein écran" : "Open the current figure in full screen" },
       ".calibration-stats": { "aria-label": language === "fr" ? "Périmètre de la campagne de calibration" : "Calibration campaign scope" },
       ".trial-video-pair": { "aria-label": language === "fr" ? "Enregistrements vidéo des essais physiques anti-collision" : "Video recordings of the physical anti-collision runs" },
       ".sim-spotlight": { "aria-label": language === "fr" ? "Simulation d’anti-collision à six agents" : "Six-agent anti-collision simulation" },
-      ".tracking-panel img": { alt: language === "fr" ? "Image caméra annotée montrant les marqueurs ArUco dans l’arène d’essai du rover" : "Annotated camera frame showing ArUco markers in the rover test arena" },
-      ".media-video-row .tracking-pair img:nth-child(1)": { alt: language === "fr" ? "Image brute de la caméra zénithale de l’arène du rover" : "Raw overhead camera frame of the rover arena" },
-      ".media-video-row .tracking-pair img:nth-child(2)": { alt: language === "fr" ? "Même image avec les identifiants et coordonnées de suivi ArUco annotés" : "Same frame with ArUco tracking IDs and coordinates annotated" },
+      ".media-video-row > figure:first-child > img": { alt: language === "fr" ? "Image caméra annotée montrant les marqueurs ArUco dans l’arène d’essai du rover" : "Annotated camera frame showing ArUco markers in the rover test arena" },
       ".system-photo .tracking-pair img:nth-child(1)": { alt: language === "fr" ? "Image brute de la caméra zénithale de l’arène du rover et de l’obstacle" : "Raw overhead camera frame of the rover and obstacle arena" },
       ".system-photo .tracking-pair img:nth-child(2)": { alt: language === "fr" ? "Même image avec les identifiants ArUco, coordonnées et homographie superposés" : "Same frame with ArUco tracking IDs, coordinates, and homography overlaid" },
       ".institution-logos": { "aria-label": language === "fr" ? "Institutions partenaires" : "Partner institutions" },
@@ -388,7 +378,6 @@
       button.classList.toggle("is-active", button.dataset.languageChoice === activeLanguage);
     });
     try { localStorage.setItem("paco-language", activeLanguage); } catch { /* Storage can be unavailable. */ }
-    if (typeof setPipelineStep === "function") setPipelineStep(Number(document.querySelector(".pipeline-step.is-active")?.dataset.step ?? 0));
   };
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -439,69 +428,12 @@
     revealElements.forEach((element) => revealObserver.observe(element));
   }
 
-  const pipelineContent = [
-    {
-      kicker: "Problem definition",
-      title: "Encode the mission, not just the geometry.",
-      copy: "Start and goal are fixed. Obstacles, walls, speed, and acceleration become explicit costs or constraints.",
-    },
-    {
-      kicker: "Candidate generation",
-      title: "Give the optimizer several useful ways to begin.",
-      copy: "Parametric curves seed the numerical search. This reduces dependence on one arbitrary initialization and exposes distinct homotopy choices.",
-    },
-    {
-      kicker: "Nominal optimization",
-      title: "Build a smooth reference through the known scene.",
-      copy: "The static phase minimizes a discretized variational objective and returns a time-parameterized trajectory around fixed obstacles.",
-    },
-    {
-      kicker: "Causal local correction",
-      title: "React only to information available now.",
-      copy: "Attraction, repulsion, and damping modify current motion when moving agents enter the perception neighborhood—without reading their future.",
-    },
-    {
-      kicker: "Differential tracking",
-      title: "Turn trajectory error into wheel motion.",
-      copy: "A physical controller follows the nominal reference, handles orientation, and enforces safe stopping behavior on the rover.",
-    },
-    {
-      kicker: "Metric perception",
-      title: "Transform pixels into a shared physical frame.",
-      copy: "An overhead camera, homography, and ArUco markers estimate rover and obstacle poses in arena coordinates.",
-    },
-    {
-      kicker: "Measured validation",
-      title: "Compare the planned path with what actually happened.",
-      copy: "Logs quantify lateral error, orientation error, final gap, clearance, marker detection, safety stops, and run outcome.",
-    },
-  ];
-
-  const pipeline = document.querySelector("[data-pipeline]");
-  const pipelineSteps = [...(pipeline?.querySelectorAll("[data-step]") ?? [])];
-  const progress = pipeline?.querySelector("[data-pipeline-progress]");
-  const stepKicker = pipeline?.querySelector("[data-step-kicker]");
-  const stepTitle = pipeline?.querySelector("[data-step-title]");
-  const stepCopy = pipeline?.querySelector("[data-step-copy]");
-
-  const setPipelineStep = (index) => {
-    const content = (activeLanguage === "fr" ? frenchPipelineContent : pipelineContent)[index];
-    if (!content) return;
-    pipelineSteps.forEach((step, stepIndex) => step.classList.toggle("is-active", stepIndex === index));
-    if (progress) progress.style.width = `${(index / (pipelineSteps.length - 1)) * 100}%`;
-    if (stepKicker) stepKicker.textContent = content.kicker;
-    if (stepTitle) stepTitle.textContent = content.title;
-    if (stepCopy) stepCopy.textContent = content.copy;
-  };
-
-  pipelineSteps.forEach((step) => {
-    step.addEventListener("click", () => setPipelineStep(Number(step.dataset.step)));
-  });
-
   document.querySelectorAll("[data-tabs]").forEach((scope) => {
     const tabs = [...scope.querySelectorAll("[data-figure]")];
     const figureEl = scope.querySelector("[data-validation-figure]");
     const captionEl = scope.querySelector("[data-figure-caption]");
+    const fullscreenButton = scope.querySelector("[data-fullscreen-figure]");
+    const fullscreenShell = fullscreenButton?.closest(".evidence-image-shell");
 
     const selectFigure = (button) => {
       tabs.forEach((tab) => {
@@ -515,7 +447,10 @@
       window.setTimeout(() => {
         figureEl.src = button.dataset.figure ?? "";
         figureEl.alt = button.dataset.alt ?? "Validation figure";
-        if (captionEl) captionEl.textContent = button.dataset.caption ?? "";
+        if (captionEl) {
+          const caption = button.dataset.caption ?? "";
+          captionEl.textContent = activeLanguage === "fr" && frenchCopy.has(caption) ? frenchCopy.get(caption) : caption;
+        }
         figureEl.classList.remove("is-changing");
       }, reducedMotion ? 0 : 160);
     };
@@ -530,6 +465,35 @@
         tabs[nextIndex].focus();
         selectFigure(tabs[nextIndex]);
       });
+    });
+
+    fullscreenButton?.addEventListener("click", async () => {
+      if (!fullscreenShell || !document.fullscreenEnabled) return;
+      try {
+        if (document.fullscreenElement === fullscreenShell) {
+          await document.exitFullscreen();
+        } else {
+          await fullscreenShell.requestFullscreen();
+        }
+      } catch {
+        // Full screen can be rejected when the browser does not recognize a direct user gesture.
+      }
+    });
+  });
+
+  document.querySelectorAll(".system-photo [data-fullscreen-figure]").forEach((button) => {
+    const media = button.closest(".tracking-pair");
+    button.addEventListener("click", async () => {
+      if (!media || !document.fullscreenEnabled) return;
+      try {
+        if (document.fullscreenElement === media) {
+          await document.exitFullscreen();
+        } else {
+          await media.requestFullscreen();
+        }
+      } catch {
+        // Full screen can be rejected when the browser does not recognize a direct user gesture.
+      }
     });
   });
 
