@@ -384,6 +384,21 @@
   const header = document.querySelector("[data-header]");
   const menuButton = document.querySelector("[data-menu-button]");
   const navigation = document.querySelector("[data-nav]");
+  let scrollLockPosition = 0;
+
+  const updateScrollLock = (shouldLock) => {
+    if (shouldLock && !document.body.dataset.scrollLocked) {
+      scrollLockPosition = window.scrollY;
+      document.body.style.top = `-${scrollLockPosition}px`;
+      document.body.dataset.scrollLocked = "true";
+    } else if (!shouldLock && document.body.dataset.scrollLocked) {
+      document.body.style.top = "";
+      delete document.body.dataset.scrollLocked;
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => window.scrollTo(0, scrollLockPosition));
+      });
+    }
+  };
 
   const updateHeader = () => {
     header?.classList.toggle("is-scrolled", window.scrollY > 20);
@@ -397,13 +412,16 @@
     menuButton.setAttribute("aria-expanded", "false");
     navigation.classList.remove("is-open");
     document.body.classList.remove("menu-open");
+    updateScrollLock(document.body.classList.contains("language-dialog-open"));
   };
 
   menuButton?.addEventListener("click", () => {
     const shouldOpen = menuButton.getAttribute("aria-expanded") !== "true";
+    if (shouldOpen) updateScrollLock(true);
     menuButton.setAttribute("aria-expanded", String(shouldOpen));
     navigation?.classList.toggle("is-open", shouldOpen);
     document.body.classList.toggle("menu-open", shouldOpen);
+    if (!shouldOpen) updateScrollLock(document.body.classList.contains("language-dialog-open"));
   });
 
   navigation?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
@@ -539,6 +557,7 @@
   const closeLanguageDialog = () => {
     languageDialog?.classList.add("is-hidden");
     document.body.classList.remove("language-dialog-open");
+    updateScrollLock();
     try { sessionStorage.setItem("paco-language-dialog-seen", "true"); } catch { /* Storage can be unavailable. */ }
   };
 
@@ -562,6 +581,7 @@
   if (hasSeenLanguageDialog) {
     languageDialog?.classList.add("is-hidden");
   } else {
+    updateScrollLock(true);
     document.body.classList.add("language-dialog-open");
   }
 })();
