@@ -59,6 +59,7 @@
           <a href="#calibration">Calibration</a>
           <a href="#validation">Validation</a>
           <a href="#system">System</a>
+          <a href="#preprint">Paper</a>
           <a href="#team">Team</a>
         </nav>
 
@@ -68,9 +69,6 @@
             <span aria-hidden="true">/</span>
             <button type="button" data-language="fr" aria-pressed="false">FR</button>
           </div>
-          <a class="header-status" href="#validation">
-            <span></span> Anti-collision validated
-          </a>
           <div class="header-partners" aria-label="Partner institutions">
             <a
               href="https://artsetmetiers.fr/fr"
@@ -137,24 +135,24 @@
 
         <div class="container metrics-strip reveal" aria-label="Key validation metrics">
           <article>
-            <strong><span data-count="21">21</span><small>/23</small></strong>
-            <p>Runs reaching the goal</p>
-            <span>with moving robots in the arena</span>
+            <strong><span data-count="40">40</span><small>/40</small></strong>
+            <p>Physical runs reaching the goal</p>
+            <span>one coefficient set, no retuning between runs</span>
           </article>
           <article>
-            <strong><span data-count="7.12">7.12</span><small> cm</small></strong>
-            <p>Mean final error</p>
-            <span>across those runs</span>
+            <strong><span data-count="0">0</span><small>/40 collisions</small></strong>
+            <p>Reported repeatability campaign</p>
+            <span>two frozen tasks; not a general guarantee</span>
           </article>
           <article>
-            <strong><span data-count="9">9</span><small>/9</small></strong>
-            <p>Two-agent runs</p>
-            <span>two moving robots at once</span>
+            <strong><span data-count="6.3">6.3</span><small> cm</small></strong>
+            <p>Smallest moving-agent clearance</p>
+            <span>edge-to-edge between conservative safety discs</span>
           </article>
           <article>
-            <strong><span data-count="99.95">99.95</span><small> %</small></strong>
-            <p>ArUco detection</p>
-            <span>over 5,688 logged frames</span>
+            <strong>19.84–19.86<small> Hz</small></strong>
+            <p>Sustained closed loop</p>
+            <span>median rates in the one- and two-agent blocks</span>
           </article>
         </div>
       </section>
@@ -209,7 +207,7 @@
               <ul class="phase-points">
                 <li><span>Input</span> Static environment and target only</li>
                 <li><span>Output</span> Time-parameterized nominal trajectory</li>
-                <li><span>Tools</span> SciPy action minimization or direct Euler–Lagrange residuals</li>
+                <li><span>Tools</span> Variational action minimization or Euler–Lagrange residuals</li>
               </ul>
             </article>
 
@@ -229,7 +227,7 @@
               <ul class="phase-points">
                 <li><span>Input</span> Nominal reference and current mobile state</li>
                 <li><span>Output</span> Trajectory corrected locally at every instant</li>
-                <li><span>Update</span> Semi-implicit Euler, Verlet, or Lennard-Jones variant</li>
+                <li><span>Update</span> Semi-implicit Euler, Velocity-Verlet, or stiff-repulsion</li>
               </ul>
             </article>
           </div>
@@ -308,26 +306,26 @@
               <span role="columnheader">Strategy</span><span role="columnheader">What it solves</span><span role="columnheader">Best use</span><span role="columnheader">Observed trade-off</span>
             </div>
             <div class="solver-row" role="row">
-              <strong role="cell"><i class="solver-dot dot-blue"></i>SciPy variational</strong>
+              <strong role="cell"><i class="solver-dot dot-blue"></i>Variational</strong>
               <span role="cell">Discretized action minimization with analytic gradient</span>
               <span role="cell">High-quality nominal planning</span>
               <span role="cell">Longer campaigns for greater precision</span>
             </div>
             <div class="solver-row" role="row">
-              <strong role="cell"><i class="solver-dot dot-orange"></i>Direct Euler–Lagrange</strong>
+              <strong role="cell"><i class="solver-dot dot-orange"></i>Euler–Lagrange</strong>
               <span role="cell">Stationarity residual through root or least-squares methods</span>
               <span role="cell">Low-complexity problems</span>
               <span role="cell">Faster campaigns, but convergence remained scenario-sensitive</span>
             </div>
             <div class="solver-row" role="row">
-              <strong role="cell"><i class="solver-dot dot-gray"></i>Straight-line baseline</strong>
+              <strong role="cell"><i class="solver-dot dot-gray"></i>Straight line</strong>
               <span role="cell">No nominal optimization</span>
               <span role="cell">Ablation and runtime baseline</span>
               <span role="cell">Ease of computation for a low-quality reference</span>
             </div>
             <div class="solver-row" role="row">
-              <strong role="cell"><i class="solver-dot dot-purple"></i>Full Newton</strong>
-              <span role="cell">Fully causal Newtonian dynamics without a nominal trajectory</span>
+              <strong role="cell"><i class="solver-dot dot-purple"></i>No-plan ablation</strong>
+              <span role="cell">Causal correction without a nominal trajectory</span>
               <span role="cell">Nominal-planning ablation baseline</span>
               <span role="cell">High safety but limited progress toward the target</span>
             </div>
@@ -373,41 +371,41 @@
           <div class="evidence-feature calibration-feature reveal" data-tabs>
             <div class="evidence-copy">
               <p class="eyebrow"><span>Joint success</span> · safe and ≤ 10 cm from target</p>
-              <h3>SciPy leads both readings; Full Newton stays safe but rarely arrives.</h3>
+              <h3>Variational planning leads at tight tolerance; safety alone misleads.</h3>
               <p>
-                Across the full final zone, SciPy + Initial leads with 50.84% joint success. Restricted to each pair's top 4 profiles and widened to 10 held-out scenarios, SciPy + Verlet edges ahead at 65.38%. Full Newton — the ablation with no nominal phase at all — reaches up to 96% collision-free runs and as little as 3.85% joint success: it stays safe by stalling short of the goal, not by reaching it.
+                Across the full final region, Variational + Semi-implicit Euler leads with 50.84% joint success. Restricted to each pair's four best-ranked profiles and re-evaluated on all 26 scenarios, Variational + Velocity-Verlet reaches 65.38%, ahead of Variational + Semi-implicit Euler at 63.46% and the best Straight-line pair at 48.08%. The No-plan ablation reaches 96.15% collision-free runs with two correctors but only 3.85% joint success: it often stays safe by stopping short of the goal.
               </p>
               <dl class="evidence-stats">
-                <div><dt>50.84%</dt><dd>best full-zone joint success · SciPy + Initial</dd></div>
-                <div><dt>65.38%</dt><dd>best top-4 joint success · SciPy + Verlet</dd></div>
-                <div><dt>3.85%</dt><dd>Full Newton + Initial/Verlet, despite 96% safety</dd></div>
+                <div><dt>65.38%</dt><dd>best-profile joint success · Variational + Velocity-Verlet</dd></div>
+                <div><dt>63.46%</dt><dd>Variational + Semi-implicit Euler</dd></div>
+                <div><dt>48.08%</dt><dd>best Straight-line combination</dd></div>
               </dl>
               <p class="trial-tabs-hint"><span aria-hidden="true">↳</span> Choose a figure — the graph updates when clicked</p>
               <div class="trial-tabs" role="tablist" aria-label="Select calibration figure">
-                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/calibration_final_zone_rates.png" data-alt="Bar chart of safe, target-reached, and joint-success rates for all final-zone profiles per solver-controller pair" data-caption="Full final zone · all profiles per pair · 16 calibration scenarios">Full zone</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_top4_rates.png" data-alt="Bar chart of safe, target-reached, and joint-success rates for the top 4 profiles per pair" data-caption="Top 4 profiles per pair · 26 scenarios, 16 calibration plus 10 held-out">Top 4</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_outcome_decomposition.png" data-alt="Horizontal stacked bars decomposing top-4 outcomes into complete success, safe but off-target, and unsafe" data-caption="Exclusive outcome shares for the top-4 runs · complete success, safe but off-target, unsafe">Outcome breakdown</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_generalization.png" data-alt="Scatter plot comparing top-4 joint success on calibration scenarios versus held-out scenarios" data-caption="Top-4 joint success on the 16 calibration scenarios versus the 10 held-out scenarios">Generalization</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/calibration_threshold_sensitivity.png" data-alt="Line chart of top-4 joint success as the target tolerance relaxes from 0 to 100 centimeters" data-caption="Top-4 joint success as the target tolerance relaxes from 0 to 100 cm">Threshold sensitivity</button>
+                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/paper_f9_final_zone.png" data-alt="Joint success, collision-free rate, and target-reaching rate for all final-region profiles across the twelve published architectures" data-caption="Figure 9 · full final region · published solver and corrector names">Full zone</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/paper_f10_best_profiles.png" data-alt="Joint success, collision-free rate, and target-reaching rate for the four best-ranked profiles of every architecture" data-caption="Figure 10 · four best-ranked profiles per architecture · 26 scenarios">Best profiles</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/paper_f11_outcomes.png" data-alt="Horizontal bars decomposing best-ranked outcomes into joint success, collision-free target misses, and unsafe runs" data-caption="Figure 11 · exclusive outcome decomposition · 10 cm terminal tolerance">Outcome breakdown</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/paper_f12_generalization.png" data-alt="Calibration-versus-held-out joint success for all nominal-generator and corrector combinations" data-caption="Figure 12 · calibration versus held-out scenarios">Generalization</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/paper_f13_tolerance.png" data-alt="Joint success of the best-ranked profiles as terminal-distance tolerance increases from zero to one hundred centimeters" data-caption="Figure 13 · ranking sensitivity to terminal-distance tolerance">Threshold sensitivity</button>
               </div>
             </div>
             <figure class="evidence-figure">
               <div class="evidence-image-shell">
-                <img data-validation-figure src="assets/figures/calibration_final_zone_rates.png" alt="Bar chart of safe, target-reached, and joint-success rates for all final-zone profiles per solver-controller pair" />
+                <img data-validation-figure src="assets/figures/paper_f9_final_zone.png" alt="Joint success, collision-free rate, and target-reaching rate for all final-region profiles across the twelve published architectures" />
                 <button class="figure-fullscreen" type="button" data-fullscreen-figure aria-label="Open the current figure in full screen">
                   <span aria-hidden="true">⛶</span> Full screen
                 </button>
               </div>
-              <figcaption><span data-figure-caption>Full final zone · all profiles per pair · 16 calibration scenarios</span></figcaption>
+              <figcaption><span data-figure-caption>Figure 9 · full final region · published solver and corrector names</span></figcaption>
             </figure>
           </div>
 
           <aside class="naming-note reveal">
             <span>Reading the figures</span>
             <p>
-              <strong>Sans collision</strong>: the trial ended without any collision;
-              <strong>Cible</strong>: the robot reaches the target within the tolerance threshold;
-              <strong>Succès conjoint</strong>: the robot reaches the target without any collision.
+              <strong>Collision-free</strong>: the run ended without a geometric collision;
+              <strong>Target reached</strong>: the robot finished within the tolerance threshold;
+              <strong>Joint success</strong>: both conditions hold in the same run.
             </p>
           </aside>
 
@@ -417,29 +415,29 @@
               <i aria-hidden="true"></i>
             </summary>
             <p class="scope-note">
-              Coefficients are searched in three stages — a broad Latin Hypercube sweep, a refined search recentered on the best region, then a tighter final-zone search — over seven parameters: attraction and damping gains, mobile/static/border repulsion, perception radius, and lookahead time. A scenario with a collision-free rate under 15% after Broad is quarantined from scoring but kept running, and is reinstated once it clears 50% then 80%. Nine pairs use the <code>long</code> budget; the three Line-based pairs use <code>very_long</code>, giving Line more sampled profiles in its final zone (900 versus 400).
+              Coefficients are searched in three stages — a broad Latin Hypercube sweep, a refined search recentered on the best region, then a tighter final-zone search — over seven parameters: attraction and damping gains, mobile/static/border repulsion, perception radius, and lookahead time. A scenario with a collision-free rate under 15% after Broad is quarantined from scoring but kept running, and is reinstated once it clears 50% then 80%. Nine pairs use the <code>long</code> budget; the three Straight-line pairs use <code>very_long</code>, giving them more sampled profiles in the final region (900 versus 400).
             </p>
             <div class="matrix-wrap">
               <table class="validation-matrix">
                 <thead><tr><th>Pair</th><th>Budget</th><th>n zone</th><th>Zone: safe / target / joint</th><th>Top 4: safe / target / joint</th><th>Joint, calib.</th><th>Joint, held-out</th><th>Duration</th></tr></thead>
                 <tbody>
-                  <tr><td>SciPy + Verlet</td><td>long</td><td>400</td><td>72.44 / 57.61 / 48.30</td><td>76.92 / 69.23 / <b>65.38</b></td><td>62.50</td><td>70.00</td><td>18h 47m</td></tr>
-                  <tr><td>SciPy + Initial</td><td>long</td><td>400</td><td>72.62 / 64.94 / <b>50.84</b></td><td>80.77 / 72.12 / 63.46</td><td>59.38</td><td>70.00</td><td>18h 28m</td></tr>
-                  <tr><td>Line + Initial</td><td>very_long</td><td>900</td><td>77.89 / 49.30 / 39.38</td><td>88.46 / 52.88 / 48.08</td><td>46.88</td><td>50.00</td><td>0h 50m</td></tr>
-                  <tr><td>Euler–Lagrange + Verlet</td><td>long</td><td>400</td><td>62.50 / 50.00 / 37.50</td><td>65.38 / 55.77 / 42.31</td><td>37.50</td><td>50.00</td><td>5h 53m</td></tr>
-                  <tr><td>Euler–Lagrange + Initial</td><td>long</td><td>400</td><td>63.83 / 44.72 / 30.25</td><td>68.27 / 41.35 / 31.73</td><td>23.44</td><td>45.00</td><td>5h 33m</td></tr>
-                  <tr><td>Line + Verlet</td><td>very_long</td><td>900</td><td>77.95 / 33.69 / 29.95</td><td>84.62 / 30.77 / 29.81</td><td>20.31</td><td>45.00</td><td>1h 25m</td></tr>
-                  <tr><td>Line + Jones</td><td>very_long</td><td>900</td><td>77.19 / 18.65 / 18.51</td><td>74.04 / 22.12 / 20.19</td><td>18.75</td><td>22.50</td><td>0h 53m</td></tr>
-                  <tr><td>SciPy + Jones</td><td>long</td><td>400</td><td>37.23 / 42.33 / 11.30</td><td>49.04 / 41.35 / 18.27</td><td>10.94</td><td>30.00</td><td>18h 28m</td></tr>
-                  <tr><td>Euler–Lagrange + Jones</td><td>long</td><td>400</td><td>43.27 / 33.66 / 5.33</td><td>53.85 / 37.50 / 16.35</td><td>6.25</td><td>32.50</td><td>5h 30m</td></tr>
-                  <tr><td>Full Newton + Jones</td><td>long</td><td>400</td><td><b>89.69</b> / 6.19 / 5.97</td><td>90.38 / 9.62 / 9.62</td><td>6.25</td><td>15.00</td><td>0h 31m</td></tr>
-                  <tr><td>Full Newton + Initial</td><td>long</td><td>400</td><td>85.80 / 22.58 / 16.38</td><td><b>96.15</b> / 7.69 / 3.85</td><td>6.25</td><td>0.00</td><td>0h 29m</td></tr>
-                  <tr><td>Full Newton + Verlet</td><td>long</td><td>400</td><td>85.14 / 21.83 / 15.56</td><td><b>96.15</b> / 7.69 / 3.85</td><td>6.25</td><td>0.00</td><td>0h 45m</td></tr>
+                  <tr><td>Variational + Velocity-Verlet</td><td>long</td><td>400</td><td>72.44 / 57.61 / 48.30</td><td>76.92 / 69.23 / <b>65.38</b></td><td>62.50</td><td>70.00</td><td>18h 47m</td></tr>
+                  <tr><td>Variational + Semi-implicit Euler</td><td>long</td><td>400</td><td>72.62 / 64.94 / <b>50.84</b></td><td>80.77 / 72.12 / 63.46</td><td>59.38</td><td>70.00</td><td>18h 28m</td></tr>
+                  <tr><td>Straight line + Semi-implicit Euler</td><td>very_long</td><td>900</td><td>77.89 / 49.30 / 39.38</td><td>88.46 / 52.88 / 48.08</td><td>46.88</td><td>50.00</td><td>0h 50m</td></tr>
+                  <tr><td>Euler–Lagrange + Velocity-Verlet</td><td>long</td><td>400</td><td>62.50 / 50.00 / 37.50</td><td>65.38 / 55.77 / 42.31</td><td>37.50</td><td>50.00</td><td>5h 53m</td></tr>
+                  <tr><td>Euler–Lagrange + Semi-implicit Euler</td><td>long</td><td>400</td><td>63.83 / 44.72 / 30.25</td><td>68.27 / 41.35 / 31.73</td><td>23.44</td><td>45.00</td><td>5h 33m</td></tr>
+                  <tr><td>Straight line + Velocity-Verlet</td><td>very_long</td><td>900</td><td>77.95 / 33.69 / 29.95</td><td>84.62 / 30.77 / 29.81</td><td>20.31</td><td>45.00</td><td>1h 25m</td></tr>
+                  <tr><td>Straight line + Stiff-repulsion</td><td>very_long</td><td>900</td><td>77.19 / 18.65 / 18.51</td><td>74.04 / 22.12 / 20.19</td><td>18.75</td><td>22.50</td><td>0h 53m</td></tr>
+                  <tr><td>Variational + Stiff-repulsion</td><td>long</td><td>400</td><td>37.23 / 42.33 / 11.30</td><td>49.04 / 41.35 / 18.27</td><td>10.94</td><td>30.00</td><td>18h 28m</td></tr>
+                  <tr><td>Euler–Lagrange + Stiff-repulsion</td><td>long</td><td>400</td><td>43.27 / 33.66 / 5.33</td><td>53.85 / 37.50 / 16.35</td><td>6.25</td><td>32.50</td><td>5h 30m</td></tr>
+                  <tr><td>No-plan ablation + Stiff-repulsion</td><td>long</td><td>400</td><td><b>89.69</b> / 6.19 / 5.97</td><td>90.38 / 9.62 / 9.62</td><td>6.25</td><td>15.00</td><td>0h 31m</td></tr>
+                  <tr><td>No-plan ablation + Semi-implicit Euler</td><td>long</td><td>400</td><td>85.80 / 22.58 / 16.38</td><td><b>96.15</b> / 7.69 / 3.85</td><td>6.25</td><td>0.00</td><td>0h 29m</td></tr>
+                  <tr><td>No-plan ablation + Velocity-Verlet</td><td>long</td><td>400</td><td>85.14 / 21.83 / 15.56</td><td><b>96.15</b> / 7.69 / 3.85</td><td>6.25</td><td>0.00</td><td>0h 45m</td></tr>
                 </tbody>
               </table>
             </div>
             <p class="scope-note">
-              These percentages are frequencies over a finite set of profiles and scenarios, not probabilities with a confidence interval — each pair is evaluated once, not repeated across independent random seeds. Full Newton's low joint success reflects a progression failure (safe but far from the goal), not primarily a safety failure; Jones controllers trade the opposite way, converting more of their safety margin into unsafe events through a very stiff 1/d¹³ repulsion law.
+              These percentages are frequencies over a finite set of profiles and scenarios, not probabilities with a confidence interval — each pair is evaluated once, not repeated across independent random seeds, and the quarantine removes scenarios from a pair's score rather than penalising them, so the pairs are not selected over a common set of scenarios. The No-plan ablation's low joint success reflects a progression failure (collision-free but far from the goal), while Stiff-repulsion trades the opposite way by producing more unsafe runs. The ranking also depends on demanded precision: Variational + Velocity-Verlet leads at 10 cm but is matched by the Straight-line baseline at 100 cm.
             </p>
             <p class="scope-note">
               <a class="text-link" href="assets/reports/rapport_comparaison_solveurs_controleurs.pdf" target="_blank" rel="noopener noreferrer">Open the full report (PDF, French) <span aria-hidden="true">↗</span></a>
@@ -463,49 +461,68 @@
           <div class="validation-status-grid reveal">
             <article class="validation-status status-complete">
               <span class="status-icon">✓</span>
-              <div><small>Physical · validated</small><h3>Moving-agent avoidance</h3><p>The rover detects moving robots, deviates around them, and still reaches its goal.</p></div>
+              <div><small>Physical · repeated tasks</small><h3>Moving-agent avoidance</h3><p>Demonstrated over 40 runs of two frozen tasks, with one or two independently moving agents.</p></div>
             </article>
             <article class="validation-status status-complete">
               <span class="status-icon">✓</span>
-              <div><small>Physical · validated</small><h3>Fixed-obstacle avoidance</h3><p>Fixed columns avoided in the same runs, with the same causal corrector.</p></div>
+              <div><small>Physical · repeated tasks</small><h3>Fixed-obstacle avoidance</h3><p>Fixed columns were avoided in the same reported campaign; the smallest measured margin was 29.7 cm.</p></div>
             </article>
             <article class="validation-status status-complete">
               <span class="status-icon">✓</span>
-              <div><small>Physical · complete</small><h3>Metric perception chain</h3><p>Camera, homography, ArUco tracking, coordinates, and control connected.</p></div>
+              <div><small>Physical · measured</small><h3>Metric perception chain</h3><p>Camera, homography, ArUco tracking, coordinates, and control closed near 20 Hz — the rover was detected in every acquired frame.</p></div>
             </article>
             <article class="validation-status status-partial">
               <span class="status-icon">↗</span>
-              <div><small>Partial · in progress</small><h3>Predictive digital twin</h3><p>The twin predicts arrival well, but not yet the full path taken.</p></div>
+              <div><small>Empirical · partial</small><h3>Predictive digital twin</h3><p>Mean path departures were 5.81 cm and 5.31 cm, but measured paths remained longer than simulated ones.</p></div>
             </article>
           </div>
 
+          <aside class="evidence-boundary reveal" aria-labelledby="evidence-boundary-title">
+            <div class="boundary-heading">
+              <h3 id="evidence-boundary-title">Forty collision-free runs do not mean zero risk.</h3>
+            </div>
+            <div class="boundary-cards">
+              <article>
+                <span>Reported repeatability campaign</span>
+                <strong>40 / 40 goals reached</strong>
+                <p>Across the two repeated frozen tasks, no physical contact and no negative clearance were recorded.</p>
+              </article>
+              <article class="boundary-warning">
+                <span>Exploratory development</span>
+                <strong>Collisions did occur</strong>
+                <p>Other exploratory configurations produced geometric collisions, and physical contacts were also observed during development. The soft-force corrector does not enforce a minimum separation.</p>
+              </article>
+            </div>
+            <p class="boundary-definition"><strong>How to read clearance:</strong> a negative value means the conservative safety discs overlap; it does not necessarily mean the physical chassis touched.</p>
+          </aside>
+
           <div class="evidence-feature reveal" data-tabs>
             <div class="evidence-copy">
-              <p class="eyebrow"><span>Anti-collision campaign</span> · July 30, 2026</p>
-              <h3>The rover now avoids moving robots — and still reaches its target.</h3>
+              <p class="eyebrow"><span>Repeated anti-collision campaign</span> · August 4, 2026</p>
+              <h3>Repeated campaign: forty runs, forty arrivals, zero collisions.</h3>
               <p>
-                Across the final campaign the rover shared its arena with one or two independently moving robots plus fixed columns. It leaves its nominal path to open a gap, then closes back onto the goal. Every run below is a physical run, logged frame by frame.
+                Two frozen tasks — twenty runs with one moving robot, twenty with two — executed in a single day with a single set of coefficients and no retuning between runs. The rover leaves its nominal path to open a gap, then closes back onto the goal. Every run below is a physical run, logged frame by frame.
               </p>
               <dl class="evidence-stats">
-                <div><dt>21 / 23</dt><dd>runs reached the goal with moving agents present</dd></div>
-                <div><dt>7.1 cm</dt><dd>mean final distance to target (max 7.9)</dd></div>
-                <div><dt>9 / 9</dt><dd>runs with two simultaneous moving agents</dd></div>
+                <div><dt>40 / 40</dt><dd>runs reached the goal, in both blocks</dd></div>
+                <div><dt>0</dt><dd>collisions, and no negative safety clearance in any run</dd></div>
+                <div><dt>0.9 %</dt><dd>run-to-run variation of the path length, one moving agent</dd></div>
               </dl>
               <p class="trial-tabs-hint"><span aria-hidden="true">↳</span> Choose a figure — the graph updates when clicked</p>
               <div class="trial-tabs" role="tablist" aria-label="Select validation figure">
-                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/phase6_10_cbd2abb020_comparison.png" data-alt="Phase 6.10 dashboard comparison between nominal, simulated, and measured trajectories for the latest physical run" data-caption="Latest Phase 6.10 run · two moving agents · real/simulation comparison · 31 July 2026">Real / simulation</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/phase6_10_cbd2abb020_mobile_clearance.png" data-alt="Mobile safety clearance measured over time from the latest Phase 6.10 physical-run log" data-caption="Latest Phase 6.10 run · logged mobile safety clearance · 31 July 2026">Mobile safety clearance</button>
-                <button role="tab" aria-selected="false" data-figure="assets/figures/anticollision_twin_vs_real.png" data-alt="Scatter plot comparing simulated and measured final distance to goal across 21 paired runs" data-caption="Simulated versus measured arrival point across 21 paired runs">Digital twin</button>
+                <button class="is-active" role="tab" aria-selected="true" data-figure="assets/figures/campaign_single_agent.png" data-alt="Twenty measured trajectories superimposed in the arena, with the clearance to the moving agent over time for every run" data-caption="One moving agent · all 20 runs superimposed · lowest clearance 10.6 cm">One moving agent · 20 runs</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/campaign_dual_agent.png" data-alt="Nineteen measured trajectories superimposed in the arena, with the smallest of the two agent clearances over time for every run" data-caption="Two simultaneous moving agents · all 19 runs superimposed · lowest clearance 6.3 cm">Two moving agents · 19 runs</button>
+                <button role="tab" aria-selected="false" data-figure="assets/figures/realtime_budget.png" data-alt="Breakdown of one control iteration into vision, serial transmission, control computation, and remaining headroom against the 50 millisecond budget" data-caption="Real-time budget of one iteration · vision 65.9 %, causal correction 1.4 %, headroom 13.8 %">Real-time budget</button>
               </div>
             </div>
             <figure class="evidence-figure">
               <div class="evidence-image-shell">
-                <img data-validation-figure src="assets/figures/phase6_10_cbd2abb020_comparison.png" alt="Phase 6.10 dashboard comparison between nominal, simulated, and measured trajectories for the latest physical run" />
+                <img data-validation-figure src="assets/figures/campaign_single_agent.png" alt="Twenty measured trajectories superimposed in the arena, with the clearance to the moving agent over time for every run" />
                 <button class="figure-fullscreen" type="button" data-fullscreen-figure aria-label="Open the current figure in full screen">
                   <span aria-hidden="true">⛶</span> Full screen
                 </button>
               </div>
-              <figcaption><span data-figure-caption>Latest Phase 6.10 run · two moving agents · real/simulation comparison · 31 July 2026</span></figcaption>
+              <figcaption><span data-figure-caption>One moving agent · all 20 runs superimposed · lowest clearance 10.6 cm</span></figcaption>
             </figure>
           </div>
 
@@ -529,7 +546,7 @@
               <p class="eyebrow"><span>Multi-agent simulation</span> · 6 independent agents</p>
               <h3>Every robot runs its own collision-avoidance brain.</h3>
               <p>
-                This scenario runs the same causal correction algorithm independently inside all six agents at once, with no central coordinator. The physical runs above validated this logic on one controlled rover among two moving robots; the simulation shows it extends to a fully decentralized swarm where every agent avoids every other.
+                This scenario runs the same causal correction algorithm independently inside all six agents at once, with no central coordinator. The physical campaign tested one controlled rover among one or two moving agents; this simulation illustrates the same local logic in a fully decentralized six-agent setting, without constituting physical validation at that scale.
               </p>
               <dl class="evidence-stats">
                 <div><dt>6</dt><dd>independent agents</dd></div>
@@ -557,20 +574,24 @@
                 <thead><tr><th>Capability</th><th>Evidence</th><th>Status</th><th>Scope</th></tr></thead>
                 <tbody>
                   <tr><td>Nominal trajectory generation</td><td>Software tests + simulation</td><td><span class="pill pill-green">Validated</span></td><td>2D scenarios in repository</td></tr>
-                  <tr><td>Fixed-obstacle physical avoidance</td><td>Phase 6.10 campaign</td><td><span class="pill pill-green">Validated</span></td><td>Documented arena and profiles</td></tr>
-                  <tr><td>Moving-agent physical avoidance</td><td>23 runs, 30 July 2026</td><td><span class="pill pill-green">Validated</span></td><td>1–2 moving robots, 2 × 2 m arena</td></tr>
-                  <tr><td>Two simultaneous moving agents</td><td>9 runs, all reached goal</td><td><span class="pill pill-green">Validated</span></td><td>Same corrector, no retuning</td></tr>
+                  <tr><td>Fixed-obstacle physical avoidance</td><td>40 runs, all clearances positive</td><td><span class="pill pill-green">Demonstrated</span></td><td>Two frozen tasks; lowest margin 29.7 cm</td></tr>
+                  <tr><td>Moving-agent physical avoidance</td><td>20 runs, 4 August 2026</td><td><span class="pill pill-green">Demonstrated</span></td><td>One moving robot, 2 × 2 m arena</td></tr>
+                  <tr><td>Two simultaneous moving agents</td><td>19 aggregate runs; all 20 reached goal</td><td><span class="pill pill-green">Demonstrated</span></td><td>Same corrector, no retuning</td></tr>
+                  <tr><td>Sustained 20 Hz closed loop</td><td>Timing logged in all 40 runs</td><td><span class="pill pill-green">Demonstrated</span></td><td>Medians 19.84 / 19.86 Hz; isolated maximum 125 ms</td></tr>
                   <tr><td>Decentralized multi-agent (6 robots)</td><td>Simulation</td><td><span class="pill pill-blue">Simulation</span></td><td>Not physically demonstrated</td></tr>
-                  <tr><td>Predictive digital twin</td><td>23 paired sim/real runs</td><td><span class="pill pill-amber">Partial</span></td><td>Arrival predicted; path not yet</td></tr>
+                  <tr><td>Predictive digital twin</td><td>39 paired sim/real runs</td><td><span class="pill pill-amber">Partial</span></td><td>Mean departures 5.81 / 5.31 cm; measured paths longer</td></tr>
                   <tr><td>Aerial drone deployment</td><td>None</td><td><span class="pill pill-gray">Not claimed</span></td><td>Physical platform is a rover</td></tr>
                 </tbody>
               </table>
             </div>
             <p class="scope-note">
-              Clearance is measured edge-to-edge between the conservative bounding discs used by the controller (rover radius 0.13 m), not between the physical chassis outlines. A small negative value therefore means the two safety discs overlapped, not that the robots touched. On the 12 runs where both the moving-agent and fixed-obstacle clearances stayed strictly positive for the whole run, the smallest measured margin was 3.0 cm and the mean was 25.8 cm.
+              Clearance is measured edge-to-edge between the conservative bounding discs used by the controller (rover radius 0.13 m), not between the physical chassis outlines. During the reported 40-run campaign, no negative value and no physical contact were recorded. The smallest margin to a moving agent was 10.6 cm with one agent and 6.3 cm with two; the smallest margin to a fixed obstacle was 29.7 cm and 49.6 cm respectively.
             </p>
             <p class="scope-note">
-              Of the 23 runs, one ended on a safety stop when a marker was momentarily lost near an agent, and one hit the duration limit — both are the safety layer behaving as designed, not collisions. Percentages describe this single campaign in one arena with one hardware setup; they are not a general reliability figure.
+              The campaign repeats two frozen tasks in one day: start, goal, and obstacles are held fixed within each block, and the two blocks share the same corrector coefficients, motor model, loop rate, and vision calibration. One run of the two-agent block is excluded from the aggregates because it was executed before the fixed obstacles were moved into that block's layout — it reached its goal like every other run. The claim supported here is that this configuration is executed safely and repeatedly, not that the method guarantees a positive clearance in general.
+            </p>
+            <p class="scope-note">
+              Earlier exploratory work covered broader and sometimes more constrained configurations. Geometric collisions and physical contacts were observed during that development phase, together with a progression stall and a perception safety stop. Those attempts provide context, not a reliability estimate; no figure on this page uses them as the reported result.
             </p>
           </details>
         </div>
@@ -607,9 +628,17 @@
                 <li><span>04</span><div><strong>Differential control</strong><small>trajectory error → wheel commands</small></div></li>
                 <li><span>05</span><div><strong>Validation log</strong><small>clearance, RMSE, stop, final gap</small></div></li>
               </ol>
-              <div class="chain-proof"><span>30 fps</span><p>900 / 900 frames captured in 30-second Ethernet tests on both Mac and Raspberry Pi.</p></div>
+              <div class="chain-proof"><span>× 1.75</span><p>Downscaling the frame before marker detection cut detection from 72.8 ms to 29.1 ms, lifting the achieved loop rate from 11.35 Hz to 19.85 Hz and dropping discarded frames from about 130 per run to 0.2 — with the controlled rover still detected in every single frame.</p></div>
             </div>
           </div>
+
+          <div class="runtime-strip reveal" aria-label="Measured real-time budget">
+            <article><strong>0.72 ms</strong><span>Causal correction</span><small>1.4 % of the 50 ms period</small></article>
+            <article><strong>32.94 ms</strong><span>Vision pipeline</span><small>65.9 % of the period</small></article>
+            <article><strong>8.43 ms</strong><span>Serial transmission</span><small>16.9 % of the period</small></article>
+            <article><strong>6.88 ms</strong><span>Remaining headroom</span><small>13.8 % of the period</small></article>
+          </div>
+          <p class="runtime-note reveal">Across all 40 runs, the slowest per-run 99th percentile was 87 ms. Isolated loop periods reached 125 ms, still six times below the 750 ms safety guard.</p>
 
         </div>
       </section>
@@ -659,6 +688,19 @@
               <figcaption><span><b>V05</b> Screen-to-rover handoff</span><span class="evidence-label">Field footage</span></figcaption>
             </figure>
           </div>
+
+          <aside id="preprint" class="preprint-card reveal" aria-labelledby="preprint-title">
+            <div class="preprint-copy">
+              <p class="eyebrow"><span>Preprint</span> · Draft v1</p>
+              <h3 id="preprint-title">Read the paper behind the results.</h3>
+              <p>The compact manuscript documents the method, calibration protocol, forty-run physical campaign, measured limitations, and simulation-to-reality comparison.</p>
+              <a class="button button-primary" href="assets/reports/paco-preprint-draft-v1-compact.pdf" target="_blank" rel="noopener noreferrer">Read the preprint — Draft v1 <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="draft-notice">
+              <span>Working version</span>
+              <p>Affiliations and corresponding-author information are still provisional in this public draft.</p>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -666,13 +708,14 @@
         <div class="container limits-grid">
           <div>
             <div class="section-index reveal">08 <span></span> Current boundary</div>
-            <h2 id="limits-title" class="reveal">Avoidance is validated.<br /><em>Prediction is what comes next.</em></h2>
+            <h2 id="limits-title" class="reveal">Avoidance was demonstrated.<br /><em>Breadth and guarantees come next.</em></h2>
           </div>
           <div class="limits-list">
-            <article class="reveal"><span aria-hidden="true">01</span><div><h3>Predictive digital twin</h3><p>The twin already predicts where the rover stops to within about a centimetre, but not the path it takes to get there. Closing that gap — modelling wheel slip, latency, and contact more faithfully — is the next major step.</p></div></article>
-            <article class="reveal"><span aria-hidden="true">02</span><div><h3>Predictive control and learning</h3><p>The corrector reacts to the present state only. Model predictive control and learning-based policies would let the rover anticipate where a moving agent is heading instead of responding once it is close.</p></div></article>
-            <article class="reveal"><span aria-hidden="true">03</span><div><h3>Better nominal planning</h3><p>The nominal path comes from a local variational solve that depends on its initialization. Graph search such as A* — used to seed or replace that stage — should give a more reliable global route before the causal layer refines it.</p></div></article>
-            <article class="reveal"><span aria-hidden="true">04</span><div><h3>Scale and benchmark breadth</h3><p>Decentralized avoidance is validated physically for two moving agents and in simulation for six. Larger fleets, and a frozen scenario suite for solver comparison, remain to be done.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">01</span><div><h3>No formal separation guarantee</h3><p>The corrector uses soft repulsive forces with bounded acceleration. The clean forty-run record belongs to the two repeated tasks; it does not enforce a minimum clearance in every configuration.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">02</span><div><h3>Predictive digital twin</h3><p>Median mean departures were 5.81 cm and 5.31 cm, but measured paths remained longer than simulated ones, with length ratios of 1.090 and 1.169. Non-holonomic motion, wheel slip, asymmetric actuation, and latency remain to be modelled more faithfully.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">03</span><div><h3>Predictive control and learning</h3><p>The corrector reacts to the present state only. Model predictive control and learning-based policies would let the rover anticipate where a moving agent is heading instead of responding once it is close.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">04</span><div><h3>Better nominal planning</h3><p>The nominal path comes from a local variational solve that depends on its initialization. Graph search such as A* — used to seed or replace that stage — should give a more reliable global route before the causal layer refines it.</p></div></article>
+            <article class="reveal"><span aria-hidden="true">05</span><div><h3>Scale and benchmark breadth</h3><p>One controlled rover was physically tested among one or two moving agents; six controlled agents remain simulation-only. Repetition across more geometries, days, seeds, and platforms is still required.</p></div></article>
           </div>
         </div>
       </section>
