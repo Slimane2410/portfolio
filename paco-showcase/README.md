@@ -1,39 +1,36 @@
-# Trajectory Optimization for Autonomous Systems — Showcase
+# PACO Showcase
 
-Static, dependency-free internal research showcase. The page is written in US English and can be hosted directly on GitHub Pages, Vercel, Netlify, or any static file server.
+Static, dependency-free bilingual research showcase. It can be hosted directly on GitHub Pages, Vercel, Netlify, or any static file server.
 
 ## Local preview
 
 From the repository root:
 
 ```bash
-python3 -m http.server 4173 --directory paco-showcase
+python -m http.server 4173 --directory paco-showcase
 ```
 
 Then open `http://localhost:4173`.
 
-## Media replacement workflow
-
-All videos have been replaced with real footage. The ArUco tracking video slot (`tracking_aruco_metric_v01.mp4`) no longer exists; V03 now shows the annotated repository frame `assets/figures/aruco_tracking_annotated.png`, while the physical-system section keeps the raw/annotated photo pair (`Brut_tracking_aruco_metric_v01.jpg` and `tracking_aruco_metric_v01.jpg`). A new simulation video, `assets/video/phase5_bis.1_solver_scipy_test_anticollision_1.mp4`, documents a 6-robot decentralized anti-collision scenario and is featured in its own spotlight block in the Validation section.
-
-The page no longer displays a visible "Concept preview" label anywhere (removed at the site owner's request). The following photographs are still AI-generated placeholders, not real photographs, even though they are shown without any visual flag — replace them in place using exactly the same filenames when real shots are available:
-
-- `assets/images/arena_overview_v01.jpg` (video poster only)
-- `assets/images/rover_aruco_v01.jpg`
-- `assets/images/fixed_obstacle_geometry_v01.jpg` (video poster only)
-- `assets/images/system_chain_v01.jpg`
-
-`assets/images/camera_arena_setup_v01.jpg` is unused — its slot in the physical-system section now shows the real ArUco tracking photo pair instead.
-
 ## Evidence policy
 
-- Figures under `assets/figures/` come from the research repository.
-- Four still images remain AI-generated concept placeholders (see Media replacement workflow above). They are no longer visually labeled, so this document is the source of truth on their status.
-- Headline KPI come from the Phase 6.10 anti-collision campaign of 30 July 2026: 23 physical runs with one or two independently moving robots in the arena, logged under `outputs/camera/phase6_10/`.
-- The two evidence figures and the digital-twin scatter are generated directly from those logs (real CSV + paired `simulations_Phase6` JSON); they are not hand-drawn.
-- Clearance is edge-to-edge between the controller's bounding discs (rover radius 0.13 m), not between chassis outlines — a small negative value means the safety discs overlapped, not that the robots touched.
-- The earlier trial 14 / 15 fixed-obstacle KPI and the smooth-tracking figures are retired: they described a single-rover scenario that the anti-collision campaign supersedes.
+- The headline results come from the paper's frozen repeatability campaign: 40 physical runs over two fixed tasks, with 40/40 goal arrivals and no reported collision in that campaign.
+- Those results are scoped evidence, not a universal safety guarantee. Geometric collisions and physical contacts were observed during other exploratory development trials.
+- Clearance is measured edge-to-edge between the controller's safety discs. A negative clearance means that these discs overlap; it does not necessarily mean that the robot chassis touched.
+- The two-agent physical aggregates contain 19 runs because one run used the wrong fixed-obstacle layout and was excluded from the aggregate analysis. That run still reached its goal and remains part of the 40/40 arrival count.
+- Figures `paper_f9_final_zone.png` through `paper_f13_tolerance.png` are copied from the current paper draft. The physical-validation figures are generated from the experiment logs in this repository.
+- Every photograph and video currently displayed on the site is authentic experimental media. There are no generated-media placeholders in the current showcase.
 
-## Free deployment recommendation
+## Preprint
 
-GitHub Pages is the simplest choice for this fully static site. Vercel is equally suitable if preview deployments and a custom domain workflow are useful.
+The site publishes `assets/reports/paco-preprint-draft-v1-compact.pdf`, a versioned copy of `Paper/redaction/main_version_compacte.pdf`. It is intentionally labelled **Draft v1** because affiliations and the corresponding-author field are still provisional.
+
+When those fields and the remaining TODOs have been cleaned, replace the versioned PDF and remove the visible draft warning from the page.
+
+## Visual validation
+
+The checked viewports, screenshots, link/media checks, and console results are documented in `VALIDATION.md`. Captures are stored in `VALIDATION_captures/`.
+
+## Deployment
+
+GitHub Pages is the simplest option for this static site. Vercel is also suitable when preview deployments or a custom-domain workflow are useful.
