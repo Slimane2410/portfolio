@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Design and Python optimization of a cam-driven mechanism for a precision industrial capping machine." />
+  <title>Cam-Driven Industrial Capping Machine | Slimane Aouanouk</title>
+
+  <link rel="stylesheet" href="style.css?v=7" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png" />
+  <link rel="icon" href="favicon_io/favicon.ico" />
+  <link rel="manifest" href="favicon_io/site.webmanifest" />
+  <meta name="theme-color" content="#0f1115" />
+</head>
+
+<body class="homepage turbine-page capping-page">
+  <div class="app-layout">
+    <aside class="sidebar slide-up">
+      <div class="profile-section">
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+          <span class="logo-text">SA.</span>
+        </a>
+        <span class="role-text">Graduate Engineering Student<br>Arts et Métiers</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="projects.html" class="nav-item active"><i class="fas fa-code-branch"></i> Projects</a>
+        <a href="resume.html" class="nav-item"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Academics</a>
+        <a href="experience.html" class="nav-item"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="beyond.html" class="nav-item"><i class="fas fa-compass"></i> Beyond Engineering</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+          <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:aouanoukslim@gmail.com" aria-label="Email Slimane Aouanouk" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+      </div>
+    </aside>
+
+    <main class="main-content turbine-main">
+      <div class="slide-up delay-1 turbine-back-link">
+        <a href="projects.html"><i class="fas fa-arrow-left"></i> RETURN TO MATRIX</a>
+      </div>
+
+      <header class="turbine-hero capping-hero slide-up delay-1">
+        <img src="img/capping/elastomer-concept.webp" alt="Cam and roller mechanism with an integrated elastomer damping concept" fetchpriority="high" />
+        <div class="turbine-hero-overlay"></div>
+        <div class="turbine-hero-content">
+          <span class="turbine-eyebrow">// MECHANICAL DESIGN · CAM OPTIMIZATION</span>
+          <h1>Cam-Driven Industrial Capping Machine</h1>
+          <p>Turning constant rotation into a precise vertical cycle through kinematic synthesis, contact mechanics, CAD, and Python-based optimization.</p>
+          <div class="turbine-hero-actions">
+            <a class="turbine-button turbine-button-primary" href="Case_Study_pdf/Cam_Driven_Capping_Machine_Report_FR.pdf" download="Cam_Driven_Capping_Machine_Report_FR.pdf">
+              <i class="fas fa-download"></i> Download Full Report (FR)
+            </a>
+            <a class="turbine-button turbine-button-secondary" href="#optimization">
+              Explore the optimization <i class="fas fa-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="turbine-metrics capping-metrics slide-up delay-2" aria-label="Project key metrics">
+        <article><strong>45 mm</strong><span>vertical stroke</span></article>
+        <article><strong>2.0 s</strong><span>complete cycle</span></article>
+        <article><strong>26,691</strong><span>designs evaluated</span></article>
+        <article><strong>29.38°</strong><span>optimized pressure angle</span></article>
+      </section>
+
+      <section class="turbine-intro glass-panel slide-up delay-2">
+        <div>
+          <span class="turbine-section-index">01 · MISSION</span>
+          <h2>Design motion that remains manufacturable</h2>
+        </div>
+        <p>
+          The cam converts a constant 30 rpm rotation into the rise, dwell, and return of a precision capping head. The design had to preserve roller contact while controlling pressure angle, curvature, Hertz stress, and overall cam size.
+        </p>
+      </section>
+
+      <section class="turbine-section slide-up delay-2">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">02 · KINEMATIC SYNTHESIS</span>
+          <h2>From the required cycle to the cam profile</h2>
+        </div>
+
+        <div class="capping-grid capping-grid-kinematics">
+          <figure class="turbine-figure capping-figure-wide capping-chart">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the capping head displacement law">
+              <img src="img/capping/motion-law.webp" alt="Capping head displacement over the two-second operating cycle" loading="lazy" />
+            </button>
+            <figcaption><strong>Rise, dwell, return</strong><span>A smooth polynomial law delivers the required 45 mm stroke without kinematic shocks.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-chart">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the cam radius law">
+              <img src="img/capping/cam-radius.webp" alt="Calculated cam radius as a function of angular position" loading="lazy" />
+            </button>
+            <figcaption><strong>Radius law</strong><span>The displacement is translated into the complete radial definition of the cam.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-cad-card">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the cam CAD model">
+              <img src="img/capping/cam-cad.webp" alt="Three-dimensional CAD model of the non-circular cam" loading="lazy" />
+            </button>
+            <figcaption><strong>Manufacturable geometry</strong><span>The analytical profile becomes a compact solid cam ready for assembly.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">03 · MECHANICAL VALIDATION</span>
+          <h2>Keeping the roller in contact throughout the cycle</h2>
+        </div>
+
+        <div class="capping-grid capping-grid-mechanics">
+          <figure class="turbine-figure capping-assembly-card">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the complete capping mechanism CAD assembly">
+              <img src="img/capping/cad-assembly.webp" alt="CAD assembly of the capping head, guide, roller, and cam" loading="lazy" />
+            </button>
+            <figcaption><strong>Complete mechanism</strong><span>The cam, roller follower, vertical guide, and capping head are integrated into one assembly.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-chart capping-figure-wide">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the cam curvature-radius validation">
+              <img src="img/capping/curvature-radius.webp" alt="Cam curvature radius plotted over one full revolution" loading="lazy" />
+            </button>
+            <figcaption><strong>No geometric interference</strong><span>The local curvature was checked against the 18 mm roller radius.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-guide-card">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the direct sliding guide CAD concept">
+              <img src="img/capping/direct-guide.webp" alt="CAD model of the direct sliding guide selected for the capping head" loading="lazy" />
+            </button>
+            <figcaption><strong>Direct guidance</strong><span>A simple sliding guide suits the moderate 225 mm/s maximum guiding speed.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-chart">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the axial contact force comparison">
+              <img src="img/capping/contact-force.webp" alt="Initial and optimized axial contact force curves over the operating cycle" loading="lazy" />
+            </button>
+            <figcaption><strong>Positive contact force</strong><span>The follower remains loaded against the cam throughout the operating cycle.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="optimization" class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">04 · PYTHON OPTIMIZATION</span>
+          <h2>Recovering the pressure-angle margin</h2>
+        </div>
+
+        <div class="capping-problem-strip" aria-label="Optimization objective">
+          <div><span>Initial</span><strong>32.92°</strong></div>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <p>The first design exceeded the 30° pressure-angle limit. A parameter sweep explored the base radius and cycle timings while enforcing every mechanical constraint.</p>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          <div><span>Selected</span><strong>29.38°</strong></div>
+        </div>
+
+        <div class="capping-grid capping-grid-optimization">
+          <figure class="turbine-figure capping-chart capping-figure-wide">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the pressure-angle comparison">
+              <img src="img/capping/pressure-angle.webp" alt="Pressure-angle comparison between the initial and optimized cam designs" loading="lazy" />
+            </button>
+            <figcaption><strong>Constraint recovered</strong><span>The optimized curve remains below the 30° limit over the complete cycle.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-chart">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the Python design-space validation map">
+              <img src="img/capping/design-map.webp" alt="Python map of valid cam configurations across base radius and rise time" loading="lazy" />
+            </button>
+            <figcaption><strong>Feasible design space</strong><span>25,515 of the 26,691 evaluated configurations satisfied the coupled constraints.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-chart">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the base-radius sensitivity study">
+              <img src="img/capping/base-radius-study.webp" alt="Influence of cam base radius on the maximum pressure angle" loading="lazy" />
+            </button>
+            <figcaption><strong>38 mm base radius</strong><span>The selected radius crosses into the admissible region without unnecessarily enlarging the mechanism.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure capping-chart capping-figure-wide">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the Hertz contact-pressure comparison">
+              <img src="img/capping/hertz-pressure.webp" alt="Initial and optimized Hertz contact-pressure curves with the admissible limit" loading="lazy" />
+            </button>
+            <figcaption><strong>503 MPa peak Hertz pressure</strong><span>The selected geometry stays below the 650 MPa material limit.</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="turbine-result-callout capping-result-callout">
+          <div><span>Selected geometry</span><strong>Rb = 38 mm</strong></div>
+          <p>The final compromise improves the pressure angle, curvature radius, sliding speed, and Hertz pressure while preserving a compact 16 mm cam width.</p>
+        </div>
+      </section>
+
+      <section class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">05 · ROBUSTNESS CONCEPT</span>
+          <h2>Adding compliance where impacts occur</h2>
+        </div>
+
+        <figure class="turbine-figure capping-innovation">
+          <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the elastomer damping concept">
+            <img src="img/capping/elastomer-concept.webp" alt="Detailed concept for integrating an elastomer insert into the cam follower" loading="lazy" />
+          </button>
+          <figcaption><strong>TRIZ-inspired elastomer insert</strong><span>A compliant interface in the roller support is proposed to reduce dynamic peaks, vibration, noise, and contact wear.</span></figcaption>
+        </figure>
+      </section>
+
+      <section id="technical-drawing" class="turbine-section turbine-drawing-section slide-up">
+        <div class="turbine-section-heading turbine-drawing-heading">
+          <div>
+            <span class="turbine-section-index">06 · SYSTEM ARCHITECTURE</span>
+            <h2>Full A2 assembly drawing</h2>
+          </div>
+          <a class="turbine-button turbine-button-outline" href="Case_Study_pdf/Capping_Machine_Assembly_Drawing_A2.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-up-right-from-square"></i> Open Technical Drawing (PDF)
+          </a>
+        </div>
+
+        <figure class="turbine-drawing capping-drawing">
+          <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge the complete capping machine assembly drawing">
+            <img src="img/capping/assembly-drawing.webp" alt="A2 assembly drawing with front, side, sectional, and detail views of the capping mechanism" loading="lazy" />
+          </button>
+          <figcaption>Front, side, sectional, and detailed views define the complete cam-and-follower architecture.</figcaption>
+        </figure>
+      </section>
+
+      <section class="turbine-report-cta capping-report-cta slide-up">
+        <div>
+          <span class="turbine-section-index">PROJECT DOCUMENTATION</span>
+          <h2>Explore the complete engineering work</h2>
+          <p>The full kinematic model, sizing calculations, constraint checks, and optimization results are available in French.</p>
+        </div>
+        <a class="turbine-button turbine-button-primary" href="Case_Study_pdf/Cam_Driven_Capping_Machine_Report_FR.pdf" download="Cam_Driven_Capping_Machine_Report_FR.pdf">
+          <i class="fas fa-download"></i> Download Full Report (FR)
+        </a>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js?v=5"></script>
+</body>
+</html>
