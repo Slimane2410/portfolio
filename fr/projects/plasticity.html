@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Etude expérimentale et numérique des structures élastoplastiques à l'aide de l'analyse limite et des modèles Abaqus pilotés par Python." name="description"/>
+<title>Plasticité &amp; analyse limite | Slimane Aouanouk</title><link href="../../en/projects/plasticity.html" hreflang="en" rel="alternate"/><link href="plasticity.html" hreflang="fr" rel="alternate"/><link href="../../en/projects/plasticity.html" hreflang="x-default" rel="alternate"/>
+<link href="../../assets/css/style.css?v=9" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../../assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/icons/favicon.ico" rel="icon"/>
+<link href="../../assets/icons/site.webmanifest" rel="manifest"/>
+<meta content="#111827" name="theme-color"/>
+</head>
+<body class="homepage turbine-page plasticity-page">
+<div class="app-layout">
+<aside class="sidebar slide-up">
+<div class="profile-section">
+<a href="../index.html" style="text-decoration: none; color: inherit;"><span class="logo-text">SA.</span></a>
+<span class="role-text">Élève ingénieur<br/>Arts et Métiers</span>
+</div>
+<nav class="nav-links">
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i> Accueil</a>
+<a class="nav-item active" href="../projects.html"><i class="fas fa-code-branch"></i> Projets</a>
+<a class="nav-item" href="../resume.html"><i class="fas fa-file-alt"></i> CV</a>
+<a class="nav-item" href="../academics.html"><i class="fas fa-graduation-cap"></i> Formation</a>
+<a class="nav-item" href="../experience.html"><i class="fas fa-briefcase"></i> Expérience</a>
+<a class="nav-item" href="../beyond.html"><i class="fas fa-compass"></i> Au-delà de l’ingénierie</a>
+</nav>
+<div class="sidebar-footer">
+<div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+<a aria-label="Consulter mon profil LinkedIn" href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" rel="noopener noreferrer" style="color: #7a8595; font-size: 1.3rem;" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a aria-label="Envoyer un e-mail à Slimane Aouanouk" href="mailto:aouanoukslim@gmail.com" style="color: #7a8595; font-size: 1.3rem;"><i class="fas fa-envelope"></i></a>
+</div>
+<p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+</div>
+</aside>
+<main class="main-content turbine-main plasticity-main">
+<div class="slide-up delay-1 turbine-back-link">
+<a href="../projects.html"><i class="fas fa-arrow-left"></i> RETOUR AUX PROJETS</a>
+</div>
+<header class="plasticity-hero slide-up delay-1">
+<div class="plasticity-hero-copy">
+<span class="turbine-eyebrow">// MÉCANIQUE EXPÉRIMENTALE · ÉLÉMENTS FINIS NON LINÉAIRES</span>
+<h1>Plasticité &amp;<br/>Analyse limite</h1>
+<p>Des tests physiques à la prédiction de l'effondrement : une étude élastoplastique combinant des mécanismes analytiques avec des simulations Abaqus pilotées par Python.</p>
+<div class="turbine-hero-actions">
+<a class="turbine-button turbine-button-primary" download="TP_PLASTICITE_FINAL.pdf" href="../../assets/documents/projects/plasticity/tp-plasticite-final.pdf"><i class="fas fa-download"></i> Télécharger le rapport complet (FR)</a>
+<a class="turbine-button turbine-button-secondary" href="#python-abaqus">Explorez le flux de travail <i class="fas fa-arrow-down"></i></a>
+</div>
+</div>
+<button aria-label="Agrandir la simulation de contraintes Abaqus" class="plasticity-hero-visual" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Champ de contrainte Abaqus von Mises dans le cadre fixe élastoplastique" fetchpriority="high" src="../../assets/images/projects/plasticity/abaqus-2d-stress.webp"/>
+<span>Modèle élastoplastique 2D · contrainte de von Mises</span>
+</button>
+</header>
+<section aria-label="Indicateurs clés du projet" class="turbine-metrics plasticity-metrics slide-up delay-2">
+<article><strong>100 kN</strong><span>Machine d'essai hydraulique MTS</span></article>
+<article><strong>1D + 2D</strong><span>Stratégies de modélisation Abaqus</span></article>
+<article><strong>3</strong><span>rotules plastiques à l'effondrement</span></article>
+<article><strong>423 N</strong><span>charge limite du cadre analytique</span></article>
+</section>
+<section class="turbine-intro glass-panel slide-up delay-2">
+<div>
+<span class="turbine-section-index">01 · OBJECTIF</span>
+<h2>Connecter le banc de test au modèle numérique</h2>
+</div>
+<p>Une poutre en flexion trois points et un portique encastré ont été chargés au-delà du domaine élastique. Les courbes expérimentales, l’analyse limite et les résultats non linéaires par éléments finis ont ensuite été comparés pour identifier les limites d’élasticité, les rotules plastiques et les charges d’effondrement.</p>
+</section>
+<section class="plasticity-code-section slide-up" id="python-abaqus">
+<div class="plasticity-code-copy">
+<span class="plasticity-code-label"><i class="fab fa-python"></i> PYTHON-DRIVEN ABAQUS</span>
+<h2>Simulation construite via du code</h2>
+<p>Un script Python a été adapté pour créer et paramétrer les modèles Abaqus avec la géométrie et les propriétés matérielles sélectionnées. Cela a rendu la configuration 1D/2D reproductible et a permis l’étude de plusieurs configurations de chargement.</p>
+<div aria-label="Flux de travail Python Abaqus" class="plasticity-code-flow">
+<span>Géométrie</span><i class="fas fa-arrow-right"></i><span>Loi de comportement</span><i class="fas fa-arrow-right"></i><span>Résolution Abaqus</span><i class="fas fa-arrow-right"></i><span>Résultats</span>
+</div>
+</div>
+<figure class="plasticity-code-figure">
+<button aria-label="Agrandir le modèle unidimensionnel Abaqus" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Modèle à cadre fixe unidimensionnel déformé généré dans Abaqus" loading="lazy" src="../../assets/images/projects/plasticity/abaqus-1d.webp"/>
+</button>
+<figcaption>Modèle 1D paramétré Python</figcaption>
+</figure>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">02 · CALIBRAGE &amp; VALIDATION</span>
+<h2>Trois vues de la même réponse non linéaire</h2>
+</div>
+<div class="plasticity-validation-grid">
+<figure class="turbine-figure plasticity-figure-main">
+<button aria-label="Agrandir le résultat de contrainte Abaqus" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Champ de contraintes bidimensionnel Abaqus montrant les zones plastiques dans le cadre fixe" loading="lazy" src="../../assets/images/projects/plasticity/abaqus-2d-stress.webp"/>
+</button>
+<figcaption><strong>Champ de contrainte 2D</strong><span>Des zones plastiques se développent au point de charge et dans les coins supérieurs.</span></figcaption>
+</figure>
+<figure class="turbine-figure plasticity-chart">
+<button aria-label="Agrandir la comparaison de déplacement de force" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Comparaison de déplacement de force entre les résultats analytiques et Abaqus" loading="lazy" src="../../assets/images/projects/plasticity/force-displacement.webp"/>
+</button>
+<figcaption><strong>Comparaison force-déplacement</strong><span>La courbe numérique reproduit la réponse expérimentale globale.</span></figcaption>
+</figure>
+</div>
+<div class="turbine-result-callout plasticity-result-callout">
+<div><span>Charge d'effondrement du cadre</span><strong>423 / 432 N</strong></div>
+<p>L'analyse limite prédit 423 N, proche des 432 N mesurés lors du test physique.</p>
+</div>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">03 · MÉCANISMES D'EFFONDREMENT</span>
+<h2>Prédire où la structure cède</h2>
+</div>
+<div class="plasticity-mechanism-grid">
+<figure class="turbine-figure plasticity-sketch">
+<button aria-label="Agrandir le diagramme de charge incliné" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Décomposition des forces inclinées sur le bâti fixe" loading="lazy" src="../../assets/images/projects/plasticity/inclined-load.webp"/>
+</button>
+<figcaption><strong>Chargement incliné</strong><span>L'angle de charge modifie l'équilibre entre les mécanismes de flexion.</span></figcaption>
+</figure>
+<figure class="turbine-figure plasticity-mechanisms">
+<button aria-label="Agrandir les cinq mécanismes d'effondrement" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Cinq mécanismes analytiques d’effondrement plastique pour le cadre fixe" loading="lazy" src="../../assets/images/projects/plasticity/collapse-mechanisms.webp"/>
+</button>
+<figcaption><strong>Cinq mécanismes candidats</strong><span>Le travail virtuel identifie le modèle de charnière déterminant pour chaque angle.</span></figcaption>
+</figure>
+<figure class="turbine-figure plasticity-map">
+<button aria-label="Agrandir la carte de transition du mécanisme" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Courbes analytiques de charge d'effondrement et angles de transition du mécanisme" loading="lazy" src="../../assets/images/projects/plasticity/mechanism-map.webp"/>
+</button>
+<figcaption><strong>Carte des mécanismes</strong><span>Les intersections de courbes révèlent les transitions proches de 59,5° et 81,6°.</span></figcaption>
+</figure>
+</div>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">04 · ÉTUDE PARAMÉTRIQUE ABAQUS</span>
+<h2>Suivi des zones plastiques lors de la rotation de la charge</h2>
+</div>
+<div class="plasticity-angle-grid">
+<figure><button aria-label="Agrandissez le résultat Abaqus de 15 degrés" onclick="openLightbox(this.querySelector('img'))" type="button"><img alt="Champ de contrainte plastique Abaqus pour un angle de charge de 15 degrés" loading="lazy" src="../../assets/images/projects/plasticity/abaqus-angle-15.webp"/></button><figcaption>15°</figcaption></figure>
+<figure><button aria-label="Agrandissez le résultat Abaqus à 45 degrés" onclick="openLightbox(this.querySelector('img'))" type="button"><img alt="Champ de contrainte plastique Abaqus pour un angle de charge de 45 degrés" loading="lazy" src="../../assets/images/projects/plasticity/abaqus-angle-45.webp"/></button><figcaption>45°</figcaption></figure>
+<figure><button aria-label="Agrandissez le résultat Abaqus à 75 degrés" onclick="openLightbox(this.querySelector('img'))" type="button"><img alt="Champ de contrainte plastique Abaqus pour un angle de charge de 75 degrés" loading="lazy" src="../../assets/images/projects/plasticity/abaqus-angle-75.webp"/></button><figcaption>75°</figcaption></figure>
+<figure><button aria-label="Agrandissez le résultat Abaqus à 90 degrés" onclick="openLightbox(this.querySelector('img'))" type="button"><img alt="Champ de contrainte plastique Abaqus pour un angle de charge de 90 degrés" loading="lazy" src="../../assets/images/projects/plasticity/abaqus-angle-90.webp"/></button><figcaption>90°</figcaption></figure>
+</div>
+<div class="plasticity-angle-results">
+<figure class="turbine-figure">
+<button aria-label="Agrandir le résultat de la transition Abaqus" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Champ de contraintes Abaqus à la transition entre deux mécanismes d'effondrement" loading="lazy" src="../../assets/images/projects/plasticity/abaqus-transition.webp"/>
+</button>
+<figcaption><strong>Transition proche de 60°</strong><span>Les zones plastiques numériques sont en accord avec le changement du mécanisme analytique.</span></figcaption>
+</figure>
+<figure class="turbine-figure plasticity-chart">
+<button aria-label="Agrandir la courbe de charge ultime en fonction de l'angle" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Charge ultime numérique de Abaqus par rapport à l'angle de charge" loading="lazy" src="../../assets/images/projects/plasticity/ultimate-load-angle.webp"/>
+</button>
+<figcaption><strong>Charge ultime par rapport à l'angle</strong><span>Le balayage angulaire quantifie le changement du seuil d'effondrement.</span></figcaption>
+</figure>
+</div>
+</section>
+<section class="turbine-report-cta plasticity-report-cta slide-up">
+<div>
+<span class="turbine-section-index">DOCUMENTATION DU PROJET</span>
+<h2>Voir la méthodologie complète</h2>
+<p>Les données expérimentales, les dérivations analytiques et les résultats Abaqus sont documentés en français.</p>
+</div>
+<a class="turbine-button turbine-button-primary" download="TP_PLASTICITE_FINAL.pdf" href="../../assets/documents/projects/plasticity/tp-plasticite-final.pdf"><i class="fas fa-download"></i> Télécharger le rapport complet (FR)</a>
+</section>
+</main>
+</div>
+<script src="../../assets/js/script.js?v=9"></script>
+</body>
+</html>

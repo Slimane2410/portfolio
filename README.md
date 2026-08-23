@@ -1,93 +1,54 @@
 # Slimane Aouanouk — Engineering Portfolio
 
-Personal engineering portfolio showcasing projects in **mechanical engineering, data-driven systems, and AI-assisted engineering workflows**.
+Static bilingual engineering portfolio hosted with GitHub Pages.
 
-⚠️ This portfolio is currently **under development**.  
-The full version, including detailed project case studies and technical documentation, will be **completed and published soon**.
+## Architecture
 
----
+```text
+.
+├── index.html              # Language-aware entry point
+├── en/                     # English pages
+│   └── projects/           # English case studies
+├── fr/                     # French pages
+│   └── projects/           # French case studies
+├── assets/
+│   ├── css/                # Shared styles
+│   ├── js/                 # Shared browser scripts
+│   ├── icons/              # Favicons and web manifest
+│   ├── images/             # Common and project images
+│   ├── videos/             # Common and project videos
+│   └── documents/          # Resume and project documents
+├── archive/                # Sources and generated/legacy material
+├── tools/                  # Maintenance and validation scripts
+└── paco-showcase/          # Independent PACO static site (do not relocate)
+```
 
+Public portfolio pages use symmetrical language paths such as
+`en/projects/f1.html` and `fr/projects/f1.html`. File and directory names use
+lowercase English `kebab-case`. The PACO showcase deliberately remains at
+`paco-showcase/index.html` so its published URL does not change.
 
-## About
+## Local preview
 
-Graduate engineering student at **Arts et Métiers Institute of Technology (ENSAM)** with a strong interest in:
+From the repository root:
 
-- Autonomous systems
-- Data-driven engineering
-- Mechanical system design
-- Physics-based modeling
-- AI applied to engineering systems
+```bash
+python3 -m http.server 4173
+```
 
-My work combines **mechanical engineering, numerical modeling, and data analysis** to develop robust engineering solutions.
+Then open `http://localhost:4173/`. The entry point redirects to the stored
+portfolio language, defaulting to English.
 
----
+## Validation
 
-## Selected Projects
+Check all local HTML and CSS references after moving or adding resources:
 
-### Drone Trajectory Optimization — PIMM Lab (CNRS / ENSAM)
+```bash
+ruby tools/validate-local-links.rb
+```
 
-Research project on **trajectory optimization for autonomous systems** using physics-based models and numerical optimization.
+## Deployment URLs
 
-Focus:
-- Euler–Lagrange based optimization
-- multi-agent path planning
-- energy-aware trajectory planning
-- Python-based simulation
-
----
-
-### Aircraft Brake System Design
-
-Mechanical design project involving:
-
-- CAD modeling
-- mechanical analysis
-- system-level engineering design
-
-Project page:  
-`project_Aircraft_Brake.html`
-
----
-
-### Formula 1 Data Analysis
-
-Data-driven engineering project using **Python and motorsport telemetry datasets** to extract performance insights.
-
-Project page:  
-`project_F1.html`
-
----
-
-### AI Pipeline Project
-
-Development of a **machine learning workflow** applied to engineering datasets.
-
-Project page:  
-`project_PJT_AI.html`
-
----
-
-## Technologies Used
-
-Engineering tools:
-
-- Python
-- Fusion 360
-- CATIA
-- CFD simulation tools
-
-Technical skills:
-
-- numerical modeling
-- data analysis
-- system design
-- experimental validation
-
----
-
-## Contact
-
-Slimane Aouanouk  
-Arts et Métiers Institute of Technology
-
-Email: aouanoukslim@gmail.com
+- English home: `/portfolio/en/index.html`
+- French home: `/portfolio/fr/index.html`
+- PACO showcase: `/portfolio/paco-showcase/index.html`

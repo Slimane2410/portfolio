@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="From AlSi7 casting to CNC machining and dimensional inspection: the complete industrialization of a ball thrust bearing housing." />
+  <title>FAB Project — Ball Thrust Bearing | Slimane Aouanouk</title>
+  <link rel="alternate" hreflang="en" href="fab.html" />
+  <link rel="alternate" hreflang="fr" href="../../fr/projects/fab.html" />
+  <link rel="alternate" hreflang="x-default" href="fab.html" />
+
+  <link rel="stylesheet" href="../../assets/css/style.css?v=9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png" />
+  <link rel="icon" href="../../assets/icons/favicon.ico" />
+  <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+  <meta name="theme-color" content="#f6f7f8" />
+
+  <style>
+    .fab-page img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .fab-page .main-content {
+      max-width: 1600px;
+    }
+
+    .fab-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      color: #6b7280;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .fab-back-link:hover {
+      color: #111827;
+      transform: translateX(-2px);
+    }
+
+    .fab-hero {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      border: 1px solid #d9dee5;
+      border-radius: 16px;
+      background: #111827;
+    }
+
+    .fab-hero > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%;
+    }
+
+    .fab-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(10, 15, 24, 0.95) 0%, rgba(10, 15, 24, 0.77) 44%, rgba(10, 15, 24, 0.18) 100%);
+    }
+
+    .fab-hero-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 440px;
+      max-width: 780px;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 48px;
+    }
+
+    .fab-eyebrow {
+      margin-bottom: 14px;
+      color: #d1d5db;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .fab-hero h1 {
+      margin: 0;
+      color: #ffffff !important;
+      font-size: clamp(2.25rem, 4.7vw, 4.6rem);
+      line-height: 1.02;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    .fab-hero p {
+      max-width: 660px;
+      margin: 18px 0 0;
+      color: #e5e7eb !important;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .fab-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .fab-tag {
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.45);
+      color: #f3f4f6;
+      font-size: 0.76rem;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+    }
+
+    .fab-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .fab-span-12 { grid-column: span 12; }
+    .fab-span-8 { grid-column: span 8; }
+    .fab-span-7 { grid-column: span 7; }
+    .fab-span-6 { grid-column: span 6; }
+    .fab-span-5 { grid-column: span 5; }
+    .fab-span-4 { grid-column: span 4; }
+
+    .fab-panel {
+      overflow: hidden;
+    }
+
+    .fab-panel h2 {
+      margin-bottom: 16px;
+      font-size: clamp(1.55rem, 2.5vw, 2rem);
+    }
+
+    .fab-panel h3 {
+      margin-bottom: 10px;
+      font-size: 1.22rem;
+    }
+
+    .fab-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .fab-lead {
+      color: #374151 !important;
+      font-size: 1.03rem;
+      line-height: 1.82;
+    }
+
+    .fab-lead strong,
+    .fab-panel strong {
+      color: #111827;
+    }
+
+    .fab-facts {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .fab-fact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 14px;
+      border: 1px solid #e1e5ea;
+      border-radius: 8px;
+      background: #f7f8fa;
+      color: #374151;
+      font-size: 0.9rem;
+    }
+
+    .fab-fact i {
+      width: 20px;
+      color: #111827;
+      text-align: center;
+    }
+
+    .fab-video-feature {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.72fr) minmax(360px, 1.28fr);
+      min-height: 590px;
+      padding: 0 !important;
+      background: #0f1115 !important;
+      border-color: #0f1115 !important;
+    }
+
+    .fab-video-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px;
+    }
+
+    .fab-video-copy .fab-eyebrow {
+      color: #9ca3af;
+    }
+
+    .fab-video-copy h2 {
+      color: #ffffff !important;
+      font-size: clamp(2rem, 3.3vw, 3.3rem);
+      line-height: 1.06;
+    }
+
+    .fab-video-copy p {
+      color: #c7ced8 !important;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .fab-video-frame {
+      position: relative;
+      display: grid;
+      min-height: 590px;
+      place-items: center;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #293241 0%, #111827 66%);
+    }
+
+    .fab-video-frame::before {
+      content: "";
+      position: absolute;
+      inset: -28px;
+      background: linear-gradient(rgba(15, 17, 21, 0.38), rgba(15, 17, 21, 0.76)), url("../../assets/images/projects/fab/foundry-pour-poster.webp") center / cover;
+      filter: blur(22px);
+      opacity: 0.62;
+      transform: scale(1.08);
+    }
+
+    .fab-video-frame video {
+      position: relative;
+      z-index: 1;
+      width: auto;
+      max-width: calc(100% - 48px);
+      height: 550px;
+      max-height: calc(100% - 40px);
+      border-radius: 12px;
+      background: #000;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+      object-fit: contain;
+    }
+
+    .fab-video-toggle {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 999px;
+      background: rgba(15, 17, 21, 0.76);
+      color: #ffffff;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    .fab-video-toggle:hover,
+    .fab-video-toggle:focus-visible {
+      background: rgba(255, 255, 255, 0.94);
+      color: #111827;
+      outline: none;
+    }
+
+    .fab-process {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: fab-step;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .fab-process li {
+      position: relative;
+      min-height: 170px;
+      padding: 26px;
+      border: 1px solid #dce1e7;
+      border-radius: 12px;
+      background: #f7f8fa;
+      counter-increment: fab-step;
+    }
+
+    .fab-process li:not(:last-child)::after {
+      content: "\f061";
+      position: absolute;
+      top: 50%;
+      right: -26px;
+      z-index: 2;
+      width: 34px;
+      height: 34px;
+      border: 1px solid #d9dee5;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #596170;
+      font: 900 0.82rem/34px "Font Awesome 6 Free";
+      text-align: center;
+      transform: translateY(-50%);
+    }
+
+    .fab-process-index {
+      display: block;
+      margin-bottom: 20px;
+      color: #7a8595;
+      font-family: "Courier New", monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .fab-process-index::after {
+      content: "0" counter(fab-step);
+    }
+
+    .fab-process h3 {
+      margin-bottom: 8px;
+    }
+
+    .fab-process p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .fab-section-heading {
+      grid-column: span 12;
+      margin: 28px 0 -8px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d9dee5;
+    }
+
+    .fab-section-heading span {
+      display: block;
+      margin-bottom: 8px;
+      color: #7a8595;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .fab-section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.65rem);
+    }
+
+    .fab-media-card {
+      padding: 0 !important;
+    }
+
+    .fab-media-card figure {
+      margin: 0;
+    }
+
+    .fab-media-card img {
+      display: block;
+      width: 100%;
+      height: 360px;
+      cursor: zoom-in;
+      object-fit: cover;
+    }
+
+    .fab-media-card img.fab-contain {
+      padding: 22px;
+      background: #f2f4f6;
+      object-fit: contain;
+    }
+
+    .fab-media-card img.fab-fit-full {
+      height: auto;
+      background: #f2f4f6;
+      object-fit: contain;
+    }
+
+    .fab-media-card figcaption {
+      padding: 18px 22px 22px;
+      color: #596170;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    .fab-copy-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .fab-list {
+      display: grid;
+      gap: 11px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .fab-list li {
+      position: relative;
+      padding-left: 21px;
+      color: #596170;
+      line-height: 1.6;
+    }
+
+    .fab-list li::before {
+      content: "";
+      position: absolute;
+      top: 0.68em;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #111827;
+    }
+
+    .fab-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .fab-metric {
+      padding: 18px;
+      border: 1px solid #dce1e7;
+      border-radius: 10px;
+      background: #f8f9fa;
+    }
+
+    .fab-metric-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .fab-metric h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .fab-status {
+      flex: none;
+      padding: 5px 8px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .fab-status-pass {
+      background: #e8f5ed;
+      color: #166534;
+    }
+
+    .fab-status-watch {
+      background: #fff4d8;
+      color: #92400e;
+    }
+
+    .fab-status-fail {
+      background: #feecec;
+      color: #991b1b;
+    }
+
+    .fab-metric-values {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      color: #596170;
+      font-size: 0.78rem;
+    }
+
+    .fab-metric-values strong {
+      color: #111827;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.45rem;
+    }
+
+    .fab-conclusion {
+      position: relative;
+      padding: 42px !important;
+      border-left: 4px solid #111827 !important;
+    }
+
+    .fab-conclusion blockquote {
+      max-width: 900px;
+      margin: 0;
+      color: #111827;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.42;
+    }
+
+    .fab-conclusion p {
+      max-width: 850px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 1100px) {
+      .fab-video-feature {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .fab-video-copy {
+        padding: 36px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .fab-span-8,
+      .fab-span-7,
+      .fab-span-6,
+      .fab-span-5,
+      .fab-span-4 {
+        grid-column: span 12;
+      }
+
+      .fab-video-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .fab-video-frame {
+        min-height: 620px;
+      }
+
+      .fab-process {
+        grid-template-columns: 1fr;
+      }
+
+      .fab-process li {
+        min-height: auto;
+      }
+
+      .fab-process li:not(:last-child)::after {
+        content: "\f063";
+        top: auto;
+        right: 50%;
+        bottom: -26px;
+        transform: translateX(50%);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .fab-grid {
+        gap: 20px;
+      }
+
+      .fab-hero,
+      .fab-hero-content {
+        min-height: 470px;
+      }
+
+      .fab-hero::after {
+        background: linear-gradient(0deg, rgba(10, 15, 24, 0.97) 0%, rgba(10, 15, 24, 0.66) 70%, rgba(10, 15, 24, 0.28) 100%);
+      }
+
+      .fab-hero-content {
+        padding: 28px 22px;
+      }
+
+      .fab-video-copy {
+        padding: 30px 24px;
+      }
+
+      .fab-video-frame {
+        min-height: 590px;
+      }
+
+      .fab-video-frame video {
+        width: calc(100% - 28px);
+        height: auto;
+        max-height: 550px;
+      }
+
+      .fab-video-toggle {
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .fab-media-card img {
+        height: 280px;
+      }
+
+      .fab-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .fab-conclusion {
+        padding: 28px 24px !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fab-video-frame video {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="homepage fab-page">
+  <div class="app-layout">
+    <aside class="sidebar slide-up">
+      <div class="profile-section">
+        <a href="../index.html" aria-label="Return to dashboard">
+          <span class="logo-text">SA.</span>
+        </a>
+        <span class="role-text">Graduate Engineering Student<br />Arts et Métiers</span>
+      </div>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html" class="nav-item"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="../projects.html" class="nav-item active"><i class="fas fa-code-branch"></i> Projects</a>
+        <a href="../resume.html" class="nav-item"><i class="fas fa-file-alt"></i> Resume</a>
+        <a href="../academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Academics</a>
+        <a href="../experience.html" class="nav-item"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="../beyond.html" class="nav-item"><i class="fas fa-compass"></i> Beyond Engineering</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+          <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" style="color: #7a8595; font-size: 1.3rem;">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:aouanoukslim@gmail.com" aria-label="Send an email" style="color: #7a8595; font-size: 1.3rem;">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <a href="../projects.html" class="fab-back-link slide-up delay-1">
+        <i class="fas fa-arrow-left"></i> RETURN TO MATRIX
+      </a>
+
+      <header class="fab-hero slide-up delay-1">
+        <img src="../../assets/images/projects/fab/mould-and-pattern.webp" alt="Sand mould prepared for casting the ball thrust bearing housing" fetchpriority="high" />
+        <div class="fab-hero-content">
+          <span class="fab-eyebrow">// MANUFACTURING · FOUNDRY · METROLOGY</span>
+          <h1>From Foundry to Metrology</h1>
+          <p>
+            Industrializing an AlSi7 ball thrust bearing housing through casting, conventional and CNC machining, then dimensional inspection.
+          </p>
+          <div class="fab-tags" aria-label="Project disciplines">
+            <span class="fab-tag">AlSi7 Casting</span>
+            <span class="fab-tag">Conventional Turning</span>
+            <span class="fab-tag">CNC Machining</span>
+            <span class="fab-tag">CMM Inspection</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="fab-grid">
+        <section class="fab-span-8 glass-panel fab-panel slide-up delay-2" aria-labelledby="mission-title">
+          <span class="fab-eyebrow" style="color: #7a8595;">// PROJECT FAB</span>
+          <h2 id="mission-title">Mission Overview</h2>
+          <p class="fab-lead">
+            The project followed the complete industrialization of a <strong>ball thrust bearing housing</strong> used to guide a rotating shaft. Starting from the functional drawing and GPS tolerances, we designed the casting strategy, produced the raw part, machined its critical features, and measured the final geometry.
+          </p>
+          <p>
+            The goal was not simply to make one part, but to understand how each manufacturing decision propagates into the next stage—and ultimately determines whether repeatable production is possible.
+          </p>
+        </section>
+
+        <aside class="fab-span-4 glass-panel fab-panel slide-up delay-2" aria-label="Project facts">
+          <h3>// PROJECT FACTS</h3>
+          <div class="fab-facts">
+            <div class="fab-fact"><span>Material</span><span><strong>AlSi7</strong> <i class="fas fa-cubes"></i></span></div>
+            <div class="fab-fact"><span>Part</span><span><strong>Bearing housing</strong> <i class="fas fa-gear"></i></span></div>
+            <div class="fab-fact"><span>Workflow</span><span><strong>3 stages</strong> <i class="fas fa-arrow-right-arrow-left"></i></span></div>
+            <div class="fab-fact"><span>Team</span><span><strong>2 students</strong> <i class="fas fa-user-group"></i></span></div>
+          </div>
+          <p style="margin-top: 18px; font-size: 0.86rem; line-height: 1.6;">
+            Slimane Aouanouk<br />with Abderrahmane Boukhad
+          </p>
+        </aside>
+
+        <section class="fab-span-12 glass-panel fab-video-feature slide-up delay-3" aria-labelledby="casting-video-title">
+          <div class="fab-video-copy">
+            <span class="fab-eyebrow">// IN THE FOUNDRY</span>
+            <h2 id="casting-video-title">Casting in action</h2>
+            <p>
+              A short view inside the foundry workshop. The casting stage transforms the mould study into a real AlSi7 blank, ready for the machining phases that follow.
+            </p>
+          </div>
+          <div class="fab-video-frame">
+            <video id="fab-foundry-video" autoplay muted loop playsinline controls preload="metadata" poster="../../assets/images/projects/fab/foundry-pour-poster.webp" aria-label="Foundry workshop during the casting stage">
+              <source src="../../assets/videos/projects/fab/foundry-pour.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video. You can <a href="../../assets/videos/projects/fab/foundry-pour.mp4">open the MP4 file directly</a>.
+            </video>
+            <button class="fab-video-toggle" id="fab-video-toggle" type="button" aria-controls="fab-foundry-video" aria-label="Pause casting video">
+              <i class="fas fa-pause" aria-hidden="true"></i><span>Pause</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="fab-span-12 glass-panel fab-panel slide-up" aria-labelledby="workflow-title">
+          <span class="fab-eyebrow" style="color: #7a8595;">// END-TO-END WORKFLOW</span>
+          <h2 id="workflow-title">One part, three connected processes</h2>
+          <ol class="fab-process">
+            <li>
+              <span class="fab-process-index" aria-hidden="true"></span>
+              <h3>Foundry</h3>
+              <p>Design the joint plane, core, draft angles and machining allowances, then cast the AlSi7 blank.</p>
+            </li>
+            <li>
+              <span class="fab-process-index" aria-hidden="true"></span>
+              <h3>Machining</h3>
+              <p>Create the reference surfaces on a conventional lathe, then complete drilling, contouring and tapping on a CNC machine.</p>
+            </li>
+            <li>
+              <span class="fab-process-index" aria-hidden="true"></span>
+              <h3>Metrology</h3>
+              <p>Inspect dimensional and geometric specifications, then trace non-conformities back to their manufacturing causes.</p>
+            </li>
+          </ol>
+        </section>
+
+        <div class="fab-section-heading">
+          <span>01 — Foundry</span>
+          <h2>Designing the raw part before pouring metal</h2>
+        </div>
+
+        <section class="fab-span-5 glass-panel fab-panel fab-copy-card">
+          <h2>Preparing the mould</h2>
+          <p>
+            The casting design had to provide enough material for later machining while remaining simple and robust in the workshop. The chosen joint plane lets the core remain stable under gravity without an additional high-temperature support.
+          </p>
+          <ul class="fab-list">
+            <li>Machining allowances added to critical surfaces.</li>
+            <li>Draft angles integrated for safe demoulding.</li>
+            <li>No vent required because the sand was naturally permeable.</li>
+            <li>No riser used because the wall thickness was considered sufficiently uniform.</li>
+            <li>Holes and threads were intentionally closed for casting.</li>
+          </ul>
+        </section>
+
+        <article class="fab-span-7 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/cad-overview.webp" class="fab-contain" alt="CAD model of the ball thrust bearing housing" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>The functional geometry used to identify critical surfaces, tolerances and machining allowances.</figcaption>
+          </figure>
+        </article>
+
+        <article class="fab-span-6 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/foundry-mould.webp" alt="Prepared sand mould cavity for the bearing housing" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>The prepared sand mould and its central cavity before casting.</figcaption>
+          </figure>
+        </article>
+
+        <article class="fab-span-6 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/cast-raw-part.webp" alt="AlSi7 bearing housing blank after casting, with its feed channel attached" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>The raw AlSi7 part after demoulding, still connected to the casting feed system.</figcaption>
+          </figure>
+        </article>
+
+        <div class="fab-section-heading">
+          <span>02 — Machining</span>
+          <h2>Building accurate references in two phases</h2>
+        </div>
+
+        <section class="fab-span-5 glass-panel fab-panel fab-copy-card">
+          <span class="fab-eyebrow" style="color: #7a8595;">PHASE 100</span>
+          <h2>Conventional turning</h2>
+          <p>
+            The raw casting was held in hard jaws and aligned with a dial indicator before machining the principal reference surfaces. Surface D was prioritized because its tolerance was tighter than the general ISO 2768-mK requirements applied elsewhere.
+          </p>
+          <p>
+            The older SIM lathe was limited to 2,800 rpm. A conservative setting of 1,000 rpm was selected for safety, below the theoretical optimum for the chosen tools—a compromise that could affect surface finish and repeatability.
+          </p>
+        </section>
+
+        <article class="fab-span-7 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/lathe-alignment.webp" alt="Raw cast part aligned with a dial indicator on a conventional SIM lathe" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>Dial-indicator alignment on the conventional lathe before cutting the reference surfaces.</figcaption>
+          </figure>
+        </article>
+
+        <article class="fab-span-6 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/lathe-setup.webp" alt="Front view of the cast part and dial indicator in the lathe chuck" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>Centering the casting so the part axis matches the spindle axis.</figcaption>
+          </figure>
+        </article>
+
+        <section class="fab-span-6 glass-panel fab-panel fab-copy-card">
+          <span class="fab-eyebrow" style="color: #7a8595;">PHASE 200</span>
+          <h2>CNC contouring and drilling</h2>
+          <p>
+            A dedicated fixture maintained the specified position while the CNC machine completed contouring, drilling, chamfering and tapping. The origin was set with an indicator, and abundant lubrication controlled heat and supported a cleaner surface finish.
+          </p>
+          <ul class="fab-list">
+            <li>Contour engagement rather than full-width slotting.</li>
+            <li>Spindle speed adapted to the machine's 7,500 rpm limit.</li>
+            <li>Cut depth validated progressively under workshop conditions.</li>
+          </ul>
+        </section>
+
+        <article class="fab-span-4 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/machining-origin.webp" alt="Dial indicator used to establish the CNC machining origin" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>Establishing the X–Y reference before CNC machining.</figcaption>
+          </figure>
+        </article>
+
+        <article class="fab-span-4 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/mocn-fixture.webp" alt="Bearing housing blank secured in the dedicated CNC fixture" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>The dedicated fixture used to secure and reference the part.</figcaption>
+          </figure>
+        </article>
+
+        <article class="fab-span-4 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/mocn-machining.webp" alt="Bearing housing being machined on the CNC machine under lubrication" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>CNC machining under abundant lubrication.</figcaption>
+          </figure>
+        </article>
+
+        <div class="fab-section-heading">
+          <span>03 — Diagnosis</span>
+          <h2>When a correct toolpath cannot recover a deficient blank</h2>
+        </div>
+
+        <article class="fab-span-7 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/casting-defect.webp" class="fab-fit-full" alt="Machined bearing housing with arrows identifying a localized lack of material" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>The localized lack of machining allowance is visible after phase 200.</figcaption>
+          </figure>
+        </article>
+
+        <section class="fab-span-5 glass-panel fab-panel fab-copy-card">
+          <h2>Root-cause reasoning</h2>
+          <p>
+            A missing allowance appeared in one localized area. Because the CNC program had been validated, the leading explanation was not the toolpath itself but the geometry and positioning of the cast blank.
+          </p>
+          <ul class="fab-list">
+            <li>The casting model or core needs additional allowance in the affected zone.</li>
+            <li>A core or mould offset may have introduced global asymmetry.</li>
+            <li>Phase-200 referencing could amplify an error already present in the blank.</li>
+            <li>A pre-machining allowance check would catch the issue before critical material removal.</li>
+          </ul>
+        </section>
+
+        <article class="fab-span-5 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/machined-part.webp" alt="Bearing housing after CNC machining" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>The machined housing at the end of phase 200.</figcaption>
+          </figure>
+        </article>
+
+        <section class="fab-span-7 glass-panel fab-panel fab-copy-card">
+          <span class="fab-eyebrow" style="color: #7a8595;">// CORRECTIVE ACTIONS</span>
+          <h2>Preparing a second iteration</h2>
+          <ul class="fab-list">
+            <li>Increase local machining allowances and revalidate the core geometry.</li>
+            <li>Standardize the fixture, datums and origin-setting procedure for phase 200.</li>
+            <li>Inspect the blank before CNC machining to confirm allowance distribution.</li>
+            <li>Produce a second version to verify repeatability before considering a series process.</li>
+          </ul>
+        </section>
+
+        <div class="fab-section-heading">
+          <span>04 — Metrology</span>
+          <h2>Turning measurements into manufacturing evidence</h2>
+        </div>
+
+        <section class="fab-span-7 glass-panel fab-panel">
+          <h2>Geometric inspection results</h2>
+          <p>
+            A coordinate-measuring machine sampled each feature and reconstructed the associated geometric elements. The results show that some operations were controlled, while others reveal the accumulated effect of blank geometry and referencing.
+          </p>
+          <div class="fab-metrics" aria-label="Metrology results in millimetres">
+            <article class="fab-metric">
+              <div class="fab-metric-topline"><h3>Flatness E</h3><span class="fab-status fab-status-pass">Pass</span></div>
+              <div class="fab-metric-values"><span>Measured <strong>0.015</strong></span><span>Limit 0.100 mm</span></div>
+            </article>
+            <article class="fab-metric">
+              <div class="fab-metric-topline"><h3>Cylindricity A</h3><span class="fab-status fab-status-watch">Near limit</span></div>
+              <div class="fab-metric-values"><span>Measured <strong>0.018</strong></span><span>Limit 0.020 mm</span></div>
+            </article>
+            <article class="fab-metric">
+              <div class="fab-metric-topline"><h3>Perpendicularity</h3><span class="fab-status fab-status-fail">Out</span></div>
+              <div class="fab-metric-values"><span>Measured <strong>0.116</strong></span><span>Limit 0.100 mm</span></div>
+            </article>
+            <article class="fab-metric">
+              <div class="fab-metric-topline"><h3>Position</h3><span class="fab-status fab-status-fail">Out</span></div>
+              <div class="fab-metric-values"><span>Measured <strong>0.750</strong></span><span>Limit 0.100 mm</span></div>
+            </article>
+          </div>
+        </section>
+
+        <article class="fab-span-5 glass-panel fab-media-card">
+          <figure>
+            <img src="../../assets/images/projects/fab/technical-drawing.webp" class="fab-contain" alt="Section drawing with the inspected dimensional and geometric specifications" loading="lazy" decoding="async" onclick="openLightbox(this)" />
+            <figcaption>The section drawing links each measurement to its functional surface and datum system.</figcaption>
+          </figure>
+        </article>
+
+        <section class="fab-span-12 glass-panel fab-panel fab-conclusion">
+          <span class="fab-eyebrow" style="color: #7a8595;">// KEY TAKEAWAY</span>
+          <blockquote>
+            Final quality is not created by machining alone. It is built through a coherent chain of blank design, positioning, cutting conditions and measurement.
+          </blockquote>
+          <p>
+            The project connected a visible defect and measured non-conformities to their likely upstream causes. That causal reading is the foundation for correcting the casting model, securing the CNC setup and moving from a workshop prototype toward a controlled, repeatable process.
+          </p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../assets/js/script.js?v=9"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const video = document.getElementById("fab-foundry-video");
+      const toggle = document.getElementById("fab-video-toggle");
+      const icon = toggle ? toggle.querySelector("i") : null;
+      const label = toggle ? toggle.querySelector("span") : null;
+
+      if (!video || !toggle || !icon || !label) return;
+
+      const syncButton = () => {
+        const isPaused = video.paused;
+        icon.className = isPaused ? "fas fa-play" : "fas fa-pause";
+        label.textContent = isPaused ? "Play" : "Pause";
+        toggle.setAttribute("aria-label", isPaused ? "Play casting video" : "Pause casting video");
+      };
+
+      toggle.addEventListener("click", () => {
+        if (video.paused) {
+          video.play().catch(syncButton);
+        } else {
+          video.pause();
+        }
+      });
+
+      video.addEventListener("play", syncButton);
+      video.addEventListener("pause", syncButton);
+      video.addEventListener("ended", syncButton);
+      syncButton();
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        video.play().catch(syncButton);
+      }
+    });
+  </script>
+</body>
+</html>

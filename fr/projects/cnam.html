@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Identification expérimentale et commande numérique par retour d’état de l’axe d’élévation d’un bicoptère de laboratoire." name="description"/>
+<title>Commande en élévation d’un bicoptère | Slimane Aouanouk</title><link href="../../en/projects/cnam.html" hreflang="en" rel="alternate"/><link href="cnam.html" hreflang="fr" rel="alternate"/><link href="../../en/projects/cnam.html" hreflang="x-default" rel="alternate"/>
+<link href="../../assets/css/style.css?v=9" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../../assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/icons/favicon.ico" rel="icon"/>
+<link href="../../assets/icons/site.webmanifest" rel="manifest"/>
+<meta content="#0f1115" name="theme-color"/>
+</head>
+<body class="homepage turbine-page control-page">
+<div class="app-layout">
+<aside class="sidebar slide-up">
+<div class="profile-section">
+<a href="../index.html" style="text-decoration: none; color: inherit;">
+<span class="logo-text">SA.</span>
+</a>
+<span class="role-text">Élève ingénieur<br/>Arts et Métiers</span>
+</div>
+<nav class="nav-links">
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i> Accueil</a>
+<a class="nav-item active" href="../projects.html"><i class="fas fa-code-branch"></i> Projets</a>
+<a class="nav-item" href="../resume.html"><i class="fas fa-file-alt"></i> CV</a>
+<a class="nav-item" href="../academics.html"><i class="fas fa-graduation-cap"></i> Formation</a>
+<a class="nav-item" href="../experience.html"><i class="fas fa-briefcase"></i> Expérience</a>
+<a class="nav-item" href="../beyond.html"><i class="fas fa-compass"></i> Au-delà de l’ingénierie</a>
+</nav>
+<div class="sidebar-footer">
+<div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+<a aria-label="Consulter mon profil LinkedIn" href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" rel="noopener noreferrer" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+<a aria-label="Envoyer un e-mail à Slimane Aouanouk" href="mailto:aouanoukslim@gmail.com" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;">
+<i class="fas fa-envelope"></i>
+</a>
+</div>
+<p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+</div>
+</aside>
+<main class="main-content turbine-main">
+<div class="slide-up delay-1 turbine-back-link">
+<a href="../projects.html"><i class="fas fa-arrow-left"></i> RETOUR AUX PROJETS</a>
+</div>
+<header class="turbine-hero slide-up delay-1">
+<img alt="Appareil de laboratoire bicoptère utilisé pour les expériences de contrôle d'élévation" fetchpriority="high" src="../../assets/images/projects/cnam/bicopter-test-rig.webp"/>
+<div class="turbine-hero-overlay"></div>
+<div class="turbine-hero-content">
+<span class="turbine-eyebrow">// INGÉNIERIE DE COMMANDE · IDENTIFICATION EXPÉRIMENTALE</span>
+<h1>Commande numérique d’un bicoptère de laboratoire</h1>
+<p>Identifier la dynamique d’élévation d’un banc d’essai réel, puis concevoir un correcteur discret par retour d’état avec action intégrale.</p>
+<div class="turbine-hero-actions">
+<a class="turbine-button turbine-button-primary" download="rapport_TP_EEA_CNAM.pdf" href="../../assets/documents/projects/cnam/rapport-tp-eea-cnam.pdf">
+<i class="fas fa-download"></i> Télécharger le rapport complet (FR)
+            </a>
+<a class="turbine-button turbine-button-secondary" href="#identification">
+              Explorez la boucle de contrôle <i class="fas fa-arrow-down"></i>
+</a>
+</div>
+</div>
+</header>
+<section aria-label="Indicateurs clés du projet" class="turbine-metrics slide-up delay-2">
+<article><strong>50 ms</strong><span>période d'échantillonnage</span></article>
+<article><strong>0.1102</strong><span>taux d'amortissement identifié</span></article>
+<article><strong>0.813</strong><span>fréquence propre · rad/s</span></article>
+<article><strong>3 pôles</strong><span>placé dans le modèle discret</span></article>
+</section>
+<section class="turbine-intro glass-panel slide-up delay-2">
+<div>
+<span class="turbine-section-index">01 · PROBLÉMATIQUE</span>
+<h2>Commander un mouvement apparemment instable à partir de données mesurées</h2>
+</div>
+<p>
+          L’étude isole l’axe d’élévation d’un bicoptère de laboratoire. Un échelon de tension révèle la dynamique du système ; la réponse mesurée est convertie en un modèle d’état du second ordre, puis en un correcteur numérique prêt à être implanté en temps réel.
+        </p>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">02 · CONFIGURATION EXPÉRIMENTALE</span>
+<h2>De la tension du moteur à l'angle d'élévation</h2>
+</div>
+<div aria-label="Chaîne de signaux expérimentale" class="control-signal-flow">
+<div><i class="fas fa-wave-square"></i><strong>Simulink</strong><span>loi de contrôle</span></div>
+<i aria-hidden="true" class="fas fa-arrow-right"></i>
+<div><i class="fas fa-microchip"></i><strong>dSPACE</strong><span>E/S en temps réel</span></div>
+<i aria-hidden="true" class="fas fa-arrow-right"></i>
+<div><i class="fas fa-fan"></i><strong>Moteurs jumelés</strong><span>U = U<sub>d</sub> + U<sub>g</sub></span></div>
+<i aria-hidden="true" class="fas fa-arrow-right"></i>
+<div><i class="fas fa-ruler-combined"></i><strong>Capteur d'angle</strong><span>élévation ε(t)</span></div>
+</div>
+<div class="turbine-gallery control-gallery-bench">
+<figure class="turbine-figure">
+<button aria-label="Agrandir la photo du banc d'essai bicoptère" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Hélicoptère bi-rotor monté sur un bras élévateur à contrepoids" loading="lazy" src="../../assets/images/projects/cnam/bicopter-test-rig.webp"/>
+</button>
+<figcaption><strong>Bicoptère instrumenté</strong><span>Deux moteurs entraînent un bras à contrepoids autour de son axe d'élévation.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Agrandir la photo de l'interface de commande manuelle" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Interface de contrôle manuel utilisée pour appliquer l'entrée de l'étape d'identification" loading="lazy" src="../../assets/images/projects/cnam/control-interface.webp"/>
+</button>
+<figcaption><strong>Interface de saisie pas à pas</strong><span>Un pas de tension contrôlé excite la dynamique d'élévation autour de la position horizontale.</span></figcaption>
+</figure>
+</div>
+</section>
+<section class="turbine-section slide-up" id="identification">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">03 · IDENTIFICATION DU SYSTÈME</span>
+<h2>Lecture d'un modèle du second ordre à partir de la réponse réelle</h2>
+</div>
+<div class="turbine-gallery control-gallery-identification">
+<figure class="turbine-figure turbine-figure-wide">
+<button aria-label="Agrandir l'entrée mesurée et la réponse en élévation" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Pas de tension mesuré et réponse d'élévation oscillatoire amortie avec temps caractéristiques annotés" loading="lazy" src="../../assets/images/projects/cnam/experimental-response.webp"/>
+</button>
+<figcaption><strong>Entrée et sortie mesurées</strong><span>L’oscillation légèrement amortie expose le temps caractéristique et le décrément logarithmique de l’installation.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Agrandir le schéma d'identification du second ordre" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Méthode d'identification de réponse de second ordre utilisant des amplitudes de dépassement et des temps caractéristiques" loading="lazy" src="../../assets/images/projects/cnam/identification-method.webp"/>
+</button>
+<figcaption><strong>Méthode d'identification</strong><span>Les extrema successifs assurent l'amortissement ; leur timing fournit la fréquence naturelle.</span></figcaption>
+</figure>
+</div>
+<div class="control-model-card">
+<div>
+<span>Système identifié</span>
+<strong>K = 0,294</strong>
+</div>
+<code>A = [ 0      1<br/>    −0.66097  −0.17919 ]</code>
+<code>B = [ 0<br/>      0.19432 ]</code>
+<p>Un modèle continu compact capture la dynamique d'élévation mesurée avant la discrétisation.</p>
+</div>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">04 · RETOUR D'ÉTAT NUMÉRIQUE</span>
+<h2>Ajouter une action intégrale et déplacer la dynamique</h2>
+</div>
+<div class="control-controller-layout">
+<figure class="turbine-figure control-pole-figure">
+<button aria-label="Agrandir le schéma de placement des pôles" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Diagramme de placement des pôles comparant les pôles continus d'origine et souhaités" loading="lazy" src="../../assets/images/projects/cnam/pole-placement.webp"/>
+</button>
+<figcaption><strong>Placement des pôles</strong><span>Le modèle augmenté combine les deux états de la centrale en un seul état intégral.</span></figcaption>
+</figure>
+<div class="control-gain-panel">
+<span class="turbine-section-index">MATLAB · ACKER</span>
+<h3>Gains du correcteur final</h3>
+<div class="control-gain-grid">
+<div><span>K<sub>p1</sub></span><strong>15.205</strong></div>
+<div><span>K<sub>p2</sub></span><strong>14.038</strong></div>
+<div><span>K<sub>je</sub></span><strong>0.42393</strong></div>
+</div>
+<div class="control-poles">
+<span>Pôles discrets souhaités</span>
+<code>0.95</code>
+<code>0.95 ± 0.04j</code>
+</div>
+<p>L'état intégral supprime l'erreur en régime permanent tandis que le placement des pôles définit la dynamique en boucle fermée dans la contrainte d'échantillonnage de 50 ms.</p>
+</div>
+</div>
+</section>
+<section class="control-outcome slide-up">
+<span class="turbine-section-index">RÉSULTAT D’INGÉNIERIE</span>
+<h2>Un workflow complet, du modèle au correcteur</h2>
+<p>Les données expérimentales, la modélisation dynamique, la discrétisation, la commandabilité et le placement des pôles sont réunis dans une chaîne de conception reproductible pour l’axe d’élévation.</p>
+<div aria-label="Outils et méthodes" class="control-outcome-tags">
+<span>MATLAB / Simulink</span><span>dSPACE</span><span>ControlDesk</span><span>Espace d'état</span><span>Placement des pôles</span>
+</div>
+</section>
+<section class="turbine-report-cta slide-up">
+<div>
+<span class="turbine-section-index">DOCUMENTATION DU PROJET</span>
+<h2>Lire l'étude de contrôle complète</h2>
+<p>L'identification expérimentale, les équations et la synthèse du contrôleur sont documentées en français.</p>
+</div>
+<a class="turbine-button turbine-button-primary" download="rapport_TP_EEA_CNAM.pdf" href="../../assets/documents/projects/cnam/rapport-tp-eea-cnam.pdf">
+<i class="fas fa-download"></i> Télécharger le rapport complet (FR)
+        </a>
+</section>
+</main>
+</div>
+<script src="../../assets/js/script.js?v=9"></script>
+</body>
+</html>
