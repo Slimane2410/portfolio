@@ -1,0 +1,1712 @@
+# Professional Knowledge Base — Slimane AOUANOUK
+
+## 0. Document Metadata
+
+- **Purpose:** Canonical, evidence-based source for tailoring resumes, cover letters, internship and job applications, professional biographies, and interview answers. It is a fact bank, not a finished resume.
+- **Generated / last reviewed:** August 23, 2026.
+- **Repository location:** `/Users/slimaneaouanouk/Desktop/Portfolio/Website/Slim portfolio-main/PORTFOLIO_CONTEXT.md`.
+- **Scope:** Current English and French portfolio content; all 12 currently published project case studies; the trajectory-optimization research subsite, reports, and validation artifacts; current resume; selected original reports, presentations, spreadsheets, code summaries, and detailed TXT files in `/Users/slimaneaouanouk/Desktop/Portfolio/Data`; and the former context file as a comparison baseline.
+- **Source hierarchy:** Current repository content; then the newest primary technical report/data; then detailed Data TXT; then current resume; then the former context file. For a number, raw/experimental data and calculation sheets outrank summaries.
+- **Interpretation:** A requirement is not an outcome; simulation is not physical validation; project scope is not impact; and a team result is not an individual result. When personal work is not partitioned in a team source, use “co-developed” or “team” language.
+- **Evidence labels:** `[VERIFIED]` directly supported; `[VERIFIED BY USER]` directly confirmed by Slimane; `[VERIFIED BY USER AND ETS SCALE]` a user-reported credential whose level mapping was checked against ETS; `[INFERENCE]` cautious interpretation; `[TO CONFIRM]` unresolved; `[TEAM RESULT]` team-owned; `[INDIVIDUAL CONTRIBUTION]` explicitly attributed; `[PLANNED]` future work; `[TARGET]` requirement; `[ESTIMATED]` prediction; `[SIMULATED]` numerical output; `[MEASURED]` experiment; `[CALCULATED]` derived here from sourced inputs; `[METRIC TO RETRIEVE/ESTIMATE]` potentially useful but unsupported today.
+- **Calculation convention:** Every new calculation states its inputs, formula, source, and assumptions. Retain reasonable significant figures; do not imply calculated precision was measured.
+- **Maintenance:** Review after each semester/project; update current status and availability; attach a source to every new number; preserve failed tests and limitations; resolve Section 17 before using affected claims; do not copy resume claims back here unless corroborated.
+- **Privacy:** Exact home/site addresses, nationality, age, work authorization, and other unnecessary sensitive data are intentionally omitted.
+- **Resume prioritization rule:** The energy-harvesting gym machine, CNAM bicopter control laboratory, and butterfly piezoelectric speaker are secondary/context-only projects. Do not give any of them a dedicated resume entry or multiple bullets by default. Mention one briefly only when a target role makes it directly relevant and stronger priority projects do not cover the same requirement.
+
+## 1. Professional Identity and Contact Information
+
+- **Full name:** Slimane AOUANOUK `[VERIFIED]`.
+- **Headline:** Graduate engineering student at Arts et Métiers, pursuing robotics, autonomous systems, and AI-enabled engineering work.
+- **Current location and mobility:** Currently based in France and available for internships worldwide `[VERIFIED BY USER]`.
+- **Email:** `slimane.aouanouk@gmail.com` `[VERIFIED]`.
+- **Phone:** `+33 7 83 54 20 26` `[VERIFIED]`; include only when needed.
+- **LinkedIn:** <https://www.linkedin.com/in/slimane-aouanouk-b69b58320/>.
+- **GitHub:** A profile exists, but its URL must not currently be included in resumes, cover letters, application forms, or recruiter-facing biographies unless Slimane explicitly changes this preference.
+- **Portfolio:** <https://slimane2410.github.io/portfolio/>.
+- **Availability:** Seeking a six-month robotics/autonomous-systems internship beginning January 2027 `[VERIFIED]` as of August 2026; re-confirm for later applications.
+- **Languages:** French (native); English (C1), supported by a TOEFL iBT MyBest score of 5/6 `[VERIFIED BY USER AND ETS SCALE]`; Italian (basic); Spanish (basic). ETS maps TOEFL iBT band 5 to CEFR C1 on the 1–6 scale introduced January 21, 2026.
+- **Work authorization:** Not documented; never infer.
+
+## 2. Professional Profile
+
+### Evidence-based positioning
+
+Slimane is an Arts et Métiers graduate engineering student whose work bridges mechanical engineering, numerical modeling, robotics, physical experimentation, and engineering data/AI. His strongest current evidence is a 2026 international research internship conducted in Paris and Singapore: co-development of trajectory optimization and real-time physical validation for an ArUco-localized rover, including a frozen 40-run goal-reaching campaign, a near-20 Hz loop, calibration, simulation sweeps, and digital-twin comparison. Additional team projects cover cam optimization, turbine CFD/electromagnetics/prototyping, plastic collapse, manufacturing metrology, robotized casting, airfoil CFD, and F1 in Schools. Individual work includes an aircraft brake design and an offline natural-language-to-SQL industrial data demonstrator.
+
+- **Primary positioning:** Robotics/autonomous systems research or engineering intern with mechanical-modeling and physical-validation depth.
+- **Secondary positioning:** Mechanical systems, simulation/CAE, manufacturing, or applied AI/data engineering for industrial systems.
+- **Interests supported by work:** trajectory optimization; real-time robotics; computational mechanics; controls; digital twins; CFD/FEA; experimental validation; manufacturing; local LLM/database interfaces.
+- **Credible environments:** research laboratories, robotics teams, multidisciplinary R&D, mechanical/CAE groups, industrial automation, manufacturing engineering, and engineering-data teams.
+- **Role categories:** robotics research intern; autonomous-systems intern; simulation/CAE intern; mechanical design intern; manufacturing/process intern; controls intern; applied AI/data intern; entry-level research engineer after graduation.
+
+### Reusable introductions
+
+- **One sentence:** Arts et Métiers graduate engineering student combining robotics, computational mechanics, physical experimentation, and applied AI, with research experience validating real-time trajectory optimization on a mobile robot.
+- **Approximately 25 words:** Graduate engineering student at Arts et Métiers focused on robotics and autonomous systems, with hands-on experience in trajectory optimization, simulation, physical validation, and mechanical design.
+- **Approximately 50 words:** Slimane AOUANOUK is an Arts et Métiers graduate engineering student focused on robotics and autonomous systems. His work spans trajectory optimization, real-time computer-vision localization, simulation-to-physical validation, mechanical design, CFD/FEA, manufacturing, controls, and an offline LLM-to-SQL industrial data demonstrator.
+- **Approximately 100 words:** Slimane AOUANOUK is an Arts et Métiers graduate engineering student pursuing robotics, autonomous systems, and AI-enabled engineering. During an international 2026 research internship with PIMM in Paris and CNRS@CREATE in Singapore, he co-developed and physically validated a trajectory-optimization stack for a mobile rover, completing a frozen 40-run campaign with no collisions and a near-20 Hz control loop. His academic portfolio also includes cam optimization, turbine CFD and prototyping, plastic-collapse analysis, foundry and CNC metrology, robotic casting, airfoil CFD, and aircraft-brake design. He also built an offline natural-language-to-SQL demonstrator using Python, SQLite, Streamlit, and a local Mistral model.
+- **Spoken elevator pitch:** I am a graduate engineering student at Arts et Métiers, and I like working where mechanics, computation, and physical systems meet. My strongest experience is an international 2026 research internship conducted in Paris and Singapore, where our team moved from trajectory-optimization simulation and calibration to repeatable rover experiments, including 40 frozen validation runs at about 20 Hz. I am looking for a six-month internship beginning in January 2027 in robotics or autonomous systems and am available worldwide, while remaining open to simulation, controls, and engineering AI roles.
+
+## 3. Education
+
+### Sorbonne Université — Master 2 SAR
+
+- **Program:** Master 2 “Systèmes Avancés et Robotiques” (Advanced Systems and Robotics), Paris, France.
+- **Dates/status:** September 2026–August 2027; enrolled and considered in progress `[VERIFIED BY USER]`.
+- **Focus:** Advanced systems and robotics. Degree award and coursework are not yet evidenced.
+- **Associated direction:** Robotics, autonomous systems, controls, AI, research engineering.
+- **Source:** `en/academics.html`, `en/resume.html`, current resume PDF.
+
+### Arts et Métiers — Diplôme d’ingénieur program
+
+- **Institution/location:** Arts et Métiers, France; portfolio materials reference Paris and Châlons-en-Champagne activities.
+- **Dates/status:** September 2024–July 2027; ongoing `[VERIFIED]`.
+- **Program explanation:** Selective French Grande École engineering curriculum leading to the official `Diplôme d’ingénieur`. Do not assert a direct US degree equivalence without credential evaluation.
+- **Academic performance:** Cohort rank 142 of 1,223 as of April 30, 2026; top 12% `[VERIFIED]`. `[CALCULATED]` rank fraction = `142 / 1,223 × 100 = 11.61%`, consistent with “top 12%.” Inputs: current academics page.
+- **GPA:** 3.83/4.00 at Arts et Métiers `[VERIFIED BY USER]`. The 3.92/4.00 figure in the August 2026 resume is a combined GPA covering CPGE and Arts et Métiers; state the scope whenever using it.
+- **Relevant work:** Trajectory-optimization and mobile-robotics research, capping machine, turbine, plasticity, CNAM bicopter, manufacturing, FANUC, F1, speaker, PJT AI, aircraft brake, NACA CFD, gear reducer, and gym energy recovery.
+- **Evidence:** `en/academics.html`, `en/projects.html`, project reports, resume PDF.
+
+### Lycée Raspail — Classe Préparatoire aux Grandes Écoles (CPGE)
+
+- **Program/location:** PTSI then PT*, Paris, France, September 2022–July 2024 `[VERIFIED]`.
+- **Explanation:** Two-year intensive postsecondary preparation for competitive engineering-school entrance examinations. PTSI emphasizes physics, technology, and engineering science; PT* is the selective advanced second-year track.
+- **Workload:** More than 35 scheduled class hours per week plus oral examinations `[VERIFIED]`; homework/self-study is not quantified.
+- **GPA:** 4.00/4.00 `[VERIFIED BY USER]`.
+- **Associated project:** Individual TIPE investigation of football impact mechanics.
+- **Source:** `en/academics.html`, `en/resume.html`, TIPE sources.
+
+## 4. Professional Experience
+
+### PIMM / CNRS@CREATE — Trajectory Optimization and Mobile Robotics Research Intern
+
+- **Location/dates/type:** Paris, France (January–May 2026) and Singapore (June–August 2026); approximately eight months; academic research internship `[VERIFIED]`.
+- **Context:** PIMM laboratory and CNRS@CREATE; supervised by Prof. Francisco Chinesta and Amine Ammar. Two student researchers: Slimane AOUANOUK and Mathis Benchikh.
+- **Responsibilities/contribution:** `[TEAM RESULT]` Co-developed trajectory optimization, simulation, robot integration, calibration, experiment execution, analysis, and communication. Individual subtask ownership is not separated in current sources.
+- **Tools/methods:** Python/scientific optimization, variational and straight-segment planners, Verlet and semi-implicit controllers, ArUco computer vision, homography/lens calibration, serial robot control, experiment logging, statistical summaries, digital-twin comparison.
+- **Problems/actions:** The team reduced vision cost through downscaling; corrected lens distortion and elevated-marker parallax; used frozen tasks/coefficient sets; retained a layout-error run in the audit trail; and separated exploratory development from confirmatory validation.
+- **Outputs:** Physical validation system, 40-run frozen campaign, simulation calibration campaigns, figures/video, project showcase, and compact preprint draft in preparation.
+- **Lesson:** Real-time systems require measurement budgets and calibration as much as planner quality; transparent failure accounting strengthens rather than weakens evidence.
+
+#### Quantitative Evidence and Resume Metrics
+
+| Evidence | Type | Attribution and significance | Source / caveat | X–Y–Z use |
+|---|---|---|---|---|
+| 40/40 goal arrivals across two frozen 20-run tasks; zero collisions | `[MEASURED]` | `[TEAM RESULT]` Repeatable physical validation with one coefficient set | Project subsite/preprint; two-agent aggregates use 19 valid-layout runs because one run had the wrong fixed layout | “Validated a trajectory-optimization stack in 40/40 frozen physical runs with no collisions by integrating planning, perception, and rover control.” Ready with team wording. |
+| Median loop 19.839 Hz and 19.863 Hz; slowest run 99th-percentile cycle 87 ms | `[MEASURED]` | `[TEAM RESULT]` Real-time execution evidence | Project real-time budget; 50 ms nominal cycle, 750 ms watchdog | Ready. |
+| Lens correction reduced mean calibration error from 36.3 mm to 5.8 mm | `[CALCULATED]` 84.0% reduction | `[TEAM RESULT]`; formula `(36.3−5.8)/36.3×100` | Project localization validation; max fell 45.2 to 9.0 mm | Ready with “calibration-grid error.” |
+| Downscaling increased loop rate from 11.35 to 19.85 Hz | `[CALCULATED]` 1.75× | `[TEAM RESULT]`; formula `19.85/11.35=1.75` | Different sessions, not a paired benchmark; marker all-visible rate changed to 99.38%, controlled-rover detection remained 100% | Usable with qualification. |
+| 77 h 31 min 54 s sequential calibration sweep; 367,374 planned runs plus 100,800 final-zone cases | `[SIMULATED]` | `[TEAM RESULT]` Computational scale | Solver-comparison report/preprint; one seed and unequal final-profile sampling | Ready as scale, not physical impact. |
+| Four physical robots available; one controlled rover plus moving agents; up to six controlled agents in simulation | mixed | `[TEAM RESULT]` Platform scale | Do not turn this into “10+ physical robots” | Ready only with exact qualification. |
+| `[METRIC TO RETRIEVE/ESTIMATE]` personal code/experiment ownership | missing | Would establish individual contribution | Git history, lab notebook, run logs; count authored modules/commits and independently executed runs after identity verification | Do not use until validated. |
+
+- **Resume-ready bullets:**
+  - Co-developed and physically validated a mobile-robot trajectory-optimization stack, achieving 40/40 goal arrivals with zero collisions across two frozen 20-run tasks.
+  - Sustained median control-loop rates of 19.84–19.86 Hz by integrating ArUco perception, trajectory correction, serial communication, and structured logging.
+  - Reduced mean calibration-grid localization error 84%, from 36.3 mm to 5.8 mm, by applying lens-distortion correction and homography-based metric mapping.
+  - Evaluated planner-controller combinations through 367,374 planned simulation runs and a 100,800-case final-zone campaign; clearly label these as team simulation results.
+- **Sources:** `paco-showcase/index.html`, `paco-showcase/README.md`, `paco-showcase/VALIDATION.md`, `paco-showcase/assets/reports/paco-preprint-draft-v1-compact.pdf`, `paco-showcase/assets/reports/rapport_comparaison_solveurs_controleurs.pdf`, `en/experience.html`.
+- **Unresolved documentation:** Exact individual ownership and formal publication status/authorship order remain undocumented. Internship dates and international locations are user-confirmed.
+
+### SRP — General Construction Worker Intern
+
+- **Location/dates/type:** Paris, France; June 9–July 4, 2025; four-week worker internship `[VERIFIED]`.
+- **Organization:** Small construction company of approximately eight staff `[VERIFIED]`.
+- **Work:** Site cleaning and preparation; material handling; positioning/marking with chalk line, tape, level, and spray; following foreman instructions and PPE rules under heat, noise, and dust.
+- **Safety:** Completed two formal safety sessions covering fire and DENIOS gas/chemical risks `[VERIFIED]`.
+- **Results:** Reliable completion of assigned site-support work is documented qualitatively; no personal productivity, incident, or volume metric is available.
+- **Learning:** Safety discipline, physical work, sequencing, communication in a small crew, and respect for field constraints.
+
+#### Quantitative Evidence and Resume Metrics
+
+- **Verified scope:** four weeks; approximately eight-person company; two formal safety trainings. These are scope/training metrics, not impact metrics.
+- **Resume-ready X–Y–Z:** “Supported a four-week Paris construction project in an approximately eight-person company by preparing work areas, handling materials, and applying layout markings under PPE and site-safety procedures.”
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Work volume/productivity:** retrieve daily logs, quantities moved, areas prepared, or tasks completed; compare planned versus actual crew output only if attributable. Resume status: do not quantify now.
+- `[TO CONFIRM]` Resume-only statements that the broader project involved 3,000+ tons of soil and a 9–10-month underground phase describe project scale, not documented personal output; do not use as a personal accomplishment without company/project records.
+- **Sources:** `en/experience.html`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_txt_Internship SRP stage 1A/Stage_Ouvrier_SRP_Slimane_AOUANOUK_FULL.txt`; current resume PDF.
+
+### Independent Artist — Document Archiving Assistant
+
+- **Date/type:** Summer 2022; temporary independent work `[VERIFIED]`.
+- **Contribution:** Organized documents chronologically and built custom labeled storage boxes `[INDIVIDUAL CONTRIBUTION]`.
+- **Result:** A physical filing structure was delivered; document count, retrieval-time change, and box count are unavailable.
+
+#### Quantitative Evidence and Resume Metrics
+
+- **Verified metric:** one summer engagement (duration beyond season not documented).
+- **X–Y–Z:** “Created a chronological physical archive and custom labeled storage system for an independent artist.” No outcome number should be added.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Archive scale and retrieval improvement:** raw inputs are number of documents/boxes and timed baseline/final retrieval tests, likely available from the artist or inventory. Formula `(baseline time−new time)/baseline time×100`; retrospective estimation is credible only with records or repeatable timed samples. Do not use until validated.
+- **Source:** `en/experience.html`.
+
+## 5. Leadership, Volunteering, and Extracurricular Activities
+
+### Student Wellbeing Association — Co-founder and Vice President
+
+- **Date/context:** 2026, Arts et Métiers `[VERIFIED]`.
+- **Scope/actions:** Three-person founding team; gathered needs through student conversations/surveys and helped open a relaxation room in April 2026 `[TEAM RESULT]`.
+- **Evidence/skills:** Initiative, stakeholder discovery, coordination, service design, and delivery.
+- **Resume-ready bullet:** “Co-founded a three-person student wellbeing association and helped launch an on-campus relaxation room in April 2026 after gathering student needs through surveys and conversations.”
+- `[METRIC TO RETRIEVE/ESTIMATE]` Users, survey responses, visits, budget, opening hours, and satisfaction change; obtain survey exports, access logs, association minutes, and budget. Adoption rate = users/eligible students; resume use only after validation.
+- **Sources:** `en/beyond.html`, `en/index.html`.
+
+### Volunteer Tutor
+
+- **Dates:** September 2022–present as of the current site `[VERIFIED]`.
+- **Work:** Mathematics, physics, and engineering tutoring for underserved middle- and high-school students.
+- **Scale/results:** Subjects and continuity are verified; student count, sessions, hours, and academic outcomes are missing.
+- **Resume-ready bullet:** “Provided ongoing volunteer tutoring in mathematics, physics, and engineering to underserved middle- and high-school students since September 2022.”
+- `[METRIC TO RETRIEVE/ESTIMATE]` sessions, learners, hours, retention, and grade change; retrieve calendars, sign-in sheets, lesson records, and anonymized before/after grades. Do not use old-context claims about coordinating people or 5,000 documents: current evidence does not corroborate them.
+- **Sources:** `en/beyond.html`; former context file (audit only).
+
+### Grand Défi — School Renovation Volunteer
+
+- **Date/location:** November 2024 in the detailed Data source; website says Winter 2024. Jules-Ferry primary school, Châlons-en-Champagne `[VERIFIED]` with minor date precision issue.
+- **Actions:** Helped repaint/decorate spaces, create a mural, clear a community garden, and prepare planters/soil `[TEAM RESULT]`.
+- **Resume-ready bullet:** “Contributed to a 2024 primary-school renovation by repainting and decorating spaces, creating a mural, and preparing a community garden.”
+- `[METRIC TO RETRIEVE/ESTIMATE]` volunteer count, hours, rooms/area painted, planters, and beneficiaries; retrieve event roster, schedule, material list, and school record.
+- **Sources:** `en/beyond.html`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/LEADERSHIP AND VOLUNTEERING EXPERIENCES/LEADERSHIP AND VOLUNTEERING EXPERIENCES.txt`.
+
+### Basketball and Strength Training
+
+- **Basketball:** Club participation from 2017–2022 (five years) `[VERIFIED]`; no captaincy, competition level, or results documented.
+- **Strength training:** Since 2022, approximately twice per week `[VERIFIED]`; personal consistency/hobby, not a professional achievement.
+- **Evidence-based relevance:** Long-term consistency and team-sport exposure; avoid unsupported leadership claims.
+- **Source:** `en/beyond.html`.
+
+## 6. Master Project Index
+
+Fifteen substantive projects are retained: the 12 currently published portfolio projects plus three technically relevant Data-only projects. “Shoulder implant optimization” appears only as a commented/asset stub and is excluded pending evidence.
+
+| Project | Date | Status | Domain/context | Role | Key tools | Strongest defensible metric | Section |
+|---|---|---|---|---|---|---|---|
+| Trajectory optimization and physical robot validation | Jan–Aug 2026 | Research validation; preprint draft | Robotics/research | Co-student researcher | Python, ArUco, optimization | 40/40 physical goal arrivals; 0 collisions | [7.1](#71-trajectory-optimization-and-physical-robot-validation) |
+| Cam-driven capping machine | 2025–26 | Academic design complete | Mechanical optimization | Team of 2 | CAD, Python/Excel-style sweeps | 26,691 designs; pressure angle 32.92°→29.38° | [7.2](#72-cam-driven-capping-machine) |
+| Hydraulic turbine-generator | 2025–26 | Academic prototype complete | CFD/electromagnetics/prototyping | Team of 3 | STAR-CCM+, FEMM, MATLAB, CAD | 75.6% peak simulated efficiency; Cp≈0.28 measured | [7.3](#73-hydraulic-turbine-generator) |
+| Plastic collapse analysis | Apr 2026 | Lab/analysis complete | Solid mechanics/FEA | Team of 2 | Abaqus, Python, MTS | Frame limit 423 N vs 432 N measured | [7.4](#74-plastic-collapse-analysis) |
+| Bicopter control laboratory | Jan 9, 2026 | Four-hour lab complete; secondary resume priority | Controls | Team of 2 | MATLAB/Simulink, dSPACE | 50 ms sample; identified ωn=0.813 rad/s | [7.5](#75-cnam-bicopter-control-laboratory) |
+| Foundry/CNC bearing-support part | 2025 | First part inspected; redesign planned | Manufacturing/metrology | Team of 2 | Foundry, lathe, CNC, CMM | 2/4 tolerances passed; 0.750 mm position vs 0.100 mm | [7.6](#76-fab--foundry-machining-and-metrology) |
+| FANUC automated casting cell | 2025 | Academic concept/simulation | Industrial robotics | Team of 4 | RobotGuide, FANUC | 30 s estimated cycle, 2 parts/cycle | [7.7](#77-fanuc-automated-casting-cell) |
+| F1 in Schools car | 2025 | Prototype and test completed | Competition/design communication | Team of 6; communication/design role | CAD/CFD/CAM collaboratively | 3–4 CAD versions; first 3D print succeeded | [7.8](#78-f1-in-schools-car) |
+| PJT AI industrial data assistant | 2025–26 | Local demonstrator complete | Applied AI/data | Individual owner | Python, SQLite, Streamlit, Ollama | 21-test plan; 15 strict passes | [7.9](#79-pjt-ai--offline-industrial-data-assistant) |
+| Composite piezoelectric speaker | 2025–26 | Physical prototype tested; secondary resume priority | Composites/acoustics | Team contribution not separately documented | Abaqus, infusion, acoustic test | 51 dB measured at 20 cm and 5.2 kHz | [7.10](#710-composite-piezoelectric-speaker) |
+| TIPE football impact mechanics | 2022–24 | Individual study complete | Experimental mechanics | Individual | Python, video tracking | ≈1.2 measured real vs ≈2 ideal speed ratio | [7.11](#711-tipe--football-impact-mechanics) |
+| Aircraft brake | 2025 | Individual preliminary design | Mechanical design | Individual | Fusion 360, Excel | ~3 calculated shaft safety factor | [7.12](#712-aircraft-brake-design) |
+| NACA 2412 CFD | 2024–25 | Academic simulation complete | Aerodynamics/CFD | Team of 4 | Fusion, STAR-CCM+ | Simulated stall ≈18.3° at 15 m/s and ≈17° at 150 m/s | [7.13](#713-naca-2412-airfoil-cfd) |
+| Industrial gear reducer | 2024–25 | Preliminary design complete | Machine design | Team E13; team size not documented | Excel, catalogs | 7 kW; ratio 4.5±4%; ≥22,000 h target | [7.14](#714-industrial-gear-reducer-preliminary-design) |
+| Energy-harvesting gym machine | May 15, 2025 | Preliminary design complete; secondary resume priority | Systems/energy | Team of 5 | FAST, trade studies, SWOT | Five-person team; V5.2 preliminary report | [7.15](#715-energy-harvesting-gym-machine) |
+
+**Comparison with the former context:** The former file contained five substantive projects that remain here—PJT AI (formerly “Smart Workshop”), F1 in Schools, aircraft brake, FANUC cell, and TIPE. This fresh inventory adds ten documented projects: trajectory optimization and physical robot validation, capping machine, hydraulic turbine-generator, plastic-collapse analysis, CNAM bicopter control, FAB manufacturing/metrology, composite speaker, NACA 2412 CFD, industrial gear reducer, and energy-harvesting gym machine. The former planned “Data-Driven Reduced-Order Mechanical Model” is excluded as a completed project because no current deliverable supports that status.
+
+## 7. Detailed Project Profiles
+
+### 7.1 Trajectory Optimization and Physical Robot Validation
+
+#### Project overview
+
+- **Official context:** International research internship in trajectory optimization and mobile robotics, PIMM / CNRS@CREATE; January–August 2026; Paris and Singapore; research validation and preprint draft.
+- **Team:** Student researchers Slimane AOUANOUK and Mathis Benchikh; supervisors Prof. Francisco Chinesta and Amine Ammar.
+- **Role:** `[TEAM RESULT]` Co-development across optimization, simulation, physical integration, validation, and communication; finer individual attribution is unavailable.
+- **System:** 2 m × 2 m arena; overhead camera; ArUco localization; four physical robots available; one controlled 1.2588 kg rover and fixed/moving agents in validated configurations.
+
+#### Problem and objectives
+
+Develop trajectory-planning and correction methods that remain safe and executable under real sensing, communication, timing, and robot-dynamics constraints. Success required goal arrival, positive obstacle clearance, stable real-time operation, and reproducible validation; simulation sweeps were calibration evidence, not physical outcomes.
+
+#### Requirements and constraints
+
+- Nominal speed 0.25 m/s, acceleration 1.0 m/s², safety radius 0.13 m; 50 ms nominal loop and 750 ms watchdog.
+- Frozen tasks and one coefficient set were used to limit post-hoc tuning.
+- Elevated ArUco markers introduced parallax; computer vision dominated the loop budget.
+
+#### Engineering approach and technical work
+
+The team compared variational and straight-segment planners with Verlet and semi-implicit controllers; ran large simulation calibration/held-out sweeps; calibrated camera intrinsics, lens distortion, homography, marker height, and robot heading; integrated perception, correction, serial commands, and logs; performed exploratory moving-agent work; then ran confirmatory frozen fixed-obstacle campaigns and digital-twin comparisons.
+
+#### Individual contribution
+
+- `[TEAM RESULT]` Sources credit both student researchers with trajectory optimization, simulation, physical integration, and validation.
+- `[TO CONFIRM]` Code ownership, experiment ownership, figure authorship, and writing sections are not partitioned.
+
+#### Tools, technologies, and equipment
+
+Python/scientific computing and optimization; ArUco/OpenCV-style vision; camera calibration and projective geometry; serial robot communication; logged real-time experiments; physical mobile robots; simulation/digital twin; statistical analysis; technical web/preprint communication.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Demonstration, attribution, action | Source/caveat | Resume readiness |
+|---|---|---|---|---|
+| Frozen physical success | 40/40 goals, zero collisions `[MEASURED]` | `[TEAM RESULT]` integrated and validated full stack | Project preprint/site; two tasks of 20 | Ready |
+| Minimum safety-disc clearance | 10.6 cm single-agent; 6.3 cm dual-agent `[MEASURED]` | `[TEAM RESULT]` physical safety margin | Fixed tasks; obstacle clearances 29.7 and 49.6 cm | Ready |
+| Loop performance | medians 19.839 and 19.863 Hz; CV 0.2%/0.4% `[MEASURED]` | Real-time stability | 99th-percentile worst run 87 ms; max 125 ms | Ready |
+| Paths/durations | 1.931 m/7.721 s and 2.336 m/10.439 s medians `[MEASURED]` | Repeatable execution | CVs 0.9%/1.1% and 3.6%/5.5% | Ready with context |
+| Localization correction | 36.3→5.8 mm mean; 45.2→9.0 mm max `[MEASURED]`; 84.0% mean reduction `[CALCULATED]` | Calibration quality | `(36.3−5.8)/36.3×100`; grid data | Ready |
+| Parallax correction | 60.8→11.6 mm mean; 78.8→23.1 mm max `[MEASURED]`; 80.9% mean reduction `[CALCULATED]` | Elevated-marker correction | `(60.8−11.6)/60.8×100`; factor 0.9234 | Ready |
+| Vision downscaling | detection 72.81→29.07 ms; loop 11.35→19.85 Hz `[MEASURED]` | Real-time optimization | Different sessions; 1.75× `[CALCULATED]` | Qualified |
+| Loop budget | vision 32.94 ms (65.9%); serial 8.43 ms (16.9%); 6.88 ms margin `[MEASURED]` | Performance diagnosis | Per 50 ms cycle | Ready |
+| Simulation calibration | 367,374 planned + 100,800 final-zone cases; 77:31:54 sequential `[SIMULATED]` | Search scale | One seed; unequal sampling | Ready as scale |
+| Best simulated joint rate | 65.38% (68/104); held-out 70% `[SIMULATED]` | Planner/controller selection | Variational + Verlet; not physical reliability | Qualified |
+| Digital-twin difference | median mean departure 5.81/5.31 cm; length ratios 1.090/1.169 `[MEASURED/CALCULATED]` | Simulation-to-real comparison | 39 paired runs | Qualified |
+| Multi-agent scale | six controlled agents; ≥15 cm minimum clearance; ≤3 cm final gap `[SIMULATED]` | Multi-agent extension | Simulation only | Qualified |
+| Exploratory moving-agent campaign | 28 attempts/24 geometries; 24/26 goals; 2 stops; 9 safety-disc overlaps; no contact `[MEASURED]` | Transparent failure accounting | Not confirmatory reliability | Not a headline metric |
+
+#### X–Y–Z accomplishment mapping
+
+- **Physical validation:** X validated repeatable goal reaching; Y 40/40 arrivals, zero collisions; Z integrated planner, localization, correction, communication, and frozen-task testing. `[TEAM RESULT][MEASURED]` Ready.
+- **Localization:** X improved calibration accuracy; Y mean grid error fell 84.0%, 36.3 to 5.8 mm; Z corrected lens distortion before homography. `[TEAM RESULT][CALCULATED from MEASURED]` Ready.
+- **Real time:** X restored near-20 Hz operation; Y 11.35 to 19.85 Hz (1.75×); Z downscaled camera processing. Different-session caveat; qualified.
+- **Simulation scale:** X compared planner/controller configurations; Y 468,174 planned cases across calibration/final-zone campaigns; Z automated parameter sweeps and held-out scoring. `[TEAM RESULT][SIMULATED]` Ready as scope.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **End-to-end replanning latency distribution:** Need timestamped capture, detection, solve, correction, send, and actuation logs on identical hardware. Report median/p95/p99; do not equate loop frequency with “<100 ms replanning” until stage boundaries are verified.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Avoidance improvement versus baseline:** Need paired no-avoidance and avoidance trials with identical starts/obstacles/seeds; formula `(baseline failures−method failures)/baseline failures×100`; credible only as a controlled A/B experiment.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Individual contribution:** Use version-control history, lab notebooks, and run ownership; never infer from author order.
+
+#### Deliverables
+
+Physical robot/arena integration; experiment logs; calibration datasets; simulation sweep outputs; digital-twin comparisons; figures; videos; web showcase; solver-comparison report; compact preprint draft.
+
+#### Challenges, failures, and corrective actions
+
+- Vision latency and frame discard were reduced through downscaling, with session-comparability caveats retained.
+- Lens distortion and marker-height parallax caused centimeter-scale errors; calibration reduced them materially.
+- One dual-agent frozen run used the wrong fixed layout; it remained a goal arrival but was excluded from aggregate layout statistics, leaving n=19.
+- Exploratory moving-agent trials included stalls and safety-disc overlaps; no physical contact occurred, but those trials are not evidence of frozen-task reliability.
+
+#### Limitations and remaining work
+
+Single controlled rover in core physical trials, limited arena, one calibration seed, unequal final-zone sampling, and incomplete individual attribution. Publication remains a draft/in preparation. Do not use resume claims of “10+ robots,” “<100 ms replanning,” or “89.7% runtime reduction” without a direct supporting benchmark.
+
+#### Skills demonstrated / ATS keywords
+
+Trajectory optimization, motion planning, autonomous systems, mobile robotics, real-time control, computer vision, ArUco, camera calibration, homography, digital twin, simulation-to-real, experimental design, Python, data logging, statistical validation, research communication.
+
+#### Resume-ready bullet points
+
+- Co-developed and physically validated a mobile-robot trajectory-optimization stack, completing 40/40 frozen goal-reaching trials with zero collisions.
+- Sustained 19.84–19.86 Hz median control-loop performance by integrating ArUco localization, trajectory correction, serial commands, and structured experiment logging.
+- Reduced mean calibration-grid localization error 84%, from 36.3 mm to 5.8 mm, through lens-distortion correction and metric homography.
+- Automated simulation campaigns totaling 367,374 planned calibration runs and 100,800 final-zone cases to compare planners, controllers, and coefficient sets.
+- Quantified simulation-to-physical departure across 39 paired runs, with median mean trajectory differences of 5.31–5.81 cm.
+
+#### Interview evidence
+
+Best stories: diagnosing the perception bottleneck; correcting distortion/parallax; designing frozen validation; retaining a configuration-error run transparently; and explaining why exploratory failures cannot be presented as confirmatory reliability. Missing STAR detail: Slimane’s exact individual decision/action ownership.
+
+#### Open points
+
+Individual ownership; final publication status and affiliations; final internship end date; exact definition behind any resume-only runtime/latency claims.
+
+#### Project sources
+
+`paco-showcase/index.html`; `paco-showcase/README.md`; `paco-showcase/VALIDATION.md`; `paco-showcase/assets/reports/paco-preprint-draft-v1-compact.pdf`; `paco-showcase/assets/reports/rapport_comparaison_solveurs_controleurs.pdf`; `paco-showcase/website/Rp_PACO_Website_Content_Strategy.md`; `en/experience.html`; current resume PDF.
+
+### 7.2 Cam-Driven Capping Machine
+
+#### Project overview
+
+- Academic mechanical optimization project; team of Slimane AOUANOUK and Mathis Benchikh; 2025–26 `[VERIFIED BY USER]`; completed design/report.
+- Objective: design a cam motion law and geometry for a 45 mm capping stroke in a 2.0 s cycle while controlling pressure angle, contact force, curvature, Hertz pressure, and speed.
+
+#### Requirements and constraints
+
+Key target pressure angle ≤30°; curvature radius above 18 mm roller radius; Hertz pressure below 650 MPa; follower speed below 1,000 mm/s; positive contact force. The elastomer concept was a proposed extension, not a tested outcome.
+
+#### Engineering approach / technical work
+
+Defined the motion law, calculated kinematics/dynamics/contact, swept 26,691 design combinations, selected base radius and cam width, generated CAD and an A2 assembly drawing, and explored TRIZ-inspired compliant contact.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Report authorship is joint; no work breakdown supports sole attribution.
+
+#### Tools, technologies, and equipment
+
+Mechanical modeling, numerical design sweep, cam CAD, engineering drawing, Hertz contact, curvature/pressure-angle analysis, TRIZ. The report notes AI assistance for code structuring; technical responsibility remained with the team.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Demonstration/action | Source/caveat | Readiness |
+|---|---|---|---|---|
+| Design-space scale | 26,691 combinations `[CALCULATED by project workflow]` | Systematic optimization | Portfolio/report | Ready as team scope |
+| Pressure angle | 32.92°→29.38° | Requirement achieved | Optimized design | Ready |
+| Pressure-angle reduction | `(32.92−29.38)/32.92×100=10.75%` `[CALCULATED]` | Optimization impact | Inputs from report | Ready |
+| Base radius | 30→38 mm; +26.7% `[CALCULATED]` | Tradeoff enabling constraint compliance | `(38−30)/30×100` | Ready |
+| Minimum curvature | 37.51→49.48 mm; +31.9% `[CALCULATED]` | Improved geometry margin | `(49.48−37.51)/37.51×100` | Ready |
+| Peak Hertz pressure | 513.6→503.1 MPa; −2.0% `[CALCULATED]` | Contact stress below 650 MPa | Later optimization table controls | Ready |
+| Other optimized checks | 12.93 N minimum force; 132.4 mm/s max speed; 16 mm width | Meets stated constraints | Calculated/model outputs, not physical test | Qualified |
+| Elastomer concept | 0.5 mm deformation; 6,019.62 N; 10–20% desired peak reduction `[TARGET/ESTIMATED]` | Future concept | 15% assumption gives 544.4 MPa in report | Not achieved; do not use as outcome |
+
+#### X–Y–Z accomplishment mapping
+
+- X brought pressure angle below the 30° target; Y 32.92° to 29.38° (10.75%); Z evaluated 26,691 cam geometries and selected a 38 mm base radius/16 mm width. `[TEAM RESULT][CALCULATED]` Ready.
+- X improved curvature margin; Y minimum curvature increased 31.9%, 37.51 to 49.48 mm; Z optimized base-circle geometry while checking contact and speed constraints. Ready as calculated team result.
+- X delivered a constraint-checked mechanism; Y positive 12.93 N contact force and 503.1 MPa peak Hertz pressure below 650 MPa; Z coupled kinematics, dynamics, and Hertz contact analysis. Use “calculated,” not “tested.”
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Physical cycle reliability/contact force:** build prototype; collect cycle count, missed caps, force traces, and wear. Success rate = successful caps/attempts. No resume outcome until tested.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Optimization runtime:** retrieve scripts/logs, hardware, and baseline/manual design time; compare identical constraints.
+
+#### Deliverables
+
+Calculation/optimization report, design maps, motion-law and contact plots, CAD cam/assembly, A2 assembly drawing, and elastomer concept.
+
+#### Challenges, failures, and corrective actions
+
+The initial 32.92° pressure angle exceeded the 30° target. Increasing/optimizing base radius reduced it to 29.38° while preserving force, curvature, pressure, and speed checks. Earlier kinematic figures in the report differ from the final optimization table; use the final table.
+
+#### Limitations and remaining work
+
+No physical capping test, endurance study, manufactured cam, or verified elastomer improvement. Exact personal task split and dates remain unknown.
+
+#### Skills demonstrated / ATS keywords
+
+Mechanical design, cam mechanisms, design optimization, Hertz contact, kinematics, dynamics, CAD, engineering drawings, parametric studies, requirements verification, TRIZ.
+
+#### Resume-ready bullet points
+
+- Co-optimized a cam-driven capping mechanism across 26,691 design combinations, reducing calculated maximum pressure angle 10.75% from 32.92° to 29.38° and meeting a 30° target.
+- Increased calculated minimum curvature radius 31.9%, from 37.51 mm to 49.48 mm, while maintaining positive follower contact and peak Hertz pressure below 650 MPa.
+- Produced the cam CAD model, design maps, contact calculations, and A2 assembly drawing for a 45 mm stroke and 2.0 s cycle.
+
+#### Interview evidence
+
+Use the initial pressure-angle failure and multi-constraint redesign as an engineering tradeoff story. Clarify personal ownership before using first-person STAR detail.
+
+#### Open points / Project sources
+
+Dates are user-confirmed; individual task division is not separately documented, so team attribution remains required. Sources: `en/projects/capping-machine.html`; `assets/documents/projects/capping-machine/cam-driven-capping-machine-report-fr.pdf`; `assets/documents/projects/capping-machine/capping-machine-assembly-drawing-a2.pdf`.
+
+### 7.3 Hydraulic Turbine-Generator
+
+#### Project overview
+
+- 2025–26 Arts et Métiers/LIFSE academic project; team of Slimane AOUANOUK, Mathis Benchikh, and Romain Pâris; supervisor Christophe Sarraf.
+- Seven-module, multidisciplinary study with 76.5 guided hours plus at least 30 autonomous hours `[TEAM SCOPE]`, spanning hydraulic design, CFD, electromagnetic sizing, additive manufacturing, and wind-tunnel testing.
+- Objective: design and evaluate a compact turbine-generator around a low-head operating point and manufacture a 150 mm demonstrator.
+
+#### Requirements and constraints
+
+Nominal head 3.7 m, flow 0.13 m³/s, 1,500 rpm, NACA 0015 blades, six blades. A specification table states at least 5 kW, while the conclusion says 3 kW required; this materially changes whether the 4.5 kW simulation met the requirement.
+
+#### Engineering approach / technical work
+
+The team performed velocity-triangle and blade design, STAR-CCM+ CFD over mass-flow conditions, analytical/electromagnetic generator sizing with MATLAB and FEMM, CAD and assembly drawing, PLA printing, then wind-tunnel testing and redesign recommendations.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Three named authors; individual modules are not assigned in the report.
+
+#### Tools, technologies, and equipment
+
+STAR-CCM+ CFD; MATLAB; FEMM; CAD; technical drawing; Prusa i3 MK3; PLA; wind tunnel and associated test instrumentation.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Demonstration/action | Caveat/source | Readiness |
+|---|---|---|---|---|
+| CFD mesh | 96,045 cells; 443,953 faces; 305,630 vertices `[SIMULATED scope]` | Built computational model | Report | Ready as scale |
+| Flow sweep | 110–205 kg/s `[SIMULATED]` | Explored operating curve | Report | Ready as scope |
+| Peak hydraulic result | 75.6% efficiency at 155 kg/s; 4.5 kW; 3.94 m head `[SIMULATED]` | CFD operating point | Power requirement conflict | Qualified |
+| Cavitation | none reported at critical point `[SIMULATED]` | CFD assessment | Not physical validation | Qualified |
+| Analytical torque | 28.648 N·m for 4.5 kW at 1,500 rpm `[CALCULATED in report]` | Generator sizing | FEMM text separately cites 38.20 N·m required | Not ready until reconciled |
+| Prototype | 150 mm; 6 h 36 min PLA print; four screws; 4 mm hole clearance `[MEASURED/scope]` | Manufactured demonstrator | Fragile blade-hub joint | Ready as scope |
+| Wind-tunnel result | Cp≈0.28 at tip-speed ratio≈1.8 `[MEASURED]` | Physical aerodynamic test | Not hydraulic-system efficiency | Qualified |
+| Redesign recommendation | blade inlet angle 54°→62° `[PLANNED]` | Experiment-informed change | Not manufactured/retested | Do not claim achieved |
+
+#### X–Y–Z accomplishment mapping
+
+- X identified a simulated operating peak; Y 75.6% efficiency and 4.5 kW at 155 kg/s; Z ran a 110–205 kg/s CFD sweep on a 96,045-cell model. `[TEAM RESULT][SIMULATED]` Qualified.
+- X produced and tested a physical demonstrator; Y 150 mm prototype printed in 6 h 36 min and Cp≈0.28 at TSR≈1.8; Z translated CAD into PLA hardware and wind-tunnel measurements. `[TEAM RESULT]` Ready with metric definitions.
+- X derived a redesign direction; Y inlet angle change from 54° to 62°; Z compared prototype behavior and blade velocity triangles. `[PLANNED]`, not an outcome.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **CFD-to-test error:** Need matched fluid, Reynolds number, geometry, rpm/TSR, torque, and power; formula `|simulation−measurement|/measurement×100`. Current wind and hydraulic cases are not comparable.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Generator validation:** Need measured torque-speed-voltage-current-efficiency maps and load conditions; compare with FEMM/analytical predictions.
+
+#### Deliverables
+
+Hydraulic/CFD model, electromagnetic design, MATLAB/FEMM outputs, CAD, assembly drawing, 150 mm PLA prototype, wind-tunnel dataset, report, and redesign proposal.
+
+#### Challenges, failures, and corrective actions
+
+The blade-hub connection was fragile; report recommends geometry/material changes. Wind-tunnel results led to a 62° inlet-angle proposal. Conflicting power and torque requirements must be corrected before external claims.
+
+#### Limitations and remaining work
+
+CFD and wind-tunnel experiments represent different media/configurations; generator was not physically validated; no uncertainty or mesh-convergence study is reported; redesigned blade was not retested.
+
+#### Skills demonstrated / ATS keywords
+
+Hydraulic turbomachinery, CFD, STAR-CCM+, fluid mechanics, electromagnetic design, FEMM, MATLAB, CAD, additive manufacturing, prototyping, wind-tunnel testing, multidisciplinary systems engineering.
+
+#### Resume-ready bullet points
+
+- Co-developed a turbine-generator concept through seven project modules, integrating hydraulic design, CFD, electromagnetic sizing, CAD, additive manufacturing, and experimental testing.
+- Simulated a 110–205 kg/s operating sweep on a 96,045-cell CFD model, identifying a 75.6% peak hydraulic efficiency and 4.5 kW operating point at 155 kg/s.
+- Manufactured a 150 mm PLA demonstrator in 6 h 36 min and measured Cp≈0.28 at a tip-speed ratio near 1.8 in wind-tunnel testing.
+
+#### Interview evidence
+
+Use the fragile hub and test-informed blade-angle change as iteration/failure evidence; use requirement conflict as a documentation-quality lesson, not a claimed success.
+
+#### Open points / Project sources
+
+Resolve 3 kW versus 5 kW requirement and 28.648 versus 38.20 N·m torque. Individual work split remains undocumented. Sources: `en/projects/turbine.html`; `assets/documents/projects/turbine/rapport-ce-turbine-hydraulique-aouanouk-benchikh-paris.pdf`; `assets/documents/projects/turbine/dessin-d-ensemble.pdf`.
+
+### 7.4 Plastic Collapse Analysis
+
+#### Project overview
+
+- Arts et Métiers solid-mechanics lab/project, report dated April 9, 2026; team of Slimane AOUANOUK and Magnum Fernandes Alberio.
+- Objective: compare analytical limit analysis, Python-generated Abaqus 1D/2D models, and physical testing for beams/frames under varying load directions.
+
+#### Requirements and constraints
+
+MTS 100 kN test frame; beam span 250 mm and 12 × 12 mm cross section; frame dimensions H=220 mm, L=295 mm, section 3.82 × 11.40 mm². Analytical assumptions and angle conventions had to align with Abaqus.
+
+#### Engineering approach / technical work
+
+Derived collapse mechanisms and limit loads, generated parametric models via Python, evaluated 15°, 45°, 75°, and 90° loads and a transition around 60°, and compared simulation with force-displacement measurements.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Joint report; personal partition unavailable.
+
+#### Tools, technologies, and equipment
+
+Abaqus 1D/2D, Python scripting, rigid-plastic limit analysis, MTS 100 kN machine, displacement/force measurement, mechanism mapping.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Demonstration/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Frame peak load | 432 N `[MEASURED]` | Physical collapse test | Team result | Ready |
+| Analytical frame limit | 423 N `[CALCULATED in report]` | Model prediction | Assumptions apply | Qualified |
+| Prediction error | `(432−423)/432×100=2.08%` underprediction `[CALCULATED]` | Analytical/physical agreement | Inputs from report | Ready |
+| Displacement/recovery | max 25.06 mm; elastic recovery 12.87 mm `[MEASURED]` | Post-yield response | “Residual” 12.19 mm assumes simple subtraction | Ready |
+| Residual estimate | `25.06−12.87=12.19 mm` `[CALCULATED]` | Permanent deformation estimate | Confirm recovery definition | Qualified |
+| Stiffness evolution | 38→3 N/mm; unload 34 N/mm `[MEASURED]`; 92.1% decline `[CALCULATED]` | Plastic softening | `(38−3)/38×100` | Ready |
+| Plastic hinges | 3 `[MEASURED/observed]` | Collapse mechanism | Report | Ready |
+| Beam analytical limit | 2,177.3 N `[CALCULATED in report]` | Model output | Experimental beam value missing | Not outcome-ready |
+| Angle transition | analytical ≈59.5°, Abaqus ≈60° `[SIMULATED/CALCULATED]` | Mechanism transition | Final report says curves did not superpose satisfactorily | Qualified |
+
+#### X–Y–Z accomplishment mapping
+
+- X predicted physical frame collapse; Y 423 N analytical versus 432 N measured, 2.08% underprediction; Z applied limit analysis and MTS validation. `[TEAM RESULT]` Ready.
+- X characterized post-yield behavior; Y stiffness fell 92.1% from 38 to 3 N/mm and three hinges formed; Z analyzed force-displacement data. Ready.
+- X mapped load-angle mechanisms; Y transition near 59.5° analytical and 60° Abaqus; Z scripted 1D/2D models at multiple angles. Qualified because overall curve agreement was unsatisfactory.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Beam model error:** Need measured beam collapse load and uncertainty; formula `|2,177.3−measured|/measured×100`.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Mesh convergence:** Need element sizes and predicted loads under identical material/BC definitions; calculate relative change between refinements.
+
+#### Deliverables
+
+Analytical derivations, Python-generated Abaqus 1D/2D models, angle sweep, mechanism map, MTS data, force-displacement plots, and final report.
+
+#### Challenges, failures, and corrective actions
+
+Analytical and Abaqus curves did not superpose satisfactorily despite similar transition angles; probable issues include angle conventions, boundary conditions, and modeling simplifications. The report preserves rather than hides this negative result.
+
+#### Limitations and remaining work
+
+Beam experiment data missing; no mesh-convergence/uncertainty analysis; residual deformation interpretation needs confirmation; individual ownership unclear.
+
+#### Skills demonstrated / ATS keywords
+
+Solid mechanics, plasticity, limit analysis, FEA, Abaqus, Python automation, experimental mechanics, force-displacement analysis, model validation.
+
+#### Resume-ready bullet points
+
+- Co-analyzed plastic collapse of a portal frame using limit analysis, Python-scripted Abaqus models, and MTS testing, predicting a 423 N limit load versus 432 N measured (2.08% underprediction).
+- Quantified a 92.1% stiffness decline from 38 to 3 N/mm and observed three plastic hinges during physical frame testing.
+- Evaluated 1D and 2D collapse mechanisms across 15°, 45°, 75°, and 90° load angles and documented unresolved model discrepancies.
+
+#### Interview evidence
+
+Strong negative-result story: similar mechanism-transition angles did not produce satisfactory curve superposition, requiring careful discussion of assumptions rather than selective reporting.
+
+#### Open points / Project sources
+
+Individual task split; measured beam result; residual-displacement definition. Sources: `en/projects/plasticity.html`; `assets/documents/projects/plasticity/tp-plasticite-final.pdf`.
+
+### 7.5 CNAM Bicopter Control Laboratory
+
+#### Project overview
+
+- Four-hour laboratory, January 9, 2026, 14:00–18:00; team of Slimane AOUANOUK and Mathis Benchikh.
+- One-degree-of-freedom bicopter elevation control using identification, discrete modeling, integral action, pole placement, simulation, and dSPACE implementation.
+- **Resume priority:** Secondary/context-only. Do not create a dedicated resume entry or several bullets unless a target controls role makes this laboratory directly useful.
+
+#### Problem, objectives, and constraints
+
+Identify the plant and design a controller that tracks elevation while rejecting constant disturbances. Sampling period was 50 ms; three discrete closed-loop poles were specified.
+
+#### Engineering approach / technical work
+
+Extracted an experimental response, identified a second-order plant, formed state-space matrices, augmented for integral action, selected poles, calculated gains, simulated, and implemented on dSPACE.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Joint report; individual ownership unavailable.
+
+#### Tools, technologies, and equipment
+
+MATLAB, Simulink, dSPACE, bicopter test rig, system identification, state-space control, pole placement, integral action.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Lab duration | 4 h `[VERIFIED scope]` | Time-boxed control workflow | Not impact | Ready as context |
+| Sampling period | 50 ms `[IMPLEMENTED]` | Discrete controller timing | Report | Ready |
+| Identified parameters | damping 0.1102; natural frequency 0.813 rad/s; gain 0.294 | Plant identification | Fit error not reported | Qualified |
+| Desired poles | 0.95; 0.95±0.04j `[TARGET]` | Closed-loop design | Not measured response | Qualified |
+| State feedback | Kp=[15.205, 14.038] | Calculated control gains | Report notation | Qualified |
+| Integral gain | Ki=0.42393 | Calculated control gain | Report | Qualified |
+
+#### X–Y–Z accomplishment mapping
+
+- X implemented an identified-model controller in a four-hour lab; Y 50 ms sampling with poles placed at 0.95 and 0.95±0.04j; Z used MATLAB/Simulink state-space augmentation and dSPACE. `[TEAM RESULT]` Use as design scope, not performance.
+- X parameterized the elevation plant; Y damping 0.1102, natural frequency 0.813 rad/s, gain 0.294; Z fit a second-order model to experimental response. Qualified; identification error missing.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Closed-loop rise time, settling time, overshoot, steady-state error, and disturbance rejection:** Need timestamped reference/output traces from simulation and hardware. Standard step-response calculations under matched conditions; essential before claiming control performance.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Identification quality:** Need predicted and measured traces; calculate RMSE/NRMSE and confidence intervals.
+
+#### Deliverables
+
+Identification results, state-space model, gain calculations, Simulink controller, dSPACE implementation, experiment plots, and lab report.
+
+#### Challenges, failures, corrective actions / limitations
+
+The report documents implementation but not numeric closed-loop outcomes. Avoid “improved stability/accuracy” until traces are recovered. Personal division is unknown.
+
+#### Skills demonstrated / ATS keywords
+
+Control systems, system identification, state-space modeling, pole placement, integral control, MATLAB, Simulink, dSPACE, hardware-in-the-loop laboratory work.
+
+#### Resume usage guidance
+
+Do not use as a dedicated project by default. If a controls-focused application needs it, allow at most one concise supporting mention: “Applied MATLAB/Simulink, dSPACE, system identification, pole placement, and integral control to a one-degree-of-freedom bicopter at a 50 ms sample period.” Do not claim improved response without recovered hardware traces.
+
+#### Interview evidence / Open points / Project sources
+
+Story: moving from empirical response to physical controller within a time-boxed lab. Individual tasks are not separately documented; performance traces would be needed before claiming controller impact. Sources: `en/projects/cnam.html`; `assets/documents/projects/cnam/rapport-tp-eea-cnam.pdf`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/2A_TP_CNAM_Copy/sujet TP.pdf`.
+
+### 7.6 FAB — Foundry, Machining, and Metrology
+
+#### Project overview
+
+- Arts et Métiers manufacturing project; team of Slimane AOUANOUK and Abderrahmane Boukhad; date 2025 `[VERIFIED BY USER]`.
+- Designed and produced an AlSi7 bearing-support part (“crapaudine”) through pattern/mold preparation, casting, lathe/CNC machining, and coordinate-measuring-machine inspection.
+
+#### Problem, objectives, and constraints
+
+Convert a technical definition into a cast and machined part, respect four highlighted geometric tolerances, and diagnose nonconformities. Lathe maximum was 2,800 rpm with 1,000 rpm selected; CNC maximum 7,500 rpm.
+
+#### Engineering approach / technical work
+
+Created/used CAD and technical drawing; prepared mold/pattern; cast AlSi7; defined datums/setups; aligned and machined on conventional lathe and CNC; inspected flatness, cylindricity, perpendicularity, and position on CMM; traced failures to stock/model/core/reference issues and planned a second version.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Two-person team; task split unavailable.
+
+#### Tools, technologies, and equipment
+
+CAD/drawing, sand casting/foundry, AlSi7, lathe, CNC milling, CAM/fixtures, coordinate measuring machine, geometric dimensioning and tolerancing (GD&T), root-cause analysis.
+
+#### Quantitative evidence and measurable results
+
+| Characteristic | Result vs tolerance | Status/interpretation | Calculation | Readiness |
+|---|---|---|---|---|
+| Flatness E | 0.015 vs 0.100 mm | `[MEASURED]` pass | 85% below limit: `(0.100−0.015)/0.100×100` `[CALCULATED]` | Ready |
+| Cylindricity A | 0.018 vs 0.020 mm | `[MEASURED]` pass | 10% below limit | Ready |
+| Perpendicularity | 0.116 vs 0.100 mm | `[MEASURED]` fail | 16% over limit | Ready as corrective evidence |
+| Position | 0.750 vs 0.100 mm | `[MEASURED]` fail | 7.5× limit / 650% over | Ready as failure evidence |
+| Conformance count | 2/4 characteristics passed `[CALCULATED]` | Validation coverage/outcome | Four reported characteristics | Ready with transparency |
+| Machine settings | 1,000 rpm chosen vs 2,800 rpm lathe maximum; CNC max 7,500 rpm | Process scope | Not an improvement | Context only |
+
+#### X–Y–Z accomplishment mapping
+
+- X manufactured and inspected an AlSi7 part end-to-end; Y achieved 0.015 mm flatness and 0.018 mm cylindricity against 0.100 and 0.020 mm limits; Z integrated casting, lathe/CNC operations, datuming, and CMM inspection. `[TEAM RESULT][MEASURED]` Ready.
+- X diagnosed geometric nonconformities; Y perpendicularity was 16% over limit and position 7.5× the limit; Z traced setup/stock/reference issues and planned a corrected second version. Strong interview evidence; not a success-rate claim.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Second-version improvement:** Need CMM report for identical features and tolerances; calculate absolute and percent error reduction from 0.116/0.750 mm baselines.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Yield/scrap/time:** Need production log, material mass, setup and machining times, and rework; only credible if process boundaries match.
+
+#### Deliverables
+
+CAD/drawing, mold/pattern, cast blank, machined part, process setup, CMM inspection results, presentation/report, and redesign plan.
+
+#### Challenges, failures, and corrective actions
+
+Missing machining allowance and reference/setup issues produced severe position error. The team identified the likely root cause and planned a second model rather than describing the first part as fully conforming.
+
+#### Limitations and remaining work
+
+Second-version CMM results are absent; exact date, task split, casting temperature, material yield, and cycle times are not evidenced.
+
+#### Skills demonstrated / ATS keywords
+
+Manufacturing engineering, foundry, sand casting, AlSi7, CNC machining, turning, CAM, fixtures, GD&T, CMM, metrology, nonconformance, root-cause analysis, corrective action.
+
+#### Resume-ready bullet points
+
+- Co-manufactured an AlSi7 bearing-support part through casting, turning, CNC machining, and CMM inspection, achieving 0.015 mm flatness against a 0.100 mm limit.
+- Verified 0.018 mm cylindricity against a 0.020 mm tolerance and documented two nonconforming geometric characteristics for redesign.
+- Diagnosed a 0.750 mm position error against a 0.100 mm tolerance, linking the failure to machining allowance, datuming, and setup decisions.
+
+#### Interview evidence / Open points / Project sources
+
+Use the nonconforming first part as a root-cause/corrective-action story. Confirm whether version two was produced. Sources: `en/projects/fab.html`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Projet FAB /Projet_FAB_Crapaudine_explication.txt`.
+
+### 7.7 FANUC Automated Casting Cell
+
+#### Project overview
+
+- Academic industrial-automation concept; team of Slimane AOUANOUK, Abderrahmane Boukhad, Mohamed Ismaili, and Mathis Benchikh; 2025 `[VERIFIED BY USER]`.
+- Objective: select and simulate a robot cell to handle hot approximately 3 kg cast parts between two furnaces and downstream steps while improving a roughly 60 s manual cycle.
+
+#### Requirements and constraints
+
+Target cycle below 60 s; two parts per robot cycle; part temperature up to 800°C; at least 80 cm between furnaces; pouring about 3 s; payload, reach, thermal protection, safety, and investment/ROI constraints.
+
+#### Engineering approach / technical work
+
+Built a weighted selection matrix, selected FANUC M-20iD/25, designed a pneumatic gripper/protection concept, laid out the cell, simulated the sequence in RobotGuide, assessed risks, and estimated cycle and ROI.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Four authors; personal role unavailable.
+
+#### Tools, technologies, and equipment
+
+FANUC RobotGuide, industrial robot selection, weighted decision matrix, pneumatic gripping, hot-part handling, cell layout, cycle-time analysis, risk assessment, ROI estimation.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning | Caveat | Readiness |
+|---|---|---|---|---|
+| Robot | M-20iD/25; 25 kg; IP67 | Selection constraints | Catalog specification | Ready as design input |
+| Part/load | ≈3 kg; up to 800°C `[ESTIMATED/REQUIREMENT]` | Hot-part handling | Verify actual process data | Qualified |
+| Layout | 2 furnaces; ≥80 cm separation | Cell scope | Requirement/design | Ready as scope |
+| Estimated cycle | ≈30 s; 2 parts/cycle `[ESTIMATED/SIMULATED]` | Predicted automation throughput | Not measured production | Qualified |
+| Manual reference | ≈60 s; 1 part/cycle `[ESTIMATED]` | Baseline | Ensure same operation boundaries | Not ready without validation |
+| Theoretical throughput | manual 60 parts/h; robot 240 parts/h; 4× `[CALCULATED]` | `3600/60×1`; `3600/30×2`; robot/manual | Ignores downtime, cooling, loading, safety stops | Qualified scenario only |
+| Pour time | ≈3 s `[ESTIMATED]` | Sequence element | Not a measured result | Context |
+
+#### X–Y–Z accomplishment mapping
+
+- X designed a robotized hot-casting concept; Y estimated 30 s for two parts versus 60 s for one manually, a theoretical 4× throughput scenario; Z selected a 25 kg IP67 FANUC robot and simulated the cell in RobotGuide. `[TEAM RESULT][ESTIMATED/CALCULATED]` Use only with “estimated.”
+- X integrated thermal/handling constraints; Y addressed approximately 3 kg parts at up to 800°C and two furnaces separated by at least 80 cm; Z designed a pneumatic gripping and protective concept. Scope, not impact.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Validated cycle/throughput:** Need RobotGuide timestamp export or physical PLC/robot logs for identical operations, including waits and faults; calculate parts/hour and confidence interval over repeated cycles.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **ROI/payback:** Need capital, integration, maintenance, energy, labor-loaded costs, uptime, production volume, and scrap/safety effects. “A few days” in project material is not defensible.
+
+#### Deliverables
+
+Robot selection matrix, RobotGuide cell/simulation, layout, gripper/PPE concept, cycle estimate, risk/ROI discussion, report/presentation, and video.
+
+#### Challenges, failures, and corrective actions / limitations
+
+Thermal handling, reach, safety, and synchronization drove selection. Results are conceptual/simulated; no physical cell, measured throughput, thermal validation, or reliable payback model is documented.
+
+#### Skills demonstrated / ATS keywords
+
+Industrial robotics, FANUC, RobotGuide, automation, robot selection, material handling, pneumatic grippers, cycle-time analysis, cell layout, safety, risk assessment, ROI.
+
+#### Resume-ready bullet points
+
+- Co-designed a FANUC M-20iD/25 casting-cell concept for approximately 3 kg parts at temperatures up to 800°C, integrating robot selection, layout, gripping, and safety constraints.
+- Simulated an estimated 30 s two-part cycle in RobotGuide versus an approximately 60 s one-part manual baseline, implying a theoretical 4× throughput scenario before downtime.
+- Built a multi-criteria robot selection and risk framework for a two-furnace layout with at least 80 cm separation.
+
+#### Interview evidence / Open points / Project sources
+
+Use selection tradeoffs or distinguishing estimate from measured performance. Date is user-confirmed; individual role remains undocumented. Retrieve time exports/cost model before performance claims. Sources: `en/projects/fanuc.html`; `assets/documents/projects/fanuc/fanuc.pdf`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Projet Fanuc/projet_fanuc_explication.txt`.
+
+### 7.8 F1 in Schools Car
+
+#### Project overview
+
+- 2025 F1 in Schools academic/competition project; six-person team.
+- `[INDIVIDUAL CONTRIBUTION]` Slimane’s documented role was communication/design: visuals, layout, and deliverables. Other teammates held project management, manufacturing, aerodynamics, CAD, and drawing roles.
+- Objective: design, manufacture, present, and test a CO₂-powered car under 2024 competition rules on a 20 m track.
+
+#### Requirements and constraints
+
+8 g CO₂ cartridge, 20 m track, rule checks T1–T10, aerodynamic/manufacturing constraints, fragile axles, CAM setup, and team-deliverable deadlines.
+
+#### Engineering approach / technical work
+
+`[TEAM RESULT]` Iterated CAD, used half-geometry CFD at 50 m/s, printed a prototype, corrected front-axle fragility, prepared two-stage CAM, and produced competition/presentation material. `[INDIVIDUAL CONTRIBUTION]` Slimane created visual communication, document layout, and project deliverables; sources do not support personally claiming CAD/CFD/manufacturing.
+
+#### Individual contribution
+
+`[INDIVIDUAL CONTRIBUTION]` Visual communication, layout, and preparation of project deliverables. Exact file/page ownership is not separately documented; all technical vehicle-development results remain team-attributed.
+
+#### Tools, technologies, and equipment
+
+Graphic/layout and technical communication directly attributed. CAD, CFD, 3D printing, CAM, and machining are team tools only unless personal use is separately confirmed.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/attribution | Caveat | Readiness |
+|---|---|---|---|---|
+| Team | 6 members `[VERIFIED]` | Project scale | Roles documented | Ready |
+| Track/propulsion | 20 m; 8 g CO₂ `[REQUIREMENT]` | Competition constraints | Not outcome | Context |
+| Design iterations | 3–4 CAD versions `[TEAM RESULT]` | Iterative design | Exact count uncertain | Qualified |
+| CFD case | 50 m/s, half geometry `[SIMULATED]` | Aerodynamic study | Not Slimane-owned | Team context only |
+| Print | first 3D prototype printed successfully `[TEAM RESULT]` | Manufacturability | No dimensions/time | Qualified |
+| CAM | 2 stages: roughing and ball-end finishing `[TEAM RESULT]` | Manufacturing process | Machining origin was not reset, causing angular offset | Team context |
+| Race performance | `[METRIC TO RETRIEVE/ESTIMATE]` | Most valuable competition outcome | Video exists, but no defensible timed result in text | Do not use |
+
+#### X–Y–Z accomplishment mapping
+
+- X communicated a six-person engineering project under competition constraints; Y packaged 3–4 design iterations and team technical work into visual/layout deliverables; Z served in the documented communication/design role. `[INDIVIDUAL CONTRIBUTION]` Ready after confirming exact deliverable count.
+- X helped the team surface/correct manufacturability issues; Y first print succeeded but exposed a fragile front axle; Z supported iterative documentation/design communication. Attribution to Slimane’s technical correction is unclear; use only as team story.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **20 m race time/speed/ranking:** Need official timing sheets and competition results; average speed = 20 m/time. Video-derived timing alone is not preferred.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Communication deliverables and audience:** Need file inventory, page/slide counts, judging score, and feedback; count only Slimane-authored items.
+
+#### Deliverables
+
+Team portfolio/presentation, visual identity/layout, CAD/CFD/CAM artifacts, printed prototype, manufacturing plan, technical report, and test video.
+
+#### Challenges, failures, and corrective actions
+
+The first print revealed a fragile front axle that the team corrected. During machining, failure to reset the origin caused angular offset; the December 23, 2025 report described machining as ongoing. Do not infer final race success from the video alone.
+
+#### Limitations and remaining work
+
+Final manufacturing/race status, time, score, ranking, and Slimane’s exact deliverable count are missing. Current resume wording that broadly says Slimane designed the car overstates his documented individual role.
+
+#### Skills demonstrated / ATS keywords
+
+Technical communication, visual design, document layout, multidisciplinary teamwork, design review, F1 in Schools, competition rules. CAD/CFD/CAM should be tagged collaborative unless confirmed.
+
+#### Resume-ready bullet points
+
+- Led visual communication and document layout for a six-person F1 in Schools team, translating 3–4 engineering design iterations into competition-ready deliverables.
+- Supported presentation of a CO₂-powered car developed for a 20 m track under 2024 F1 in Schools technical rules.
+- **Draft requiring metric:** Improved judging clarity or portfolio score through visual design. **Raw data needed:** official judging rubric, before/after deliverables, and reviewer scores. **Do not use until:** attribution and scores are verified.
+
+#### Interview evidence / Open points / Project sources
+
+Stories: communicating across specialized roles; fragile axle iteration; machining-origin error. Confirm final race status and Slimane’s exact artifacts. Sources: `en/projects/f1.html`; `assets/documents/projects/f1/f1.pdf`; `archive/sources/f1/f1-portfolio-presentation.pdf`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_F1 in school/Projet_F1_in_Schools_Rapport_texte_detaille.txt`.
+
+### 7.9 PJT AI — Offline Industrial Data Assistant
+
+#### Project overview
+
+- Individual applied-AI/data project, 2025–26 `[VERIFIED BY USER]`; local demonstrator complete.
+- Objective: allow industrial users to ask natural-language questions over a structured equipment database using a local LLM, while keeping data on-device and exposing generated SQL/results in a Streamlit interface.
+
+#### Requirements and constraints
+
+Offline operation, accessible interface, SQLite data model, local Mistral 7B Instruct via Ollama, SQL generation/validation, reproducible seed data, and tests including unsupported/security-sensitive queries. Model download was approximately 8 GB `[scope]`.
+
+#### Engineering approach / technical work
+
+`[INDIVIDUAL CONTRIBUTION]` Designed an eight-table/two-view schema, built Python ingestion/query/UI modules, populated a small synthetic industrial dataset, prompted a local LLM for SQL, displayed results, and executed a 21-case functional/security test plan.
+
+#### Individual contribution
+
+`[INDIVIDUAL CONTRIBUTION]` Project owner for the documented Python application, SQLite schema/data, local-LLM workflow, Streamlit interface, and test plan.
+
+#### Tools, technologies, and equipment
+
+Python, pandas, SQLite/SQL, Streamlit, Jupyter, Ollama, Mistral 7B Instruct, Excel input, local inference, test planning, data modeling.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Demonstration/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Schema | 8 base tables + 2 views | Data-model scope | Source/code summary | Ready |
+| Seed dataset | 32 base rows | Small demonstrator | 2 machines, 2 types, 2 zones, 10 parameter definitions, 10 values, 2 documents, 2 links, 2 tools | Ready as scope |
+| Database file | 77,824 bytes | Reproducible local artifact | Small, not production scale | Ready as scope |
+| Source code | 627 LOC across 3 modules (337+203+87) `[CALCULATED]` | Implementation scope | LOC is not quality/impact | Qualified |
+| Test plan | 21 cases | Functional/security coverage | Manual/result-text categorization | Ready |
+| Strict validation | 15/21 = 71.4% `[CALCULATED]` | Passed cases | `15÷21×100`; 3 medium and 3 failed | Ready with definition |
+| Medium/fail | 3/21=14.3% each `[CALCULATED]` | Transparent limitations | Classification from result wording | Ready internally; not headline |
+| Local model | Mistral 7B Instruct; ≈8 GB download | Offline-AI scale | Model artifact size approximate | Qualified |
+
+#### X–Y–Z accomplishment mapping
+
+- X built an offline natural-language-to-SQL demonstrator; Y integrated 8 tables, 2 views, and 32 seed rows; Z combined Python, SQLite, Streamlit, Ollama, and Mistral 7B Instruct. `[INDIVIDUAL CONTRIBUTION]` Ready as scope.
+- X evaluated functional/security behavior; Y 21 tests with 15 strict passes (71.4%), 3 medium, and 3 failures; Z authored a structured test plan spanning valid, malformed, comparative, and restricted SQL requests. Ready with transparent outcome.
+- X kept industrial data local; Y used a local approximately 8 GB model and 77,824-byte database; Z deployed inference through Ollama rather than a cloud API. Locality verified; privacy/security effectiveness not independently audited.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **SQL execution accuracy on a larger benchmark:** Need labeled questions, reference SQL/results, difficulty classes, repeated runs, and fixed model/settings; exact-match and result-equivalence rates. Current 21-case plan is too small for a broad accuracy claim.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Latency and analyst time saved:** Need hardware, warm/cold inference times, manual-query baseline, task completion time, and quality parity; formula `(manual−assistant)/manual×100`.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Security rejection rate:** Need a dedicated adversarial set and explicit safe parser/allowlist criteria; current PRAGMA execution and malformed-SQL behavior show incomplete controls.
+
+#### Deliverables
+
+Python application (three modules), SQLite database/schema, seed data, Streamlit interface, notebooks/inputs, 21-test spreadsheet, report/mind map, and presentation video.
+
+#### Challenges, failures, and corrective actions
+
+Two-machine comparison failed; one French query worked despite English-preferred documentation; malformed SQL and PRAGMA behavior exposed validation weaknesses. UPDATE was rejected, while DROP/multi-statement cases preserved tools but lacked clear error behavior. This is a prototype, not a secured production agent.
+
+#### Limitations and remaining work
+
+Tiny synthetic dataset, no production users, inconsistent query validation, no latency/accuracy benchmark, and no formal threat model. Do not claim “secure,” “production-ready,” or broad natural-language accuracy.
+
+#### Skills demonstrated / ATS keywords
+
+Python, SQL, SQLite, pandas, Streamlit, local LLM, Ollama, Mistral, natural-language interface, data modeling, prompt engineering, test planning, industrial data, offline AI.
+
+#### Resume-ready bullet points
+
+- Built an offline industrial natural-language-to-SQL demonstrator using Python, SQLite, Streamlit, Ollama, and Mistral 7B Instruct across an eight-table, two-view data model.
+- Implemented 627 lines of Python across three modules for database creation, LLM-assisted querying, and the user interface.
+- Designed and executed a 21-case functional/security test plan, recording 15 strict passes (71.4%), three partial results, and three failures to guide further validation.
+- Structured a 32-row seed dataset spanning machines, equipment types, zones, parameters, documents, links, and tools for reproducible local testing.
+
+#### Interview evidence
+
+Useful story: exposing failure categories rather than declaring a successful demo; explain why query allowlisting/parser validation is necessary even when data remains local.
+
+#### Open points / Project sources
+
+Dates are user-confirmed. The final repository/code path and whether later fixes exist remain undocumented. Sources: `en/projects/pjt-ai.html`; `assets/documents/projects/pjt-ai/plan-de-tests-llm-sql-streamlit-v3.xlsx`; `assets/documents/projects/pjt-ai/pjt-ai.pdf`; `assets/documents/projects/pjt-ai/mindmap-projet.pdf`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/2A_PJT_AI/context_PJT_AI.txt`.
+
+### 7.10 Composite Piezoelectric Speaker
+
+#### Project overview
+
+- Academic composite/acoustic project, 2025–26 `[VERIFIED BY USER]`; physical prototype produced and tested; team size and individual task division are not separately documented.
+- **Resume priority:** Secondary/context-only. Do not create a dedicated resume entry or several individual bullets unless a target role specifically requires composite acoustics or piezoelectric systems.
+- Objective: create a lightweight loudspeaker by bonding two piezoelectric actuators to basalt/epoxy flexural elements and evaluate structural, acoustic, and environmental behavior.
+
+#### Requirements and constraints
+
+Composite process quality, actuator bonding, structural resonance, sound-pressure prediction/measurement, lightweight enclosure, and life-cycle considerations. Success thresholds are not explicitly documented.
+
+#### Engineering approach / technical work
+
+Manufactured basalt/epoxy elements by vacuum infusion; characterized material behavior; modeled sound pressure in Abaqus; integrated two PZT actuators and a 3D-printed body; tested in an anechoic setup with an oscilloscope; summarized life-cycle shares.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Current sources do not identify team members or Slimane’s tasks; use only team/project wording.
+
+#### Tools, technologies, and equipment
+
+Basalt/epoxy composite, vacuum infusion, 3D printing, PZT actuators, Abaqus acoustic/structural analysis, Instron bending, DMA, rheometer, TGA, anechoic test, oscilloscope, life-cycle assessment.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Actuators | 2 PZT units | Prototype integration | Scope | Ready |
+| Test frequency | 5,200 Hz | Acoustic operating point | Exact resonance/selection rationale is not documented | Qualified |
+| Sound level | 51 dB at 20 cm | `[MEASURED][VERIFIED BY USER]` performance | Detailed calibration, input power, and repeat count are unavailable | Usable only with setup qualification |
+| Flexural modulus | 11.79 GPa | Material-property result; source type not documented | Test method/sample count missing | Qualified |
+| Acoustic efficiency | 0.00197% `[CALCULATED in project]` | Efficiency estimate | Formula/inputs absent | Not resume-ready |
+| LCA end-of-life electronics share | 66.3% | `[CALCULATED model]` | System boundary/database missing | Qualified |
+| Other LCA shares | electricity 15.9%, 3D print 4.8%, composite manufacture 4.0%, PCB 3.9%, composite end 3.1% | `[CALCULATED model]` | Sum/context should be checked | Internal evidence only |
+
+#### X–Y–Z accomplishment mapping
+
+- X built and evaluated a composite piezoelectric speaker; Y integrated two PZT actuators and measured 51 dB at 20 cm/5.2 kHz; Z combined basalt/epoxy vacuum infusion, a printed body, Abaqus, and anechoic testing. `[TEAM RESULT][MEASURED]` Secondary/context-only resume use.
+- X characterized environmental hotspots; Y electronics end-of-life represented 66.3% of modeled impact; Z performed a component/process life-cycle breakdown. Qualified by LCA system-boundary caveat.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Frequency response and sensitivity:** Need calibrated microphone SPL versus frequency, input voltage/power, distance, background, and repeats; report peak/average response and uncertainty.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Model-to-test SPL error:** Need Abaqus and measured SPL at identical frequency, geometry, boundary conditions, and reference pressure; formula absolute dB difference and pressure-domain relative error.
+
+#### Deliverables
+
+Composite mold/parts, two-PZT functional prototype, 3D-printed enclosure, material tests, Abaqus model, anechoic/oscilloscope test, LCA/product sheet, and portfolio case study.
+
+#### Challenges, failures, and corrective actions / limitations
+
+Current evidence demonstrates a prototype workflow but does not clearly state repeat count, calibration, input power, model error, or individual role. Efficiency and LCA boundaries need the underlying calculation sheet.
+
+#### Skills demonstrated / ATS keywords
+
+Composite materials, vacuum infusion, basalt fiber, epoxy, piezoelectric actuators, acoustics, Abaqus, material characterization, additive manufacturing, anechoic testing, life-cycle assessment.
+
+#### Resume usage guidance
+
+Do not use as a dedicated project by default. If a composites, acoustics, or smart-structures role makes it directly relevant, allow at most one short supporting mention: “Co-developed and tested a two-PZT basalt/epoxy composite speaker prototype, measuring 51 dB at 20 cm and 5.2 kHz.” Retain the missing calibration/input-power caveat in technical discussion.
+
+#### Interview evidence / Open points / Project sources
+
+Potential story: integrating unfamiliar materials, simulation, and acoustic test methods. Date is user-confirmed; team composition, personal task division, sample count, and detailed measurement setup remain undocumented. Sources: `en/projects/speaker.html`; `assets/images/projects/speaker/product-sheet.webp`.
+
+### 7.11 TIPE — Football Impact Mechanics
+
+#### Project overview
+
+- Individual CPGE TIPE, 2022–24 `[VERIFIED BY USER]`; experimental mechanics study.
+- Objective: investigate how striker geometry/surface influences football impact and ball speed using a controlled pendulum-like leg and video/Python analysis.
+
+#### Requirements and constraints
+
+Reproducible striker velocity, interchangeable impact geometries, video-derived motion, contact-time interpretation, and separation of shape from surface effects. Available sources lack exact test counts and uncertainty.
+
+#### Engineering approach / technical work
+
+`[INDIVIDUAL CONTRIBUTION]` Designed a controlled mechanical leg/pendulum; compared interchangeable cylinders and a plate; recorded impacts; tracked motion and fitted data in Python; compared ideal collision behavior with football behavior.
+
+#### Individual contribution
+
+`[INDIVIDUAL CONTRIBUTION]` Individually designed the rig and protocol, performed the video/Python analysis, interpreted results, and prepared the TIPE deliverables.
+
+#### Tools, technologies, and equipment
+
+Mechanical experiment design, pendulum/impact mechanics, interchangeable strikers, video tracking, Python regression/data analysis, collision modeling, presentation.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Ideal speed ratio | near 2 `[THEORETICAL]` | Ideal collision reference | Not measured outcome | Context |
+| Football speed ratio | ≈1.2 `[MEASURED][VERIFIED BY USER]` | Individual experimental comparison | Raw trial aggregation is not currently preserved in the source archive | Usable with qualification |
+| Geometries | multiple interchangeable cylinders plus plate `[scope]` | Controlled shape comparison | Exact count absent | Qualified |
+| Shape finding | no material ball-speed change at equal striker speed `[MEASURED qualitative]` | Negative result | No effect size/confidence | Qualified |
+| Surface finding | surface affected contact time `[MEASURED qualitative]` | Contact mechanics | Exact times absent | Qualified |
+
+#### X–Y–Z accomplishment mapping
+
+- X built an individual repeatable impact experiment; Y compared multiple interchangeable striker geometries at controlled speed; Z combined a pendulum mechanism, video tracking, and Python regression. Scope-ready.
+- X found no material ball-speed change from striker shape at equal speed; Y quantitative effect size is `[METRIC TO RETRIEVE/ESTIMATE]`; Z controlled striker motion and compared trials. Do not overstate without data.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Ball/striker speed by geometry:** Need frame-by-frame positions, frame rate, calibration scale, trial IDs, and repeats; calculate regression slope speeds, ratio, mean/SD, and effect size/ANOVA.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Contact time by surface:** Need high-speed frames or force-sensor traces and material labels; compare means with uncertainty.
+
+#### Deliverables
+
+Mechanical test rig, interchangeable strikers, videos, Python analysis/regression, TIPE presentation, and report/source synthesis.
+
+#### Challenges, failures, and corrective actions / limitations
+
+The most useful result was negative/qualitative: geometry did not materially change speed under the tested conditions. Exact data, repeats, error bars, and surface definitions must be recovered before a quantitative resume claim.
+
+#### Skills demonstrated / ATS keywords
+
+Experimental mechanics, impact dynamics, test-rig design, video tracking, Python, regression, controlled experiments, negative-result interpretation, technical presentation.
+
+#### Resume-ready bullet points
+
+- Designed and executed an individual football-impact study using a pendulum-style leg, interchangeable striker geometries, video tracking, and Python regression.
+- Isolated striker geometry from approach speed and found no material geometry-driven change in ball speed under the tested conditions; quantitative effect size remains to be recovered.
+- Investigated surface-dependent contact time and compared real football behavior with an ideal collision-model ratio.
+
+#### Interview evidence / Open points / Project sources
+
+Use as a story about designing a controlled experiment and accepting a negative result. Recover raw video/data, exact year, trial counts, and the provenance of the 1.2 ratio. Sources: `en/projects/tipe.html`; `assets/documents/projects/tipe/tipe.pdf`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/PREPA_ TIPE/TIPE_pointu_explicatif.txt`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/PREPA_ TIPE/TIPE_55556.pdf`.
+
+### 7.12 Aircraft Brake Design
+
+#### Project overview
+
+- Individual preliminary mechanical design, 2025; Arts et Métiers second-year academic context `[VERIFIED BY USER]`.
+- Objective: design a compact floating-caliper aircraft wheel brake, size primary components and interfaces, select standard hardware, and document assembly/maintenance logic.
+
+#### Requirements and constraints
+
+Braking load/thermal requirements are not retained in accessible summaries; design had to package disc, caliper/pads, shaft, bearings, fasteners, and interfaces. Without original loads, the safety-factor result cannot be independently reproduced.
+
+#### Engineering approach / technical work
+
+`[INDIVIDUAL CONTRIBUTION]` Developed Fusion 360 assembly, used Excel for force/shaft checks, selected bearings and fasteners, checked shaft strength, and produced a case-study/report.
+
+#### Individual contribution
+
+`[INDIVIDUAL CONTRIBUTION]` Individually developed the preliminary architecture, CAD assembly, component selections, engineering calculations, and case-study documentation.
+
+#### Tools, technologies, and equipment
+
+Fusion 360, Excel, mechanical design, free-body/load calculations, shaft sizing, rolling-bearing selection, fastener selection, assemblies, engineering documentation.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Shaft safety factor | ≈3 `[CALCULATED in project]` | Strength margin | Load/material/calculation inputs missing | Qualified only |
+| Bearings | 2 × 32004X tapered roller bearings | Component selection | Catalog/load-life check unavailable | Ready as scope |
+| Fasteners | M6 grade 8.8 | Assembly choice | Quantity/load margin unavailable | Ready as scope |
+| Assembly complexity | 10+ custom/standard components `[resume/site scope]` | Integration scale | Count should be verified from BOM | Qualified |
+| Interfaces | 5+ mechanical interfaces `[resume scope]` | Systems integration | Definition/count absent | Not ready until BOM/interface map |
+| Prototype/testing | none documented | Design-only status | No physical brake validation | Must state limitation |
+
+#### X–Y–Z accomplishment mapping
+
+- X completed an individual floating-caliper brake preliminary design; Y integrated two 32004X tapered bearings, M6 grade 8.8 fasteners, and a calculated shaft safety factor near 3; Z combined Fusion 360 assembly design with Excel sizing. Qualified because inputs are missing.
+- X organized a multi-component mechanical assembly; Y 10+ components and 5+ interfaces are claimed; Z defined standard/custom parts and maintenance interfaces. Verify BOM before use.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Braking torque, stopping energy, disc temperature, bearing life, and bolt/shaft margins:** Need aircraft mass/speed, wheel radius, deceleration, duty cycle, material properties, loads, geometry, and thermal boundary conditions from original workbook/report. Recalculate with units and factors of safety before resume use.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Mass and part/interface count:** Export verified BOM and CAD mass properties; define counting rules.
+
+#### Deliverables
+
+Fusion 360 assembly, sizing workbook/calculations, component selections, report/case study, renderings/drawings.
+
+#### Challenges, failures, and corrective actions / limitations
+
+Packaging, bearing arrangement, load path, and maintainability were the primary documented design challenges. No prototype, dynamometer test, thermal validation, detailed load inputs, or certification analysis.
+
+#### Skills demonstrated / ATS keywords
+
+Mechanical design, Fusion 360, shaft sizing, bearings, bolted joints, brake systems, free-body diagrams, design for assembly, preliminary design, Excel engineering calculations.
+
+#### Resume-ready bullet points
+
+- Designed an individual floating-caliper aircraft brake concept in Fusion 360, integrating a disc/caliper system, two tapered-roller bearings, shaft, and grade 8.8 fasteners.
+- Calculated a shaft safety factor near 3 using Excel-based load and strength checks; original load inputs must accompany detailed technical discussion.
+- Produced a multi-component assembly and engineering case study covering load paths, component selection, interfaces, and maintenance considerations.
+
+#### Interview evidence / Open points / Project sources
+
+Use for packaging and component-selection tradeoffs, not validated aircraft performance. Recover original workbook/load case, BOM, interface definition, date, and course. Sources: `en/projects/aircraft-brake.html`; `assets/documents/projects/aircraft-brake/airplane-break.pdf`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/2A_Projet Frein d'avion/projet_frein_avion.txt`.
+
+### 7.13 NACA 2412 Airfoil CFD
+
+#### Project overview
+
+- Arts et Métiers ENGi Subject 9 academic project, 2024–25 `[VERIFIED BY USER]`; team of Slimane AOUANOUK, Mathis Benchikh, Abderrahmane Boukhad, and Mohamed Ismaili.
+- Objective: build a repeatable CAD-to-CFD workflow and compare lift/drag trends and simulated stall at two inlet speeds.
+
+#### Requirements and constraints
+
+NACA 2412 profile; 80 mm chord; 2 mm extrusion; external-flow domain; steady turbulent air with density 1.2 kg/m³; k-ε model; comparable convergence/post-processing. This was a comparative educational study, not a certified aerodynamic prediction.
+
+#### Engineering approach / technical work
+
+Imported airfoil coordinates into Fusion; built geometry/domain; configured STAR-CCM+ mesh, boundaries, reference areas, monitors, and fields; swept incidence; refined at 0.25° near stall; repeated at 15 m/s and approximately 150 m/s; compared Cx/Cz curves.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Four named authors; personal task split unavailable.
+
+#### Tools, technologies, and equipment
+
+Fusion, NACA coordinates, STAR-CCM+, CFD meshing, steady k-ε turbulence, lift/drag coefficients, polar plots, flow-field post-processing.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Geometry | 80 mm chord; 2 mm extrusion | Model scope | Simplified quasi-2D | Ready as scope |
+| Mesh settings | 0.001 m base size; 20% relative setting | CFD setup | Cell count/convergence missing | Qualified |
+| Air model | ρ=1.2 kg/m³; steady k-ε | Assumptions | No compressibility/transition sensitivity | Context |
+| Campaign 1 | 15 m/s; 0.25° steps from 17–20° | Sweep resolution | Simulation only | Ready as scope |
+| Stall 1 | ≈18.3–18.5° `[SIMULATED]` | Predicted stall | Model dependent | Qualified |
+| Campaign 2 | ≈150 m/s; 0.25° steps from 15–18° | Second speed | ~Mach 0.45 but constant-density assumptions need review | Qualified |
+| Stall 2 | ≈17° `[SIMULATED]` | Comparative prediction | Only two speeds | Qualified |
+| Difference | ≈1.3° earlier vs 18.3° baseline `[CALCULATED]` | Comparative result | `18.3−17.0`; not experimental causality | Qualified |
+
+#### X–Y–Z accomplishment mapping
+
+- X built a two-condition airfoil CFD workflow; Y resolved simulated stall at approximately 18.3° for 15 m/s and 17° for ~150 m/s with 0.25° refinement; Z integrated Fusion geometry, STAR-CCM+ meshing, k-ε physics, and lift/drag post-processing. `[TEAM RESULT][SIMULATED]` Qualified.
+- X improved stall-region resolution; Y used 0.25° angle increments over 17–20° and 15–18° windows; Z narrowed broad sweeps near changes in Cz. Ready as simulation methodology.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Mesh/convergence uncertainty:** Need cell counts, refinement levels, residual criteria, and Cz/Cx histories; use Grid Convergence Index or relative change under identical conditions.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Experimental/reference error:** Need wind-tunnel or trusted NACA data at matched Reynolds/Mach, turbulence, and geometry; calculate stall-angle and coefficient errors.
+
+#### Deliverables
+
+Fusion geometry, STAR-CCM+ cases, mesh/boundary setup, Cx/Cz monitors, polars/field plots, comparative interpretation, and report.
+
+#### Challenges, failures, and corrective actions / limitations
+
+Angle steps were refined near stall. No mesh-convergence or physical validation was performed; steady k-ε and quasi-2D geometry can misrepresent separation. Two velocities do not establish a general speed-stall law.
+
+#### Skills demonstrated / ATS keywords
+
+CFD, STAR-CCM+, Fusion, aerodynamics, NACA 2412, meshing, turbulence modeling, lift, drag, stall, parametric sweep, post-processing.
+
+#### Resume-ready bullet points
+
+- Co-developed a Fusion-to-STAR-CCM+ CFD workflow for a NACA 2412 airfoil, including geometry, meshing, boundary conditions, convergence monitoring, and lift/drag post-processing.
+- Predicted simulated stall near 18.3° at 15 m/s and 17° at approximately 150 m/s using 0.25° incidence refinement near each critical region.
+- Documented the limits of steady k-ε, quasi-2D geometry, and absent mesh/experimental validation rather than presenting simulated trends as flight-test results.
+
+#### Interview evidence / Open points / Project sources
+
+Story: narrowing the parameter sweep near a nonlinear transition. Date is user-confirmed; role split and exact stall definition remain undocumented, and solver/cell data would strengthen validation. Source: `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Projet ENGI/Projet_NACA2412_STARCCM.txt`.
+
+### 7.14 Industrial Gear Reducer Preliminary Design
+
+#### Project overview
+
+- Team E13 preliminary design, 2024–25 `[VERIFIED BY USER]`; exact team size is not documented.
+- Objective: define a mount-ready industrial reduction gearbox transmitting 7 kW at ratio 4.5±4% with at least 22,000 h target life, sealing, maintainability, low cost, and reasonable size.
+
+#### Requirements and constraints
+
+7 kW; ratio 4.5±4%; ≥22,000 h `[TARGET]`; bolted floor mounting; oil retention/contamination prevention; static preliminary load model; suppliers/standard components; concept rather than manufacturing package.
+
+#### Engineering approach / technical work
+
+Used functional/FAST analysis and trade matrices; selected a clevis-type housing/architecture; sized gear geometry and forces in Excel and institutional tools; sized shafts; selected bearings/seals; specified splash oil; integrated fill/drain/level maintenance features; produced technology schematic and concept drawing.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Team E13; Slimane is associated with the report, but individual work and team count are missing.
+
+#### Tools, technologies, and equipment
+
+Excel, functional analysis, FAST, trade matrices, gear sizing, shaft bending/torsion, 35CrMo4, SKF-style catalog selection, seals, lubrication design, technical schematics.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Power | 7 kW `[REQUIREMENT]` | Transmission sizing | Not tested | Context |
+| Ratio | 4.5±4% `[TARGET]` | Architecture constraint | Achieved actual ratio should be verified | Qualified |
+| Life | ≥22,000 h `[TARGET]` | Durability requirement | Bearing/gear verification details needed | Not outcome-ready |
+| Gear geometry | 54/12 teeth; module 5; 270/60 mm pitch diameters; 42 mm width | Preliminary design | Report calculations | Ready as scope |
+| Oil | ≈0.48 L `[CALCULATED in report]` | Splash-lubrication quantity | No thermal/leak test | Qualified |
+| Input shaft minima | 19 and 21 mm | Preliminary strength sizing | Assumptions/safety factors in workbook | Qualified |
+| Output shaft minima | 32 and 32 mm | Preliminary strength sizing | Same caveat | Qualified |
+| Shaft material | 35CrMo4 | Material choice | Both shafts assumed same for simplification | Ready as design choice |
+| Detailed validation | `[METRIC TO RETRIEVE/ESTIMATE]` | Fatigue, vibration, thermal, efficiency | Not completed | Do not claim industrial readiness |
+
+#### X–Y–Z accomplishment mapping
+
+- X co-developed a preliminary 7 kW gearbox concept; Y specified a 54/12-tooth, module-5, 42 mm-wide gearset and 19–32 mm minimum shaft zones; Z combined functional analysis, Excel sizing, material selection, and catalog components. `[TEAM RESULT][CALCULATED DESIGN]` Qualified.
+- X integrated lubrication/maintenance; Y estimated 0.48 L oil fill; Z selected splash lubrication and added fill, drain, and level-control provisions. Qualified design output.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Actual ratio error:** Need final tooth counts; formula `|(54/12)−4.5|/4.5×100`; current values imply exactly 4.5, but confirm tooth geometry is final before claiming.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Efficiency, thermal rise, bearing/gear life, mass, cost:** Need detailed losses, duty cycle, bearing references/loads, materials/volumes, quotes, and test data. Targets are not outcomes.
+
+#### Deliverables
+
+Functional specification, FAST, trade matrices, gear/force/shaft spreadsheets, component selections, lubrication plan, technology schematic, preliminary assembly concept, and V3 report.
+
+#### Challenges, failures, and corrective actions / limitations
+
+The study deliberately simplified dynamics, fatigue, tolerances, housing detail, and final supplier references. Choosing common 35CrMo4 for both shafts simplified the concept but needs later optimization.
+
+#### Skills demonstrated / ATS keywords
+
+Machine design, gearboxes, spur gears, shaft sizing, bearings, seals, lubrication, functional analysis, FAST, Excel, preliminary design, maintainability, design tradeoffs.
+
+#### Resume-ready bullet points
+
+- Co-developed a preliminary 7 kW industrial gear-reducer concept for a 4.5±4% ratio and ≥22,000 h target life using functional analysis, trade matrices, and Excel sizing.
+- Sized a module-5, 54/12-tooth gearset with 270/60 mm pitch diameters and a 42 mm face width, then derived 19–32 mm minimum shaft zones.
+- Integrated approximately 0.48 L splash lubrication, sealing, fill/drain, and oil-level provisions into a maintainable housing concept.
+
+#### Interview evidence / Open points / Project sources
+
+Story: system-level sequencing from need to interfaces. Confirm team/date/role, final ratio, safety factors, and detailed verification. Source: `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Avant Projet Reducteur /avant projet réducteur.txt`.
+
+### 7.15 Energy-Harvesting Gym Machine
+
+#### Project overview
+
+- Team M232, five Arts et Métiers students; preliminary report V5.2 dated May 15, 2025; client/request owner Jean-Marc Périnet.
+- Objective: assess and architect energy recovery from an existing cable-based strength machine without degrading exercise feel, safety, maintainability, or integration.
+- **Resume priority:** Secondary/context-only. Do not create a dedicated resume entry or several bullets unless a target energy/systems role makes this preliminary study directly relevant.
+
+#### Requirements and constraints
+
+Existing-machine integration; users/bystanders; sweat, humidity, dust, chalk, vibration, noise, temperature; mechanical/electrical/thermal protection; storage and power conditioning. Full building-grid integration, new fitness-machine design, advanced UI, and exhaustive maintenance/recycling were out of scope.
+
+#### Engineering approach / technical work
+
+Analyzed stakeholders and lifecycle needs; benchmarked products, patents, and standards; created functional specification/FAST; generated and scored alternatives; chose generator + mechanical transmission with conditioning/storage; performed preliminary sizing; developed multi-layer safety strategy, SWOT, action plan, and follow-on schedule.
+
+#### Individual contribution
+
+`[TEAM RESULT]` Slimane is a team member, but task allocation is not captured in the TXT synthesis.
+
+#### Tools, technologies, and equipment
+
+Functional specification, lifecycle analysis, FAST, benchmarking, patent/standards research, multi-criteria selection, energy-chain architecture, preliminary electromechanical sizing, battery/power-conditioning concept, SWOT, scheduling. AI tools assisted research/synthesis and were critically reviewed.
+
+#### Quantitative evidence and measurable results
+
+| Metric | Value/status | Meaning/action | Caveat | Readiness |
+|---|---|---|---|---|
+| Team | 5 students `[VERIFIED scope]` | Collaboration scale | Report | Ready |
+| Report maturity/date | V5.2, May 15, 2025 | Iterative preliminary deliverable | Version number is not design iterations | Context |
+| Prototype output | none `[VERIFIED limitation]` | Preliminary study only | No measured energy | Must disclose |
+| Recovered power/efficiency | `[METRIC TO RETRIEVE/ESTIMATE]` | Core impact metric | No raw values in detailed synthesis | Not resume-ready |
+| Cost/payback | `[METRIC TO RETRIEVE/ESTIMATE]` | Commercial feasibility | No bill of materials/use profile | Not resume-ready |
+
+#### X–Y–Z accomplishment mapping
+
+- X structured a feasible energy-recovery concept; Y delivered a V5.2 preliminary study through a five-person team; Z combined lifecycle requirements, patent/standards review, FAST, trade studies, preliminary sizing, and risk planning. `[TEAM RESULT]` Ready as scope, not energy impact.
+- X bounded project risk; Y explicitly excluded four major scope areas and defined multi-layer mechanical/electrical/thermal protections; Z used lifecycle requirements and SWOT/action planning. Scope claim.
+
+#### Metric opportunities and missing raw data
+
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Electrical energy per workout and conversion efficiency:** Need cable force, displacement/speed, repetition profile, mechanical input energy, generator voltage/current over time, conditioning/storage losses, and repeats. Efficiency = stored electrical energy/mechanical input energy ×100.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Annual savings/payback:** Need user-hours, exercises, duty cycle, energy yield distribution, electricity price, BOM/integration/maintenance. Payback = total installed cost/annual net savings; retrospective estimate is only credible with a tested prototype and representative usage.
+- `[METRIC TO RETRIEVE/ESTIMATE]` **Effect on exercise feel:** Need controlled force-displacement curves and blinded user ratings with/without recovery load.
+
+#### Deliverables
+
+Needs analysis, lifecycle functional specification, benchmark/patent/standards review, FAST, technology matrix, selected architecture, preliminary sizing, safety concept, SWOT, action plan, schedule, and V5.2 report.
+
+#### Challenges, failures, and corrective actions / limitations
+
+The team balanced energy capture against unchanged exercise feel, environmental exposure, safe energy storage, and maintainability. No prototype, measured power, efficiency, cost, or user acceptance evidence exists.
+
+#### Skills demonstrated / ATS keywords
+
+Systems engineering, functional analysis, FAST, energy harvesting, electromechanical systems, power conditioning, energy storage, safety-by-design, benchmarking, technology selection, project planning, risk analysis.
+
+#### Resume usage guidance
+
+Do not use as a dedicated project by default. If an energy or systems-engineering application needs it, allow at most one concise supporting mention: “Contributed to a five-person preliminary energy-recovery concept using FAST, trade studies, lifecycle requirements, and safety-focused system architecture.” Do not claim recovered energy, efficiency, savings, or payback.
+
+#### Interview evidence / Open points / Project sources
+
+Use as systems-boundary and tradeoff evidence. Individual task allocation remains undocumented; retrieve sizing workbook values before claiming energy or financial impact. Source: `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_machine musculation/Machine musculation.txt`.
+
+## 8. Technical Skills
+
+Assessments below describe evidenced use, not generic proficiency levels.
+
+| Skill area | Evidence and quantitative association | Cautious assessment / limitation |
+|---|---|---|
+| Robotics and motion planning | Trajectory-optimization research: integrated planning/perception/control; 40/40 frozen physical arrivals; up to six agents in simulation | Strong recent research exposure; core results are team-owned and mostly one controlled physical rover |
+| Real-time experimental systems | Trajectory-optimization research: 19.84–19.86 Hz median loops; latency budget; serial control/logging | Demonstrated project use; not evidence of embedded/production certification |
+| Computer vision/localization | Trajectory-optimization research: ArUco, calibration, distortion, homography, parallax; mean grid error 36.3→5.8 mm | Applied use in a bounded 2 m × 2 m arena; broader perception stack not evidenced |
+| Mechanical design | Capping, aircraft brake, reducer, turbine, manufacturing, gym machine | Repeated academic design work; most systems not production-released or endurance-tested |
+| Engineering calculations | Cam kinematics/contact, plastic limit loads, shafts/gears, turbine sizing, controls | Repeated analytical/numerical work; retain source assumptions and conflicts |
+| Solid mechanics/FEA | Plasticity Abaqus/Python; turbine stress; speaker Abaqus | Applied academic use; mesh-convergence and advanced nonlinear-validation depth is incomplete |
+| Fluid mechanics/CFD | Turbine and NACA 2412 in STAR-CCM+ | Built and interpreted CFD cases; no full mesh-uncertainty or matched experimental validation |
+| Control systems | CNAM identification/pole placement/dSPACE; trajectory tracking/correction research | Academic/lab and research integration; closed-loop bicopter metrics missing |
+| Numerical simulation/optimization | Trajectory-optimization research sweeps; cam 26,691 designs; CFD parametric sweeps | Strong evidence of parametric computation; individual code share often unclear |
+| Manufacturing | AlSi7 casting, turning, CNC, CAM, CMM; turbine/speaker/F1 additive manufacture; composites infusion | Hands-on academic processes with measured metrology; no production-volume experience |
+| Experimental engineering | Mobile-robot physical campaigns, plasticity MTS, turbine wind tunnel, speaker acoustics, TIPE impact | Multiple setups and honest failure analysis; uncertainty/repeat counts vary by project |
+| Data engineering | PJT AI eight-table/two-view SQLite model and 32-row seed dataset | Direct individual prototype use; not production-scale ETL/data governance |
+| Applied AI | Local Mistral/Ollama natural-language-to-SQL demonstrator | Direct individual implementation; 71.4% strict pass on 21 tests, so no production/accuracy claim |
+| Programming | Python in trajectory-optimization research, plasticity automation, PJT AI, and TIPE; MATLAB in turbine/CNAM; SQL in PJT AI | Repeated project use; no standardized proficiency rating or professional software tenure |
+| Systems engineering | Mobile-robot research architecture, gym/reducer/FANUC functional analysis and tradeoffs | Evidence of requirements, interfaces, validation, and scope control in projects |
+| Technical documentation | Reports/drawings across projects; F1 communication role; research-project site/preprint | Strong repeated deliverables; exact sole-authored page/figure counts mostly unavailable |
+| Safety/risk | SRP PPE/two trainings; FANUC hot-part risks; gym multi-layer protections | Concrete awareness and design consideration; no formal safety certification evidenced |
+
+## 9. Software, Programming Languages, and Equipment
+
+| Item | Direct use and projects | Complexity/scale and evidence | Attribution caveat |
+|---|---|---|---|
+| Python | Trajectory-optimization analysis; Abaqus generation; PJT AI; TIPE | 627 LOC across three PJT AI modules; large research simulation sweeps | Direct; research code split unclear |
+| SQL / SQLite | PJT AI schema and generated queries | 8 tables, 2 views, 32 rows, 21 tests | Individual prototype |
+| pandas | PJT AI data handling | Small seed dataset | Individual |
+| Streamlit | PJT AI interface | Local demonstrator | Individual |
+| Ollama / Mistral 7B Instruct | Local NL-to-SQL | Approx. 8 GB model download | Individual; no production accuracy |
+| Jupyter | PJT AI exploration | Prototype/notebook workflow | Direct |
+| MATLAB | CNAM control; turbine/electromagnetic sizing | Controller gains and turbine calculations | Team projects |
+| Simulink | CNAM bicopter control | 50 ms discrete implementation | Team project |
+| dSPACE | CNAM physical controller deployment | One 4-hour laboratory | Team project |
+| Fusion 360 / Fusion | Aircraft brake; NACA geometry; likely other CAD | Individual brake assembly; 80 mm NACA profile | Direct where named; do not generalize to every CAD artifact |
+| Other CAD/engineering drawing tools | Capping, turbine, FAB, F1 team | Assemblies, A2 drawing, manufacturing definitions | Exact product/version often not stated |
+| STAR-CCM+ | Turbine and NACA CFD | 96,045-cell turbine mesh; two-speed airfoil sweep | Team projects |
+| Abaqus | Plasticity and speaker | Python-scripted 1D/2D plasticity; acoustic/structural speaker model | Team projects |
+| FEMM | Turbine generator | Electromagnetic flux/torque study | Team; torque conflict unresolved |
+| FANUC RobotGuide | Automated casting cell | Estimated 30 s/two-part simulated sequence | Team; not physical cell |
+| Excel | Aircraft brake, reducer, and documented engineering sizing | Shaft/gear calculations and tables | Direct/team varies |
+| ArUco / camera calibration | Trajectory-optimization mobile-robot research | Distortion/parallax correction; near-20 Hz system | Team research |
+| Git/GitHub / web technologies | Portfolio and research-project showcase | Published static portfolio and project subsite | Exact implementation ownership is not separately documented; do not include the GitHub URL in recruiter-facing material |
+| MTS 100 kN test machine | Plasticity | 432 N frame peak within 100 kN machine capability | Team lab |
+| Coordinate measuring machine | FAB | Four GD&T characteristics, 2 passes/2 failures | Team hands-on |
+| Conventional lathe | FAB | 1,000 rpm chosen; max 2,800 rpm | Team hands-on |
+| CNC mill / CAM | FAB; F1 team | FAB machining; two-stage F1 CAM | Team; Slimane’s F1 use not established |
+| Foundry equipment | FAB | AlSi7 mold/casting | Team hands-on |
+| Prusa i3 MK3 / 3D printing | Turbine; speaker/F1 collaboratively | 150 mm turbine, 6 h 36 min print | Team |
+| Wind tunnel | Turbine | Cp≈0.28 at TSR≈1.8 | Team experiment |
+| Composite processing | Speaker | Vacuum infusion of basalt/epoxy | Personal role is not separately documented |
+| Instron, DMA, rheometer, TGA | Speaker | Material characterization workflow | Directness and sample details are not separately documented |
+| Anechoic setup / oscilloscope | Speaker | 5.2 kHz, 51 dB at 20 cm measured result | Detailed calibration and input-power records remain unavailable |
+| Construction layout tools | SRP | Chalk line, tape, level, spray | Direct field use |
+
+## 10. Interpersonal and Professional Skills
+
+| Skill | Supporting situation, action, and observable evidence |
+|---|---|
+| Teamwork | Worked in teams of 2–6 across trajectory-optimization research, capping, turbine, plasticity, CNAM, FAB, FANUC, F1, NACA, reducer, gym machine, and speaker; use team attribution unless roles are explicit. |
+| Initiative | Co-founded a three-person student wellbeing association and helped open a relaxation room in April 2026 after gathering needs. |
+| Technical communication | Documented engineering work through reports, drawings, a research-project showcase/preprint draft, and an explicitly assigned F1 communication/design role. |
+| Documentation discipline | The trajectory-optimization project retained invalid-layout metadata and separated exploratory from confirmatory trials; PJT AI recorded pass/medium/fail cases; FAB and plasticity retained negative results. |
+| Problem-solving | Corrected mobile-robot distortion/parallax and performance bottlenecks; redesigned capping geometry after a target failure; diagnosed FAB setup/allowance errors. |
+| Learning unfamiliar tools | Applied RobotGuide, dSPACE, FEMM, STAR-CCM+, Abaqus, local LLM tooling, and composite/acoustic equipment across time-bounded academic projects. |
+| Safety awareness | Followed PPE/site procedures and completed two safety trainings at SRP; included hot-part, electrical, mechanical, and thermal risks in FANUC/gym concepts. |
+| Mentoring/service | Sustained volunteer tutoring in mathematics, physics, and engineering from September 2022; learner/session outcomes remain unquantified. |
+| Systems thinking | Defined scope, interfaces, lifecycle requirements, and validation chains in trajectory-optimization research, gear reducer, and gym energy-recovery projects. |
+| Adaptability | International research moved from Paris to Singapore and from simulation/calibration to physical experimentation; exact individual task ownership is not partitioned. |
+| Integrity with evidence | Technical sources acknowledge failed tests, nonconforming dimensions, model mismatch, and exploratory safety overlaps rather than presenting only successes. |
+
+## 11. Accomplishments and Quantitative Evidence
+
+### Strongest centralized metrics
+
+The “record count” is the number of distinct quantified evidence records retained in each detailed profile, including targets/limitations but excluding missing-metric placeholders. It is not a count of personal achievements.
+
+| Project/experience | Evidence records | Strongest number(s) | Type / attribution | Technical action | Source confidence / resume status |
+|---|---:|---|---|---|---|
+| Education | 6 | Arts et Métiers GPA 3.83/4.00; combined GPA 3.92/4.00; CPGE GPA 4.00/4.00; rank 142/1,223; 11.61% rank fraction; >35 class h/week | Verified/calculated; individual | Academic performance/selective preparation | High; always label GPA scope |
+| English credential | 1 | TOEFL iBT MyBest 5/6, CEFR C1 | Verified by user and ETS scale; individual | Academic English assessment | High; ready to use |
+| Trajectory-optimization research | 13 | 40/40 goals, 0 collisions; 19.84–19.86 Hz; 84.0% calibration-error reduction | Measured/calculated; team | Full-stack integration/calibration | High; team wording |
+| Capping machine | 8 | 26,691 designs; 32.92°→29.38°; 10.75% reduction | Calculated/model; team | Parametric multi-constraint optimization | High for design calculations |
+| Turbine | 8 | 75.6% simulated; 4.5 kW; Cp≈0.28 measured; 6 h 36 min print | Mixed; team | CFD, sizing, prototype/test | Medium; requirements conflict |
+| Plasticity | 9 | 423 N predicted vs 432 N measured; 2.08% error | Calculated/measured; team | Limit analysis + Abaqus + MTS | High for frame result |
+| CNAM bicopter | 6 | 50 ms; ωn=0.813 rad/s; K gains | Identified/calculated; team | Identification/pole placement | Medium; response metrics missing |
+| FAB | 6 | 0.015 mm flatness; 0.018 mm cylindricity; 0.750 vs 0.100 mm position | Measured/calculated; team | Casting/machining/CMM | High; transparent failures |
+| FANUC | 7 | 30 s/2 parts vs 60 s/1 part; theoretical 4× | Estimated/calculated; team | Robot selection/RobotGuide | Medium-low; scenario only |
+| F1 in Schools | 6 | 6 people; 3–4 versions; 20 m/8 g constraints | Scope/target; team, explicit comms role | Communication/design across team | Medium; final race absent |
+| PJT AI | 8 | 8 tables/2 views; 627 LOC; 15/21 strict tests | Direct/calculated; individual | Python/SQLite/local LLM app | High for prototype scope |
+| Speaker | 7 | 2 PZT; 51 dB measured at 20 cm/5.2 kHz; 11.79 GPa | Mixed; team | Composite/model/test | Secondary resume priority; setup details incomplete |
+| TIPE | 5 | ideal ≈2 vs measured real ≈1.2 ratio | Theory/measured; individual | Pendulum/video/Python | User-confirmed; raw aggregation missing |
+| Aircraft brake | 6 | safety factor ≈3; 2 bearings; M6 grade 8.8 | Calculated/scope; individual | CAD and sizing | Medium; inputs missing |
+| NACA CFD | 8 | stall ≈18.3° at 15 m/s; ≈17° at 150 m/s | Simulated; team | CAD-to-CFD angle sweeps | Medium; no convergence/test |
+| Gear reducer | 9 | 7 kW; 4.5±4%; ≥22,000 h; 54/12 teeth | Design/targets; team | Gear/shaft/lubrication sizing | Medium; not physically validated |
+| Gym energy recovery | 2 | five-person team; V5.2 dated May 15, 2025 | Scope; team | Functional/system preliminary design | High for scope; no outcome |
+| SRP | 3 | 4 weeks; ~8 staff; 2 safety trainings | Verified scope; individual experience | Field support/safety | High; no productivity metric |
+| Artist archive | 1 | one summer | Verified scope; individual | Chronological archive/system | High; no volume metric |
+| Wellbeing association | 3 | three founders; room opened Apr 2026 | Verified/team | Needs gathering/launch | High; adoption missing |
+| Tutoring | 1 | Sep 2022–present | Verified scope; individual | Ongoing STEM tutoring | High; learners/hours missing |
+| Grand Défi | 1 | 2024 event | Verified/team | Renovation/garden work | Medium; seasonal wording differs |
+| Sports | 2 | basketball 5 years; strength ≈2×/week since 2022 | Verified personal activity | Consistency/team sport | High; not impact claims |
+
+### Formula-backed calculated metrics
+
+- **Arts et Métiers rank fraction:** `142 ÷ 1,223 × 100 = 11.61%`; inputs from `en/academics.html`; assumption: rank and cohort use same snapshot. Supports top-12% wording.
+- **Mobile-robot calibration improvement:** `(36.3−5.8) ÷ 36.3 × 100 = 84.0%`; measured means from trajectory-optimization research localization validation; team result.
+- **Mobile-robot parallax improvement:** `(60.8−11.6) ÷ 60.8 × 100 = 80.9%`; measured means; team result.
+- **Mobile-robot loop-rate factor:** `19.85 ÷ 11.35 = 1.75×`; inputs from different camera sessions, so this is not a paired benchmark.
+- **Capping pressure-angle reduction:** `(32.92−29.38) ÷ 32.92 × 100 = 10.75%`; final design table; team calculation.
+- **Capping base-radius increase:** `(38−30) ÷ 30 × 100 = 26.7%`; design values.
+- **Capping curvature increase:** `(49.48−37.51) ÷ 37.51 × 100 = 31.9%`; design values.
+- **Capping pressure reduction:** `(513.6−503.1) ÷ 513.6 × 100 = 2.0%`; final design table.
+- **Plasticity frame error:** `(432−423) ÷ 432 × 100 = 2.08%` analytical underprediction; measured and analytical inputs from report.
+- **Plasticity stiffness decline:** `(38−3) ÷ 38 × 100 = 92.1%`; initial/end measured stiffness.
+- **FAB conformance margins:** flatness `(0.100−0.015)/0.100=85%` below limit; cylindricity 10% below; perpendicularity 16% over; position `0.750/0.100=7.5×`, or 650% over.
+- **FANUC theoretical throughput:** manual `3,600/60×1=60 parts/h`; robot `3,600/30×2=240 parts/h`; `240/60=4×`. Inputs are estimates and omit downtime.
+- **PJT AI test split:** strict `15/21=71.4%`; medium `3/21=14.3%`; failed `3/21=14.3%`; categories derived from test-result wording.
+- **PJT AI code total:** `337+203+87=627 LOC`; source-module counts from Data project context.
+- **NACA stall difference:** `18.3°−17.0°=1.3°`; simulated approximate inputs, not experimental causal proof.
+
+### Metrics to Retrieve or Estimate
+
+| Project or experience | Proposed metric | Why it matters | Raw data needed / likely source | Calculation/validation | Resume status |
+|---|---|---|---|---|---|
+| Trajectory-optimization research | End-to-end replanning latency | Real-time autonomy | Stage timestamps, hardware, fixed scenarios; run logs/code | Median/p95/p99 capture-to-command/actuation | Do not claim <100 ms yet |
+| Trajectory-optimization research | Avoidance gain versus baseline | Impact/safety | Paired A/B trials, same tasks/seeds | Failure/clearance difference and confidence interval | New controlled test required |
+| All team projects | Personal code/work share | Attribution | Git history, lab notebooks, task plans | Count verified authored modules/runs/deliverables | Do not infer |
+| Capping | Physical cap success/endurance | Reliability | Prototype, cap counts, force/wear traces | Success rate; cycles-to-failure | New testing required |
+| Turbine | Matched simulation-to-test error | Validation | Same medium/geometry/Re/TSR and torque-power data | Relative error with uncertainty | Current cases not comparable |
+| Plasticity | Beam prediction error | Model quality | Missing measured beam load | Relative error vs 2,177.3 N | Retrieve lab data |
+| CNAM | Overshoot/settling/SSE | Controls impact | Hardware step traces | Standard response metrics | Essential before performance bullet |
+| FAB | Version-two improvement | Corrective-action result | Second CMM report | Error reduction vs first part | Retrieve if manufactured |
+| FANUC | Actual cycle/throughput/ROI | Operational value | RobotGuide logs or cell data; full costs/uptime | Repeated cycle distribution; payback | Estimate wording until physical data |
+| F1 | Race time/rank and judged score | Competition result | Official timing/ranking/rubric | 20 m/time; verified scores | Do not derive from video alone |
+| PJT AI | SQL accuracy, latency, time saved | AI usefulness | Larger labeled benchmark, hardware, manual baseline | Result equivalence; p50/p95; time reduction | Prototype metrics only now |
+| Speaker | Calibrated frequency response/efficiency | Acoustic performance | Input power, calibrated SPL sweep, repeats | dB response, electrical-to-acoustic efficiency | Current headline not ready |
+| TIPE | Speed/contact-time effect sizes | Experimental impact | Raw video/frame rate/scale/repeats | Regression, mean/SD, effect sizes | Recover data |
+| Aircraft brake | Torque/thermal/life/mass | Design credibility | Original workbook, load case, CAD BOM/mass | Recalculate with units/safety factors | Do not invent |
+| NACA CFD | Mesh and experimental error | CFD credibility | Mesh levels/residuals/reference data | GCI/relative error under matched conditions | Simulation wording only |
+| Gear reducer | Efficiency/life/mass/cost | Industrial viability | Loss model, duty, bearings, CAD, quotes/tests | Efficiency, L10 life, mass, BOM cost | Targets only now |
+| Gym machine | Energy/repetition, efficiency, payback | Core project impact | Force-motion and V/I traces, duty/use, BOM/cost | Stored/mechanical energy; annual savings | No impact claim yet |
+| SRP | Personal work volume | Field productivity | Daily logs/quantities/area | Actual vs plan if attributable | Scope-only now |
+| Artist archive | Archive scale/retrieval time | Process improvement | Inventory and timed retrieval samples | Percent time reduction | Retrieve/measure |
+| Wellbeing | Adoption/satisfaction | Leadership impact | Surveys, visits, eligible population | Adoption and before/after satisfaction | Retrieve records |
+| Tutoring | Learners/hours/outcomes | Service scale | Rosters, calendars, anonymized grades | Counts, retention, change with caveats | Retrieve records |
+| Grand Défi | Hours/area/beneficiaries | Volunteer scale | Event roster, schedule, material/school records | Counts and areas | Retrieve records |
+
+## 12. Potential Professional Positioning
+
+### Robotics and Autonomous Systems
+
+- **Why credible:** The international trajectory-optimization internship is recent, deep, and spans simulation, perception, control-loop integration, physical experiments, and research communication; Sorbonne SAR is the current academic direction.
+- **Emphasize:** 40/40 frozen arrivals, zero collisions, 19.84–19.86 Hz, 84.0% localization-error reduction, 39 simulation/physical pairs, transparent exploratory failures.
+- **Keywords:** mobile robotics, motion planning, trajectory optimization, autonomous systems, real-time control, computer vision, localization, simulation-to-real, experimental validation.
+- **Gap/claims to avoid:** Do not claim production autonomy, SLAM, ROS, ten physical robots, <100 ms replanning, or sole ownership without evidence.
+
+### Simulation, CAE, and Computational Mechanics
+
+- **Why credible:** Trajectory-optimization sweeps, cam design map, turbine/NACA CFD, plasticity FEA/limit analysis, speaker Abaqus, and turbine FEMM.
+- **Emphasize:** 367,374 + 100,800 simulated cases, 26,691 cam designs, 2.08% frame-load prediction error, 96,045-cell turbine CFD, two-speed NACA stall study.
+- **Keywords:** numerical simulation, optimization, FEA, CFD, Abaqus, STAR-CCM+, FEMM, model validation, parametric sweep, computational mechanics.
+- **Gap/claims to avoid:** No generalized “high-fidelity expert” claim; mesh convergence, uncertainty, and matched physical validation are incomplete.
+
+### Mechanical Design and Systems Engineering
+
+- **Why credible:** Capping, aircraft brake, gear reducer, turbine, gym machine, and manufacturing projects connect requirements, calculations, interfaces, standard components, CAD, and documentation.
+- **Emphasize:** cam pressure angle reduced to 29.38°; module-5 7 kW reducer design; brake with ≈3 calculated shaft safety factor; explicit lifecycle/safety scope.
+- **Keywords:** mechanical design, machine elements, mechanisms, design optimization, bearings, shafts, gears, CAD, requirements, functional analysis, design for assembly.
+- **Gap/claims to avoid:** Most are academic preliminary designs without endurance, certification, cost, or production validation.
+
+### Manufacturing and Industrial Automation
+
+- **Why credible:** End-to-end FAB process and CMM results; FANUC/RobotGuide concept; additive manufacture; foundry, machining, metrology, composite infusion.
+- **Emphasize:** 0.015 mm flatness, 0.018 mm cylindricity, honest 0.750 mm position failure, estimated RobotGuide cycle with clear qualification.
+- **Keywords:** CNC, CAM, turning, foundry, CMM, GD&T, metrology, FANUC, RobotGuide, automation, root-cause analysis, corrective action.
+- **Gap/claims to avoid:** No production cell commissioning, statistical process control, production throughput, or validated ROI.
+
+### Applied AI and Industrial Data
+
+- **Why credible:** Individual PJT AI app with local LLM, schema, UI, source code, and explicit tests; complements engineering domain knowledge.
+- **Emphasize:** 8 tables/2 views, 627 LOC, 21 test cases and transparent 71.4% strict-pass rate.
+- **Keywords:** Python, SQL, SQLite, Streamlit, pandas, local LLM, Ollama, Mistral, natural-language-to-SQL, data modeling, test planning.
+- **Gap/claims to avoid:** Not production-scale, secured, or benchmark-accurate; do not call it a deployed industrial AI system.
+
+### Research Engineering
+
+- **Why credible:** The mobile-robot project progressed from hypotheses and simulation through calibration, frozen physical validation, paired comparison, and preprint/showcase; TIPE and lab projects add experimental breadth.
+- **Emphasize:** controlled experiment design, measurement classification, failed-trial accounting, 40-run validation, calibration corrections, simulation-to-real metrics.
+- **Keywords:** research engineering, experimental design, validation, reproducibility, technical writing, data analysis, robotics research.
+- **Gap/claims to avoid:** Preprint is in preparation; no peer-reviewed publication should be claimed until accepted/published.
+
+## 13. ATS Keyword Bank
+
+- **Robotics/autonomy:** autonomous systems, mobile robotics, trajectory optimization, motion planning, obstacle avoidance, real-time control, localization, computer vision, ArUco markers, camera calibration, homography, digital twin, simulation-to-real, multi-agent simulation.
+- **Mechanical/computational:** mechanical design, mechanisms, cam design, machine elements, gears, bearings, shafts, Hertz contact, solid mechanics, plasticity, limit analysis, computational mechanics, numerical optimization.
+- **CAE/software:** CAD, Fusion 360, FEA, Abaqus, CFD, STAR-CCM+, FEMM, MATLAB, Simulink, dSPACE, parametric simulation, post-processing.
+- **Manufacturing:** CNC machining, CAM, turning, sand casting, foundry, AlSi7, additive manufacturing, 3D printing, composite materials, vacuum infusion, GD&T, CMM, metrology, root-cause analysis, corrective action.
+- **Controls/automation:** system identification, state-space modeling, pole placement, integral control, industrial robotics, FANUC, RobotGuide, pneumatic gripper, cycle-time analysis, robot-cell layout.
+- **AI/data/software:** Python, pandas, SQL, SQLite, Streamlit, Jupyter, Ollama, Mistral 7B, local LLM, natural-language-to-SQL, data modeling, functional testing.
+- **Research/validation:** experimental design, physical validation, calibration, performance benchmarking, statistical analysis, reproducibility, technical documentation, preprint, failure analysis.
+- **Energy/fluids/materials:** hydraulic turbine, turbomachinery, aerodynamics, NACA airfoil, wind-tunnel testing, piezoelectric actuator, acoustic testing, life-cycle assessment, energy harvesting.
+- **Professional:** multidisciplinary teamwork, technical communication, mentoring, safety awareness, project planning, systems engineering, requirements analysis, trade studies, risk assessment.
+- **France-specific terms when useful:** Arts et Métiers, `Diplôme d’ingénieur`, Grande École, CPGE, PTSI, PT*, TIPE, `alternance` only if later documented (not currently supported).
+
+## 14. Resume Content Bank
+
+### Professional headlines
+
+- Graduate Engineering Student | Robotics, Autonomous Systems, and Physical Validation
+- Robotics Research Intern Candidate | Motion Planning, Computer Vision, and Simulation-to-Real
+- Mechanical and Computational Engineering Student | CAE, Experimentation, and Applied AI
+
+### Summary statements
+
+- **Ready to use:** Arts et Métiers graduate engineering student with recent research experience co-developing trajectory optimization, real-time ArUco localization, simulation campaigns, and physical rover validation.
+- **Ready to use:** Multidisciplinary engineering student connecting mechanical design, CFD/FEA, controls, manufacturing, experimentation, and Python/SQL tools.
+- **Ready to use:** International research experience in Paris and Singapore; currently based in France and available for internships worldwide.
+- **Ready to use:** Enrolled Sorbonne Université Master 2 SAR student, 2026–27; program treated as in progress.
+
+### Education formulations
+
+- **Ready to use:** Arts et Métiers, `Diplôme d’ingénieur` program, expected July 2027; ranked 142/1,223 (top 12%) as of April 30, 2026.
+- **Ready to use:** Arts et Métiers GPA: 3.83/4.00. Combined CPGE and Arts et Métiers GPA: 3.92/4.00. Use only one formulation at a time and state its scope.
+- **Ready to use:** Lycée Raspail, CPGE PTSI/PT*, 2022–2024; GPA 4.00/4.00; intensive postsecondary preparation for competitive French engineering-school examinations with 35+ scheduled class hours per week plus oral exams.
+
+### Ready-to-use experience, project, and leadership bullets
+
+- Co-developed and physically validated a mobile-robot trajectory-optimization stack, completing 40/40 frozen goal-reaching trials with zero collisions.
+- Sustained 19.84–19.86 Hz median control-loop performance by integrating ArUco localization, correction, serial commands, and structured logging.
+- Reduced mean calibration-grid localization error 84%, from 36.3 mm to 5.8 mm, through lens-distortion correction and metric homography.
+- Co-optimized a capping cam across 26,691 designs, reducing calculated maximum pressure angle 10.75% from 32.92° to 29.38° and meeting a 30° target.
+- Predicted a portal-frame collapse load within 2.08% of physical measurement (423 N analytical versus 432 N measured) using limit analysis and MTS validation.
+- Co-manufactured and CMM-inspected an AlSi7 part, achieving 0.015 mm flatness against a 0.100 mm limit and 0.018 mm cylindricity against 0.020 mm.
+- Built an offline natural-language-to-SQL demonstrator using Python, SQLite, Streamlit, Ollama, and Mistral 7B across an eight-table, two-view data model.
+- Designed and executed a 21-case AI/data test plan, documenting 15 strict passes, three partial results, and three failures.
+- Designed an individual football-impact test rig and analysis workflow using interchangeable strikers, video tracking, and Python regression.
+- Co-founded a three-person student wellbeing association and helped open an on-campus relaxation room in April 2026 after gathering student needs.
+- Provided ongoing volunteer tutoring in mathematics, physics, and engineering to underserved middle- and high-school students since September 2022.
+
+### Use with qualification
+
+- Simulated a turbine operating sweep that reached 75.6% peak hydraulic efficiency and 4.5 kW at 155 kg/s; explicitly say `[SIMULATED][TEAM RESULT]` and do not say it met the power requirement until the 3/5 kW conflict is resolved.
+- Measured Cp≈0.28 at TSR≈1.8 on a 150 mm turbine demonstrator; specify this was wind-tunnel prototype performance, not hydraulic-system efficiency.
+- Simulated NACA 2412 stall near 18.3° at 15 m/s and 17° near 150 m/s; preserve model/no-convergence caveats.
+- Estimated a 30 s two-part FANUC cycle versus a 60 s one-part manual baseline, implying theoretical 4× throughput; say “estimated/simulated” and omit ROI.
+- Calculated an aircraft-brake shaft safety factor near 3; use only if original load case can be produced for technical review.
+- Measured 51 dB at 20 cm and 5.2 kHz for a composite speaker; secondary/context-only project, with calibration and input-power details unavailable.
+
+### Draft pending metric
+
+- Improved F1 competition performance through communication/design. **Need:** official judging score/ranking and attributed deliverable inventory.
+- Improved archive retrieval time. **Need:** inventory and timed before/after retrieval samples.
+- Expanded tutoring impact. **Need:** verified learners, sessions/hours, retention, and anonymized outcomes.
+
+### Do not use yet
+
+- A GPA without scope: use 3.83/4.00 for Arts et Métiers, 4.00/4.00 for CPGE, or 3.92/4.00 for the combined CPGE–Arts et Métiers record.
+- The GitHub profile URL, until Slimane explicitly decides it is ready for recruiter-facing use.
+- “10+ physical robots,” “<100 ms replanning,” or “89.7% runtime reduction” for the trajectory-optimization research project.
+- Sole design/CFD/manufacturing ownership for F1.
+- “A few days” FANUC payback.
+- Peer-reviewed publication for the trajectory-optimization research project.
+- Dedicated resume entries or multiple bullets for the gym-machine study, CNAM bicopter laboratory, or butterfly piezoelectric speaker unless the target role specifically requires them.
+- “5,000 documents managed” or tutoring coordination claims from the old context.
+- “Secure,” “production-ready,” or high-accuracy PJT AI claims.
+
+## 15. Interview Story Bank
+
+| Theme | Situation/task | Documented actions | Result/evidence | Lesson / missing detail |
+|---|---|---|---|---|
+| Simulation to physical validation | Trajectory-optimization research needed reliable real-world execution | Integrated calibration, perception, correction, commands, frozen tests | 40/40 goals; 0 collisions; near-20 Hz | Calibration/timing are system components; exact individual task ownership is not separately documented |
+| Solving a technical bottleneck | Mobile-robot vision dominated the 50 ms budget | Downscaled image path and measured timing | 11.35→19.85 Hz across sessions; vision 32.94 ms | Benchmark comparability matters |
+| Correcting measurement error | Mobile-robot grid/raised markers showed centimeter error | Corrected distortion, homography, parallax | Mean grid 36.3→5.8 mm; raised marker 60.8→11.6 mm | Model sensor geometry explicitly |
+| Transparent validation | One dual-agent run used wrong layout | Kept goal result but excluded layout aggregate | n=19 for relevant aggregate | Auditability prevents false precision |
+| Constraint-driven redesign | Capping pressure angle missed target | Swept 26,691 designs and changed base geometry | 32.92°→29.38°; under 30° | Optimize across coupled constraints |
+| Negative model result | Plasticity curves did not superpose | Compared analytic/Abaqus/test and documented discrepancy | Transition aligned near 60°, curves still unsatisfactory | Do not select only favorable outputs |
+| Manufacturing failure | FAB position/perpendicularity failed | Used CMM, traced allowance/datum/setup causes, planned v2 | Position 0.750 vs 0.100 mm | Metrology closes the manufacturing loop |
+| Prototype weakness | Turbine blade-hub joint fragile | Tested prototype and proposed angle/joint redesign | Cp≈0.28; proposed 54°→62° inlet | Physical tests reveal integration issues |
+| AI testing/security | PJT AI demo handled some queries but exposed failures | Built 21-case plan and classified strict/medium/fail | 15/21 strict; PRAGMA/malformed SQL weaknesses | Local inference does not equal safe execution |
+| Time-boxed learning | CNAM four-hour controls lab | Identified model, designed gains, implemented dSPACE | 50 ms sample; parameters/gains recorded | Recover outcome traces before claiming impact |
+| Communication across disciplines | F1 team had six specialized roles | Produced visuals/layout/deliverables | 3–4 team iterations communicated | Exact deliverable count/judging result missing |
+| Leadership/initiative | Student wellbeing need | Co-founded three-person group; surveyed students | Room opened April 2026 | Adoption/use data still needed |
+| Safety under field constraints | SRP construction internship | Followed PPE/instructions; completed two trainings | Four-week placement in ~8-person company | Safety behavior is evidence even without productivity metrics |
+| Accepting a negative finding | TIPE striker shape question | Controlled speed, changed geometry, tracked with Python | No material speed effect observed | Retrieve effect size and repeats |
+
+## 16. Master Timeline
+
+| Date | Education / experience / project / activity | Status and audit note |
+|---|---|---|
+| 2017–2022 | Club basketball | Five years |
+| Summer 2022 | Independent artist archive work | Scale missing |
+| Sep 2022–Jul 2024 | Lycée Raspail CPGE PTSI/PT* | Completed |
+| Sep 2022–present | Volunteer STEM tutoring | Current as of site; impact scale missing |
+| 2022–24 | TIPE football impact study | Dates verified by user |
+| Sep 2024–Jul 2027 | Arts et Métiers `Diplôme d’ingénieur` | Ongoing; expected end date |
+| Nov/Winter 2024 | Grand Défi school renovation | Date wording differs but likely same event |
+| 2024–25 | NACA 2412 CFD; gear reducer | Dates verified by user |
+| May 15, 2025 | Gym energy-recovery preliminary report V5.2 | Team project complete at preliminary stage |
+| Jun 9–Jul 4, 2025 | SRP worker internship | Four weeks |
+| 2025 | FAB, FANUC, aircraft brake, F1 | Dates and F1 prototype/test completion verified by user |
+| 2025–26 | Capping machine and speaker | Dates verified by user; some individual task divisions remain undocumented |
+| Jan 9, 2026 | CNAM bicopter lab | 14:00–18:00 |
+| Jan–Aug 2026 | PIMM/CNRS@CREATE trajectory-optimization and mobile-robotics internship | Paris Jan–May; Singapore Jun–Aug |
+| 2025–26 | Hydraulic turbine-generator | Reported academic year |
+| Apr 9, 2026 | Plasticity report | Completed lab/project |
+| Apr 2026 | Wellbeing relaxation room opened | Three-person founding team |
+| 2025–26 | PJT AI | Dates verified by user; current site project |
+| Sep 2026–Aug 2027 | Sorbonne Université Master 2 SAR | Enrolled and treated as in progress |
+| Jan 2027 | Desired six-month internship start | Availability statement; re-confirm over time |
+
+Compared with the former context, the current record adds mature trajectory-optimization and physical-validation evidence and many portfolio projects. The former planned “Data-Driven Reduced-Order Mechanical Model” is not treated as a completed independent project because no current deliverable supports it.
+
+## 17. Contradictions, Uncertainties, and Information Gaps
+
+| Priority / affected item | Conflicting or missing evidence | Recommended interpretation | Confidence / confirmation / resume impact |
+|---|---|---|---|
+| Critical — trajectory-optimization project scale | Resume: 10+ robots, <100 ms replanning, 89.7% solver runtime reduction; primary evidence: four physical robots, one controlled rover + agents, six controlled simulated agents, loop timing but no matching 89.7% baseline | Use primary project metrics only; recover benchmark definition if resume claims are retained | High confidence mismatch; remove/qualify now |
+| Critical — F1 attribution | Resume broadly implies car design; report assigns Slimane communication/design, while CAD/CFD/manufacturing belong to other roles/team | Claim communication/layout deliverables; use “team developed” for technical car work | High; materially changes bullet wording |
+| Critical — turbine requirement | Specification table ≥5 kW; conclusion says 3 kW; simulated output 4.5 kW | Report 4.5 kW simulated without “met target” | Confirmation required |
+| Critical — turbine torque | Analytical 28.648 N·m for 4.5 kW at 1,500 rpm; FEMM section says 38.20 N·m required | Do not use torque comparison until equations/operating point reconciled | Confirmation required |
+| High — trajectory-optimization publication | Draft/preprint in preparation; resume may imply publication | Use “preprint draft in preparation,” not peer-reviewed publication | High confidence |
+| High — trajectory-optimization contribution | Two student researchers credited jointly; individual code/experiment ownership absent | Use “co-developed” and team metrics | Individual task partition remains undocumented |
+| High — speaker metric documentation | 51 dB at 20 cm and 5.2 kHz are user-confirmed measured values; 11.79 GPa and 0.00197% still lack underlying method/calculation records | Treat sound result as measured but retain setup caveat; recover material/efficiency calculations | Secondary project; not a default headline |
+| High — FANUC impact | 30 s/2 parts and ~60 s/1 part are estimates; “few days” ROI lacks defensible costs | State simulated/estimated scenario; omit ROI | High confidence |
+| High — SRP large-project scale | Resume-only 3,000+ tons soil and 9–10 months underground | Could describe employer/project context only after project records; not personal output | Confirmation required |
+| Medium — plasticity | 423 vs 432 N aligns, but analytical/Abaqus curves did not superpose; beam measured load absent | Preserve both positive frame comparison and model limitation | High confidence |
+| Medium — capping values | Earlier kinematic tables differ from later optimized table | Use final optimization table and label calculations | High confidence source-priority decision |
+| Medium — F1 performance | User confirms prototype and test completion, but no official race time, score, or ranking is available | State completion without inventing competition performance | Completion verified; quantitative performance still unavailable |
+| Medium — TIPE ratio documentation | User confirms the ≈1.2 real speed ratio is an individual measured result, but raw trial aggregation is absent | Use only with “approximately” and be prepared to explain the measurement method | User-confirmed; underlying data still desirable |
+| Medium — aircraft brake | Safety factor ≈3 and 10+/5+ scope lack accessible inputs/count definitions | Use qualified design language; recover workbook/BOM | Confirmation required |
+| Medium — old tutoring/archive claim | Former context says coordination and 5,000 documents; current site does not corroborate | Exclude from current fact bank except as audit | High confidence; do not use |
+| Medium — Grand Défi date | Detailed source November 2024; website Winter 2024 | Use 2024 or November 2024 with note; likely same event | Low-impact confirmation |
+| Medium — project role partition | Several team reports do not separate Slimane’s exact tasks even though dates/statuses are now user-confirmed | Preserve team wording unless individual ownership is explicitly documented | Material attribution limitation |
+| Excluded project stub | Shoulder implant/prosthesis cover and commented card exist without a published case study/source | Exclude until a report, status, role, and results are supplied | No resume use |
+| Former planned project | Old context lists a planned Data-Driven Reduced-Order Mechanical Model for Feb 2026 | Treat as archived plan, not completed work; determine whether it evolved into another project | Confirmation only if reviving claim |
+
+### Highest-value information to recover
+
+1. Official transcript/ranking documentation supporting the three clearly scoped GPA figures: CPGE 4.00, Arts et Métiers 3.83, and combined 3.92.
+2. Trajectory-optimization version-control/lab ownership plus the exact solver-latency/runtime benchmark underlying resume claims.
+3. Second FAB CMM report and official F1 timing/judging record.
+4. TIPE raw videos/data and aircraft-brake sizing workbook/BOM.
+5. FANUC RobotGuide timing export and cost model.
+6. Leadership/tutoring usage records: survey responses, room visits, sessions, learners, hours, and outcomes.
+
+## 18. Source Register
+
+### Repository sources actually used
+
+| Source path | Type | Supports / extracted evidence | Reliability notes |
+|---|---|---|---|
+| `en/index.html` | HTML | Identity, positioning, highlights, contact links | Current published summary |
+| `en/academics.html` | HTML | Education, GPA 3.83, rank 142/1,223, CPGE workload | Current; conflicts with resume GPA |
+| `en/experience.html` | HTML | Trajectory-optimization research, SRP, and archive roles/dates | Current published experience |
+| `en/beyond.html` | HTML | Wellbeing, tutoring, Grand Défi, sports | Current; some scale missing |
+| `en/projects.html` | HTML | Current 12-project inventory | Authoritative current inventory |
+| `en/resume.html` | HTML | Current resume presentation and availability | Summary only |
+| `en/projects/capping-machine.html` | HTML | 2.0 s, 45 mm, 26,691 designs, optimized geometry | Current summary; report used for detail |
+| `en/projects/turbine.html` | HTML | Turbine headline metrics/workflow | Current summary; requirement conflict in report |
+| `en/projects/plasticity.html` | HTML | Plasticity overview/results | Current summary |
+| `en/projects/cnam.html` | HTML | Bicopter overview/tools | Current summary |
+| `en/projects/fab.html` | HTML | CMM values, processes, nonconformities | Strong current measured evidence |
+| `en/projects/fanuc.html` | HTML | Robot/cell concept and cycle estimate | Estimated, not physical |
+| `en/projects/f1.html` | HTML | Competition project and media | Does not resolve final race result/role split |
+| `en/projects/pjt-ai.html` | HTML | Local AI assistant overview | Detail from spreadsheet/Data context |
+| `en/projects/speaker.html` | HTML | Composite/acoustic workflow | Metric methods incomplete |
+| `en/projects/tipe.html` | HTML | TIPE overview | Detail/provenance from Data source |
+| `en/projects/aircraft-brake.html` | HTML | Brake design overview | No physical validation |
+| `fr/index.html`; `fr/academics.html`; `fr/experience.html`; `fr/beyond.html`; `fr/projects.html`; `fr/resume.html` | HTML | French/English parity check for identity, education, experience, activities, project inventory, and resume navigation | Current parallel pages; GPA/rank align with English site |
+| `fr/projects/aircraft-brake.html`; `fr/projects/capping-machine.html`; `fr/projects/cnam.html`; `fr/projects/f1.html`; `fr/projects/fab.html`; `fr/projects/fanuc.html`; `fr/projects/pjt-ai.html`; `fr/projects/plasticity.html`; `fr/projects/speaker.html`; `fr/projects/tipe.html`; `fr/projects/turbine.html` | HTML | French/English project-page parity check | Current parallel pages; primary quantitative evidence remains detailed reports/data |
+| `paco-showcase/index.html` | HTML | Latest trajectory-optimization physical/simulation/localization metrics | Highest-priority current research synthesis; directory retains the internal project name |
+| `paco-showcase/README.md` | Markdown | Research system, media/evidence map | Current repository documentation; directory retains the internal project name |
+| `paco-showcase/VALIDATION.md` | Markdown | Site validation/evidence conventions | Useful corroboration |
+| `paco-showcase/assets/reports/paco-preprint-draft-v1-compact.pdf` | PDF | Frozen campaigns, timing, localization, simulation, digital twin, limitations | Primary recent technical source; draft publication |
+| `paco-showcase/assets/reports/rapport_comparaison_solveurs_controleurs.pdf` | PDF | Solver/controller calibration scale and results | Detailed simulation source; caveats retained |
+| `paco-showcase/website/Rp_PACO_Website_Content_Strategy.md` | Markdown | Content/status reconciliation | Secondary strategy source; filename retains the internal project name |
+| `assets/documents/resume/resume-aouanouk-slimane.pdf` | PDF | Contact, availability, combined-GPA scope, resume claims, and languages | Current resume but lower priority than primary results |
+| `assets/documents/projects/capping-machine/cam-driven-capping-machine-report-fr.pdf` | PDF | Cam calculations, constraints, tables, elastomer target | Primary detailed design report |
+| `assets/documents/projects/capping-machine/capping-machine-assembly-drawing-a2.pdf` | PDF | Assembly deliverable | Drawing evidence |
+| `assets/documents/projects/turbine/rapport-ce-turbine-hydraulique-aouanouk-benchikh-paris.pdf` | PDF | Hours, CFD, generator, print/test, conflicts | Primary report; internal inconsistencies retained |
+| `assets/documents/projects/turbine/dessin-d-ensemble.pdf` | PDF | Assembly drawing | Deliverable evidence |
+| `assets/documents/projects/plasticity/tp-plasticite-final.pdf` | PDF | Frame/beam, MTS, Abaqus, measured values/limitations | Primary report |
+| `assets/documents/projects/cnam/rapport-tp-eea-cnam.pdf` | PDF | Identification, gains, sample period | Primary report; output metrics absent |
+| `assets/documents/projects/fanuc/fanuc.pdf` | PDF | Cell/robot/cycle presentation | Estimated academic concept |
+| `assets/documents/projects/f1/f1.pdf` | PDF | F1 project summary | Supplemented by detailed TXT/report |
+| `archive/sources/f1/f1-portfolio-presentation.pdf` | PDF | F1 presentation artifact | Archive, not outcome authority |
+| `assets/documents/projects/pjt-ai/plan-de-tests-llm-sql-streamlit-v3.xlsx` | XLSX | 21 test cases/results | Strongest test evidence; classification explained |
+| `assets/documents/projects/pjt-ai/pjt-ai.pdf` | PDF | PJT AI summary | Limited detail |
+| `assets/documents/projects/pjt-ai/mindmap-projet.pdf` | PDF | Architecture/planning | Supporting source |
+| `assets/documents/projects/aircraft-brake/airplane-break.pdf` | PDF | Brake case study | Load details insufficient |
+| `assets/documents/projects/tipe/tipe.pdf` | PDF | TIPE portfolio artifact | Data source used for technical detail |
+| `assets/images/projects/speaker/product-sheet.webp` | Image | Speaker metrics and LCA shares | Visual source; metric method needs confirmation |
+
+### External sources actually used
+
+| Absolute path | Type | Supports / extracted evidence | Reliability notes |
+|---|---|---|---|
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Context_portfolio_memory.txt` | TXT | Comparison baseline, outdated claims/plans | Secondary, Jan 2026, not authoritative |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/LEADERSHIP AND VOLUNTEERING EXPERIENCES/LEADERSHIP AND VOLUNTEERING EXPERIENCES.txt` | TXT | Grand Défi date/tasks; activity context | Detailed synthesis |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_txt_Internship SRP stage 1A/Stage_Ouvrier_SRP_Slimane_AOUANOUK_FULL.txt` | TXT | SRP dates, company, work, safety, conditions | Detailed experience source |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/2A_PJT_AI/context_PJT_AI.txt` | TXT | Schema, rows, code size, app/tools, limitations | Detailed source closest to code summary |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Projet FAB /Projet_FAB_Crapaudine_explication.txt` | TXT | Manufacturing sequence, metrology, root cause | Detailed synthesis; values align with site |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Projet Fanuc/projet_fanuc_explication.txt` | TXT | Robot constraints, timing/ROI assumptions | Detailed but estimates retained as such |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_F1 in school/Projet_F1_in_Schools_Rapport_texte_detaille.txt` | TXT | Roles, versions, rules, print/CAM failures, status | Best role-attribution source |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/PREPA_ TIPE/TIPE_pointu_explicatif.txt` | TXT | Rig, analysis method, findings, missing metrics | Detailed synthesis; raw results unavailable |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/2A_Projet Frein d'avion/projet_frein_avion.txt` | TXT | Brake architecture, components, safety factor, limitations | Detailed summary; workbook missing |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Projet ENGI/Projet_NACA2412_STARCCM.txt` | TXT | Geometry, physics, angle sweeps, simulated stalls, limits | Detailed CFD synthesis |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Avant Projet Reducteur /avant projet réducteur.txt` | TXT | Requirements, gear/shaft/oil values, method/limits | Detailed design synthesis |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_machine musculation/Machine musculation.txt` | TXT | Team, V5.2 date, scope, FAST/architecture/risks | Detailed synthesis; no measured energy |
+| `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/2A_TP_CNAM_Copy/sujet TP.pdf` | PDF | CNAM task/context | Subject, not achieved performance |
+| <https://www.ets.org/toefl/institutions/ibt/score-scale-update.html> | Official web reference | TOEFL iBT 1–6 score scale and CEFR mapping | ETS confirms band 5 maps to C1; scale introduced January 21, 2026 |
+
+### Source-use cautions
+
+- French-language project reports were translated into natural US English without changing official institution/program names.
+- Duplicate copies of the same report in the repository and Data directory were not counted as independent corroboration.
+- Decorative media and videos were not used to derive precise numbers. The F1 video does not substitute for official timing; trajectory-optimization videos support presentation but logged/report data supports the metrics.
+- Current French pages were checked as parallel content, but no material French/English discrepancy was used to override the more detailed current English/project sources. The material conflicts found were instead between website, resume, and detailed reports and are recorded in Section 17.
+- This knowledge base intentionally stops short of claiming direct US degree equivalence, professional licensure, work authorization, expert proficiency, peer-reviewed publication, or production deployment.
