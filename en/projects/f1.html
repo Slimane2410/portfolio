@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>F1 in Schools | Slimane Aouanouk</title>
+  <link rel="alternate" hreflang="en" href="f1.html" />
+  <link rel="alternate" hreflang="fr" href="../../fr/projects/f1.html" />
+  <link rel="alternate" hreflang="x-default" href="f1.html" />
+
+  <!-- Core styles and icon fonts -->
+  <link rel="stylesheet" href="../../assets/css/style.css?v=9" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png" />
+  <link rel="icon" href="../../assets/icons/favicon.ico" />
+  <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+  <meta name="theme-color" content="#0f1115" />
+
+  <style>
+    /* Page-specific layout elements */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .project-banner {
+      position: relative;
+      height: 350px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      margin-bottom: 30px;
+      background: #000;
+    }
+
+    .project-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+
+    .project-banner-content {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      z-index: 2;
+      padding-right: 20px;
+    }
+
+    .pdf-embed {
+      width: 100%;
+      height: 80vh;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: #000;
+    }
+
+    .pdf-slider-section {
+      padding: 20px;
+    }
+
+    .pdf-slider-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+
+    .pdf-slider-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .pdf-nav-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      background: rgba(15, 23, 42, 0.7);
+      color: #e2e8f0;
+      cursor: pointer;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .pdf-nav-btn:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+      transform: translateY(-1px);
+    }
+
+    .pdf-page-indicator {
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      min-width: 72px;
+      text-align: center;
+    }
+
+    .pdf-slider-frame {
+      height: 55vh;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #d9dee5;
+      background: linear-gradient(135deg, #f7f8fa 0%, #eef1f5 100%);
+      box-shadow: 0 10px 26px rgba(15, 17, 21, 0.08);
+      padding: 10px;
+    }
+
+    .pdf-slider-frame .pdf-page-media {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #d4dae2;
+      border-radius: 8px;
+      background: #ffffff;
+      object-fit: contain;
+      display: block;
+      opacity: 1;
+      transition: opacity 220ms ease;
+    }
+
+    .pdf-slider-frame .pdf-page-media.is-fading {
+      opacity: 0.35;
+    }
+
+    .test-day-section {
+      padding: 20px;
+    }
+
+    .test-day-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .test-day-section h2 {
+      font-size: 1.7rem;
+    }
+
+    .test-day-section p {
+      font-size: 1rem;
+    }
+
+    .test-day-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #d9dee5;
+      background: linear-gradient(135deg, #f4f6f8 0%, #eef2f6 100%);
+      padding: 10px;
+      box-shadow: 0 14px 34px rgba(15, 17, 21, 0.08);
+    }
+
+    .test-day-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+    }
+
+    .test-day-media img,
+    .test-day-media video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 10px;
+      object-fit: contain;
+      background: #0f1115;
+    }
+
+    @media (max-width: 768px) {
+      .test-day-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .pdf-slider-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .pdf-slider-frame {
+        height: 45vh;
+      }
+
+      .test-day-media {
+        padding: 8px;
+        border-radius: 12px;
+      }
+
+      .test-day-media::after {
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body class="homepage">
+
+  <!-- App layout: fixed sidebar + main content -->
+  <div class="app-layout">
+
+    <aside class="sidebar slide-up">
+      <div class="profile-section">
+        <a href="../index.html" style="text-decoration: none; color: inherit;">
+            <span class="logo-text">SA.</span>
+        </a>
+        <span class="role-text">Graduate Engineering Student<br>Arts et Métiers</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-item">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="../projects.html" class="nav-item active">
+          <i class="fas fa-code-branch"></i> Projects
+        </a>
+        <a href="../resume.html" class="nav-item">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+        <a href="../academics.html" class="nav-item">
+          <i class="fas fa-graduation-cap"></i> Academics
+        </a>
+        <a href="../experience.html" class="nav-item">
+          <i class="fas fa-briefcase"></i> Experience
+        </a>
+        <a href="../beyond.html" class="nav-item">
+          <i class="fas fa-compass"></i> Beyond Engineering
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+          <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank"
+             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#111827'"
+             onmouseout="this.style.color='#7a8595'">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <!-- <a href="https://github.com/Slimane2410" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"
+             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#111827'"
+             onmouseout="this.style.color='#7a8595'">
+            <i class="fab fa-github"></i>
+          </a> -->
+          <a href="mailto:aouanoukslim@gmail.com"
+             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#111827'"
+             onmouseout="this.style.color='#7a8595'">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+
+      <!-- Back to projects grid -->
+      <div class="slide-up delay-1" style="margin-bottom: 20px;">
+        <a href="../projects.html" style="color: #6b7280; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#111827'" onmouseout="this.style.color='#7a8595'">
+          <i class="fas fa-arrow-left"></i> RETURN TO MATRIX
+        </a>
+      </div>
+
+      <!-- Hero banner -->
+      <div class="project-banner slide-up delay-1">
+        <img src="../../assets/images/projects/f1/cover.png" alt="F1 in Schools mini Formula 1 car" />
+        <div class="project-banner-content">
+          <h1 style="font-size: 2.5rem; margin: 0; color: #fff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">F1 in Schools - Mini Formula 1 Car</h1>
+          <p style="margin: 10px 0 0 0; color: #cbd5e1; max-width: 700px;">
+            Design and manufacture of a CO2-powered mini F1 car for a 20 m sprint, under strict 2024 regulations.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-grid">
+
+        <div class="col-8 glass-panel slide-up delay-2">
+          <h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px;">
+            <i class="fas fa-flag-checkered" style="color: #38bdf8; margin-right: 10px;"></i> Project Context and Objective
+          </h2>
+          <p>
+            This project is part of the international F1 in Schools challenge. The goal is to engineer a mini Formula 1 car
+            propelled by an 8 g CO2 cartridge, machined from an approved F1 Model Block, and optimized to run a straight 20 m track
+            as fast as possible while meeting the 2024 technical rules (T1 to T10).
+          </p>
+          <p style="margin-top: 15px; color: #374151; line-height: 1.8;">
+            <strong>Engineering focus:</strong> strict compliance, aerodynamic performance, rolling stability, CNC manufacturability,
+            and professional deliverables.
+          </p>
+
+        </div>
+
+        <div class="col-4 glass-panel slide-up delay-2">
+          <h3 style="margin-bottom: 20px; color: #94a3b8; font-size: 0.9rem;">// TOOLS AND METHODS</h3>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>Fusion 360 (CAD/CAM)</span>
+              <i class="fas fa-cube" style="color: #38bdf8;"></i>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>Star-CCM+ (CFD)</span>
+              <i class="fas fa-wind" style="color: #f59e0b;"></i>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>3D Printing</span>
+              <i class="fas fa-print" style="color: #10b981;"></i>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>CNC Machining</span>
+              <i class="fas fa-industry" style="color: #e879f9;"></i>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
+              <span>Dimensional Control</span>
+              <i class="fas fa-ruler-combined" style="color: #60a5fa;"></i>
+            </div>
+          </div>
+        </div>
+                <!-- Full case study embedded PDF -->
+        <div class="col-12 glass-panel slide-up delay-4" style="padding: 15px;">
+          <h2 style="margin-bottom: 20px;">Case Study PDF</h2>
+          <iframe class="pdf-embed" src="../../assets/documents/projects/f1/f1.pdf" title="F1 in Schools Case Study"></iframe>
+        </div>
+
+        <div class="col-12 glass-panel slide-up delay-4 pdf-slider-section">
+          <div class="pdf-slider-header">
+            <div>
+              <h2 style="margin-bottom: 8px;">Portfolio Pages</h2>
+            </div>
+            <div class="pdf-slider-controls">
+              <button class="pdf-nav-btn" type="button" data-dir="-1" aria-label="Previous page">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <span class="pdf-page-indicator" aria-live="polite">01 / 07</span>
+              <button class="pdf-nav-btn" type="button" data-dir="1" aria-label="Next page">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="pdf-slider-frame">
+            <img
+              id="f1-pdf-slider"
+              class="pdf-page-media"
+              src="../../assets/images/projects/f1/portfolio-pages/page-01.webp"
+              alt="F1 portfolio page 1"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 glass-panel slide-up delay-3">
+          <h2 style="margin-bottom: 20px;">Deliverables</h2>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Complete CAD model (Fusion 360, STEP export)</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>2D technical drawings with dimensions and tolerances</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Realistic 3D renders for communication</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>CFD simulations with pressure, velocity, and friction maps</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>3D printed prototype for fit and assembly validation</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>CAM programming and CNC machining simulation</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Dimensional inspection (CAD vs prototype and machining)</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Final report and compliance documentation</li>
+          </ul>
+        </div>
+
+
+        <div class="col-6 glass-panel slide-up delay-3">
+          <h3 style="margin-bottom: 15px;">Workflow and Compliance Strategy</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Iterative loop between CAD, CFD, prototyping, and CAM</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Early identification of blocking rules and safety items</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Required features: single-block body, tether guides, CO2 chamber, wheel visibility</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Conservative geometry to avoid limit violations</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Design for CNC access and clean assembly</li>
+          </ul>
+        </div>
+
+        <div class="col-6 glass-panel slide-up delay-4">
+          <h3 style="margin-bottom: 15px;">CAD and Design Iterations</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Restarted the model from scratch to avoid legacy errors</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Structured sub-assemblies for fast iterations</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>3 to 4 versions refined for compliance and machinability</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Halo and helmet kept as standard supplied parts</li>
+          </ul>
+        </div>
+
+        <div class="col-6 glass-panel slide-up delay-4">
+          <h3 style="margin-bottom: 15px;">CFD Analysis and Findings</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Half-geometry simulation to reduce compute time</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Airflow set at 50 m/s for comparative diagnostics</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Removed side skirt and tuned wing transitions</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Late issue: front wing rod disrupted the inlet flow</li>
+          </ul>
+        </div>
+
+        <div class="col-6 glass-panel slide-up delay-4">
+          <h3 style="margin-bottom: 15px;">Prototyping and Validation</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>3D printed prototype to validate geometry and assembly</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Light filament and vertical orientation for quality</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Weak front axle zone detected and reinforced in CAD</li>
+          </ul>
+        </div>
+
+        <div class="col-6 glass-panel slide-up delay-4">
+          <h3 style="margin-bottom: 15px;">CAM and CNC Machining</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Two-step toolpath: roughing then ball-end finishing</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Custom fixture inserted in the central hole for rotation</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Incident: origin not reset, causing angular offset</li>
+            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Machining ongoing at the time of the report</li>
+          </ul>
+        </div>
+
+        <div class="col-12 glass-panel slide-up delay-4 test-day-section">
+          <div class="test-day-header">
+            <div>
+              <h2 style="margin-bottom: 10px;">Test Day</h2>
+              <p style="margin: 0;">In theory, everything stops perfectly.
+In practice, it sometimes meets the camera.</p>
+            </div>
+          </div>
+
+          <div class="test-day-media">
+            <video controls playsinline preload="metadata" poster="../../assets/images/projects/f1/test-poster.png">
+              <source src="../../assets/videos/projects/f1/test.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </main>
+  </div>
+
+  <script src="../../assets/js/script.js?v=9"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sliderImage = document.getElementById("f1-pdf-slider");
+      const indicator = document.querySelector(".pdf-page-indicator");
+      const buttons = document.querySelectorAll(".pdf-nav-btn");
+
+      if (!sliderImage || !indicator || !buttons.length) {
+        return;
+      }
+
+      const totalPages = 7;
+      let currentPage = 1;
+      let timerId = null;
+
+      const formatPage = (value) => String(value).padStart(2, "0");
+      const pageSrc = (value) => `../../assets/images/projects/f1/portfolio-pages/page-${formatPage(value)}.webp`;
+
+      const updatePage = (value) => {
+        currentPage = value;
+        sliderImage.classList.add("is-fading");
+        sliderImage.src = pageSrc(currentPage);
+        sliderImage.alt = `F1 portfolio page ${currentPage}`;
+        indicator.textContent = `${formatPage(currentPage)} / ${formatPage(totalPages)}`;
+      };
+
+      sliderImage.addEventListener("load", () => {
+        sliderImage.classList.remove("is-fading");
+      });
+
+      const step = (dir) => {
+        let next = currentPage + dir;
+        if (next < 1) {
+          next = totalPages;
+        }
+        if (next > totalPages) {
+          next = 1;
+        }
+        updatePage(next);
+      };
+
+      const startAuto = () => {
+        if (timerId) {
+          clearInterval(timerId);
+        }
+        timerId = setInterval(() => step(1), 5000);
+      };
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const dir = Number(btn.getAttribute("data-dir")) || 1;
+          step(dir);
+          startAuto();
+        });
+      });
+
+      updatePage(1);
+      startAuto();
+    });
+  </script>
+</body>
+</html>
