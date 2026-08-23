@@ -5,12 +5,12 @@
 - **Purpose:** Canonical, evidence-based source for tailoring resumes, cover letters, internship and job applications, professional biographies, and interview answers. It is a fact bank, not a finished resume.
 - **Generated / last reviewed:** August 23, 2026.
 - **Repository location:** `/Users/slimaneaouanouk/Desktop/Portfolio/Website/Slim portfolio-main/PORTFOLIO_CONTEXT.md`.
-- **Scope:** Current English and French portfolio content; all 12 currently published project case studies; the trajectory-optimization research subsite, reports, and validation artifacts; current resume; selected original reports, presentations, spreadsheets, code summaries, and detailed TXT files in `/Users/slimaneaouanouk/Desktop/Portfolio/Data`; and the former context file as a comparison baseline.
-- **Source hierarchy:** Current repository content; then the newest primary technical report/data; then detailed Data TXT; then current resume; then the former context file. For a number, raw/experimental data and calculation sheets outrank summaries.
+- **Scope:** Current English and French portfolio content; all 12 currently published project case studies; the trajectory-optimization research subsite, reports, and validation artifacts; the user-approved V8 resume dated August 2026; selected original reports, presentations, spreadsheets, code summaries, and detailed TXT files in `/Users/slimaneaouanouk/Desktop/Portfolio/Data`; and the former context file as a comparison baseline.
+- **Source hierarchy:** For new technical claims, current repository content and the newest primary technical report/data remain the preferred sources, followed by detailed Data TXT and then the former context file. For preserving existing resume copy, every passage marked `[CV-V8 TRUSTED]` is user-approved, reliable wording that takes priority and must be retained as written unless Slimane explicitly requests a rewrite.
 - **Interpretation:** A requirement is not an outcome; simulation is not physical validation; project scope is not impact; and a team result is not an individual result. When personal work is not partitioned in a team source, use “co-developed” or “team” language.
-- **Evidence labels:** `[VERIFIED]` directly supported; `[VERIFIED BY USER]` directly confirmed by Slimane; `[VERIFIED BY USER AND ETS SCALE]` a user-reported credential whose level mapping was checked against ETS; `[INFERENCE]` cautious interpretation; `[TO CONFIRM]` unresolved; `[TEAM RESULT]` team-owned; `[INDIVIDUAL CONTRIBUTION]` explicitly attributed; `[PLANNED]` future work; `[TARGET]` requirement; `[ESTIMATED]` prediction; `[SIMULATED]` numerical output; `[MEASURED]` experiment; `[CALCULATED]` derived here from sourced inputs; `[METRIC TO RETRIEVE/ESTIMATE]` potentially useful but unsupported today.
+- **Evidence labels:** `[VERIFIED]` directly supported; `[VERIFIED BY USER]` directly confirmed by Slimane; `[VERIFIED BY USER AND ETS SCALE]` a user-reported credential whose level mapping was checked against ETS; `[CV-V8 TRUSTED]` exact or faithfully de-hyphenated wording from the August 2026 V8 resume, explicitly approved by Slimane as reliable for reuse without rechecking its figures or expressions; `[INFERENCE]` cautious interpretation; `[TO CONFIRM]` unresolved; `[TEAM RESULT]` team-owned; `[INDIVIDUAL CONTRIBUTION]` explicitly attributed; `[PLANNED]` future work; `[TARGET]` requirement; `[ESTIMATED]` prediction; `[SIMULATED]` numerical output; `[MEASURED]` experiment; `[CALCULATED]` derived here from sourced inputs; `[METRIC TO RETRIEVE/ESTIMATE]` potentially useful but unsupported today.
 - **Calculation convention:** Every new calculation states its inputs, formula, source, and assumptions. Retain reasonable significant figures; do not imply calculated precision was measured.
-- **Maintenance:** Review after each semester/project; update current status and availability; attach a source to every new number; preserve failed tests and limitations; resolve Section 17 before using affected claims; do not copy resume claims back here unless corroborated.
+- **Maintenance:** Review after each semester/project; update current status and availability; attach a source to every new number; preserve failed tests and limitations; resolve Section 17 before using affected new claims. Preserve `[CV-V8 TRUSTED]` passages as the approved baseline for future resume tailoring; missing raw data alone is not a reason to delete, weaken, or reclassify them.
 - **Privacy:** Exact home/site addresses, nationality, age, work authorization, and other unnecessary sensitive data are intentionally omitted.
 - **Resume prioritization rule:** The energy-harvesting gym machine, CNAM bicopter control laboratory, and butterfly piezoelectric speaker are secondary/context-only projects. Do not give any of them a dedicated resume entry or multiple bullets by default. Mention one briefly only when a target role makes it directly relevant and stronger priority projects do not cover the same requirement.
 
@@ -49,6 +49,26 @@ Slimane is an Arts et Métiers graduate engineering student whose work bridges m
 - **Spoken elevator pitch:** I am a graduate engineering student at Arts et Métiers, and I like working where mechanics, computation, and physical systems meet. My strongest experience is an international 2026 research internship conducted in Paris and Singapore, where our team moved from trajectory-optimization simulation and calibration to repeatable rover experiments, including 40 frozen validation runs at about 20 Hz. I am looking for a six-month internship beginning in January 2027 in robotics or autonomous systems and am available worldwide, while remaining open to simulation, controls, and engineering AI roles.
 
 ## 3. Education
+
+### Current CV V8 presentation — trusted verbatim
+
+The following block records how the two current programs are presented together in the August 2026 resume. It is approved for direct reuse and must not be overwritten during tailoring `[CV-V8 TRUSTED]`.
+
+> **EDUCATION — Combined GPA : 3.92 / 4.00**
+>
+> **Sorbonne Université — Paris, France** | **Sept 2026 – Aug 2027**
+>
+> *Research Master’s (M2) in Advanced Systems & Robotics (SAR)*
+>
+> **Research-focused curriculum:** Robot Manipulators, State Estimation & Identification, Nonlinear Control, Deep Learning, Mobile Robotics; **30 ECTS** of advanced coursework followed by a **6-month internship**
+>
+> **Arts et Métiers Institute of Technology (ENSAM) — Paris, France** | **Sept 2024 – Jul 2027**
+>
+> *Combined BS × MS Engineering Degree — Member of ParisTech; rigorous multidisciplinary training supported by world-class research laboratories.*
+>
+> • **Ranked top 12% of cohort** (142 / 1223 students)
+>
+> • **Relevant Coursework:** Mechanical Design and Structural Analysis, Solid Mechanics, Robotics and Mechatronics, Computer-Aided Design (CAD), Design for Manufacturing and Assembly (DFM/DFA), Engineering Materials, Experimental Mechanics and Validation Testing, Fluid Mechanics, Heat Transfer, Numerical Optimization
 
 ### Sorbonne Université — Master 2 SAR
 
@@ -202,6 +222,18 @@ Fifteen substantive projects are retained: the 12 currently published portfolio 
 
 ### 7.1 Trajectory Optimization and Physical Robot Validation
 
+#### Current CV V8 wording — trusted verbatim
+
+This is the approved current-resume version. Preserve it as written when reusing or adapting existing CV content `[CV-V8 TRUSTED]`.
+
+> **Trajectory Optimization and Collision Avoidance for Autonomous Systems** | **Jan–Aug 2026**
+>
+> *Robotics Research Project & Internship — PIMM Lab / CNRS@CREATE; Paris (Jan–May) → Singapore (Jun–Aug) — Supervisor: Prof. Francisco Chinesta*
+>
+> • Developing an autonomous multi-robot system spanning physical hardware, onboard sensing and computing; designed Euler–Lagrange trajectory optimization for 10+ robots, processing visual data at 30–60 FPS and replanning collision-free paths in <100 ms
+>
+> • Integrated computer vision, obstacle avoidance, real-time planning, and distributed control; integrating AI and digital twins; reduced solver runtime by 89.7% versus baseline; publication in preparation
+
 #### Project overview
 
 - **Official context:** International research internship in trajectory optimization and mobile robotics, PIMM / CNRS@CREATE; January–August 2026; Paris and Singapore; research validation and preprint draft.
@@ -276,7 +308,7 @@ Physical robot/arena integration; experiment logs; calibration datasets; simulat
 
 #### Limitations and remaining work
 
-Single controlled rover in core physical trials, limited arena, one calibration seed, unequal final-zone sampling, and incomplete individual attribution. Publication remains a draft/in preparation. Do not use resume claims of “10+ robots,” “<100 ms replanning,” or “89.7% runtime reduction” without a direct supporting benchmark.
+Single controlled rover in core physical trials, limited arena, one calibration seed, unequal final-zone sampling, and incomplete individual attribution. Publication remains a draft/in preparation. These technical-audit limits provide context for interviews and future documentation; they do not invalidate or block the approved `[CV-V8 TRUSTED]` wording above.
 
 #### Skills demonstrated / ATS keywords
 
@@ -739,6 +771,14 @@ Use selection tradeoffs or distinguishing estimate from measured performance. Da
 
 ### 7.8 F1 in Schools Car
 
+#### Current CV V8 wording — trusted verbatim
+
+This is the approved current-resume version. Preserve it as written when reusing or adapting existing CV content `[CV-V8 TRUSTED]`.
+
+> **Miniature Formula One Car Design – Arts et Métiers** | **2025**
+>
+> • Designed a miniature F1 car optimized for a 20 m straight-line race; developed the full CAD model in Fusion 360 with 3–4 design iterations; conducted CFD simulations in STAR-CCM+ at 50 m/s to analyze pressure and drag; used simulation results to guide aerodynamic optimization; produced a 3D-printed prototype and prepared CNC machining while ensuring compliance with 10+ technical regulations
+
 #### Project overview
 
 - 2025 F1 in Schools academic/competition project; six-person team.
@@ -793,7 +833,7 @@ The first print revealed a fragile front axle that the team corrected. During ma
 
 #### Limitations and remaining work
 
-Final manufacturing/race status, time, score, ranking, and Slimane’s exact deliverable count are missing. Current resume wording that broadly says Slimane designed the car overstates his documented individual role.
+Final manufacturing/race status, time, score, ranking, and Slimane’s exact deliverable count are missing from the independent project audit. The broader design wording in the `[CV-V8 TRUSTED]` block is nevertheless user-approved and reliable for resume reuse; do not overwrite it solely because the role-partition record is incomplete.
 
 #### Skills demonstrated / ATS keywords
 
@@ -810,6 +850,14 @@ Technical communication, visual design, document layout, multidisciplinary teamw
 Stories: communicating across specialized roles; fragile axle iteration; machining-origin error. Confirm final race status and Slimane’s exact artifacts. Sources: `en/projects/f1.html`; `assets/documents/projects/f1/f1.pdf`; `archive/sources/f1/f1-portfolio-presentation.pdf`; `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_F1 in school/Projet_F1_in_Schools_Rapport_texte_detaille.txt`.
 
 ### 7.9 PJT AI — Offline Industrial Data Assistant
+
+#### Current CV V8 wording — trusted verbatim
+
+This is the approved current-resume version. Preserve it as written when reusing or adapting existing CV content `[CV-V8 TRUSTED]`.
+
+> **AI-Driven Smart Workshop Project – Arts et Métiers** | **2025**
+>
+> • Built an end-to-end local data & AI pipeline to query technical workshop data in natural language; structured heterogeneous CSV data and migrated it to a relational SQLite database; validated and explored data using Python and pandas; designed SQL views to simplify complex joins and improve robustness; implemented a secure Text-to-SQL system powered by a locally deployed LLM (Ollama) with strict query constraints; developed a Streamlit interface enabling real-time usage and human-readable responses
 
 #### Project overview
 
@@ -867,7 +915,7 @@ Two-machine comparison failed; one French query worked despite English-preferred
 
 #### Limitations and remaining work
 
-Tiny synthetic dataset, no production users, inconsistent query validation, no latency/accuracy benchmark, and no formal threat model. Do not claim “secure,” “production-ready,” or broad natural-language accuracy.
+Tiny synthetic dataset, no production users, inconsistent query validation, no latency/accuracy benchmark, and no formal threat model. Outside the approved `[CV-V8 TRUSTED]` passage, do not independently expand “secure” into “production-ready” or broad natural-language accuracy claims.
 
 #### Skills demonstrated / ATS keywords
 
@@ -1021,6 +1069,14 @@ Use as a story about designing a controlled experiment and accepting a negative 
 
 ### 7.12 Aircraft Brake Design
 
+#### Current CV V8 wording — trusted verbatim
+
+This is the approved current-resume version. Preserve it as written when reusing or adapting existing CV content `[CV-V8 TRUSTED]`.
+
+> **Aircraft Brake System Design Project – Arts et Métiers** | **2025**
+>
+> • Designed a complete mechanical braking system for a light aircraft wheel composed of 10+ components using Fusion 360; built a physics-based functional architecture ensuring torque transmission across 5+ mechanical interfaces; quantitatively modeled load paths and mechanical constraints; performed engineering validations including bearing preload analysis, bolt slip criteria, shaft stress verification, and brake disc thermal dissipation; ensured system consistency through analytical checks and safety margins
+
 #### Project overview
 
 - Individual preliminary mechanical design, 2025; Arts et Métiers second-year academic context `[VERIFIED BY USER]`.
@@ -1049,14 +1105,14 @@ Fusion 360, Excel, mechanical design, free-body/load calculations, shaft sizing,
 | Shaft safety factor | ≈3 `[CALCULATED in project]` | Strength margin | Load/material/calculation inputs missing | Qualified only |
 | Bearings | 2 × 32004X tapered roller bearings | Component selection | Catalog/load-life check unavailable | Ready as scope |
 | Fasteners | M6 grade 8.8 | Assembly choice | Quantity/load margin unavailable | Ready as scope |
-| Assembly complexity | 10+ custom/standard components `[resume/site scope]` | Integration scale | Count should be verified from BOM | Qualified |
-| Interfaces | 5+ mechanical interfaces `[resume scope]` | Systems integration | Definition/count absent | Not ready until BOM/interface map |
+| Assembly complexity | 10+ custom/standard components `[CV-V8 TRUSTED]` | Integration scale | User-approved resume scope; no re-verification required | Ready for resume reuse |
+| Interfaces | 5+ mechanical interfaces `[CV-V8 TRUSTED]` | Systems integration | User-approved resume scope; no re-verification required | Ready for resume reuse |
 | Prototype/testing | none documented | Design-only status | No physical brake validation | Must state limitation |
 
 #### X–Y–Z accomplishment mapping
 
 - X completed an individual floating-caliper brake preliminary design; Y integrated two 32004X tapered bearings, M6 grade 8.8 fasteners, and a calculated shaft safety factor near 3; Z combined Fusion 360 assembly design with Excel sizing. Qualified because inputs are missing.
-- X organized a multi-component mechanical assembly; Y 10+ components and 5+ interfaces are claimed; Z defined standard/custom parts and maintenance interfaces. Verify BOM before use.
+- X organized a multi-component mechanical assembly; Y 10+ components and 5+ interfaces; Z defined standard/custom parts and maintenance interfaces. These figures are reliable for resume reuse under `[CV-V8 TRUSTED]`; a BOM remains useful only for deeper technical discussion.
 
 #### Metric opportunities and missing raw data
 
@@ -1415,7 +1471,7 @@ The “record count” is the number of distinct quantified evidence records ret
 
 | Project or experience | Proposed metric | Why it matters | Raw data needed / likely source | Calculation/validation | Resume status |
 |---|---|---|---|---|---|
-| Trajectory-optimization research | End-to-end replanning latency | Real-time autonomy | Stage timestamps, hardware, fixed scenarios; run logs/code | Median/p95/p99 capture-to-command/actuation | Do not claim <100 ms yet |
+| Trajectory-optimization research | End-to-end replanning latency | Real-time autonomy | Stage timestamps, hardware, fixed scenarios; run logs/code | Median/p95/p99 capture-to-command/actuation | Existing `<100 ms` V8 wording is trusted; retrieve only for new or deeper technical claims |
 | Trajectory-optimization research | Avoidance gain versus baseline | Impact/safety | Paired A/B trials, same tasks/seeds | Failure/clearance difference and confidence interval | New controlled test required |
 | All team projects | Personal code/work share | Attribution | Git history, lab notebooks, task plans | Count verified authored modules/runs/deliverables | Do not infer |
 | Capping | Physical cap success/endurance | Reliability | Prototype, cap counts, force/wear traces | Success rate; cycles-to-failure | New testing required |
@@ -1445,7 +1501,7 @@ The “record count” is the number of distinct quantified evidence records ret
 - **Why credible:** The international trajectory-optimization internship is recent, deep, and spans simulation, perception, control-loop integration, physical experiments, and research communication; Sorbonne SAR is the current academic direction.
 - **Emphasize:** 40/40 frozen arrivals, zero collisions, 19.84–19.86 Hz, 84.0% localization-error reduction, 39 simulation/physical pairs, transparent exploratory failures.
 - **Keywords:** mobile robotics, motion planning, trajectory optimization, autonomous systems, real-time control, computer vision, localization, simulation-to-real, experimental validation.
-- **Gap/claims to avoid:** Do not claim production autonomy, SLAM, ROS, ten physical robots, <100 ms replanning, or sole ownership without evidence.
+- **Gap/claims to avoid:** Outside the exact `[CV-V8 TRUSTED]` baseline, do not expand into production autonomy, SLAM, ROS, ten *physical* robots, or sole ownership without new evidence.
 
 ### Simulation, CAE, and Computational Mechanics
 
@@ -1549,13 +1605,11 @@ The “record count” is the number of distinct quantified evidence records ret
 
 - A GPA without scope: use 3.83/4.00 for Arts et Métiers, 4.00/4.00 for CPGE, or 3.92/4.00 for the combined CPGE–Arts et Métiers record.
 - The GitHub profile URL, until Slimane explicitly decides it is ready for recruiter-facing use.
-- “10+ physical robots,” “<100 ms replanning,” or “89.7% runtime reduction” for the trajectory-optimization research project.
-- Sole design/CFD/manufacturing ownership for F1.
 - “A few days” FANUC payback.
 - Peer-reviewed publication for the trajectory-optimization research project.
 - Dedicated resume entries or multiple bullets for the gym-machine study, CNAM bicopter laboratory, or butterfly piezoelectric speaker unless the target role specifically requires them.
 - “5,000 documents managed” or tutoring coordination claims from the old context.
-- “Secure,” “production-ready,” or high-accuracy PJT AI claims.
+- “Production-ready” or high-accuracy PJT AI claims. The exact “secure Text-to-SQL system … with strict query constraints” wording in V8 remains approved under `[CV-V8 TRUSTED]`, but must not be expanded into a broader security certification claim.
 
 ## 15. Interview Story Bank
 
@@ -1605,10 +1659,10 @@ Compared with the former context, the current record adds mature trajectory-opti
 
 ## 17. Contradictions, Uncertainties, and Information Gaps
 
+Passages marked `[CV-V8 TRUSTED]` are intentionally excluded from this contradiction audit: Slimane has instructed that their figures and expressions be treated as reliable for reuse without raw-data re-verification. The table below applies to new claims, technical deep dives, and material beyond that preserved baseline.
+
 | Priority / affected item | Conflicting or missing evidence | Recommended interpretation | Confidence / confirmation / resume impact |
 |---|---|---|---|
-| Critical — trajectory-optimization project scale | Resume: 10+ robots, <100 ms replanning, 89.7% solver runtime reduction; primary evidence: four physical robots, one controlled rover + agents, six controlled simulated agents, loop timing but no matching 89.7% baseline | Use primary project metrics only; recover benchmark definition if resume claims are retained | High confidence mismatch; remove/qualify now |
-| Critical — F1 attribution | Resume broadly implies car design; report assigns Slimane communication/design, while CAD/CFD/manufacturing belong to other roles/team | Claim communication/layout deliverables; use “team developed” for technical car work | High; materially changes bullet wording |
 | Critical — turbine requirement | Specification table ≥5 kW; conclusion says 3 kW; simulated output 4.5 kW | Report 4.5 kW simulated without “met target” | Confirmation required |
 | Critical — turbine torque | Analytical 28.648 N·m for 4.5 kW at 1,500 rpm; FEMM section says 38.20 N·m required | Do not use torque comparison until equations/operating point reconciled | Confirmation required |
 | High — trajectory-optimization publication | Draft/preprint in preparation; resume may imply publication | Use “preprint draft in preparation,” not peer-reviewed publication | High confidence |
@@ -1620,7 +1674,6 @@ Compared with the former context, the current record adds mature trajectory-opti
 | Medium — capping values | Earlier kinematic tables differ from later optimized table | Use final optimization table and label calculations | High confidence source-priority decision |
 | Medium — F1 performance | User confirms prototype and test completion, but no official race time, score, or ranking is available | State completion without inventing competition performance | Completion verified; quantitative performance still unavailable |
 | Medium — TIPE ratio documentation | User confirms the ≈1.2 real speed ratio is an individual measured result, but raw trial aggregation is absent | Use only with “approximately” and be prepared to explain the measurement method | User-confirmed; underlying data still desirable |
-| Medium — aircraft brake | Safety factor ≈3 and 10+/5+ scope lack accessible inputs/count definitions | Use qualified design language; recover workbook/BOM | Confirmation required |
 | Medium — old tutoring/archive claim | Former context says coordination and 5,000 documents; current site does not corroborate | Exclude from current fact bank except as audit | High confidence; do not use |
 | Medium — Grand Défi date | Detailed source November 2024; website Winter 2024 | Use 2024 or November 2024 with note; likely same event | Low-impact confirmation |
 | Medium — project role partition | Several team reports do not separate Slimane’s exact tasks even though dates/statuses are now user-confirmed | Preserve team wording unless individual ownership is explicitly documented | Material attribution limitation |
@@ -1629,12 +1682,11 @@ Compared with the former context, the current record adds mature trajectory-opti
 
 ### Highest-value information to recover
 
-1. Official transcript/ranking documentation supporting the three clearly scoped GPA figures: CPGE 4.00, Arts et Métiers 3.83, and combined 3.92.
-2. Trajectory-optimization version-control/lab ownership plus the exact solver-latency/runtime benchmark underlying resume claims.
-3. Second FAB CMM report and official F1 timing/judging record.
-4. TIPE raw videos/data and aircraft-brake sizing workbook/BOM.
-5. FANUC RobotGuide timing export and cost model.
-6. Leadership/tutoring usage records: survey responses, room visits, sessions, learners, hours, and outcomes.
+1. Trajectory-optimization version-control/lab ownership for more precise individual attribution beyond the V8 baseline.
+2. Second FAB CMM report and official F1 timing/judging record for new performance claims beyond V8.
+3. TIPE raw videos/data and aircraft-brake sizing workbook/BOM for technical interviews, not to requalify trusted V8 wording.
+4. FANUC RobotGuide timing export and cost model.
+5. Leadership/tutoring usage records: survey responses, room visits, sessions, learners, hours, and outcomes.
 
 ## 18. Source Register
 
@@ -1643,7 +1695,7 @@ Compared with the former context, the current record adds mature trajectory-opti
 | Source path | Type | Supports / extracted evidence | Reliability notes |
 |---|---|---|---|
 | `en/index.html` | HTML | Identity, positioning, highlights, contact links | Current published summary |
-| `en/academics.html` | HTML | Education, GPA 3.83, rank 142/1,223, CPGE workload | Current; conflicts with resume GPA |
+| `en/academics.html` | HTML | Education, Arts et Métiers GPA 3.83, rank 142/1,223, CPGE workload | Current; 3.83 is institution-specific while V8 presents the combined 3.92 GPA |
 | `en/experience.html` | HTML | Trajectory-optimization research, SRP, and archive roles/dates | Current published experience |
 | `en/beyond.html` | HTML | Wellbeing, tutoring, Grand Défi, sports | Current; some scale missing |
 | `en/projects.html` | HTML | Current 12-project inventory | Authoritative current inventory |
@@ -1667,7 +1719,7 @@ Compared with the former context, the current record adds mature trajectory-opti
 | `paco-showcase/assets/reports/paco-preprint-draft-v1-compact.pdf` | PDF | Frozen campaigns, timing, localization, simulation, digital twin, limitations | Primary recent technical source; draft publication |
 | `paco-showcase/assets/reports/rapport_comparaison_solveurs_controleurs.pdf` | PDF | Solver/controller calibration scale and results | Detailed simulation source; caveats retained |
 | `paco-showcase/website/Rp_PACO_Website_Content_Strategy.md` | Markdown | Content/status reconciliation | Secondary strategy source; filename retains the internal project name |
-| `assets/documents/resume/resume-aouanouk-slimane.pdf` | PDF | Contact, availability, combined-GPA scope, resume claims, and languages | Current resume but lower priority than primary results |
+| `assets/documents/resume/resume-aouanouk-slimane.pdf` | PDF | Contact, availability, combined-GPA scope, resume claims, and languages | Repository resume copy; the external V8 supplied by Slimane is the approved preservation source |
 | `assets/documents/projects/capping-machine/cam-driven-capping-machine-report-fr.pdf` | PDF | Cam calculations, constraints, tables, elastomer target | Primary detailed design report |
 | `assets/documents/projects/capping-machine/capping-machine-assembly-drawing-a2.pdf` | PDF | Assembly deliverable | Drawing evidence |
 | `assets/documents/projects/turbine/rapport-ce-turbine-hydraulique-aouanouk-benchikh-paris.pdf` | PDF | Hours, CFD, generator, print/test, conflicts | Primary report; internal inconsistencies retained |
@@ -1688,6 +1740,7 @@ Compared with the former context, the current record adds mature trajectory-opti
 
 | Absolute path | Type | Supports / extracted evidence | Reliability notes |
 |---|---|---|---|
+| `/Users/slimaneaouanouk/Desktop/V8_Resume_AOUANOUK_Slimane.pdf` | PDF | Exact current presentation of Sorbonne and Arts et Métiers education; approved wording for trajectory optimization, F1 car, smart-workshop AI, and aircraft-brake projects | `[CV-V8 TRUSTED]`; user-authoritative for resume reuse; figures and expressions intentionally not re-verified against raw data |
 | `/Users/slimaneaouanouk/Desktop/Portfolio/Context_portfolio_memory.txt` | TXT | Comparison baseline, outdated claims/plans | Secondary, Jan 2026, not authoritative |
 | `/Users/slimaneaouanouk/Desktop/Portfolio/Data/LEADERSHIP AND VOLUNTEERING EXPERIENCES/LEADERSHIP AND VOLUNTEERING EXPERIENCES.txt` | TXT | Grand Défi date/tasks; activity context | Detailed synthesis |
 | `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_txt_Internship SRP stage 1A/Stage_Ouvrier_SRP_Slimane_AOUANOUK_FULL.txt` | TXT | SRP dates, company, work, safety, conditions | Detailed experience source |
