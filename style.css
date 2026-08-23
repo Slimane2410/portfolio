@@ -182,6 +182,139 @@ a {
   padding-top: 20px;
 }
 
+/* === LANGUAGE SWITCHER === */
+.language-switcher {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid var(--border-dim);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  z-index: 2;
+}
+
+.language-option {
+  min-width: 38px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  color: #94a3b8;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-align: center;
+}
+
+.language-option:hover,
+.language-option:focus-visible,
+.language-option.active {
+  color: #ffffff;
+  background: #111827;
+  outline: none;
+}
+
+.language-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.language-dialog-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.language-dialog-panel {
+  position: relative;
+  width: min(100%, 500px);
+  padding: 42px;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 18px;
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.36);
+  text-align: center;
+}
+
+.language-dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.language-dialog-kicker {
+  color: #0284c7;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.language-dialog-panel h2 {
+  margin: 14px 0 12px;
+  color: #0f172a;
+  font-size: clamp(1.65rem, 5vw, 2.25rem);
+  line-height: 1.15;
+}
+
+.language-dialog-panel h2 span {
+  color: #475569;
+  font-size: 0.72em;
+}
+
+.language-dialog-panel h2 .language-dialog-title-en {
+  color: #0f172a;
+  font-size: 1em;
+}
+
+.language-dialog-panel p {
+  margin: 0 auto 28px;
+  color: #64748b;
+}
+
+.language-dialog-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.language-dialog-choice {
+  min-height: 48px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #0f172a;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.language-dialog-choice:hover,
+.language-dialog-choice:focus-visible,
+.language-dialog-choice.primary {
+  border-color: #111827;
+  background: #111827;
+  color: #ffffff;
+  outline: 3px solid rgba(56, 189, 248, 0.18);
+}
+
+.language-dialog-open {
+  overflow: hidden;
+}
+
 /* -- 2. MAIN CONTENT (Zone Droite) -- */
 .main-content {
   margin-left: var(--sidebar-width);
@@ -470,6 +603,11 @@ p {
   .sidebar-footer {
     display: none;
   }
+
+  .language-switcher {
+    top: calc(20px + env(safe-area-inset-top, 0px));
+    right: 20px;
+  }
   
   .nav-links {
     flex-direction: row;
@@ -553,6 +691,14 @@ p {
 
   .sidebar {
     padding: 20px 16px;
+  }
+
+  .profile-section {
+    padding-right: 92px;
+  }
+
+  .language-dialog-panel {
+    padding: 38px 22px 24px;
   }
 
   .glass-panel {

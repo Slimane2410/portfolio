@@ -1,6 +1,55 @@
-/* script.js - Version Adaptée pour Dashboard Layout */
+/* script.js - Dashboard layout and bilingual portfolio navigation */
+
+const PORTFOLIO_LANGUAGE_KEY = "portfolio-language";
+
+function isFrenchPortfolioPage() {
+  return window.location.pathname.split("/").filter(Boolean).includes("fr");
+}
+
+function getStoredPortfolioLanguage() {
+  try {
+    const language = window.sessionStorage.getItem(PORTFOLIO_LANGUAGE_KEY);
+    return language === "en" || language === "fr" ? language : null;
+  } catch (_) {
+    return null;
+  }
+}
+
+function storePortfolioLanguage(language) {
+  try {
+    window.sessionStorage.setItem(PORTFOLIO_LANGUAGE_KEY, language);
+  } catch (_) {
+    // The language switch still works when session storage is unavailable.
+  }
+}
+
+function getLanguageCounterpart(language) {
+  const url = new URL(window.location.href);
+  const parts = url.pathname.split("/");
+  const frIndex = parts.lastIndexOf("fr");
+
+  if (language === "fr" && frIndex === -1) {
+    const filename = parts.pop();
+    parts.push("fr", filename || "");
+  } else if (language === "en" && frIndex !== -1) {
+    parts.splice(frIndex, 1);
+  }
+
+  url.pathname = parts.join("/").replace(/\/{2,}/g, "/");
+  return url.href;
+}
+
+const storedPortfolioLanguage = getStoredPortfolioLanguage();
+const currentPortfolioLanguage = isFrenchPortfolioPage() ? "fr" : "en";
+
+if (storedPortfolioLanguage && storedPortfolioLanguage !== currentPortfolioLanguage) {
+  window.location.replace(getLanguageCounterpart(storedPortfolioLanguage));
+}
 
 document.addEventListener("DOMContentLoaded", function() {
+  const language = isFrenchPortfolioPage() ? "fr" : "en";
+  document.documentElement.lang = language;
+  initLanguageControls(language);
   
   // 1. GESTION AUTOMATIQUE DU MENU ACTIF
   // Ça permet de surligner le bon onglet dans la sidebar selon la page ouverte
@@ -26,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     menuButton.className = 'mobile-menu-toggle';
     menuButton.setAttribute('aria-expanded', 'true');
     menuButton.innerHTML = '<i class="fas fa-bars"></i> Menu';
+    menuButton.setAttribute('aria-label', language === 'fr' ? 'Afficher ou masquer la navigation' : 'Show or hide navigation');
 
     menuButton.addEventListener('click', () => {
       const isCollapsed = sidebar.classList.toggle('mobile-collapsed');
@@ -73,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="lightbox-overlay" onclick="closeLightbox()"></div>
       <div class="lightbox-content">
         <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" src="" alt="Full view">
+        <img id="lightbox-img" src="" alt="${language === 'fr' ? 'Vue agrandie' : 'Full view'}">
       </div>
     `;
     document.body.appendChild(lightboxDiv);
@@ -140,7 +190,7 @@ function initScrollNavigator() {
 
   const nav = document.createElement("div");
   nav.className = "scroll-nav";
-  nav.setAttribute("aria-label", "Scroll navigator");
+  nav.setAttribute("aria-label", isFrenchPortfolioPage() ? "Navigateur de défilement" : "Scroll navigator");
   nav.setAttribute("role", "scrollbar");
 
   const thumb = document.createElement("div");
@@ -229,4 +279,107 @@ function initScrollNavigator() {
   window.addEventListener("scroll", updateThumb, { passive: true });
   window.addEventListener("resize", updateThumb);
   updateThumb();
+}
+
+function initLanguageControls(language) {
+  const sidebar = document.querySelector('.sidebar');
+  if (!sidebar || sidebar.querySelector('.language-switcher')) return;
+
+  const labels = language === 'fr'
+    ? {
+        switcher: 'Choisir la langue',
+        dialogTitle: 'Choisissez votre langue',
+        dialogText: 'Select your preferred language. Vous pourrez la modifier à tout moment.',
+        close: 'Continuer en anglais'
+      }
+    : {
+        switcher: 'Choose language',
+        dialogTitle: 'Choose your language',
+        dialogText: 'Select your preferred language. Vous pourrez la modifier à tout moment.',
+        close: 'Continue in English'
+      };
+
+  const switcher = document.createElement('div');
+  switcher.className = 'language-switcher';
+  switcher.setAttribute('aria-label', labels.switcher);
+
+  ['en', 'fr'].forEach((targetLanguage) => {
+    const link = document.createElement('a');
+    link.className = `language-option${targetLanguage === language ? ' active' : ''}`;
+    link.href = getLanguageCounterpart(targetLanguage);
+    link.textContent = targetLanguage.toUpperCase();
+    link.lang = targetLanguage;
+    link.hreflang = targetLanguage;
+    link.setAttribute('aria-label', targetLanguage === 'fr' ? 'Afficher le site en français' : 'View the site in English');
+    if (targetLanguage === language) link.setAttribute('aria-current', 'true');
+    link.addEventListener('click', () => storePortfolioLanguage(targetLanguage));
+    switcher.appendChild(link);
+  });
+
+  sidebar.appendChild(switcher);
+
+  if (!storedPortfolioLanguage) {
+    showLanguageDialog(labels);
+  }
+}
+
+function showLanguageDialog(labels) {
+  const dialog = document.createElement('div');
+  dialog.className = 'language-dialog';
+  dialog.innerHTML = `
+    <div class="language-dialog-backdrop"></div>
+    <section class="language-dialog-panel" role="dialog" aria-modal="true" aria-labelledby="language-dialog-title" aria-describedby="language-dialog-description">
+      <button class="language-dialog-close" type="button" aria-label="${labels.close}">&times;</button>
+      <span class="language-dialog-kicker">EN / FR</span>
+      <h2 id="language-dialog-title"><span lang="en" class="language-dialog-title-en">Choose your language</span><br><span lang="fr">Choisissez votre langue</span></h2>
+      <p id="language-dialog-description">${labels.dialogText}</p>
+      <div class="language-dialog-actions">
+        <button class="language-dialog-choice primary" type="button" data-language="en" lang="en">English</button>
+        <button class="language-dialog-choice" type="button" data-language="fr" lang="fr">Français</button>
+      </div>
+    </section>
+  `;
+  document.body.appendChild(dialog);
+  document.body.classList.add('language-dialog-open');
+
+  const panel = dialog.querySelector('.language-dialog-panel');
+  const englishButton = dialog.querySelector('[data-language="en"]');
+  const closeButton = dialog.querySelector('.language-dialog-close');
+  const focusable = Array.from(dialog.querySelectorAll('button'));
+
+  const chooseLanguage = (targetLanguage) => {
+    storePortfolioLanguage(targetLanguage);
+    const destination = getLanguageCounterpart(targetLanguage);
+    if ((targetLanguage === 'fr') !== isFrenchPortfolioPage()) {
+      window.location.assign(destination);
+      return;
+    }
+    document.body.classList.remove('language-dialog-open');
+    dialog.remove();
+  };
+
+  dialog.querySelectorAll('[data-language]').forEach((button) => {
+    button.addEventListener('click', () => chooseLanguage(button.dataset.language));
+  });
+  closeButton.addEventListener('click', () => chooseLanguage('en'));
+
+  panel.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      chooseLanguage('en');
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  window.requestAnimationFrame(() => englishButton.focus());
 }

@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="De la fonderie AlSi7 à l'usinage et au contrôle dimensionnel du CNC : l'industrialisation complète d'un boîtier de butée à billes." name="description"/>
+<title>Projet FAB — Butée à billes | Slimane Aouanouk</title><link href="../project_FAB.html" hreflang="en" rel="alternate"/><link href="project_FAB.html" hreflang="fr" rel="alternate"/><link href="../project_FAB.html" hreflang="x-default" rel="alternate"/>
+<link href="../style.css?v=9" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../favicon_io/favicon.ico" rel="icon"/>
+<link href="../favicon_io/site.webmanifest" rel="manifest"/>
+<meta content="#f6f7f8" name="theme-color"/>
+<style>
+    .fab-page img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .fab-page .main-content {
+      max-width: 1600px;
+    }
+
+    .fab-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+      color: #6b7280;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .fab-back-link:hover {
+      color: #111827;
+      transform: translateX(-2px);
+    }
+
+    .fab-hero {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      border: 1px solid #d9dee5;
+      border-radius: 16px;
+      background: #111827;
+    }
+
+    .fab-hero > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%;
+    }
+
+    .fab-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(10, 15, 24, 0.95) 0%, rgba(10, 15, 24, 0.77) 44%, rgba(10, 15, 24, 0.18) 100%);
+    }
+
+    .fab-hero-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      min-height: 440px;
+      max-width: 780px;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 48px;
+    }
+
+    .fab-eyebrow {
+      margin-bottom: 14px;
+      color: #d1d5db;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .fab-hero h1 {
+      margin: 0;
+      color: #ffffff !important;
+      font-size: clamp(2.25rem, 4.7vw, 4.6rem);
+      line-height: 1.02;
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    .fab-hero p {
+      max-width: 660px;
+      margin: 18px 0 0;
+      color: #e5e7eb !important;
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .fab-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .fab-tag {
+      padding: 7px 11px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.45);
+      color: #f3f4f6;
+      font-size: 0.76rem;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+    }
+
+    .fab-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .fab-span-12 { grid-column: span 12; }
+    .fab-span-8 { grid-column: span 8; }
+    .fab-span-7 { grid-column: span 7; }
+    .fab-span-6 { grid-column: span 6; }
+    .fab-span-5 { grid-column: span 5; }
+    .fab-span-4 { grid-column: span 4; }
+
+    .fab-panel {
+      overflow: hidden;
+    }
+
+    .fab-panel h2 {
+      margin-bottom: 16px;
+      font-size: clamp(1.55rem, 2.5vw, 2rem);
+    }
+
+    .fab-panel h3 {
+      margin-bottom: 10px;
+      font-size: 1.22rem;
+    }
+
+    .fab-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .fab-lead {
+      color: #374151 !important;
+      font-size: 1.03rem;
+      line-height: 1.82;
+    }
+
+    .fab-lead strong,
+    .fab-panel strong {
+      color: #111827;
+    }
+
+    .fab-facts {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+    }
+
+    .fab-fact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 14px;
+      border: 1px solid #e1e5ea;
+      border-radius: 8px;
+      background: #f7f8fa;
+      color: #374151;
+      font-size: 0.9rem;
+    }
+
+    .fab-fact i {
+      width: 20px;
+      color: #111827;
+      text-align: center;
+    }
+
+    .fab-video-feature {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.72fr) minmax(360px, 1.28fr);
+      min-height: 590px;
+      padding: 0 !important;
+      background: #0f1115 !important;
+      border-color: #0f1115 !important;
+    }
+
+    .fab-video-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px;
+    }
+
+    .fab-video-copy .fab-eyebrow {
+      color: #9ca3af;
+    }
+
+    .fab-video-copy h2 {
+      color: #ffffff !important;
+      font-size: clamp(2rem, 3.3vw, 3.3rem);
+      line-height: 1.06;
+    }
+
+    .fab-video-copy p {
+      color: #c7ced8 !important;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .fab-video-frame {
+      position: relative;
+      display: grid;
+      min-height: 590px;
+      place-items: center;
+      overflow: hidden;
+      background: radial-gradient(circle at center, #293241 0%, #111827 66%);
+    }
+
+    .fab-video-frame::before {
+      content: "";
+      position: absolute;
+      inset: -28px;
+      background: linear-gradient(rgba(15, 17, 21, 0.38), rgba(15, 17, 21, 0.76)), url("../Data_FAB/foundry-pour-poster.webp") center / cover;
+      filter: blur(22px);
+      opacity: 0.62;
+      transform: scale(1.08);
+    }
+
+    .fab-video-frame video {
+      position: relative;
+      z-index: 1;
+      width: auto;
+      max-width: calc(100% - 48px);
+      height: 550px;
+      max-height: calc(100% - 40px);
+      border-radius: 12px;
+      background: #000;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45);
+      object-fit: contain;
+    }
+
+    .fab-video-toggle {
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      border-radius: 999px;
+      background: rgba(15, 17, 21, 0.76);
+      color: #ffffff;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    .fab-video-toggle:hover,
+    .fab-video-toggle:focus-visible {
+      background: rgba(255, 255, 255, 0.94);
+      color: #111827;
+      outline: none;
+    }
+
+    .fab-process {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: fab-step;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .fab-process li {
+      position: relative;
+      min-height: 170px;
+      padding: 26px;
+      border: 1px solid #dce1e7;
+      border-radius: 12px;
+      background: #f7f8fa;
+      counter-increment: fab-step;
+    }
+
+    .fab-process li:not(:last-child)::after {
+      content: "\f061";
+      position: absolute;
+      top: 50%;
+      right: -26px;
+      z-index: 2;
+      width: 34px;
+      height: 34px;
+      border: 1px solid #d9dee5;
+      border-radius: 50%;
+      background: #ffffff;
+      color: #596170;
+      font: 900 0.82rem/34px "Font Awesome 6 Free";
+      text-align: center;
+      transform: translateY(-50%);
+    }
+
+    .fab-process-index {
+      display: block;
+      margin-bottom: 20px;
+      color: #7a8595;
+      font-family: "Courier New", monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .fab-process-index::after {
+      content: "0" counter(fab-step);
+    }
+
+    .fab-process h3 {
+      margin-bottom: 8px;
+    }
+
+    .fab-process p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.65;
+    }
+
+    .fab-section-heading {
+      grid-column: span 12;
+      margin: 28px 0 -8px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d9dee5;
+    }
+
+    .fab-section-heading span {
+      display: block;
+      margin-bottom: 8px;
+      color: #7a8595;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .fab-section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.65rem);
+    }
+
+    .fab-media-card {
+      padding: 0 !important;
+    }
+
+    .fab-media-card figure {
+      margin: 0;
+    }
+
+    .fab-media-card img {
+      display: block;
+      width: 100%;
+      height: 360px;
+      cursor: zoom-in;
+      object-fit: cover;
+    }
+
+    .fab-media-card img.fab-contain {
+      padding: 22px;
+      background: #f2f4f6;
+      object-fit: contain;
+    }
+
+    .fab-media-card img.fab-fit-full {
+      height: auto;
+      background: #f2f4f6;
+      object-fit: contain;
+    }
+
+    .fab-media-card figcaption {
+      padding: 18px 22px 22px;
+      color: #596170;
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
+    .fab-copy-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .fab-list {
+      display: grid;
+      gap: 11px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .fab-list li {
+      position: relative;
+      padding-left: 21px;
+      color: #596170;
+      line-height: 1.6;
+    }
+
+    .fab-list li::before {
+      content: "";
+      position: absolute;
+      top: 0.68em;
+      left: 0;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #111827;
+    }
+
+    .fab-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .fab-metric {
+      padding: 18px;
+      border: 1px solid #dce1e7;
+      border-radius: 10px;
+      background: #f8f9fa;
+    }
+
+    .fab-metric-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .fab-metric h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .fab-status {
+      flex: none;
+      padding: 5px 8px;
+      border-radius: 999px;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .fab-status-pass {
+      background: #e8f5ed;
+      color: #166534;
+    }
+
+    .fab-status-watch {
+      background: #fff4d8;
+      color: #92400e;
+    }
+
+    .fab-status-fail {
+      background: #feecec;
+      color: #991b1b;
+    }
+
+    .fab-metric-values {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      color: #596170;
+      font-size: 0.78rem;
+    }
+
+    .fab-metric-values strong {
+      color: #111827;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.45rem;
+    }
+
+    .fab-conclusion {
+      position: relative;
+      padding: 42px !important;
+      border-left: 4px solid #111827 !important;
+    }
+
+    .fab-conclusion blockquote {
+      max-width: 900px;
+      margin: 0;
+      color: #111827;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(1.35rem, 2.4vw, 2.1rem);
+      font-weight: 700;
+      line-height: 1.42;
+    }
+
+    .fab-conclusion p {
+      max-width: 850px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 1100px) {
+      .fab-video-feature {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .fab-video-copy {
+        padding: 36px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .fab-span-8,
+      .fab-span-7,
+      .fab-span-6,
+      .fab-span-5,
+      .fab-span-4 {
+        grid-column: span 12;
+      }
+
+      .fab-video-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .fab-video-frame {
+        min-height: 620px;
+      }
+
+      .fab-process {
+        grid-template-columns: 1fr;
+      }
+
+      .fab-process li {
+        min-height: auto;
+      }
+
+      .fab-process li:not(:last-child)::after {
+        content: "\f063";
+        top: auto;
+        right: 50%;
+        bottom: -26px;
+        transform: translateX(50%);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .fab-grid {
+        gap: 20px;
+      }
+
+      .fab-hero,
+      .fab-hero-content {
+        min-height: 470px;
+      }
+
+      .fab-hero::after {
+        background: linear-gradient(0deg, rgba(10, 15, 24, 0.97) 0%, rgba(10, 15, 24, 0.66) 70%, rgba(10, 15, 24, 0.28) 100%);
+      }
+
+      .fab-hero-content {
+        padding: 28px 22px;
+      }
+
+      .fab-video-copy {
+        padding: 30px 24px;
+      }
+
+      .fab-video-frame {
+        min-height: 590px;
+      }
+
+      .fab-video-frame video {
+        width: calc(100% - 28px);
+        height: auto;
+        max-height: 550px;
+      }
+
+      .fab-video-toggle {
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .fab-media-card img {
+        height: 280px;
+      }
+
+      .fab-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .fab-conclusion {
+        padding: 28px 24px !important;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fab-video-frame video {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body class="homepage fab-page">
+<div class="app-layout">
+<aside class="sidebar slide-up">
+<div class="profile-section">
+<a aria-label="Retour à l’accueil" href="index.html">
+<span class="logo-text">SA.</span>
+</a>
+<span class="role-text">Élève ingénieur<br/>Arts et Métiers</span>
+</div>
+<nav aria-label="Navigation principale" class="nav-links">
+<a class="nav-item" href="index.html"><i class="fas fa-home"></i> Accueil</a>
+<a class="nav-item active" href="projects.html"><i class="fas fa-code-branch"></i> Projets</a>
+<a class="nav-item" href="resume.html"><i class="fas fa-file-alt"></i> CV</a>
+<a class="nav-item" href="academics.html"><i class="fas fa-graduation-cap"></i> Formation</a>
+<a class="nav-item" href="experience.html"><i class="fas fa-briefcase"></i> Expérience</a>
+<a class="nav-item" href="beyond.html"><i class="fas fa-compass"></i> Au-delà de l’ingénierie</a>
+</nav>
+<div class="sidebar-footer">
+<div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+<a aria-label="Profil LinkedIn" href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" rel="noopener noreferrer" style="color: #7a8595; font-size: 1.3rem;" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+<a aria-label="Envoyer un e-mail" href="mailto:aouanoukslim@gmail.com" style="color: #7a8595; font-size: 1.3rem;">
+<i class="fas fa-envelope"></i>
+</a>
+</div>
+<p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+</div>
+</aside>
+<main class="main-content">
+<a class="fab-back-link slide-up delay-1" href="projects.html">
+<i class="fas fa-arrow-left"></i> RETOUR AUX PROJETS
+      </a>
+<header class="fab-hero slide-up delay-1">
+<img alt="Moule en sable préparé pour couler le boîtier de butée à billes" fetchpriority="high" src="../Data_FAB/mould-and-pattern.webp"/>
+<div class="fab-hero-content">
+<span class="fab-eyebrow">// PRODUCTION · FONDERIE · MÉTROLOGIE</span>
+<h1>De la fonderie à la métrologie</h1>
+<p>
+            Industrialisation d'un boîtier de butée à billes AlSi7 par fonderie, usinage conventionnel et CNC, puis contrôle dimensionnel.
+          </p>
+<div aria-label="Disciplines du projet" class="fab-tags">
+<span class="fab-tag">Coulée AlSi7</span>
+<span class="fab-tag">Tournage conventionnel</span>
+<span class="fab-tag">Usinage CNC</span>
+<span class="fab-tag">Inspection MMT</span>
+</div>
+</div>
+</header>
+<div class="fab-grid">
+<section aria-labelledby="mission-title" class="fab-span-8 glass-panel fab-panel slide-up delay-2">
+<span class="fab-eyebrow" style="color: #7a8595;">// PROJET FAB</span>
+<h2 id="mission-title">Aperçu de la mission</h2>
+<p class="fab-lead">
+            Le projet fait suite à l'industrialisation complète d'un <strong>boîtier de roulement de butée à billes</strong> utilisé pour guider un arbre rotatif. À partir du dessin fonctionnel et des tolérances GPS, nous avons conçu la stratégie de coulée, produit la pièce brute, usiné ses caractéristiques critiques et mesuré la géométrie finale.
+          </p>
+<p>
+            L'objectif n'était pas simplement de fabriquer une pièce, mais de comprendre comment chaque décision de fabrication se propage à l'étape suivante et détermine finalement si une production reproductible est possible.
+          </p>
+</section>
+<aside aria-label="Informations sur le projet" class="fab-span-4 glass-panel fab-panel slide-up delay-2">
+<h3>// FAITS SUR LE PROJET</h3>
+<div class="fab-facts">
+<div class="fab-fact"><span>Matériel</span><span><strong>AlSi7</strong> <i class="fas fa-cubes"></i></span></div>
+<div class="fab-fact"><span>Partie</span><span><strong>Boîtier de roulement</strong> <i class="fas fa-gear"></i></span></div>
+<div class="fab-fact"><span>Flux de travail</span><span><strong>3 étapes</strong> <i class="fas fa-arrow-right-arrow-left"></i></span></div>
+<div class="fab-fact"><span>Équipe</span><span><strong>2 étudiants</strong> <i class="fas fa-user-group"></i></span></div>
+</div>
+<p style="margin-top: 18px; font-size: 0.86rem; line-height: 1.6;">
+            Slimane Aouanouk<br/>avec Abderrahmane Boukhad
+          </p>
+</aside>
+<section aria-labelledby="casting-video-title" class="fab-span-12 glass-panel fab-video-feature slide-up delay-3">
+<div class="fab-video-copy">
+<span class="fab-eyebrow">// DANS LA FONDERIE</span>
+<h2 id="casting-video-title">La coulée en action</h2>
+<p>
+              Une brève vue de l'intérieur de l'atelier de fonderie. L'étape de coulée transforme l'étude du moule en une pièce brute réelle AlSi7, prête pour les phases d'usinage qui suivent.
+            </p>
+</div>
+<div class="fab-video-frame">
+<video aria-label="Atelier de fonderie pendant la phase de coulée" autoplay="" controls="" id="fab-foundry-video" loop="" muted="" playsinline="" poster="../Data_FAB/foundry-pour-poster.webp" preload="metadata">
+<source src="../Data_FAB/foundry-pour.mp4" type="video/mp4"/>
+              Votre navigateur ne prend pas en charge la vidéo HTML5. Vous pouvez <a href="../Data_FAB/foundry-pour.mp4">ouvrir directement le fichier MP4</a>.
+            </video>
+<button aria-controls="fab-foundry-video" aria-label="Suspendre la diffusion de la vidéo" class="fab-video-toggle" id="fab-video-toggle" type="button">
+<i aria-hidden="true" class="fas fa-pause"></i><span>Pause</span>
+</button>
+</div>
+</section>
+<section aria-labelledby="workflow-title" class="fab-span-12 glass-panel fab-panel slide-up">
+<span class="fab-eyebrow" style="color: #7a8595;">// FLUX DE TRAVAIL DE BOUT EN BOUT</span>
+<h2 id="workflow-title">Une partie, trois processus connectés</h2>
+<ol class="fab-process">
+<li>
+<span aria-hidden="true" class="fab-process-index"></span>
+<h3>Fonderie</h3>
+<p>Concevez le plan de joint, le noyau, les angles de dépouille et les surépaisseurs d'usinage, puis coulez l'ébauche AlSi7.</p>
+</li>
+<li>
+<span aria-hidden="true" class="fab-process-index"></span>
+<h3>Usinage</h3>
+<p>Créez les surfaces de référence sur un tour conventionnel, puis effectuez le perçage, le contournage et le taraudage sur une machine CNC.</p>
+</li>
+<li>
+<span aria-hidden="true" class="fab-process-index"></span>
+<h3>Métrologie</h3>
+<p>Inspectez les spécifications dimensionnelles et géométriques, puis remontez les non-conformités jusqu'à leurs causes de fabrication.</p>
+</li>
+</ol>
+</section>
+<div class="fab-section-heading">
+<span>01 — Fonderie</span>
+<h2>Concevoir la pièce brute avant de couler le métal</h2>
+</div>
+<section class="fab-span-5 glass-panel fab-panel fab-copy-card">
+<h2>Préparation du moule</h2>
+<p>
+            La conception de la pièce moulée devait fournir suffisamment de matière pour un usinage ultérieur tout en restant simple et robuste en atelier. Le plan de joint choisi permet au noyau de rester stable sous l'effet de la gravité sans support supplémentaire à haute température.
+          </p>
+<ul class="fab-list">
+<li>Surépaisseurs d'usinage ajoutées aux surfaces critiques.</li>
+<li>Angles de dépouille intégrés pour un démoulage en toute sécurité.</li>
+<li>Aucun évent n'est nécessaire car le sable est naturellement perméable.</li>
+<li>Aucune contremarche n’a été utilisée car l’épaisseur des parois a été jugée suffisamment uniforme.</li>
+<li>Les trous et les fils ont été intentionnellement fermés pour le moulage.</li>
+</ul>
+</section>
+<article class="fab-span-7 glass-panel fab-media-card">
+<figure>
+<img alt="Modèle CAD du boîtier de roulement de butée à billes" class="fab-contain" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/cad-overview.webp"/>
+<figcaption>La géométrie fonctionnelle utilisée pour identifier les surfaces critiques, les tolérances et les surépaisseurs d'usinage.</figcaption>
+</figure>
+</article>
+<article class="fab-span-6 glass-panel fab-media-card">
+<figure>
+<img alt="Cavité de moule en sable préparée pour le boîtier de roulement" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/foundry-mould.webp"/>
+<figcaption>Le moule en sable préparé et sa cavité centrale avant la coulée.</figcaption>
+</figure>
+</article>
+<article class="fab-span-6 glass-panel fab-media-card">
+<figure>
+<img alt="Ébauche de boîtier de roulement AlSi7 après coulée, avec son canal d'alimentation fixé" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/cast-raw-part.webp"/>
+<figcaption>La pièce brute AlSi7 après démoulage, toujours connectée au système d'alimentation de coulée.</figcaption>
+</figure>
+</article>
+<div class="fab-section-heading">
+<span>02 — Usinage</span>
+<h2>Construire des références précises en deux phases</h2>
+</div>
+<section class="fab-span-5 glass-panel fab-panel fab-copy-card">
+<span class="fab-eyebrow" style="color: #7a8595;">PHASE 100</span>
+<h2>Tournage conventionnel</h2>
+<p>
+            La pièce moulée brute a été maintenue dans des mâchoires dures et alignée avec un indicateur à cadran avant d'usiner les principales surfaces de référence. La surface D a été privilégiée car sa tolérance était plus stricte que les exigences générales ISO 2768-mK appliquées ailleurs.
+          </p>
+<p>
+            L'ancien tour SIM était limité à 2 800 tr/min. Un réglage conservateur de 1 000 tr/min a été choisi pour des raisons de sécurité, en dessous de l'optimum théorique pour les outils choisis, un compromis qui pourrait affecter l'état de surface et la répétabilité.
+          </p>
+</section>
+<article class="fab-span-7 glass-panel fab-media-card">
+<figure>
+<img alt="Pièce moulée brute alignée avec un comparateur à cadran sur un tour SIM conventionnel" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/lathe-alignment.webp"/>
+<figcaption>Alignement du cadran-indicateur sur le tour conventionnel avant de couper les surfaces de référence.</figcaption>
+</figure>
+</article>
+<article class="fab-span-6 glass-panel fab-media-card">
+<figure>
+<img alt="Vue de face de la pièce moulée et du comparateur à cadran dans le mandrin du tour" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/lathe-setup.webp"/>
+<figcaption>Centrer la pièce moulée pour que l'axe de la pièce corresponde à l'axe de la broche.</figcaption>
+</figure>
+</article>
+<section class="fab-span-6 glass-panel fab-panel fab-copy-card">
+<span class="fab-eyebrow" style="color: #7a8595;">PHASE 200</span>
+<h2>CNC contourage et perçage</h2>
+<p>
+            Un dispositif dédié maintenait la position spécifiée pendant que la machine CNC effectuait le contourage, le perçage, le chanfreinage et le taraudage. L'origine était réglée avec un indicateur, et une lubrification abondante contrôlait la chaleur et permettait une finition de surface plus propre.
+          </p>
+<ul class="fab-list">
+<li>Engagement de contour plutôt que fente sur toute la largeur.</li>
+<li>Vitesse de broche adaptée à la limite de 7 500 tr/min de la machine.</li>
+<li>Profondeur de coupe validée au fur et à mesure dans les conditions d'atelier.</li>
+</ul>
+</section>
+<article class="fab-span-4 glass-panel fab-media-card">
+<figure>
+<img alt="Comparateur à cadran utilisé pour établir l'origine de l'usinage CNC" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/machining-origin.webp"/>
+<figcaption>Etablissement de la référence X–Y avant l'usinage CNC.</figcaption>
+</figure>
+</article>
+<article class="fab-span-4 glass-panel fab-media-card">
+<figure>
+<img alt="Ébauche de boîtier de roulement sécurisée dans le support dédié CNC" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/mocn-fixture.webp"/>
+<figcaption>Le dispositif dédié utilisé pour sécuriser et référencer la pièce.</figcaption>
+</figure>
+</article>
+<article class="fab-span-4 glass-panel fab-media-card">
+<figure>
+<img alt="Boîtier de roulement en cours d'usinage sur la machine CNC sous lubrification" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/mocn-machining.webp"/>
+<figcaption>Usinage CNC sous lubrification abondante.</figcaption>
+</figure>
+</article>
+<div class="fab-section-heading">
+<span>03 — Diagnostic</span>
+<h2>Lorsqu'un parcours d'outil correct ne peut pas récupérer une ébauche déficiente</h2>
+</div>
+<article class="fab-span-7 glass-panel fab-media-card">
+<figure>
+<img alt="Boîtier de roulement usiné avec flèches identifiant un manque de matière localisé" class="fab-fit-full" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/casting-defect.webp"/>
+<figcaption>Le manque localisé de surépaisseur d'usinage est visible après la phase 200.</figcaption>
+</figure>
+</article>
+<section class="fab-span-5 glass-panel fab-panel fab-copy-card">
+<h2>Raisonnement par la cause profonde</h2>
+<p>
+            Une surépaisseur insuffisante est apparue dans une zone localisée. Le programme CNC ayant été validé, l'explication principale n'était pas le parcours d'outil lui-même mais la géométrie et le positionnement de l'ébauche coulée.
+          </p>
+<ul class="fab-list">
+<li>Le modèle de coulée ou le noyau nécessite une surépaisseur supplémentaire dans la zone affectée.</li>
+<li>Un décalage du noyau ou du moule peut avoir introduit une asymétrie globale.</li>
+<li>Le référencement en phase 200 pourrait amplifier une erreur déjà présente dans la pièce brute.</li>
+<li>Une vérification des surépaisseurs avant usinage permettrait de détecter le problème avant l'enlèvement de matière critique.</li>
+</ul>
+</section>
+<article class="fab-span-5 glass-panel fab-media-card">
+<figure>
+<img alt="Boîtier de roulement après usinage CNC" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/machined-part.webp"/>
+<figcaption>Le boîtier usiné à la fin de la phase 200.</figcaption>
+</figure>
+</article>
+<section class="fab-span-7 glass-panel fab-panel fab-copy-card">
+<span class="fab-eyebrow" style="color: #7a8595;">// ACTIONS CORRECTIVES</span>
+<h2>Préparer une deuxième itération</h2>
+<ul class="fab-list">
+<li>Augmentez les surépaisseurs d'usinage locales et revalidez la géométrie du noyau.</li>
+<li>Harmoniser le montage, les références et la procédure de mise à l'origine de la phase 200.</li>
+<li>Inspectez l'ébauche avant l'usinage CNC pour confirmer la répartition des surépaisseurs.</li>
+<li>Produisez une deuxième version pour vérifier la répétabilité avant d’envisager un processus en série.</li>
+</ul>
+</section>
+<div class="fab-section-heading">
+<span>04 — Métrologie</span>
+<h2>Transformer les mesures en preuves de fabrication</h2>
+</div>
+<section class="fab-span-7 glass-panel fab-panel">
+<h2>Résultats de l'inspection géométrique</h2>
+<p>
+            Une machine à mesurer les coordonnées a échantillonné chaque élément et reconstruit les éléments géométriques associés. Les résultats montrent que certaines opérations étaient contrôlées, tandis que d'autres révèlent l'effet accumulé de la géométrie du flan et du référencement.
+          </p>
+<div aria-label="Résultats de métrologie en millimètres" class="fab-metrics">
+<article class="fab-metric">
+<div class="fab-metric-topline"><h3>Planéité E</h3><span class="fab-status fab-status-pass">Conforme</span></div>
+<div class="fab-metric-values"><span>Mesuré <strong>0.015</strong></span><span>Limite 0,100 mm</span></div>
+</article>
+<article class="fab-metric">
+<div class="fab-metric-topline"><h3>Cylindricité A</h3><span class="fab-status fab-status-watch">Proche de la limite</span></div>
+<div class="fab-metric-values"><span>Mesuré <strong>0.018</strong></span><span>Limite 0,020 mm</span></div>
+</article>
+<article class="fab-metric">
+<div class="fab-metric-topline"><h3>Perpendicularité</h3><span class="fab-status fab-status-fail">Non conforme</span></div>
+<div class="fab-metric-values"><span>Mesuré <strong>0.116</strong></span><span>Limite 0,100 mm</span></div>
+</article>
+<article class="fab-metric">
+<div class="fab-metric-topline"><h3>Position</h3><span class="fab-status fab-status-fail">Non conforme</span></div>
+<div class="fab-metric-values"><span>Mesuré <strong>0.750</strong></span><span>Limite 0,100 mm</span></div>
+</article>
+</div>
+</section>
+<article class="fab-span-5 glass-panel fab-media-card">
+<figure>
+<img alt="Dessin en coupe avec les spécifications dimensionnelles et géométriques inspectées" class="fab-contain" decoding="async" loading="lazy" onclick="openLightbox(this)" src="../Data_FAB/technical-drawing.webp"/>
+<figcaption>Le dessin en coupe relie chaque mesure à sa surface fonctionnelle et à son système de référence.</figcaption>
+</figure>
+</article>
+<section class="fab-span-12 glass-panel fab-panel fab-conclusion">
+<span class="fab-eyebrow" style="color: #7a8595;">// CLÉ À RETENIR</span>
+<blockquote>
+            La qualité finale ne se construit pas uniquement pendant l’usinage. Elle résulte d’une chaîne cohérente associant conception de la pièce brute, mise en position, conditions de coupe et mesure.
+          </blockquote>
+<p>
+            Le projet a relié un défaut visible et mesuré les non-conformités à leurs causes probables en amont. Cette lecture causale constitue la base de la correction du modèle de coulée, de la sécurisation de la configuration de l’usinage CNC et du passage d'un prototype d'atelier à un processus contrôlé et reproductible.
+          </p>
+</section>
+</div>
+</main>
+</div>
+<script src="../script.js?v=9"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const video = document.getElementById("fab-foundry-video");
+      const toggle = document.getElementById("fab-video-toggle");
+      const icon = toggle ? toggle.querySelector("i") : null;
+      const label = toggle ? toggle.querySelector("span") : null;
+
+      if (!video || !toggle || !icon || !label) return;
+
+      const syncButton = () => {
+        const isPaused = video.paused;
+        icon.className = isPaused ? "fas fa-play" : "fas fa-pause";
+        label.textContent = isPaused ? "Lecture" : "Pause";
+        toggle.setAttribute("aria-label", isPaused ? "Lire la vidéo de coulée" : "Mettre la vidéo de coulée en pause");
+      };
+
+      toggle.addEventListener("click", () => {
+        if (video.paused) {
+          video.play().catch(syncButton);
+        } else {
+          video.pause();
+        }
+      });
+
+      video.addEventListener("play", syncButton);
+      video.addEventListener("pause", syncButton);
+      video.addEventListener("ended", syncButton);
+      syncButton();
+
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        video.play().catch(syncButton);
+      }
+    });
+  </script>
+</body>
+</html>

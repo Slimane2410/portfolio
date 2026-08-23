@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Projets d'ingénierie | Slimane Aouanouk</title><link href="../projects.html" hreflang="en" rel="alternate"/><link href="projects.html" hreflang="fr" rel="alternate"/><link href="../projects.html" hreflang="x-default" rel="alternate"/>
+<link href="../style.css?v=9" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../favicon_io/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../favicon_io/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../favicon_io/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../favicon_io/favicon.ico" rel="icon"/>
+<link href="../favicon_io/site.webmanifest" rel="manifest"/>
+<meta content="#0f1115" name="theme-color"/>
+<style>
+    /* === ANIMATIONS DES CARTES PROJETS === */
+    .project-card-new {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      backface-visibility: hidden;
+    }
+
+    .project-card-new:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5);
+      border-color: #c7ced8;
+    }
+
+    .project-card-new .project-img-container img {
+      transition: transform 0.5s ease;
+    }
+
+    .project-card-new:hover .project-img-container img {
+      transform: scale(1.03);
+    }
+
+    /* === STYLE DU LIEN (TEXTE SEULEMENT) === */
+    .action-link {
+        transition: color 0.3s ease, transform 0.2s ease;
+        text-decoration: none;
+
+        /* COULEUR PAR DÉFAUT : Gris */
+        color: #596170;
+
+        /* SUPPRESSION TOTALE DES BORDURES/FONDS */
+        border: none !important;
+        background: transparent !important;
+        outline: none !important;
+        box-shadow: none !important;
+
+        padding: 5px 0;
+        display: inline-flex;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    /* Règle : Quand on survole la CARTE, le TEXTE devient BLEU */
+    .project-card-new:hover .action-link,
+    .glass-panel:hover .action-link {
+        color: #111827 !important;
+    }
+
+    /* Règle : Au survol direct du LIEN */
+    .action-link:hover {
+        color: #2b3545 !important;
+    }
+
+    /* Effet au CLIC */
+    .action-link:active {
+        transform: scale(0.95);
+        color: #111827 !important;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+    }
+
+    /* Subtle cue that the featured research project is clickable */
+    .project-featured:hover .project-featured-link,
+    .project-featured:focus-within .project-featured-link {
+        color: #ffffff !important;
+        animation: research-link-pulse 0.85s ease-in-out infinite alternate;
+    }
+
+    @keyframes research-link-pulse {
+        from {
+            opacity: 0.58;
+            transform: translateX(0);
+            text-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(4px);
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .project-featured:hover .project-featured-link,
+        .project-featured:focus-within .project-featured-link {
+            animation: none;
+            text-decoration: underline;
+        }
+    }
+  </style>
+</head>
+<body class="homepage">
+<div class="app-layout">
+<aside class="sidebar slide-up">
+<div class="profile-section">
+<a href="index.html" style="text-decoration: none; color: inherit;">
+<span class="logo-text">SA.</span>
+</a>
+<span class="role-text">Élève ingénieur<br/>Arts et Métiers</span>
+</div>
+<nav class="nav-links">
+<a class="nav-item" href="index.html">
+<i class="fas fa-home"></i> Accueil
+        </a>
+<a class="nav-item active" href="projects.html">
+<i class="fas fa-code-branch"></i> Projets
+        </a>
+<a class="nav-item" href="resume.html">
+<i class="fas fa-file-alt"></i> CV
+        </a>
+<a class="nav-item" href="academics.html">
+<i class="fas fa-graduation-cap"></i> Formation
+        </a>
+<a class="nav-item" href="experience.html">
+<i class="fas fa-briefcase"></i> Expérience
+        </a>
+<a class="nav-item" href="beyond.html">
+<i class="fas fa-compass"></i> Au-delà de l’ingénierie
+        </a>
+</nav>
+<div class="sidebar-footer">
+<div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+<a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" onmouseout="this.style.color='#7a8595'" onmouseover="this.style.color='#111827'" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+<!-- <a href="https://github.com/Slimane2410" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"
+             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
+             onmouseover="this.style.color='#111827'"
+             onmouseout="this.style.color='#7a8595'">
+            <i class="fab fa-github"></i>
+          </a> -->
+<a href="mailto:aouanoukslim@gmail.com" onmouseout="this.style.color='#7a8595'" onmouseover="this.style.color='#111827'" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;">
+<i class="fas fa-envelope"></i>
+</a>
+</div>
+<p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+</div>
+</aside>
+<main class="main-content">
+<header class="page-header slide-up delay-1">
+<div>
+<h1 class="page-title">Projets d’ingénierie</h1>
+<p style="color: #94a3b8; margin-top: 5px; font-size: 1rem; max-width: 650px;">
+            Une sélection de mes projets d'ingénierie les plus représentatifs, couvrant l'ingénierie des données, l'intelligence artificielle et les systèmes mécaniques.
+          </p>
+</div>
+</header>
+<!-- Featured Project: Trajectory Optimization for Autonomous Systems -->
+<section class="slide-up delay-2" style="margin-bottom: 50px;">
+<article class="glass-panel project-featured" id="trajectory-optimization">
+<img alt="Rover autonome à côté de l'ordinateur contrôlant le système expérimental" class="project-featured-image system-chain-featured-image" src="../paco-showcase/assets/images/system_chain_v01.jpg"/>
+<div class="project-featured-overlay"></div>
+<div class="project-featured-content">
+<span class="page-subtitle project-featured-eyebrow">
+              // SYSTÈMES AUTONOMES · RECHERCHE
+            </span>
+<h2>Optimisation de trajectoire pour systèmes autonomes</h2>
+<p>
+              Un projet de recherche associant planification variationnelle de trajectoire, évitement des collisions,
+              vision par ordinateur et validation expérimentale en boucle fermée sur un rover autonome.
+            </p>
+<div class="tech-stack-row project-featured-tags">
+<span class="tech-badge">Python</span>
+<span class="tech-badge">SciPy</span>
+<span class="tech-badge">Optimisation numérique</span>
+<span class="tech-badge">Vision par ordinateur</span>
+<span class="tech-badge">Robotique</span>
+<span class="tech-badge">Systèmes autonomes</span>
+</div>
+<a class="action-link project-featured-link" href="../paco-showcase/index.html">
+              Voir le projet de recherche (en anglais)
+            </a>
+</div>
+</article>
+</section>
+<div class="projects-grid slide-up delay-3">
+<!-- Project: Smart Workshop · Data & AI -->
+<article class="project-card-new project-order-22">
+<div class="project-img-container">
+<img alt="Données d'atelier intelligent et tableau de bord IA" src="../img/View_PJT_AI.png"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // INGÉNIERIE DES DONNÉES · LOCAL IA
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Atelier intelligent · Données &amp; IA
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Un atelier FabLab intelligent reposant sur un pipeline de données structuré et un système d’IA entièrement local pour les requêtes Text-to-SQL.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">Python</span>
+<span class="tech-badge">SQL</span>
+<span class="tech-badge">pandas</span>
+<span class="tech-badge">Streamlit</span>
+<span class="tech-badge">IA locale</span>
+</div>
+<a class="action-link" href="project_PJT_AI.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: F1 in Schools – Mini Formula 1 Car -->
+<article class="project-card-new project-order-2">
+<div class="project-img-container">
+<img alt="F1 in Schools – Mini voiture de Formule 1" src="../img/F1_img1.png"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // CONCEPTION MÉCANIQUE · FABRICATION
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Mini Formule 1
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Conception et fabrication de bout en bout d'une voiture miniature de Formule 1 pour une course de 20 m.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">CAD</span>
+<span class="tech-badge">CFD (Bases)</span>
+<span class="tech-badge">Usinage CNC</span>
+<span class="tech-badge">Fabrication</span>
+</div>
+<a class="action-link" href="project_F1.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: FAB — Foundry to Metrology -->
+<article class="project-card-new project-order-6">
+<div class="project-img-container">
+<img alt="Boîtier de roulement AlSi7 après coulée" decoding="async" loading="lazy" src="../Data_FAB/cast-raw-part.webp"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // PRODUCTION · FONDERIE · MÉTROLOGIE
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Projet FAB — Butée à billes
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Industrialisation de bout en bout d'une pièce AlSi7, depuis le moulage sable et l'usinage jusqu'au contrôle géométrique.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">Fabrication</span>
+<span class="tech-badge">Fonderie</span>
+<span class="tech-badge">Usinage CNC</span>
+<span class="tech-badge">Métrologie</span>
+</div>
+<a class="action-link" href="project_FAB.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: Bicopter Elevation Control -->
+<article class="project-card-new project-order-1">
+<div class="project-img-container">
+<img alt="Bicopter de laboratoire utilisé pour le contrôle numérique de l'élévation" src="../img/cnam/bicopter-test-rig.webp" style="object-position: center 59%;"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // INGÉNIERIE DE COMMANDE · MÉCATRONIQUE
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Commande en élévation d’un bicoptère
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Identification expérimentale et contrôle numérique par retour d'état d'un système de laboratoire à double rotor.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">MATLAB / Simulink</span>
+<span class="tech-badge">dSPACE</span>
+<span class="tech-badge">Retour d’état</span>
+<span class="tech-badge">Identification</span>
+</div>
+<a class="action-link" href="project_CNAM.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: Cam-Driven Industrial Capping Machine -->
+<article class="project-card-new">
+<div class="project-img-container">
+<img alt="Mécanisme à cames et rouleaux conçu pour une capsuleuse industrielle" src="../img/capping/elastomer-concept.webp" style="object-position: 24% center;"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // CONCEPTION MÉCANIQUE · OPTIMISATION
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Bouchonneuse industrielle à came
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Synthèse d’un mécanisme came-galet combinant cinématique, mécanique du contact, CAD et exploration de l’espace de conception avec Python.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">CAD</span>
+<span class="tech-badge">Python</span>
+<span class="tech-badge">Contact de Hertz</span>
+<span class="tech-badge">TRIZ</span>
+</div>
+<a class="action-link" href="project_Capping_Machine.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: Rim-Driven Hydraulic Turbine -->
+<article class="project-card-new project-order-3">
+<div class="project-img-container">
+<img alt="Turbine hydraulique entraînée par jante modèle CAD" src="../img/turbine/turbine-cad.webp" style="object-position: center 48%;"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // SYSTÈMES ÉNERGÉTIQUES · MULTIPHYSIQUE
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Turbine hydraulique à entraînement périphérique
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Développement complet d’une turbine, du dimensionnement hydraulique et de la CAD jusqu’à la CFD, au prototypage et à la validation expérimentale.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">CATIA V5</span>
+<span class="tech-badge">Star-CCM+</span>
+<span class="tech-badge">FEM</span>
+<span class="tech-badge">Prototypage</span>
+</div>
+<a class="action-link" href="project_Turbine.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: Plasticity & Limit Analysis -->
+<article class="project-card-new">
+<div class="project-img-container">
+<img alt="Champ de contraintes Abaqus dans un cadre fixe élastoplastique" src="../img/plasticity/abaqus-2d-stress.webp" style="object-fit: contain; background: #ffffff;"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // PLASTICITÉ · ÉLÉMENTS FINIS NON LINÉAIRES
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Plasticité &amp; analyse limite
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Tests d'effondrement expérimentaux comparés aux mécanismes analytiques et aux modèles Abaqus pilotés par Python.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">Python</span>
+<span class="tech-badge">Abaqus</span>
+<span class="tech-badge">Plasticité</span>
+<span class="tech-badge">Analyse limite</span>
+</div>
+<a class="action-link" href="project_Plasticity.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: Aircraft Brake System -->
+<article class="project-card-new project-order-4">
+<div class="project-img-container">
+<img alt="Système de freinage d’avion" src="../img/frein_avion1.jpg"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // SYSTÈMES MÉCANIQUES
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Système de freinage d’avion
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Conception d’un système de freinage d’avion couvrant la modélisation CAD, le dimensionnement et la dissipation d’énergie.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">CAD</span>
+<span class="tech-badge">Conception mécanique</span>
+<span class="tech-badge">Dissipation d'énergie</span>
+<span class="tech-badge">Analyse de sécurité</span>
+</div>
+<a class="action-link" href="project_Aircraft_Brake.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- project Shoulder Implant  -->
+<!-- <article class="project-card-new">
+          <div class="project-img-container">
+            <img src="img/prothese.png" alt="Prosthesis" />
+          </div>
+          <div class="project-body">
+            <span class="page-subtitle" style="font-size: 0.8rem;">// BIOTECH</span>
+            <h3 style="margin-top: 10px; font-size: 1.3rem;">Shoulder Implant Opt.</h3>
+            <p style="font-size: 0.9rem; flex-grow: 1;">
+              Finite Element Analysis (FEA) of the glenoid component. Analyzed contact mechanics to prevent loosening.
+            </p>
+            <div class="tech-stack-row">
+              <span class="tech-badge">FEM Analysis</span>
+              <span class="tech-badge">Biomechanics</span>
+            </div>
+            <a href="#" class="action-link">View Case Study</a>
+          </div>
+        </article> -->
+<!-- Project: FANUC -->
+<article class="project-card-new project-order-5">
+<div class="project-img-container">
+<img alt="Cellule de coulée robotisée FANUC" src="../img/View_Fanuc.png"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // ROBOTIQUE INDUSTRIELLE · AUTOMATISATION
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Cellule robotisée de coulée FANUC
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Conception d'une cellule de coulée robotisée FANUC pour des opérations de fonderie sécurisées et automatisées.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">Robotique industrielle</span>
+<span class="tech-badge">FANUC</span>
+<span class="tech-badge">Conception du système</span>
+</div>
+<a class="action-link" href="project_FANUC.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: Ball Impact Dynamics -->
+<article class="project-card-new project-order-23">
+<div class="project-img-container">
+<img alt="Configuration expérimentale d'impact de balle" src="../img/View_TIPE.png"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // PHYSIQUE · MÉCANIQUE EXPÉRIMENTALE
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Dynamique d’impact d’un ballon
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Analyse expérimentale de la mécanique de l'impact balle-pied à l'aide d'un banc d'essai contrôlé.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">Physique expérimentale</span>
+<span class="tech-badge">Mécanique d'impact</span>
+<span class="tech-badge">Analyse vidéo</span>
+<span class="tech-badge">Modélisation</span>
+</div>
+<a class="action-link" href="project_TIPE.html">Voir l’étude de cas</a>
+</div>
+</article>
+<!-- Project: Butterfly Piezo Speaker -->
+<article class="project-card-new project-order-24">
+<div class="project-img-container">
+<img alt="Vue de face du prototype de haut-parleur piézoélectrique en forme de papillon" src="../img/speaker/speaker-card.webp" style="object-fit: contain; background: #ffffff;"/>
+</div>
+<div class="project-body">
+<span class="page-subtitle" style="font-size: 0.8rem;">
+            // STRUCTURES INTELLIGENTES · PROTOTYPAGE
+          </span>
+<h3 style="margin-top: 10px; font-size: 1.3rem;">
+            Haut-parleur piézoélectrique papillon
+          </h3>
+<p style="font-size: 0.9rem; flex-grow: 1;">
+            Une preuve de concept de haut-parleur stéréo compact construit autour de deux ailes composites actives.
+          </p>
+<div class="tech-stack-row">
+<span class="tech-badge">Composites</span>
+<span class="tech-badge">PZT</span>
+<span class="tech-badge">Abaqus</span>
+<span class="tech-badge">Acoustique</span>
+</div>
+<a class="action-link" href="project_Speaker.html">Voir l’étude de cas</a>
+</div>
+</article>
+</div>
+</main>
+</div>
+<script src="../script.js?v=9"></script>
+</body>
+</html>
