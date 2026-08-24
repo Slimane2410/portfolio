@@ -5,7 +5,7 @@
 - **Purpose:** Canonical, evidence-based source for tailoring resumes, cover letters, internship and job applications, professional biographies, and interview answers. It is a fact bank, not a finished resume.
 - **Generated / last reviewed:** August 23, 2026.
 - **Repository location:** `/Users/slimaneaouanouk/Desktop/Portfolio/Website/Slim portfolio-main/PORTFOLIO_CONTEXT.md`.
-- **Scope:** Current English and French portfolio content; all 12 currently published project case studies; the trajectory-optimization research subsite, reports, and validation artifacts; the user-approved V8 resume dated August 2026; selected original reports, presentations, spreadsheets, code summaries, and detailed TXT files in `/Users/slimaneaouanouk/Desktop/Portfolio/Data`; and the former context file as a comparison baseline.
+- **Scope:** Current English and French portfolio content; all 13 currently published project case studies; the trajectory-optimization research subsite, reports, and validation artifacts; the user-approved V8 resume dated August 2026; selected original reports, presentations, spreadsheets, code summaries, and detailed TXT files in `/Users/slimaneaouanouk/Desktop/Portfolio/Data`; and the former context file as a comparison baseline.
 - **Source hierarchy:** For new technical claims, current repository content and the newest primary technical report/data remain the preferred sources, followed by detailed Data TXT and then the former context file. For preserving existing resume copy, every passage marked `[CV-V8 TRUSTED]` is user-approved, reliable wording that takes priority and must be retained as written unless Slimane explicitly requests a rewrite.
 - **Interpretation:** A requirement is not an outcome; simulation is not physical validation; project scope is not impact; and a team result is not an individual result. When personal work is not partitioned in a team source, use “co-developed” or “team” language.
 - **Evidence labels:** `[VERIFIED]` directly supported; `[VERIFIED BY USER]` directly confirmed by Slimane; `[VERIFIED BY USER AND ETS SCALE]` a user-reported credential whose level mapping was checked against ETS; `[CV-V8 TRUSTED]` exact or faithfully de-hyphenated wording from the August 2026 V8 resume, explicitly approved by Slimane as reliable for reuse without rechecking its figures or expressions; `[INFERENCE]` cautious interpretation; `[TO CONFIRM]` unresolved; `[TEAM RESULT]` team-owned; `[INDIVIDUAL CONTRIBUTION]` explicitly attributed; `[PLANNED]` future work; `[TARGET]` requirement; `[ESTIMATED]` prediction; `[SIMULATED]` numerical output; `[MEASURED]` experiment; `[CALCULATED]` derived here from sourced inputs; `[METRIC TO RETRIEVE/ESTIMATE]` potentially useful but unsupported today.
@@ -196,7 +196,7 @@ The following block records how the two current programs are presented together 
 
 ## 6. Master Project Index
 
-Fifteen substantive projects are retained: the 12 currently published portfolio projects plus three technically relevant Data-only projects. “Shoulder implant optimization” appears only as a commented/asset stub and is excluded pending evidence.
+Sixteen substantive projects are retained: the 13 currently published portfolio projects plus three technically relevant Data-only projects. “Shoulder implant optimization” appears only as a commented/asset stub and is excluded pending evidence.
 
 | Project | Date | Status | Domain/context | Role | Key tools | Strongest defensible metric | Section |
 |---|---|---|---|---|---|---|---|
@@ -213,7 +213,7 @@ Fifteen substantive projects are retained: the 12 currently published portfolio 
 | TIPE football impact mechanics | 2022–24 | Individual study complete | Experimental mechanics | Individual | Python, video tracking | ≈1.2 measured real vs ≈2 ideal speed ratio | [7.11](#711-tipe--football-impact-mechanics) |
 | Aircraft brake | 2025 | Individual preliminary design | Mechanical design | Individual | Fusion 360, Excel | ~3 calculated shaft safety factor | [7.12](#712-aircraft-brake-design) |
 | NACA 2412 CFD | 2024–25 | Academic simulation complete | Aerodynamics/CFD | Team of 4 | Fusion, STAR-CCM+ | Simulated stall ≈18.3° at 15 m/s and ≈17° at 150 m/s | [7.13](#713-naca-2412-airfoil-cfd) |
-| Industrial gear reducer | 2024–25 | Preliminary design complete | Machine design | Team E13; team size not documented | Excel, catalogs | 7 kW; ratio 4.5±4%; ≥22,000 h target | [7.14](#714-industrial-gear-reducer-preliminary-design) |
+| Industrial gear reducer | 2024–25 | Preliminary design complete | Machine design | Team E13; five students | Excel, catalogs | 7 kW; ratio 4.5±4%; ≥22,000 h target | [7.14](#714-industrial-gear-reducer-preliminary-design) |
 | Energy-harvesting gym machine | May 15, 2025 | Preliminary design complete; secondary resume priority | Systems/energy | Team of 5 | FAST, trade studies, SWOT | Five-person team; V5.2 preliminary report | [7.15](#715-energy-harvesting-gym-machine) |
 
 **Comparison with the former context:** The former file contained five substantive projects that remain here—PJT AI (formerly “Smart Workshop”), F1 in Schools, aircraft brake, FANUC cell, and TIPE. This fresh inventory adds ten documented projects: trajectory optimization and physical robot validation, capping machine, hydraulic turbine-generator, plastic-collapse analysis, CNAM bicopter control, FAB manufacturing/metrology, composite speaker, NACA 2412 CFD, industrial gear reducer, and energy-harvesting gym machine. The former planned “Data-Driven Reduced-Order Mechanical Model” is excluded as a completed project because no current deliverable supports that status.
@@ -1213,7 +1213,7 @@ Story: narrowing the parameter sweep near a nonlinear transition. Date is user-c
 
 #### Project overview
 
-- Team E13 preliminary design, 2024–25 `[VERIFIED BY USER]`; exact team size is not documented.
+- Team E13 preliminary design, 2024–25 `[VERIFIED BY USER]`; five students are listed on the report cover.
 - Objective: define a mount-ready industrial reduction gearbox transmitting 7 kW at ratio 4.5±4% with at least 22,000 h target life, sealing, maintainability, low cost, and reasonable size.
 
 #### Requirements and constraints
@@ -1226,7 +1226,7 @@ Used functional/FAST analysis and trade matrices; selected a clevis-type housing
 
 #### Individual contribution
 
-`[TEAM RESULT]` Team E13; Slimane is associated with the report, but individual work and team count are missing.
+`[TEAM RESULT]` Team E13; the report lists Slimane Aouanouk, Abderrahmane Boukhad, Fatima Zahra Mehjoubi, Eloi Moroldo, and Youssef Mrani. Individual work is not partitioned in the source.
 
 #### Tools, technologies, and equipment
 
@@ -1276,7 +1276,7 @@ Machine design, gearboxes, spur gears, shaft sizing, bearings, seals, lubricatio
 
 #### Interview evidence / Open points / Project sources
 
-Story: system-level sequencing from need to interfaces. Confirm team/date/role, final ratio, safety factors, and detailed verification. Source: `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Avant Projet Reducteur /avant projet réducteur.txt`.
+Story: system-level sequencing from need to interfaces. Confirm individual role, final ratio, safety factors, and detailed verification. Sources: `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Avant Projet Reducteur /E13 - Rapport Réducteur - Avant-projet - V3.docx`, `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Avant Projet Reducteur /E13 - Rapport Réducteur - Avant-projet - V3 PDF.pdf`, and `/Users/slimaneaouanouk/Desktop/Portfolio/Data/Projects:internship/1A_Avant Projet Reducteur /avant projet réducteur.txt`.
 
 ### 7.15 Energy-Harvesting Gym Machine
 

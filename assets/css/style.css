@@ -3549,3 +3549,286 @@ p {
     padding: 5px;
   }
 }
+
+/* === INDUSTRIAL GEAR REDUCER CASE STUDY === */
+.reducer-page {
+  --reducer-accent: #d16b36;
+  --reducer-ink: #17202e;
+  scroll-behavior: smooth;
+}
+
+.reducer-hero {
+  background: #17202e;
+}
+
+.reducer-hero > img {
+  object-fit: cover;
+  object-position: 47% center;
+  filter: grayscale(0.08) contrast(1.08) saturate(0.78);
+}
+
+.reducer-hero .turbine-hero-overlay {
+  background:
+    linear-gradient(90deg, rgba(12, 20, 31, 0.97) 0%, rgba(12, 20, 31, 0.9) 39%, rgba(12, 20, 31, 0.34) 70%, rgba(12, 20, 31, 0.12) 100%),
+    linear-gradient(0deg, rgba(12, 20, 31, 0.72), transparent 58%);
+}
+
+.reducer-page .turbine-eyebrow {
+  color: #ffd5bd;
+}
+
+.reducer-page .turbine-button-primary:hover {
+  background: #fff0e7;
+}
+
+.reducer-page .turbine-figure {
+  border-color: #d9dfe6;
+}
+
+.reducer-page .turbine-figure .turbine-media-button {
+  height: 410px;
+  padding: 18px;
+  background: #f7f8fa;
+}
+
+.reducer-page .turbine-figure img {
+  object-fit: contain;
+}
+
+.reducer-gallery-architecture > :first-child {
+  grid-column: span 5;
+}
+
+.reducer-gallery-architecture > :nth-child(2) {
+  grid-column: span 7;
+}
+
+.reducer-gallery-choice > *,
+.reducer-gallery-housing > * {
+  grid-column: span 6;
+}
+
+.reducer-gallery-choice .turbine-media-button {
+  height: 430px;
+}
+
+.reducer-gallery-gear > :first-child {
+  grid-column: span 4;
+}
+
+.reducer-gallery-gear > :nth-child(2) {
+  grid-column: span 8;
+}
+
+.reducer-gallery-gear > :first-child .turbine-media-button {
+  background: #ffffff;
+}
+
+.reducer-gallery-shafts > :first-child {
+  grid-column: span 4;
+}
+
+.reducer-gallery-shafts > :nth-child(2) {
+  grid-column: span 8;
+}
+
+.reducer-gallery-shafts > :nth-child(3),
+.reducer-gallery-shafts > :nth-child(4) {
+  grid-column: span 6;
+}
+
+.reducer-bearing-card .turbine-media-button {
+  height: 330px !important;
+}
+
+.reducer-spec-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+  margin-top: 20px;
+  border: 1px solid #d9dee5;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.reducer-spec-strip div {
+  display: flex;
+  min-height: 112px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px 24px;
+  border-right: 1px solid #e2e6eb;
+}
+
+.reducer-spec-strip div:last-child {
+  border-right: 0;
+}
+
+.reducer-spec-strip span {
+  color: #788394;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.reducer-spec-strip strong {
+  margin-top: 5px;
+  color: var(--reducer-ink);
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.05rem, 1.8vw, 1.5rem);
+  letter-spacing: -0.025em;
+}
+
+.reducer-result-callout {
+  background: linear-gradient(120deg, #17202e 0%, #253349 100%);
+}
+
+.reducer-result-callout strong {
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+}
+
+.reducer-integration-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(330px, 0.65fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.reducer-integration-grid .turbine-figure .turbine-media-button {
+  height: 690px;
+  padding: 8px;
+  background: #ffffff;
+}
+
+.reducer-integration-grid .turbine-figure figcaption {
+  min-height: 126px;
+}
+
+.reducer-integration-wide {
+  grid-column: 1 / -1;
+}
+
+.reducer-integration-wide .turbine-media-button {
+  height: min(72vw, 860px) !important;
+}
+
+.reducer-limit-note {
+  margin: 20px 0 0;
+  padding: 20px 24px;
+  border-left: 4px solid var(--reducer-accent);
+  border-radius: 0 10px 10px 0;
+  background: #fff7f2;
+  color: #626e7d;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.reducer-limit-note strong {
+  color: var(--reducer-ink);
+}
+
+.reducer-report-cta {
+  background: linear-gradient(120deg, #17202e 0%, #28384e 100%);
+}
+
+@media (max-width: 1100px) {
+  .reducer-gallery-architecture > *,
+  .reducer-gallery-architecture > :first-child,
+  .reducer-gallery-architecture > :nth-child(2),
+  .reducer-gallery-gear > *,
+  .reducer-gallery-gear > :first-child,
+  .reducer-gallery-gear > :nth-child(2),
+  .reducer-gallery-shafts > :first-child,
+  .reducer-gallery-shafts > :nth-child(2) {
+    grid-column: span 6;
+  }
+
+  .reducer-integration-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .reducer-integration-grid .turbine-figure .turbine-media-button {
+    height: 580px;
+  }
+}
+
+@media (max-width: 900px) {
+  .reducer-hero > img {
+    object-position: 52% center;
+  }
+
+  .reducer-hero .turbine-hero-overlay {
+    background: linear-gradient(0deg, rgba(12, 20, 31, 0.98) 0%, rgba(12, 20, 31, 0.84) 64%, rgba(12, 20, 31, 0.42) 100%);
+  }
+
+  .reducer-gallery-architecture > *,
+  .reducer-gallery-architecture > :first-child,
+  .reducer-gallery-architecture > :nth-child(2),
+  .reducer-gallery-choice > *,
+  .reducer-gallery-gear > *,
+  .reducer-gallery-gear > :first-child,
+  .reducer-gallery-gear > :nth-child(2),
+  .reducer-gallery-shafts > *,
+  .reducer-gallery-shafts > :first-child,
+  .reducer-gallery-shafts > :nth-child(2),
+  .reducer-gallery-shafts > :nth-child(3),
+  .reducer-gallery-shafts > :nth-child(4),
+  .reducer-gallery-housing > * {
+    grid-column: 1 / -1;
+  }
+
+  .reducer-page .turbine-figure .turbine-media-button,
+  .reducer-gallery-choice .turbine-media-button,
+  .reducer-bearing-card .turbine-media-button {
+    height: min(68vw, 500px) !important;
+  }
+
+  .reducer-spec-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reducer-spec-strip div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .reducer-spec-strip div:nth-child(-n+2) {
+    border-bottom: 1px solid #e2e6eb;
+  }
+
+  .reducer-integration-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reducer-integration-wide {
+    grid-column: auto;
+  }
+
+  .reducer-integration-grid .turbine-figure .turbine-media-button,
+  .reducer-integration-wide .turbine-media-button {
+    height: min(112vw, 720px) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .reducer-page .turbine-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .reducer-page .turbine-figure .turbine-media-button,
+  .reducer-gallery-choice .turbine-media-button,
+  .reducer-bearing-card .turbine-media-button {
+    height: 300px !important;
+    padding: 10px;
+  }
+
+  .reducer-integration-grid .turbine-figure .turbine-media-button,
+  .reducer-integration-wide .turbine-media-button {
+    height: 430px !important;
+    padding: 4px;
+  }
+
+  .reducer-spec-strip div {
+    min-height: 98px;
+    padding: 18px;
+  }
+}

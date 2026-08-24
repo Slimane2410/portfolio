@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2D682VTWG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M2D682VTWG');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Avant-projet d’un réducteur industriel de 7 kW, du cahier des charges et de l’architecture au prédimensionnement et à l’intégration de l’ensemble." />
+  <title>Réducteur industriel | Slimane Aouanouk</title>
+  <link rel="alternate" hreflang="en" href="../../en/projects/reducer.html" />
+  <link rel="alternate" hreflang="fr" href="reducer.html" />
+  <link rel="alternate" hreflang="x-default" href="../../en/projects/reducer.html" />
+
+  <link rel="stylesheet" href="../../assets/css/style.css?v=10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png" />
+  <link rel="icon" href="../../assets/icons/favicon.ico" />
+  <link rel="manifest" href="../../assets/icons/site.webmanifest" />
+  <meta name="theme-color" content="#0f1115" />
+</head>
+
+<body class="homepage turbine-page reducer-page">
+  <div class="app-layout">
+    <aside class="sidebar slide-up">
+      <div class="profile-section">
+        <a href="../index.html" style="text-decoration: none; color: inherit;"><span class="logo-text">SA.</span></a>
+        <span class="role-text">Élève ingénieur<br>Arts et Métiers</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-item"><i class="fas fa-home"></i> Accueil</a>
+        <a href="../projects.html" class="nav-item active"><i class="fas fa-code-branch"></i> Projets</a>
+        <a href="../resume.html" class="nav-item"><i class="fas fa-file-alt"></i> CV</a>
+        <a href="../academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Formation</a>
+        <a href="../experience.html" class="nav-item"><i class="fas fa-briefcase"></i> Expérience</a>
+        <a href="../beyond.html" class="nav-item"><i class="fas fa-compass"></i> Au-delà de l’ingénierie</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+          <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank" rel="noopener noreferrer" aria-label="Voir mon profil LinkedIn" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:aouanoukslim@gmail.com" aria-label="Envoyer un e-mail à Slimane Aouanouk" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+      </div>
+    </aside>
+
+    <main class="main-content turbine-main">
+      <div class="slide-up delay-1 turbine-back-link">
+        <a href="../projects.html"><i class="fas fa-arrow-left"></i> RETOUR AUX PROJETS</a>
+      </div>
+
+      <header class="turbine-hero reducer-hero slide-up delay-1">
+        <img src="../../assets/images/projects/reducer/assembly-section.webp" alt="Coupe de l’avant-projet du réducteur industriel" fetchpriority="high" />
+        <div class="turbine-hero-overlay"></div>
+        <div class="turbine-hero-content">
+          <span class="turbine-eyebrow">// CONCEPTION DE MACHINES · AVANT-PROJET</span>
+          <h1>Réducteur industriel</h1>
+          <p>Un avant-projet système reliant cahier des charges, engrenage droit, arbres, roulements, étanchéité, lubrification et conception d’un carter prêt à intégrer.</p>
+          <div class="turbine-hero-actions">
+            <a class="turbine-button turbine-button-primary" href="../../assets/documents/projects/reducer/e13-rapport-reducteur-avant-projet-v3-fr.pdf" download="E13-Rapport-Reducteur-Avant-Projet-V3-FR.pdf">
+              <i class="fas fa-download"></i> Télécharger le rapport complet (FR)
+            </a>
+            <a class="turbine-button turbine-button-secondary" href="#integrated-design">Explorer l’ensemble <i class="fas fa-arrow-down"></i></a>
+          </div>
+        </div>
+      </header>
+
+      <section class="turbine-metrics slide-up delay-2" aria-label="Chiffres clés du projet">
+        <article><strong>7 kW</strong><span>puissance à transmettre</span></article>
+        <article><strong>4,5</strong><span>rapport de réduction</span></article>
+        <article><strong>1 500 tr/min</strong><span>vitesse d’entrée</span></article>
+        <article><strong>≥22 000 h</strong><span>durée de vie visée</span></article>
+      </section>
+
+      <section class="turbine-intro glass-panel slide-up delay-2">
+        <div>
+          <span class="turbine-section-index">01 · MISSION</span>
+          <h2>Transformer une exigence en machine cohérente</h2>
+        </div>
+        <p>
+          Cette étude en équipe développe un avant-projet détaillé, et non un réducteur validé pour la production. La démarche part de l’analyse fonctionnelle et des compromis d’architecture pour aboutir aux dimensions calculées, aux composants standards, aux fonctions de maintenance et à un croquis d’ensemble complet.
+        </p>
+      </section>
+
+      <section class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">02 · ARCHITECTURE SYSTÈME</span>
+          <h2>Définir les frontières avant de dimensionner les pièces</h2>
+        </div>
+
+        <div class="turbine-gallery reducer-gallery-architecture">
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir le schéma du périmètre du réducteur">
+              <img src="../../assets/images/projects/reducer/system-boundary.webp" alt="Réducteur placé entre le moteur et le récepteur avec les accouplements d’entrée et de sortie" loading="lazy" />
+            </button>
+            <figcaption><strong>Périmètre du système</strong><span>Le réducteur est isolé du moteur, du récepteur et des accouplements tout en conservant leurs interfaces de montage.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir l’architecture générale du réducteur">
+              <img src="../../assets/images/projects/reducer/system-architecture.webp" alt="Schéma de face et de côté du réducteur avec les arbres d’entrée, de sortie et les engrenages droits" loading="lazy" />
+            </button>
+            <figcaption><strong>Architecture générale</strong><span>Deux arbres parallèles et un étage d’engrenages droits assurent le rapport 4,5.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">03 · COMPROMIS DE CONCEPTION</span>
+          <h2>Maintenir l’alignement des dentures sous charge</h2>
+        </div>
+
+        <div class="turbine-gallery reducer-gallery-choice">
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Comparer les architectures en porte-à-faux et en chape">
+              <img src="../../assets/images/projects/reducer/mounting-options.webp" alt="Comparaison des montages en porte-à-faux et en chape pour les engrenages et roulements" loading="lazy" />
+            </button>
+            <figcaption><strong>Deux architectures candidates</strong><span>Le porte-à-faux facilite l’accès ; le montage en chape soutient chaque engrenage des deux côtés.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir la comparaison des déformées d’arbres">
+              <img src="../../assets/images/projects/reducer/mounting-deflection.webp" alt="Comparaison des déformées d’arbres montrant le meilleur alignement obtenu avec le montage en chape" loading="lazy" />
+            </button>
+            <figcaption><strong>Choix : montage en chape</strong><span>Le support par roulements de chaque côté limite la pente des arbres et le désalignement des dents.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">04 · ENGRENAGE</span>
+          <h2>Dimensionner, vérifier, puis supprimer la largeur superflue</h2>
+        </div>
+
+        <div class="turbine-gallery reducer-gallery-gear">
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir le tableau de choix du module d’engrenage">
+              <img src="../../assets/images/projects/reducer/gear-options.webp" alt="Tableau de choix du module et des nombres de dents mettant en évidence le module 5 et les 12 et 54 dents" loading="lazy" />
+            </button>
+            <figcaption><strong>Choix de la géométrie</strong><span>Le module 5 et les 12/54 dents donnent exactement le rapport 4,5.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir la vérification optimisée de l’engrenage">
+              <img src="../../assets/images/projects/reducer/gear-validation.webp" alt="Logiciel de vérification montrant la largeur optimisée à 42 millimètres et la puissance admissible" loading="lazy" />
+            </button>
+            <figcaption><strong>Vérifié après optimisation</strong><span>La denture est ramenée à 42 mm tout en conservant une puissance admissible supérieure aux 7 kW exigés.</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="reducer-spec-strip" aria-label="Géométrie retenue pour l’engrenage">
+          <div><span>Matériau</span><strong>35CrMo4</strong></div>
+          <div><span>Diamètres primitifs</span><strong>60 / 270 mm</strong></div>
+          <div><span>Nombre de dents</span><strong>12 / 54</strong></div>
+          <div><span>Largeur</span><strong>42 mm</strong></div>
+        </div>
+      </section>
+
+      <section class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">05 · ARBRES &amp; COMPOSANTS STANDARDS</span>
+          <h2>Transmettre les efforts par des interfaces fabricables</h2>
+        </div>
+
+        <div class="turbine-gallery reducer-gallery-shafts">
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir le modèle de flexion et de torsion de l’arbre">
+              <img src="../../assets/images/projects/reducer/shaft-load-diagram.webp" alt="Diagrammes de moment fléchissant et de moment de torsion utilisés pour dimensionner les arbres" loading="lazy" />
+            </button>
+            <figcaption><strong>Modèle flexion + torsion</strong><span>Les réactions des roulements et les efforts de denture définissent les deux zones critiques.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir le tableur de dimensionnement des arbres">
+              <img src="../../assets/images/projects/reducer/shaft-sizing-sheet.webp" alt="Tableur calculant les diamètres minimaux des arbres d’entrée et de sortie à partir des efforts de denture" loading="lazy" />
+            </button>
+            <figcaption><strong>Diamètres minimaux calculés</strong><span>Zones d’entrée : 19/21 mm. Zones de sortie : 32/32 mm.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure reducer-bearing-card">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir la sélection du roulement d’entrée">
+              <img src="../../assets/images/projects/reducer/input-bearing-selection.webp" alt="Comparaison catalogue SKF mettant en évidence le roulement 6005 pour l’arbre d’entrée" loading="lazy" />
+            </button>
+            <figcaption><strong>Roulement d’entrée</strong><span>Roulement radial à billes 6005, alésage 25 mm.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure reducer-bearing-card">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir la sélection du roulement de sortie">
+              <img src="../../assets/images/projects/reducer/output-bearing-selection.webp" alt="Comparaison catalogue SKF mettant en évidence le roulement 61909 pour l’arbre de sortie" loading="lazy" />
+            </button>
+            <figcaption><strong>Roulement de sortie</strong><span>Roulement radial à billes 61909, alésage 45 mm.</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">06 · CARTER &amp; LUBRIFICATION</span>
+          <h2>Concevoir pour la durée de vie, l’étanchéité et la maintenance</h2>
+        </div>
+
+        <div class="turbine-gallery reducer-gallery-housing">
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir le tableau de choix de l’huile">
+              <img src="../../assets/images/projects/reducer/lubrication-selection.webp" alt="Tableau de choix d’huile selon le diamètre, la vitesse et la charge linéaire de l’engrenage" loading="lazy" />
+            </button>
+            <figcaption><strong>Lubrification par barbotage</strong><span>L’huile assure distribution et refroidissement avec un volume minimal calculé d’environ 0,48 L.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir le diagramme de choix du matériau du carter">
+              <img src="../../assets/images/projects/reducer/material-selection.webp" alt="Diagramme d’Ashby comparant fonte grise et alliages d’aluminium et de magnésium pour le carter" loading="lazy" />
+            </button>
+            <figcaption><strong>Carter en fonte</strong><span>La tenue en fatigue et le coût conduisent à un carter moulé au sable d’épaisseur préliminaire 8 mm.</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="turbine-result-callout reducer-result-callout">
+          <div><span>Concept de maintenance</span><strong>Remplir · contrôler · vidanger</strong></div>
+          <p>Étanchéités statique et dynamique, jauge d’huile, bouchons, pieds boulonnés et extrémités d’arbres aménagées sont intégrés au même concept.</p>
+        </div>
+      </section>
+
+      <section id="integrated-design" class="turbine-section slide-up">
+        <div class="turbine-section-heading">
+          <span class="turbine-section-index">07 · CONCEPT INTÉGRÉ</span>
+          <h2>Réunir chaque décision locale dans un ensemble</h2>
+        </div>
+
+        <div class="reducer-integration-grid">
+          <figure class="turbine-figure reducer-integration-primary">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir la coupe complète du réducteur">
+              <img src="../../assets/images/projects/reducer/assembly-section.webp" alt="Coupe complète du réducteur avec engrenages, arbres, roulements, joints, carter et couvercle" loading="lazy" />
+            </button>
+            <figcaption><strong>Coupe complète</strong><span>Engrenage, arbres, roulements, étanchéités, couvercle et carter sont résolus sur un même croquis préliminaire à l’échelle 1:1.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir la vue de face du carter">
+              <img src="../../assets/images/projects/reducer/housing-front-view.webp" alt="Vue de face du carter avec enveloppes d’engrenages, vis, remplissage et pieds" loading="lazy" />
+            </button>
+            <figcaption><strong>Vue de face du carter</strong><span>Enveloppes des roues, visserie, remplissage, centrage et fixation au sol sont positionnés ensemble.</span></figcaption>
+          </figure>
+
+          <figure class="turbine-figure reducer-integration-wide">
+            <button class="turbine-media-button" type="button" onclick="openLightbox(this.querySelector('img'))" aria-label="Agrandir l’ensemble annoté du réducteur">
+              <img src="../../assets/images/projects/reducer/annotated-assembly.webp" alt="Coupe annotée du réducteur montrant les surfaces fonctionnelles et les interfaces des composants" loading="lazy" />
+            </button>
+            <figcaption><strong>Surfaces fonctionnelles</strong><span>La vue annotée prépare le passage de l’avant-projet aux tolérances détaillées et à la définition de fabrication.</span></figcaption>
+          </figure>
+        </div>
+
+        <p class="reducer-limit-note"><strong>Périmètre :</strong> avant-projet calculé. La fatigue détaillée, la thermique, les vibrations, les tolérances, le coût et la validation physique restent des phases ultérieures.</p>
+      </section>
+
+      <section class="turbine-report-cta reducer-report-cta slide-up">
+        <div>
+          <span class="turbine-section-index">DOCUMENTATION DU PROJET</span>
+          <h2>Lire le rapport complet d’avant-projet</h2>
+          <p>Le rapport technique complet de 54 pages est disponible en français.</p>
+        </div>
+        <a class="turbine-button turbine-button-primary" href="../../assets/documents/projects/reducer/e13-rapport-reducteur-avant-projet-v3-fr.pdf" download="E13-Rapport-Reducteur-Avant-Projet-V3-FR.pdf">
+          <i class="fas fa-download"></i> Télécharger le rapport complet (FR)
+        </a>
+      </section>
+    </main>
+  </div>
+
+  <script src="../../assets/js/script.js?v=9"></script>
+</body>
+</html>
