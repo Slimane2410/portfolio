@@ -611,6 +611,38 @@
     if (reducedMotion) video.pause();
   });
 
+  // Load deferred video sources shortly before they enter the viewport.
+  const loadDeferredVideo = (video) => {
+    video.querySelectorAll("source[data-src]").forEach((source) => {
+      source.src = source.dataset.src;
+      source.removeAttribute("data-src");
+    });
+    video.load();
+  };
+
+  const deferredVideos = [
+    ...new Set(
+      [...document.querySelectorAll("video source[data-src]")]
+        .map((source) => source.closest("video"))
+        .filter(Boolean),
+    ),
+  ];
+  if ("IntersectionObserver" in window) {
+    const lazyVideoObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          loadDeferredVideo(entry.target);
+          observer.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "200px" },
+    );
+    deferredVideos.forEach((video) => lazyVideoObserver.observe(video));
+  } else {
+    deferredVideos.forEach(loadDeferredVideo);
+  }
+
   const languageDialog = document.querySelector("[data-language-dialog]");
   const closeLanguageDialog = () => {
     languageDialog?.classList.add("is-hidden");
