@@ -611,6 +611,26 @@
     if (reducedMotion) video.pause();
   });
 
+  // Lazy-load videos: swap data-src → src only when the video enters the viewport.
+  const lazyVideoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const video = entry.target;
+        video.querySelectorAll("source[data-src]").forEach((source) => {
+          source.src = source.dataset.src;
+          source.removeAttribute("data-src");
+        });
+        video.load();
+        lazyVideoObserver.unobserve(video);
+      });
+    },
+    { rootMargin: "200px" },
+  );
+  document.querySelectorAll("video source[data-src]").forEach((source) => {
+    lazyVideoObserver.observe(source.closest("video"));
+  });
+
   const languageDialog = document.querySelector("[data-language-dialog]");
   const closeLanguageDialog = () => {
     languageDialog?.classList.add("is-hidden");

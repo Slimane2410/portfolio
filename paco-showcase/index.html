@@ -120,6 +120,7 @@
               muted
               loop
               playsinline
+              preload="metadata"
               poster="assets/images/fixed_obstacle_geometry_v01.jpg"
               aria-label="Mother rover in the test arena, alongside parasite rovers and fixed obstacles"
             >
@@ -528,14 +529,14 @@
 
           <div class="trial-video-pair reveal" aria-label="Video recordings of the physical anti-collision runs">
             <figure>
-              <video controls muted playsinline poster="assets/images/fixed_obstacle_geometry_v01.jpg">
-                <source src="assets/video/anticollision_multi_agent_v01.mp4" type="video/mp4" />
+              <video controls muted playsinline preload="none" poster="assets/images/fixed_obstacle_geometry_v01.jpg">
+                <source data-src="assets/video/anticollision_multi_agent_v01.mp4" type="video/mp4" />
               </video>
               <figcaption><span><b>Multi-agent run</b> · mother rover among moving robots</span></figcaption>
             </figure>
             <figure>
-              <video controls muted playsinline poster="assets/images/arena_overview_v01.jpg">
-                <source src="assets/video/anticollision_moving_agent_v01.mp4" type="video/mp4" />
+              <video controls muted playsinline preload="none" poster="assets/images/arena_overview_v01.jpg">
+                <source data-src="assets/video/anticollision_moving_agent_v01.mp4" type="video/mp4" />
               </video>
               <figcaption><span><b>Close pass</b> · avoidance of a moving robot</span></figcaption>
             </figure>
@@ -556,8 +557,8 @@
             </div>
             <figure class="sim-figure">
               <div class="sim-video-shell">
-                <video controls muted playsinline poster="assets/images/anticollision_6robot_v01.jpg">
-                  <source src="assets/video/phase5_bis.1_solver_scipy_test_anticollision_1.mp4" type="video/mp4" />
+                <video controls muted playsinline preload="none" poster="assets/images/anticollision_6robot_v01.jpg">
+                  <source data-src="assets/video/phase5_bis.1_solver_scipy_test_anticollision_1.mp4" type="video/mp4" />
                 </video>
               </div>
               <figcaption><span class="sim-label">Simulation</span><span>6-robot decentralized anti-collision</span></figcaption>
@@ -656,8 +657,8 @@
           </div>
           <div class="media-mosaic">
             <figure class="mosaic-wide reveal">
-              <video controls muted playsinline poster="assets/images/arena_overview_v01.jpg">
-                <source src="assets/video/validation_fixed_obstacle_full_v01.mp4" type="video/mp4" />
+              <video controls muted playsinline preload="none" poster="assets/images/arena_overview_v01.jpg">
+                <source data-src="assets/video/validation_fixed_obstacle_full_v01.mp4" type="video/mp4" />
               </video>
               <figcaption><span><b>V02</b> Full arena run</span></figcaption>
             </figure>
@@ -676,14 +677,14 @@
               <figcaption><span><b>V03</b> Metric ArUco tracking</span><span class="evidence-label">Field footage</span></figcaption>
             </figure>
             <figure class="reveal" data-delay="1">
-              <video controls muted playsinline poster="assets/figures/simulation_lagrange_newton_source.png">
-                <source src="assets/video/simulation_lagrange_newton_v01.mp4" type="video/mp4" />
+              <video controls muted playsinline preload="none" poster="assets/figures/simulation_lagrange_newton_source.png">
+                <source data-src="assets/video/simulation_lagrange_newton_v01.mp4" type="video/mp4" />
               </video>
               <figcaption><span><b>V04</b> Nominal to causal correction</span><span class="sim-label">Simulation</span></figcaption>
             </figure>
             <figure class="reveal" data-delay="2">
-              <video controls muted playsinline poster="assets/images/system_chain_v01.jpg">
-                <source src="assets/video/screen_to_rover_handoff_v01.mp4" type="video/mp4" />
+              <video controls muted playsinline preload="none" poster="assets/images/system_chain_v01.jpg">
+                <source data-src="assets/video/screen_to_rover_handoff_v01.mp4" type="video/mp4" />
               </video>
               <figcaption><span><b>V05</b> Screen-to-rover handoff</span><span class="evidence-label">Field footage</span></figcaption>
             </figure>
