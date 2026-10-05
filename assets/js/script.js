@@ -1,6 +1,7 @@
 /* script.js - Dashboard layout and bilingual portfolio navigation */
 
 const PORTFOLIO_LANGUAGE_KEY = "portfolio-language";
+let lightboxTrigger = null;
 
 function isFrenchPortfolioPage() {
   return window.location.pathname.split("/").filter(Boolean).includes("fr");
@@ -114,12 +115,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const lightboxDiv = document.createElement('div');
     lightboxDiv.id = 'lightbox';
     lightboxDiv.style.display = 'none'; // Caché par défaut
+    lightboxDiv.setAttribute('role', 'dialog');
+    lightboxDiv.setAttribute('aria-modal', 'true');
+    lightboxDiv.setAttribute('aria-hidden', 'true');
+    lightboxDiv.setAttribute('aria-label', language === 'fr' ? 'Image agrandie' : 'Enlarged image');
     
     // Structure HTML de la lightbox
     lightboxDiv.innerHTML = `
       <div class="lightbox-overlay" onclick="closeLightbox()"></div>
       <div class="lightbox-content">
-        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <button type="button" class="close-lightbox" onclick="closeLightbox()" aria-label="${language === 'fr' ? 'Fermer l’image' : 'Close image'}">&times;</button>
         <img id="lightbox-img" src="" alt="${language === 'fr' ? 'Vue agrandie' : 'Full view'}">
       </div>
     `;
@@ -132,10 +137,17 @@ document.addEventListener("DOMContentLoaded", function() {
       .lightbox-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(5px); }
       .lightbox-content { position: relative; z-index: 1001; max-width: 90%; max-height: 90%; }
       #lightbox-img { max-width: 100%; max-height: 85vh; border-radius: 8px; box-shadow: 0 0 30px rgba(56, 189, 248, 0.2); border: 1px solid #334155; }
-      .close-lightbox { position: absolute; top: -40px; right: 0; color: #fff; font-size: 2rem; cursor: pointer; transition: color 0.3s; }
+      .close-lightbox { position: absolute; top: -40px; right: 0; color: #fff; font-size: 2rem; cursor: pointer; transition: color 0.3s; background: transparent; border: 0; }
       .close-lightbox:hover { color: #38bdf8; }
     `;
     document.head.appendChild(style);
+    lightboxDiv.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeLightbox();
+      if (event.key === 'Tab') {
+        event.preventDefault();
+        lightboxDiv.querySelector('.close-lightbox').focus();
+      }
+    });
   }
   
   // Petit clin d'oeil console pour faire pro
@@ -154,12 +166,16 @@ function openLightbox(element) {
   const imgBox = document.getElementById("lightbox-img");
   
   if(lightbox && imgBox) {
+    lightboxTrigger = document.activeElement;
     // Si l'élément passé est une image, on prend son src
     // Sinon on cherche si l'utilisateur a passé une URL (string)
     const src = element.src ? element.src : element;
     
     imgBox.src = src;
+    if (element.alt) imgBox.alt = element.alt;
     lightbox.style.display = "flex";
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightbox.querySelector('.close-lightbox').focus();
     
     // Animation d'entrée
     imgBox.style.transform = "scale(0.9)";
@@ -177,6 +193,8 @@ function closeLightbox() {
   const lightbox = document.getElementById("lightbox");
   if(lightbox) {
     lightbox.style.display = "none";
+    lightbox.setAttribute('aria-hidden', 'true');
+    if (lightboxTrigger) lightboxTrigger.focus();
   }
 }
 

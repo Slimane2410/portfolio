@@ -18,7 +18,7 @@
   <link rel="alternate" hreflang="x-default" href="f1.html" />
 
   <!-- Core styles and icon fonts -->
-  <link rel="stylesheet" href="../../assets/css/style.css?v=9" />
+  <link rel="stylesheet" href="../../assets/css/style.css?v=10" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -312,32 +312,7 @@
 
         </div>
 
-        <div class="col-4 glass-panel slide-up delay-2">
-          <h3 style="margin-bottom: 20px; color: #94a3b8; font-size: 0.9rem;">// TOOLS AND METHODS</h3>
-
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
-              <span>Fusion 360 (CAD/CAM)</span>
-              <i class="fas fa-cube" style="color: #38bdf8;"></i>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
-              <span>Star-CCM+ (CFD)</span>
-              <i class="fas fa-wind" style="color: #f59e0b;"></i>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
-              <span>3D Printing</span>
-              <i class="fas fa-print" style="color: #10b981;"></i>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
-              <span>CNC Machining</span>
-              <i class="fas fa-industry" style="color: #e879f9;"></i>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: rgba(0,0,0,0.2); border-radius: 4px;">
-              <span>Dimensional Control</span>
-              <i class="fas fa-ruler-combined" style="color: #60a5fa;"></i>
-            </div>
-          </div>
-        </div>
+        <aside class="project-tools-panel glass-panel col-4" aria-label="TOOLS AND COMPONENTS"><h3>// TOOLS AND COMPONENTS</h3><ul><li>Fusion 360 (CAD/CAM)</li><li>Star-CCM+ (CFD)</li><li>3D Printing</li><li>CNC Machining</li><li>Dimensional Control</li></ul></aside>
                 <!-- Full case study embedded PDF -->
         <div class="col-12 glass-panel slide-up delay-4" style="padding: 15px;">
           <h2 style="margin-bottom: 20px;">Case Study PDF</h2>
@@ -372,72 +347,90 @@
           </div>
         </div>
 
-        <div class="col-12 glass-panel slide-up delay-3">
-          <h2 style="margin-bottom: 20px;">Deliverables</h2>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Complete CAD model (Fusion 360, STEP export)</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>2D technical drawings with dimensions and tolerances</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Realistic 3D renders for communication</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>CFD simulations with pressure, velocity, and friction maps</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>3D printed prototype for fit and assembly validation</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>CAM programming and CNC machining simulation</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Dimensional inspection (CAD vs prototype and machining)</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Final report and compliance documentation</li>
-          </ul>
-        </div>
-
-
-        <div class="col-6 glass-panel slide-up delay-3">
-          <h3 style="margin-bottom: 15px;">Workflow and Compliance Strategy</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Iterative loop between CAD, CFD, prototyping, and CAM</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Early identification of blocking rules and safety items</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Required features: single-block body, tether guides, CO2 chamber, wheel visibility</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Conservative geometry to avoid limit violations</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Design for CNC access and clean assembly</li>
-          </ul>
-        </div>
-
-        <div class="col-6 glass-panel slide-up delay-4">
-          <h3 style="margin-bottom: 15px;">CAD and Design Iterations</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Restarted the model from scratch to avoid legacy errors</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Structured sub-assemblies for fast iterations</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>3 to 4 versions refined for compliance and machinability</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Halo and helmet kept as standard supplied parts</li>
-          </ul>
-        </div>
-
-        <div class="col-6 glass-panel slide-up delay-4">
-          <h3 style="margin-bottom: 15px;">CFD Analysis and Findings</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Half-geometry simulation to reduce compute time</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Airflow set at 50 m/s for comparative diagnostics</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Removed side skirt and tuned wing transitions</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Late issue: front wing rod disrupted the inlet flow</li>
-          </ul>
-        </div>
-
-        <div class="col-6 glass-panel slide-up delay-4">
-          <h3 style="margin-bottom: 15px;">Prototyping and Validation</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>3D printed prototype to validate geometry and assembly</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Light filament and vertical orientation for quality</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Weak front axle zone detected and reinforced in CAD</li>
-          </ul>
-        </div>
-
-        <div class="col-6 glass-panel slide-up delay-4">
-          <h3 style="margin-bottom: 15px;">CAM and CNC Machining</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Two-step toolpath: roughing then ball-end finishing</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Custom fixture inserted in the central hole for rotation</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Incident: origin not reset, causing angular offset</li>
-            <li><span style="color: #38bdf8; margin-right: 10px;">-</span>Machining ongoing at the time of the report</li>
-          </ul>
-        </div>
-
-        <div class="col-12 glass-panel slide-up delay-4 test-day-section">
+        <section class="case-section ">
+      <div class="turbine-section-heading">
+      <span class="turbine-section-index">01 · ENGINEERING PROCESS</span>
+      <h2>An iterative design process</h2>
+      </div>
+      <ol class="engineering-flow" aria-label="F1 in Schools engineering process">
+      <li>
+      <span class="flow-number">01</span>
+      <strong>Regulations</strong>
+      <p>Identify T1–T10 constraints and required features: model block, CO₂ chamber, tether guides and wheels.</p>
+      </li>
+      <li>
+      <span class="flow-number">02</span>
+      <strong>CAD</strong>
+      <p>Build subassemblies in Fusion 360, then refine three to four design versions.</p>
+      </li>
+      <li>
+      <span class="flow-number">03</span>
+      <strong>CFD</strong>
+      <p>Compare flow at 50 m/s and revise wing transitions and the side skirt.</p>
+      </li>
+      <li>
+      <span class="flow-number">04</span>
+      <strong>Prototype</strong>
+      <p>3D-print the assembly to check fit and reinforce the front axle region.</p>
+      </li>
+      <li>
+      <span class="flow-number">05</span>
+      <strong>CAM / CNC</strong>
+      <p>Prepare roughing, ball-end finishing and the machining fixture.</p>
+      </li>
+      <li>
+      <span class="flow-number">06</span>
+      <strong>Testing</strong>
+      <p>Compare the manufactured geometry against CAD and observe track behaviour.</p>
+      </li>
+      </ol>
+      <p class="case-note">Compliance checks run through every stage. CFD findings and prototype defects feed back into CAD before machining preparation.</p>
+      </section>
+      <section class="case-section ">
+      <div class="turbine-section-heading">
+      <span class="turbine-section-index">02 · ITERATIONS AND DELIVERABLES</span>
+      <h2>Decisions supported by observations</h2>
+      </div>
+      <div class="case-gallery">
+      <figure class="case-figure ">
+      <button type="button" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge: Design and communication">
+      <img src="../../assets/images/projects/f1/portfolio-pages/page-02.webp" alt="Design and communication" loading="lazy" />
+      </button>
+      <figcaption>
+      <strong>Design and communication</strong>
+      <span>CAD, dimensioned drawings and renders document geometry and integration choices.</span>
+      </figcaption>
+      </figure>
+      <figure class="case-figure ">
+      <button type="button" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge: Aerodynamic analysis">
+      <img src="../../assets/images/projects/f1/portfolio-pages/page-03.webp" alt="Aerodynamic analysis" loading="lazy" />
+      </button>
+      <figcaption>
+      <strong>Aerodynamic analysis</strong>
+      <span>Pressure, velocity and friction fields guide changes. The front-wing rod disturbs the inlet flow.</span>
+      </figcaption>
+      </figure>
+      <figure class="case-figure ">
+      <button type="button" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge: Prototype and inspection">
+      <img src="../../assets/images/projects/f1/portfolio-pages/page-07.webp" alt="Prototype and inspection" loading="lazy" />
+      </button>
+      <figcaption>
+      <strong>Prototype and inspection</strong>
+      <span>The first printed prototype checks the geometry. A weak front axle region prompts a CAD revision.</span>
+      </figcaption>
+      </figure>
+      <figure class="case-figure ">
+      <button type="button" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" aria-label="Enlarge: Machining preparation">
+      <img src="../../assets/images/projects/f1/portfolio-pages/page-04.webp" alt="Machining preparation" loading="lazy" />
+      </button>
+      <figcaption>
+      <strong>Machining preparation</strong>
+      <span>A dedicated fixture allows part rotation. An angular offset caused by the machining origin highlights the need to reset it; machining was still ongoing at the report date.</span>
+      </figcaption>
+      </figure>
+      </div>
+      </section>
+      <div class="col-12 glass-panel slide-up delay-4 test-day-section">
           <div class="test-day-header">
             <div>
               <h2 style="margin-bottom: 10px;">Test Day</h2>
@@ -462,7 +455,7 @@ In practice, it sometimes meets the camera.</p>
     </main>
   </div>
 
-  <script src="../../assets/js/script.js?v=9"></script>
+  <script src="../../assets/js/script.js?v=10"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const sliderImage = document.getElementById("f1-pdf-slider");
