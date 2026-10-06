@@ -17,7 +17,7 @@
   <link rel="alternate" hreflang="fr" href="../fr/projects.html" />
   <link rel="alternate" hreflang="x-default" href="projects.html" />
   
-  <link rel="stylesheet" href="../assets/css/style.css?v=10" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=11" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -89,33 +89,6 @@
         outline: none !important;
     }
 
-    /* Subtle cue that the featured research project is clickable */
-    .project-featured:hover .project-featured-link,
-    .project-featured:focus-within .project-featured-link {
-        color: #ffffff !important;
-        animation: research-link-pulse 0.85s ease-in-out infinite alternate;
-    }
-
-    @keyframes research-link-pulse {
-        from {
-            opacity: 0.58;
-            transform: translateX(0);
-            text-shadow: 0 0 0 rgba(255, 255, 255, 0);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(4px);
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-        }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .project-featured:hover .project-featured-link,
-        .project-featured:focus-within .project-featured-link {
-            animation: none;
-            text-decoration: underline;
-        }
-    }
   </style>
 </head>
 
@@ -204,7 +177,7 @@
 
             <h2>Trajectory Optimization for Autonomous Systems</h2>
 
-            <p>Three-month research internship at CNRS@CREATE in Singapore (June–August 2026), within the collaboration with PIMM Laboratory in Paris. Trajectory planning, perception and control brought together on an autonomous rover.</p><div class="research-affiliation"><img src="../paco-showcase/assets/logos/cnrs-at-create.png" alt="CNRS@CREATE" /><span>PIMM · Paris<br>CNRS@CREATE · Singapore</span></div><h3 class="research-tools-heading">// TOOLS AND COMPONENTS</h3>
+            <p>Three-month research internship at CNRS@CREATE in Singapore (June–August 2026), within the collaboration with PIMM Laboratory in Paris. Trajectory planning, perception and control brought together on an autonomous rover.</p><h3 class="research-tools-heading">// TOOLS AND COMPONENTS</h3>
 
             <div class="tech-stack-row project-featured-tags">
               <span class="tech-badge">Python</span>
@@ -215,9 +188,12 @@
               <span class="tech-badge">Autonomous Systems</span>
             </div>
 
-            <a href="../paco-showcase/index.html" class="action-link project-featured-link">
+            <div class="research-hero-footer">
+<a href="../paco-showcase/index.html" class="action-link project-featured-link">
               Explore the research project
             </a>
+<div class="research-affiliation"><img src="../paco-showcase/assets/logos/cnrs-at-create.png" alt="CNRS@CREATE" /><span>PIMM · Paris<br>CNRS@CREATE · Singapore</span></div>
+</div>
           </div>
         </article>
       </section>

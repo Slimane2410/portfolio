@@ -13,7 +13,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Projets d'ingénierie | Slimane Aouanouk</title><link href="../en/projects.html" hreflang="en" rel="alternate"/><link href="projects.html" hreflang="fr" rel="alternate"/><link href="../en/projects.html" hreflang="x-default" rel="alternate"/>
-<link href="../assets/css/style.css?v=10" rel="stylesheet"/>
+<link href="../assets/css/style.css?v=11" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
@@ -84,33 +84,6 @@
         outline: none !important;
     }
 
-    /* Subtle cue that the featured research project is clickable */
-    .project-featured:hover .project-featured-link,
-    .project-featured:focus-within .project-featured-link {
-        color: #ffffff !important;
-        animation: research-link-pulse 0.85s ease-in-out infinite alternate;
-    }
-
-    @keyframes research-link-pulse {
-        from {
-            opacity: 0.58;
-            transform: translateX(0);
-            text-shadow: 0 0 0 rgba(255, 255, 255, 0);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(4px);
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-        }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        .project-featured:hover .project-featured-link,
-        .project-featured:focus-within .project-featured-link {
-            animation: none;
-            text-decoration: underline;
-        }
-    }
   </style>
 </head>
 <body class="homepage">
@@ -177,7 +150,7 @@
 <div class="project-featured-content">
 <span class="page-subtitle project-featured-eyebrow">// RECHERCHE INTERNATIONALE · SINGAPOUR</span>
 <h2>Optimisation de trajectoire pour systèmes autonomes</h2>
-<p>Stage de recherche de trois mois à CNRS@CREATE, à Singapour (juin–août 2026), dans la collaboration avec le laboratoire PIMM à Paris. Planification, perception et commande réunies sur un rover autonome.</p><div class="research-affiliation"><img src="../paco-showcase/assets/logos/cnrs-at-create.png" alt="CNRS@CREATE" /><span>PIMM · Paris<br>CNRS@CREATE · Singapour</span></div><h3 class="research-tools-heading">// OUTILS ET COMPOSANTS</h3>
+<p>Stage de recherche de trois mois à CNRS@CREATE, à Singapour (juin–août 2026), dans la collaboration avec le laboratoire PIMM à Paris. Planification, perception et commande réunies sur un rover autonome.</p><h3 class="research-tools-heading">// OUTILS ET COMPOSANTS</h3>
 <div class="tech-stack-row project-featured-tags">
 <span class="tech-badge">Python</span>
 <span class="tech-badge">SciPy</span>
@@ -186,9 +159,12 @@
 <span class="tech-badge">Robotique</span>
 <span class="tech-badge">Systèmes autonomes</span>
 </div>
+<div class="research-hero-footer">
 <a class="action-link project-featured-link" href="../paco-showcase/index.html">
               Découvrir le projet de recherche
             </a>
+<div class="research-affiliation"><img src="../paco-showcase/assets/logos/cnrs-at-create.png" alt="CNRS@CREATE" /><span>PIMM · Paris<br>CNRS@CREATE · Singapour</span></div>
+</div>
 </div>
 </article>
 </section>

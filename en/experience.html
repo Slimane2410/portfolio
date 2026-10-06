@@ -166,19 +166,17 @@
           <a href="../paco-showcase/index.html" class="featured-card-link research-experience-link" aria-label="Explore the research project">
             <div class="card-header">
               <span class="tech-badge" style="background: rgba(30, 64, 175, 0.2); color: #60a5fa; border: none;">Data-Driven Mechanical Engineering</span>
-              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Jan 2026 — Present · Paris &amp; Singapore</span>
+              <span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Jan–Aug 2026 · Paris &amp; Singapore</span>
             </div>
             
-            <h2 class="exp-title">Trajectory Optimization for Autonomous Drone Systems — PIMM Lab × CNRS@CREATE</h2>
-            <span class="exp-role">Research Project at PIMM Lab, Paris · Research Internship at CNRS@CREATE, Singapore (June–August 2026)</span>
-
-            <p class="exp-desc">
-Initiated in <strong>Paris</strong> at the <strong>PIMM Laboratory</strong> under the supervision of <strong>Professor Francisco Chinesta</strong>, this research project develops <strong>collision-aware trajectory optimization</strong> methods for autonomous systems operating around fixed and moving obstacles. From <strong>June to August 2026</strong>, the work continued through a research internship at <strong>CNRS@CREATE in Singapore</strong>, with technical supervision from <strong>Amine Ammar</strong>.
-
-The approach combines a <strong>variational planner</strong> based on the <strong>Euler–Lagrange equations</strong> with a causal, Newtonian dynamics-based corrector that adapts the nominal path to observed obstacles and agents. Developed first in Python simulation, the complete planning–perception–control chain was then transferred to an instrumented rover platform in Singapore, using camera calibration, ArUco tracking, and differential-wheel control to measure trajectory accuracy, clearance, and repeatability.
-
-The experimental campaign validated fixed-obstacle avoidance in both directions and continuous trajectory tracking, while moving-agent and multi-agent extensions remain under development. These theoretical, numerical, and experimental results are currently being consolidated into a <strong>research publication in preparation</strong>, with the longer-term objective of transferring the framework from ground-based validation to autonomous drone systems.
-</p>
+            <h2 class="exp-title">Trajectory Optimization and Collision Avoidance for Autonomous Systems — PIMM Lab × CNRS@CREATE</h2>
+            <span class="exp-role">Robotics Research Project &amp; Internship — Paris (Jan–May) → Singapore (Jun–Aug) · Supervisor: Prof. Francisco Chinesta</span>
+            <ul class="exp-desc research-experience-results">
+              <li>Co-developed and physically validated an end-to-end mobile-robot autonomy stack, from trajectory planning and perception to real-time control: <strong>40/40 goal arrivals with zero collisions</strong> across two frozen 20-run experimental campaigns.</li>
+              <li>Built a closed-loop perception-to-action pipeline integrating computer vision, real-time trajectory replanning, robot control, and structured experiment logging, sustaining a median <strong>19.84–19.86 Hz control loop</strong>.</li>
+              <li>Diagnosed and resolved a perception failure mode, reducing mean localization error by <strong>84% (36.3 → 5.8 mm)</strong> through systematic lens-distortion correction and homography-based metric calibration.</li>
+              <li>Designed structured experiments comparing variational planners and controllers across <strong>367,374 simulation runs</strong> and a <strong>100,800-case campaign</strong>; quantified the simulation-to-real gap across <strong>39 paired runs</strong> and contributed to a preprint draft in preparation.</li>
+            </ul>
 
             <div class="tech-stack-row">
               <span class="tech-badge">Python</span>
@@ -187,7 +185,10 @@ The experimental campaign validated fixed-obstacle avoidance in both directions 
               <span class="tech-badge">Experimental Validation</span>
               <span class="tech-badge">Research Publication</span>
             </div>
-          <span class="research-experience-cta">Explore the research project <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+          <div class="research-experience-footer">
+            <span class="research-experience-cta">Explore the research project <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            <img class="research-experience-logo" src="../paco-showcase/assets/logos/cnrs-at-create.png" alt="CNRS@CREATE Singapore" width="15073" height="4585" loading="lazy" />
+          </div></a>
         </div>
 
         <div class="col-6 slide-up delay-3">

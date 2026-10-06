@@ -145,21 +145,28 @@
 <a aria-label="Découvrir le projet de recherche" class="featured-card-link research-experience-link" href="../paco-showcase/index.html">
 <div class="card-header">
 <span class="tech-badge" style="background: rgba(30, 64, 175, 0.2); color: #60a5fa; border: none;">Ingénierie mécanique basée sur les données</span>
-<span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">janvier 2026 — Aujourd'hui · Paris et Singapour</span>
+<span style="font-family: monospace; font-size: 0.8rem; color: #64748b;">Janvier–août 2026 · Paris et Singapour</span>
 </div>
-<h2 class="exp-title">Optimisation de trajectoire pour les systèmes de drones autonomes — PIMM Lab × CNRS@CREATE</h2>
-<span class="exp-role">Projet de recherche au PIMM Lab, Paris · Stage de recherche au CNRS@CREATE, Singapour (juin-août 2026)</span>
-<p class="exp-desc">
-Démarré à <strong>Paris</strong> au <strong>laboratoire PIMM</strong> sous la direction du <strong>professeur Francisco Chinesta</strong>, ce projet de recherche développe des <strong>méthodes d’optimisation de trajectoire avec évitement des collisions</strong> pour des systèmes autonomes évoluant parmi des obstacles fixes et mobiles. De <strong>juin à août 2026</strong>, les travaux se sont poursuivis lors d’un stage de recherche au <strong>CNRS@CREATE à Singapour</strong>, sous la supervision technique d’<strong>Amine Ammar</strong>. L’approche associe un <strong>planificateur variationnel</strong> fondé sur les <strong>équations d’Euler–Lagrange</strong> à un correcteur causal inspiré de la dynamique newtonienne, qui adapte la trajectoire nominale aux obstacles et aux agents observés. D’abord développée en simulation Python, la chaîne complète de planification, de perception et de commande a ensuite été transférée sur un rover instrumenté à Singapour. L’étalonnage de la caméra, le suivi ArUco et la commande différentielle des roues ont permis de mesurer la précision, le dégagement et la répétabilité des trajectoires. La campagne expérimentale a validé l’évitement d’obstacles fixes dans les deux sens et le suivi continu de trajectoire ; les extensions aux agents mobiles et aux configurations multi-agents sont en cours. Ces résultats théoriques, numériques et expérimentaux sont rassemblés dans une <strong>publication scientifique en préparation</strong>, avec pour objectif à plus long terme de transposer aux drones autonomes le cadre validé au sol.
-</p>
-<div class="tech-stack-row">
+<h2 class="exp-title">Optimisation de trajectoire et évitement des collisions pour les systèmes autonomes — PIMM Lab × CNRS@CREATE</h2>
+            <span class="exp-role">Projet de recherche et stage en robotique — Paris (janvier–mai) → Singapour (juin–août) · Encadrant : Pr Francisco Chinesta</span>
+            <ul class="exp-desc research-experience-results">
+              <li>Co-développé et validé expérimentalement une chaîne complète d’autonomie pour robot mobile, de la planification de trajectoire et la perception à la commande en temps réel : <strong>40/40 arrivées à l’objectif, sans collision</strong>, sur deux campagnes de 20 essais à protocole figé.</li>
+              <li>Développé une boucle perception–action intégrant vision par ordinateur, replanification de trajectoire en temps réel, commande du robot et journalisation structurée des essais, avec une fréquence médiane de commande de <strong>19,84–19,86 Hz</strong>.</li>
+              <li>Diagnostiqué et corrigé une défaillance de perception, réduisant l’erreur moyenne de localisation de <strong>84 % (36,3 → 5,8 mm)</strong> grâce à la correction systématique de la distorsion optique et à une calibration métrique par homographie.</li>
+              <li>Conçu des expériences structurées comparant planificateurs variationnels et contrôleurs sur <strong>367 374 simulations</strong> et une <strong>campagne de 100 800 cas</strong> ; quantifié l’écart simulation–réalité sur <strong>39 essais appariés</strong> et contribué à un brouillon de prépublication en préparation.</li>
+            </ul>
+
+            <div class="tech-stack-row">
 <span class="tech-badge">Python</span>
 <span class="tech-badge">Optimisation de trajectoire</span>
 <span class="tech-badge">Vision par ordinateur</span>
 <span class="tech-badge">Validation expérimentale</span>
 <span class="tech-badge">Publication de recherche</span>
 </div>
-<span class="research-experience-cta">Découvrir le projet de recherche <i class="fas fa-arrow-right" aria-hidden="true"></i></span></a>
+<div class="research-experience-footer">
+            <span class="research-experience-cta">Découvrir le projet de recherche <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            <img class="research-experience-logo" src="../paco-showcase/assets/logos/cnrs-at-create.png" alt="CNRS@CREATE Singapore" width="15073" height="4585" loading="lazy" />
+          </div></a>
 </div>
 <div class="col-6 slide-up delay-3">
 <a class="featured-card-link">
