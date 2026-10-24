@@ -1,0 +1,43 @@
+/* Isolated consent controls; no changes to the portfolio's existing styles. */
+.analytics-consent[hidden], .analytics-consent button[hidden] { display: none !important; }
+.analytics-consent, .analytics-privacy-settings {
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 2147483647;
+  color: #f7f7f7;
+  background: #171a20;
+  border: 1px solid #737b89;
+  border-radius: 10px;
+  font: 14px/1.5 system-ui, sans-serif;
+  text-align: left;
+}
+.analytics-consent {
+  bottom: 62px;
+  left: 16px;
+  width: min(460px, calc(100vw - 32px));
+  max-height: calc(100dvh - 90px);
+  overflow: auto;
+  padding: 20px;
+  box-shadow: 0 6px 30px #0005;
+}
+#analytics-consent h2 { margin: 0 0 10px; font: 600 18px/1.4 system-ui, sans-serif; color: #f7f7f7; }
+#analytics-consent p { margin: 0 0 14px; color: #f7f7f7; font: inherit; }
+.analytics-consent a { color: #d5e5ff; text-decoration: underline; display: inline-block; margin-right: 16px; }
+.analytics-consent-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.analytics-consent button, .analytics-privacy-settings {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #737b89;
+  border-radius: 6px;
+  color: #f7f7f7;
+  background: #252b35;
+  font: 600 14px/1.5 system-ui, sans-serif;
+  cursor: pointer;
+}
+.analytics-privacy-settings { left: 16px; bottom: 10px; }
+.analytics-consent button:hover, .analytics-privacy-settings:hover { background: #394352; }
+.analytics-consent :focus-visible, .analytics-privacy-settings:focus-visible { outline: 3px solid #9cc9ff; outline-offset: 3px; }
+
+/* Let the existing language dialog finish before presenting consent controls. */
+body.language-dialog-open .analytics-consent,
+body.language-dialog-open .analytics-privacy-settings { display: none !important; }
