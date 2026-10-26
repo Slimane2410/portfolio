@@ -1,174 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Shared analytics: automatic asynchronous loading. -->
+<!-- Shared analytics: automatic asynchronous loading. -->
   <!-- Consent interface temporarily disabled: <link rel="stylesheet" href="../../assets/css/analytics-consent.css" /> -->
   <script defer src="../../assets/js/analytics-consent.js?v=2"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ball Impact Dynamics | Slimane Aouanouk</title>
-  <link rel="alternate" hreflang="en" href="tipe.html" />
-  <link rel="alternate" hreflang="fr" href="../../fr/projects/tipe.html" />
-  <link rel="alternate" hreflang="x-default" href="tipe.html" />
-
-  <!-- Core styles and icon fonts -->
-  <link rel="stylesheet" href="../../assets/css/style.css?v=10" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../../assets/icons/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/icons/favicon-16x16.png" />
-  <link rel="icon" href="../../assets/icons/favicon.ico" />
-  <link rel="manifest" href="../../assets/icons/site.webmanifest" />
-  <meta name="theme-color" content="#0f1115" />
-
-  <style>
-    /* Page-specific layout elements */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .project-banner {
-      position: relative;
-      height: 350px;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      margin-bottom: 30px;
-      background: #000;
-    }
-
-    .project-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
-
-    .project-banner-content {
-      position: absolute;
-      bottom: 30px;
-      left: 30px;
-      z-index: 2;
-      padding-right: 20px;
-    }
-
-    .pdf-embed {
-      width: 100%;
-      height: 80vh;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      background: #000;
-    }
-  </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Ball impact dynamics in ball sports: experimental investigation using an instrumented pendulum rig, high-speed video tracking, automated Python analysis, and dynamic collision modeling." name="description"/>
+<title>Ball Impact Dynamics: The Toe-Kick Effect | Slimane Aouanouk</title><link href="tipe.html" hreflang="en" rel="alternate"/><link href="../../fr/projects/tipe.html" hreflang="fr" rel="alternate"/><link href="tipe.html" hreflang="x-default" rel="alternate"/>
+<link href="../../assets/css/style.css?v=10" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<link href="../../assets/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../../assets/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../../assets/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../assets/icons/favicon.ico" rel="icon"/>
+<link href="../../assets/icons/site.webmanifest" rel="manifest"/>
+<meta content="#0f1115" name="theme-color"/>
 </head>
-
-<body class="homepage">
-
-  <!-- App layout: fixed sidebar + main content -->
-  <div class="app-layout">
-
-    <aside class="sidebar slide-up">
-      <div class="profile-section">
-        <a href="../index.html" style="text-decoration: none; color: inherit;">
-            <span class="logo-text">SA.</span>
-        </a>
-        <span class="role-text">Graduate Engineering Student<br>Arts et Métiers</span>
-      </div>
-
-      <nav class="nav-links">
-        <a href="../index.html" class="nav-item">
-          <i class="fas fa-home"></i> Dashboard
-        </a>
-        <a href="../projects.html" class="nav-item active">
-          <i class="fas fa-code-branch"></i> Projects
-        </a>
-        <a href="../resume.html" class="nav-item">
-          <i class="fas fa-file-alt"></i> Resume
-        </a>
-        <a href="../academics.html" class="nav-item">
-          <i class="fas fa-graduation-cap"></i> Academics
-        </a>
-        <a href="../experience.html" class="nav-item">
-          <i class="fas fa-briefcase"></i> Experience
-        </a>
-        <a href="../beyond.html" class="nav-item">
-          <i class="fas fa-compass"></i> Beyond Engineering
-        </a>
-      </nav>
-
-      <div class="sidebar-footer">
-        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
-          <a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" target="_blank"
-             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
-             onmouseover="this.style.color='#111827'"
-             onmouseout="this.style.color='#7a8595'">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <!-- <a href="https://github.com/Slimane2410" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"
-             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
-             onmouseover="this.style.color='#111827'"
-             onmouseout="this.style.color='#7a8595'">
-            <i class="fab fa-github"></i>
-          </a> -->
-          <a href="mailto:aouanoukslim@gmail.com"
-             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
-             onmouseover="this.style.color='#111827'"
-             onmouseout="this.style.color='#7a8595'">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-        <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
-      </div>
-    </aside>
-
-    <main class="main-content">
-
-      <!-- Back to projects grid -->
-      <div class="slide-up delay-1" style="margin-bottom: 20px;">
-        <a href="../projects.html" style="color: #6b7280; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#111827'" onmouseout="this.style.color='#7a8595'">
-          <i class="fas fa-arrow-left"></i> RETURN TO MATRIX
-        </a>
-      </div>
-
-      <!-- Hero banner -->
-      <div class="project-banner slide-up delay-1">
-        <img src="../../assets/images/projects/tipe/cover.png" alt="Ball Impact Dynamics" />
-        <div class="project-banner-content">
-          <h1 style="font-size: 2.5rem; margin: 0; color: #fff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Ball Impact Dynamics</h1>
-          <p style="margin: 10px 0 0 0; color: #cbd5e1; max-width: 700px;">
-            Experimental analysis of ball-foot impact mechanics using a controlled test bench.
-          </p>
-        </div>
-      </div>
-
-      <div class="content-grid">
-
-        <div class="col-8 glass-panel slide-up delay-2">
-          <h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px;">
-            <i class="fas fa-info-circle" style="color: #38bdf8; margin-right: 10px;"></i> Mission Overview
-          </h2>
-          <p>
-            This project investigates impact mechanics with controlled, repeatable tests to capture deformation, energy transfer, and rebound dynamics.
-          </p>
-          <p style="margin-top: 15px; color: #374151; line-height: 1.8;">
-            <strong>Objective:</strong> quantify the ball-foot interaction and validate simplified models using experimental data.
-          </p>
-        </div>
-
-        <aside class="project-tools-panel glass-panel col-4" aria-label="TOOLS AND COMPONENTS"><h3>// TOOLS AND COMPONENTS</h3><ul><li>Experimental Physics</li><li>Impact Mechanics</li><li>Video Analysis</li><li>Modeling</li></ul></aside>
-
-        <!-- Full case study embedded PDF -->
-        <div class="col-12 glass-panel slide-up delay-3" style="padding: 15px;">
-          <h2 style="margin-bottom: 20px;">Case Study PDF</h2>
-          <iframe class="pdf-embed" src="../../assets/documents/projects/tipe/tipe.pdf" title="Ball Impact Dynamics Case Study"></iframe>
-        </div>
-
-      </div>
-    </main>
-  </div>
-
-  <script src="../../assets/js/script.js?v=10"></script>
+<body class="homepage turbine-page tipe-page">
+<div class="app-layout">
+<aside class="sidebar slide-up">
+<div class="profile-section">
+<a href="../index.html" style="text-decoration: none; color: inherit;">
+<span class="logo-text">SA.</span>
+</a>
+<span class="role-text">Graduate Engineering Student<br/>Arts et Métiers</span>
+</div>
+<nav class="nav-links">
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i> Dashboard</a>
+<a class="nav-item active" href="../projects.html"><i class="fas fa-code-branch"></i> Projects</a>
+<a class="nav-item" href="../resume.html"><i class="fas fa-file-alt"></i> Resume</a>
+<a class="nav-item" href="../academics.html"><i class="fas fa-graduation-cap"></i> Academics</a>
+<a class="nav-item" href="../experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+<a class="nav-item" href="../beyond.html"><i class="fas fa-compass"></i> Beyond Engineering</a>
+</nav>
+<div class="sidebar-footer">
+<div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
+<a aria-label="Visit my LinkedIn profile" href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" rel="noopener noreferrer" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+<a aria-label="Send an email to Slimane Aouanouk" href="mailto:aouanoukslim@gmail.com" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;">
+<i class="fas fa-envelope"></i>
+</a>
+</div>
+<p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
+</div>
+</aside>
+<main class="main-content turbine-main">
+<div class="slide-up delay-1 turbine-back-link">
+<a href="../projects.html"><i class="fas fa-arrow-left"></i> RETURN TO MATRIX</a>
+</div>
+<header class="turbine-hero tipe-hero slide-up delay-1">
+<img alt="Experimental ball-pendulum impact test bench for investigating the toe-kick effect" fetchpriority="high" src="../../assets/images/projects/tipe/cover.png"/>
+<div class="turbine-hero-overlay tipe-hero-overlay"></div>
+<div class="turbine-hero-content">
+<span class="turbine-eyebrow">// IMPACT MECHANICS · SPORTS BIOMECHANICS</span>
+<h1>Ball Impact Dynamics: The "Toe-Kick" Effect in Ball Sports</h1>
+<p>From replicating a university research protocol to dynamic modeling: separating collision kinematics, contact duration, and human biomechanics in football strikes.</p>
+<div class="turbine-hero-actions">
+<a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf">
+<i class="fas fa-download"></i> Download TIPE Presentation (FR PDF)
+</a>
+<a class="turbine-button turbine-button-secondary" href="#experimental-bench">
+Explore the Test Bench <i class="fas fa-arrow-down"></i>
+</a>
+</div>
+</div>
+</header>
+<section aria-label="Key project metrics" class="turbine-metrics slide-up delay-2">
+<article><strong>2×</strong><span>Ideal v₂'/v₁ speed ratio (theory)</span></article>
+<article><strong>≈ 1.2</strong><span>Measured real ball/foot speed ratio</span></article>
+<article><strong>4</strong><span>Tested striker heads (6, 12, 24 mm &amp; plate)</span></article>
+<article><strong>0.27 mm/px</strong><span>Video tracking calibration resolution</span></article>
+</section>
+<div class="project-overview">
+<section class="turbine-intro glass-panel slide-up delay-2">
+<div>
+<span class="turbine-section-index">01 · PROBLEM &amp; OBJECTIVE</span>
+<h2>Demystifying the "Toe-Kick": Sports Intuition vs Impact Mechanics</h2>
+</div>
+<p>
+In ball sports and particularly football, an entrenched belief among athletes holds that striking the ball with the toe ("le pointu") yields superior departure speed ("more pure power"), whereas the inside of the foot ("le plat du pied") guarantees precision. This competitive CPGE TIPE research project investigated whether contact geometry alone can intrinsically alter ball launch velocity.
+</p>
+<p>
+To resolve this question, my engineering methodology centered on <strong>decoupling impact mechanics from human motor execution</strong>. By replicating at laboratory scale the experimental protocol of a doctoral reference thesis (football physics at LadHyX / École Polytechnique), I designed a repeatable pendulum test bench, built a high-speed video tracking workflow, automated kinematic data processing in Python, and formulated a minimal dynamic model validated by physical measurements.
+</p>
+</section>
+<aside aria-label="TOOLS AND METHODS" class="project-tools-panel glass-panel">
+<h3>// TOOLS AND METHODS</h3>
+<ul>
+<li>Instrumented pendulum rig</li>
+<li>3D Printing (PLA)</li>
+<li>High-speed video tracking</li>
+<li>Python (NumPy, SciPy)</li>
+<li>Type B uncertainty analysis</li>
+<li>Dynamic contact modeling</li>
+</ul>
+</aside>
+</div>
+<section class="turbine-section slide-up delay-2" id="experimental-bench">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">02 · EXPERIMENTAL RIG &amp; PROTOTYPING</span>
+<h2>Replicating Research Protocol at Laboratory Scale</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+To eliminate biases inherent to human motor variability (fluctuating foot speeds, muscular deceleration, parasitic ankle flexion), I engineered a mechanical leg based on a compound pendulum weighing <strong>m₁ = 1.4 kg</strong> with length <strong>L = 46 cm</strong>, guided inside a 50 cm vertical structure. Interchangeable impactor heads were modeled and 3D printed in PLA: three cylinders of diameters <strong>2r = 6 mm, 12 mm, and 24 mm</strong> (representing toe-kick geometries at different scales) as well as a wide flat plate (representing the inside of the foot). An elastic spherical ball inflated to controlled overpressure (p = 0.2 bar / 3 psi) was struck equatorially to isolate pure collision dynamics before introducing real football damping.
+</p>
+<div class="turbine-gallery turbine-gallery-design">
+<figure class="turbine-figure turbine-figure-tall">
+<button aria-label="Enlarge pendulum design schema" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Hand-drawn isometric mechanical design schema of the compound pendulum rig" loading="lazy" src="../../assets/images/projects/tipe/pendulum-schema.webp"/>
+</button>
+<figcaption><strong>Mechanical design schema</strong><span>Guided pendulum (L = 46 cm, frame height 50 cm), pivot axis, and stabilized baseplate.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Enlarge physical test bench photo" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Physical test bench with weighted pendulum swing arm and 3D-printed interchangeable heads" loading="lazy" src="../../assets/images/projects/tipe/test-bench-rig.webp"/>
+</button>
+<figcaption><strong>Instrumented physical test rig</strong><span>Dual vertical guide boards, weighted arm, and interchangeable orange striker heads mounted at the extremity.</span></figcaption>
+</figure>
+<figure class="turbine-figure turbine-figure-accent">
+<button aria-label="Enlarge photo of 3D printed striker heads" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="3D-printed interchangeable PLA impactor heads: cylinders 6, 12, 24 mm and flat plate" loading="lazy" src="../../assets/images/projects/tipe/impactor-geometries.webp"/>
+</button>
+<figcaption><strong>3D-printed PLA impactors</strong><span>Side and top views: cylinders of 2r = 6, 12, 24 mm (toe-kick analogs) and flat plate (inside-foot analog).</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Enlarge high-speed impact chronophotography" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="High-speed chronophotography sequence capturing pendulum approach, impact contact, and ball departure" loading="lazy" src="../../assets/images/projects/tipe/impact-chronophotography.webp"/>
+</button>
+<figcaption><strong>Impact chronophotography</strong><span>High-frame-rate sequence tracking pendulum approach, equatorial contact deformation, and ball launch.</span></figcaption>
+</figure>
+</div>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">03 · ACQUISITION PIPELINE &amp; PYTHON</span>
+<h2>Trajectory Tracking, Measurement Uncertainty, and Regressions</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+Each strike was recorded with high-frame-rate lateral video under calibrated lighting. To extract quantitative metrics, I developed an automated Python pipeline: coordinates of the impactor x₁(t) and ball center x₂(t) were tracked frame-by-frame across 50 to 120 ms intervals. Spatial calibration was set at <strong>1 pixel = 0.00027 m</strong>. A rigorous <strong>Type B experimental uncertainty analysis</strong> (accounting for motion blur spots of 22 to 50 pixels, yielding u = 2Δ / √3) was applied to every data point. Ordinary least squares regressions (`scipy.stats.linregress`) isolated pre-impact striker speed (V₁), post-impact striker speed (V'₁), and ball launch speed (V'₂), while delimiting the contact zone.
+</p>
+<div class="turbine-gallery turbine-gallery-validation">
+<figure class="turbine-figure turbine-figure-wide">
+<button aria-label="Enlarge ball regression plots" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Ball position-time curves with linear regressions and contact zone identification for 12 mm cylinder and flat plate" loading="lazy" src="../../assets/images/projects/tipe/ball-regression-contact.webp"/>
+</button>
+<figcaption><strong>Trajectories x₂(t) &amp; contact zone</strong><span>Data points with error bars and fitted regression lines: V'₂ = 4.0 m/s identical for both the 12 mm cylinder and flat plate.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Enlarge striker kinematics plot" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Striker position-time curves before and after collision showing near-constant velocity" loading="lazy" src="../../assets/images/projects/tipe/striker-kinematics.webp"/>
+</button>
+<figcaption><strong>Striker kinematics x₁(t)</strong><span>Regression before impact (V₁ = 2.2 m/s) and after impact (V'₁ = 2.0 m/s) demonstrating minimal deceleration of the heavy striker.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Enlarge Python uncertainty calculation code" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Python source code for Type B uncertainty estimation and linear regression analysis" loading="lazy" src="../../assets/images/projects/tipe/python-analysis-code.webp"/>
+</button>
+<figcaption><strong>Python analysis script</strong><span>Automated data reduction: pixel calibration, expanded Type B uncertainty computation, and statistical curve fitting.</span></figcaption>
+</figure>
+<figure class="turbine-figure turbine-figure-wide turbine-figure-dark">
+<button aria-label="Enlarge ball contact deformation comparison" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Photographic comparison of local ball deformation under cylindrical striker versus flat plate impact" loading="lazy" src="../../assets/images/projects/tipe/ball-deformation-contact.webp"/>
+</button>
+<figcaption><strong>Contact morphology under impact</strong><span>Deep, localized penetration for cylindrical striker (toe-kick) versus distributed surface flattening for the flat plate.</span></figcaption>
+</figure>
+</div>
+<div class="turbine-result-callout">
+<div><span>Measured Velocity</span><strong>v'₂ = 4.0 m/s</strong></div>
+<p>At pendulum approach speed v₁ = 2.2 m/s, the ball departs at v'₂ = 4.0 m/s. The measured ratio v'₂ / v₁ ≈ 1.82 - 2.0 directly validates the heavy-striker elastic regime (m₁ ≫ m₂) and theoretical momentum conservation without major energy dissipation.</p>
+</div>
+</section>
+<section class="turbine-section slide-up" id="results">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">04 · DYNAMIC MODELING &amp; FINDINGS</span>
+<h2>Two Formal Discoveries: Invariant Velocity, Modulated Contact Duration</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+The theoretical collision analysis is governed by linear momentum conservation over the brief impact duration (τ ≈ 10-20 ms). With external forces negligible over this window, <strong>m₁ v₁ + m₂ v₂ = m₁ v'₁ + m₂ v'₂</strong>. Introducing the coefficient of restitution <strong>e = -(v'₂ - v'₁) / (v₂ - v₁)</strong> and an initial stationary ball (v₂ = 0), the striking efficiency ratio evaluates analytically to:
+<br/><br/>
+<strong style="color: #0f172a; font-size: 1.15rem; display: block; text-align: center; margin: 12px 0; font-family: monospace;">v'₂ / v₁ = (1 + e) / (1 + m₂/m₁)</strong>
+In the heavy striker limit (m₁ ≫ m₂ ⇒ m₂/m₁ ≈ 0.05) and elastic impact (e ≈ 1), the ratio asymptotically reaches <strong>2</strong>. Experimental results reveal two fundamental insights:
+</p>
+<div class="tipe-gallery-two">
+<figure class="turbine-figure turbine-chart">
+<button aria-label="Enlarge speed ratio comparison graph" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Comparative chart of ball departure speed versus foot speed showing independence of striker shape" loading="lazy" src="../../assets/images/projects/tipe/speed-ratio-comparison.webp"/>
+</button>
+<figcaption><strong>Ball speed v'₂ vs striker speed v₁</strong><span>Experimental points for toe-kick (circles) and flat strikes (squares) overlay directly on the line v'₂ = 2 v₁: zero speed difference!</span></figcaption>
+</figure>
+<figure class="turbine-figure turbine-chart">
+<button aria-label="Enlarge ball deformation comparison" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Photographic comparison of ball indentation during impact" loading="lazy" src="../../assets/images/projects/tipe/ball-deformation-contact.webp"/>
+</button>
+<figcaption><strong>Geometric control of contact duration</strong><span>Contact time decreases as surface area grows: τ_plate &lt; τ_24 &lt; τ_12 &lt; τ_6. Modeled as an equivalent spring k(r,p) where τ = π√(m₂/k) ∝ p^(-1/2) r^(-1/4).</span></figcaption>
+</figure>
+</div>
+<div style="margin-top: 24px; padding: 24px 28px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px; box-shadow: 0 10px 30px rgba(17,24,39,0.04);">
+<h3 style="margin-top: 0; font-family: 'Manrope', sans-serif; font-size: 1.15rem; color: #0f172a;">Summary of Physics Conclusions</h3>
+<ul style="margin: 0; padding-left: 20px; color: #475569; line-height: 1.8;">
+<li><strong>1. Exit Velocity Invariance:</strong> At equal striker approach speed V₁, the ball leaves the rig at the identical velocity V'₂ (4.0 m/s), regardless of whether the head is a 6 mm, 12 mm, 24 mm cylinder or a wide flat plate. <em>There is no intrinsic "toe-kick effect" on exit speed in pure impact mechanics.</em></li>
+<li><strong>2. Contact Duration Modulation:</strong> A wide contact surface provides a stiffer equivalent contact spring k, shortening interaction time (τ ≈ 10 ms). A small surface easily initiates deep localized deformation, producing a longer contact duration (τ ≈ 20 ms).</li>
+</ul>
+</div>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">05 · FROM LAB TO PITCH: BIOMECHANICS</span>
+<h2>Disentangling Ball Physics from Human Striking Biomechanics</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+Why then do football players universally perceive a toe kick as inherently more powerful? Comparing pendulum measurements to human kicking kinematics and official standards reveals that the paradox stems entirely from <strong>joint biomechanics</strong> and <strong>proprioception</strong>:
+</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 28px;">
+<div style="padding: 24px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px;">
+<span style="display: inline-block; padding: 4px 10px; background: #e0f2fe; color: #0284c7; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">Real-world losses</span>
+<h3 style="margin: 0 0 10px; font-size: 1.1rem; color: #0f172a;">FIFA Standards &amp; Damping</h3>
+<p style="margin: 0; color: #64748b; font-size: 0.88rem; line-height: 1.65;">
+A FIFA-approved match ball dropped from 2 m onto steel must rebound between 1.35 m and 1.55 m, fixing e ∈ [0.82; 0.88]. With human foot mass (m₁ ≈ 1.2 kg) and ball mass (m₂ = 450 g), the theoretical ratio drops to <strong>v'₂/v₁ ≈ 1.34</strong>, and <strong>≈ 1.2</strong> in match conditions due to ankle flexion and footwear compliance.
+</p>
+</div>
+<div style="padding: 24px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px;">
+<span style="display: inline-block; padding: 4px 10px; background: #fef3c7; color: #d97706; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">Biomechanics</span>
+<h3 style="margin: 0 0 10px; font-size: 1.1rem; color: #0f172a;">Segmental Inertia &amp; Speed</h3>
+<p style="margin: 0; color: #64748b; font-size: 0.88rem; line-height: 1.65;">
+A toe-kick mobilizes only the shank from the knee (lower moment of inertia, execution in <strong>0.21 s</strong>). An inside-foot strike swings the entire lower limb from the hip (double the inertia, <strong>0.42 s</strong>). Under defensive pressure, the toe-kick allows achieving higher foot speed v₁ in restricted time.
+</p>
+</div>
+<div style="padding: 24px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px;">
+<span style="display: inline-block; padding: 4px 10px; background: #dcfce7; color: #16a34a; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">Motor control</span>
+<h3 style="margin: 0 0 10px; font-size: 1.1rem; color: #0f172a;">Power vs Precision Tradeoff</h3>
+<p style="margin: 0; color: #64748b; font-size: 0.88rem; line-height: 1.65;">
+While contact area does not alter speed, it dictates angular control: the broad surface of the inside of the foot forgives misalignment errors relative to the ball's center of mass, explaining its dominance for accurate passing and clinical finishing.
+</p>
+</div>
+</div>
+<figure class="turbine-figure" style="margin: 0 auto; max-width: 980px;">
+<button aria-label="Enlarge biomechanical kick chronophotography" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button" style="height: auto; padding: 18px; background: #ffffff;">
+<img alt="Chronophotography decomposing biomechanical execution of a toe kick (0.21 s) versus inside-of-foot strike (0.42 s)" loading="lazy" src="../../assets/images/projects/tipe/human-kick-kinematics.webp"/>
+</button>
+<figcaption><strong>Biomechanical kick motion decomposition</strong><span>(a) Toe-kick: rapid knee-shank flexion (210 ms) for an emergency strike. (b) Inside-foot: whole-leg rotation from the hip (420 ms) optimizing trajectory stability.</span></figcaption>
+</figure>
+</section>
+<section class="turbine-section turbine-drawing-section slide-up" id="documentation">
+<div class="turbine-section-heading turbine-drawing-heading">
+<div>
+<span class="turbine-section-index">06 · PROJECT DOSSIER</span>
+<h2>Technical Documentation &amp; Presentation Materials</h2>
+</div>
+<a class="turbine-button turbine-button-outline" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf" rel="noopener noreferrer" target="_blank">
+<i class="fas fa-up-right-from-square"></i> Open Defense Slides (31 pages PDF)
+</a>
+</div>
+<div class="tipe-docs-grid">
+<div class="tipe-doc-card">
+<div>
+<span style="font-family: monospace; font-size: 0.8rem; color: #0284c7; font-weight: 700;">// MAIN DELIVERABLE · DEFENSE SLIDES</span>
+<h3>Full TIPE Defense Presentation (31 slides FR)</h3>
+<p>Comprehensive oral examination slide deck: pendulum design, experimental campaigns, Python regressions, Type B uncertainty analysis, harmonic oscillator model, and biomechanical discussion.</p>
+</div>
+<a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf" style="align-self: flex-start;">
+<i class="fas fa-file-pdf"></i> Download Presentation (PDF)
+</a>
+</div>
+<div class="tipe-doc-card">
+<div>
+<span style="font-family: monospace; font-size: 0.8rem; color: #ea580c; font-weight: 700;">// EXECUTIVE CASE STUDY · SUMMARY</span>
+<h3>Condensed Technical Poster (1 page EN)</h3>
+<p>Autonomous executive summary poster in English: pendulum schematics, 3D printed striker photographs, Python displacement-time curves, and engineering conclusions.</p>
+</div>
+<a class="turbine-button turbine-button-outline" download="TIPE_BALL_IMPACT_DYNAMICS_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/tipe.pdf" style="align-self: flex-start;">
+<i class="fas fa-file-alt"></i> Download Poster (EN PDF)
+</a>
+</div>
+</div>
+</section>
+<section class="turbine-report-cta slide-up">
+<div>
+<span class="turbine-section-index">PROJECT DOCUMENTATION</span>
+<h2>Explore the Full Engineering Study &amp; Data Pipeline</h2>
+<p>Access the detailed mathematical models, Python data extraction algorithms, and experimental validation protocols in the official slide deck.</p>
+</div>
+<a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf">
+<i class="fas fa-download"></i> Download Full Presentation (FR PDF)
+</a>
+</section>
+</main>
+</div>
+<script src="../../assets/js/script.js?v=10"></script>
 </body>
 </html>
