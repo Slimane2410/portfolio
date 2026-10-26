@@ -6,8 +6,8 @@
   <script defer src="../../assets/js/analytics-consent.js?v=2"></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Dynamique d’impact d’un ballon | Slimane Aouanouk</title><link href="../../en/projects/tipe.html" hreflang="en" rel="alternate"/><link href="tipe.html" hreflang="fr" rel="alternate"/><link href="../../en/projects/tipe.html" hreflang="x-default" rel="alternate"/>
-<!-- Core styles and icon fonts -->
+<meta content="Dynamique d’impact dans les sports de balle : analyse expérimentale par banc pendulaire, acquisition vidéo rapide, dépouillement Python et modélisation dynamique de l'effet « pointu »." name="description"/>
+<title>Dynamique d’impact dans les sports de balle | Slimane Aouanouk</title><link href="../../en/projects/tipe.html" hreflang="en" rel="alternate"/><link href="tipe.html" hreflang="fr" rel="alternate"/><link href="../../en/projects/tipe.html" hreflang="x-default" rel="alternate"/>
 <link href="../../assets/css/style.css?v=10" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -18,48 +18,8 @@
 <link href="../../assets/icons/favicon.ico" rel="icon"/>
 <link href="../../assets/icons/site.webmanifest" rel="manifest"/>
 <meta content="#0f1115" name="theme-color"/>
-<style>
-    /* Page-specific layout elements */
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .project-banner {
-      position: relative;
-      height: 350px;
-      border-radius: 4px;
-      overflow: hidden;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      margin-bottom: 30px;
-      background: #000;
-    }
-
-    .project-banner img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.7);
-    }
-
-    .project-banner-content {
-      position: absolute;
-      bottom: 30px;
-      left: 30px;
-      z-index: 2;
-      padding-right: 20px;
-    }
-
-    .pdf-embed {
-      width: 100%;
-      height: 80vh;
-      border: 1px solid rgba(56, 189, 248, 0.2);
-      background: #000;
-    }
-  </style>
 </head>
-<body class="homepage">
-<!-- App layout: fixed sidebar + main content -->
+<body class="homepage turbine-page tipe-page">
 <div class="app-layout">
 <aside class="sidebar slide-up">
 <div class="profile-section">
@@ -69,79 +29,265 @@
 <span class="role-text">Élève ingénieur<br/>Arts et Métiers</span>
 </div>
 <nav class="nav-links">
-<a class="nav-item" href="../index.html">
-<i class="fas fa-home"></i> Accueil
-        </a>
-<a class="nav-item active" href="../projects.html">
-<i class="fas fa-code-branch"></i> Projets
-        </a>
-<a class="nav-item" href="../resume.html">
-<i class="fas fa-file-alt"></i> CV
-        </a>
-<a class="nav-item" href="../academics.html">
-<i class="fas fa-graduation-cap"></i> Formation
-        </a>
-<a class="nav-item" href="../experience.html">
-<i class="fas fa-briefcase"></i> Expérience
-        </a>
-<a class="nav-item" href="../beyond.html">
-<i class="fas fa-compass"></i> Au-delà de l’ingénierie
-        </a>
+<a class="nav-item" href="../index.html"><i class="fas fa-home"></i> Accueil</a>
+<a class="nav-item active" href="../projects.html"><i class="fas fa-code-branch"></i> Projets</a>
+<a class="nav-item" href="../resume.html"><i class="fas fa-file-alt"></i> CV</a>
+<a class="nav-item" href="../academics.html"><i class="fas fa-graduation-cap"></i> Formation</a>
+<a class="nav-item" href="../experience.html"><i class="fas fa-briefcase"></i> Expérience</a>
+<a class="nav-item" href="../beyond.html"><i class="fas fa-compass"></i> Au-delà de l’ingénierie</a>
 </nav>
 <div class="sidebar-footer">
 <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 10px;">
-<a href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" onmouseout="this.style.color='#7a8595'" onmouseover="this.style.color='#111827'" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;" target="_blank">
+<a aria-label="Consulter mon profil LinkedIn" href="https://www.linkedin.com/in/slimane-aouanouk-b69b58320/" rel="noopener noreferrer" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;" target="_blank">
 <i class="fab fa-linkedin"></i>
 </a>
-<!-- <a href="https://github.com/Slimane2410" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"
-             style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;"
-             onmouseover="this.style.color='#111827'"
-             onmouseout="this.style.color='#7a8595'">
-            <i class="fab fa-github"></i>
-          </a> -->
-<a href="mailto:aouanoukslim@gmail.com" onmouseout="this.style.color='#7a8595'" onmouseover="this.style.color='#111827'" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;">
+<a aria-label="Envoyer un e-mail à Slimane Aouanouk" href="mailto:aouanoukslim@gmail.com" style="color: #7a8595; font-size: 1.3rem; transition: color 0.3s;">
 <i class="fas fa-envelope"></i>
 </a>
 </div>
 <p style="opacity: 0.5; font-size: 0.75rem; margin: 0;">© 2025 Slimane AOUANOUK</p>
 </div>
 </aside>
-<main class="main-content">
-<!-- Back to projects grid -->
-<div class="slide-up delay-1" style="margin-bottom: 20px;">
-<a href="../projects.html" onmouseout="this.style.color='#7a8595'" onmouseover="this.style.color='#111827'" style="color: #6b7280; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: color 0.3s;">
-<i class="fas fa-arrow-left"></i> RETOUR AUX PROJETS
-        </a>
+<main class="main-content turbine-main">
+<div class="slide-up delay-1 turbine-back-link">
+<a href="../projects.html"><i class="fas fa-arrow-left"></i> RETOUR AUX PROJETS</a>
 </div>
-<!-- Hero banner -->
-<div class="project-banner slide-up delay-1">
-<img alt="Dynamique d’impact d’un ballon" src="../../assets/images/projects/tipe/cover.png"/>
-<div class="project-banner-content">
-<h1 style="font-size: 2.5rem; margin: 0; color: #fff; text-shadow: 0 4px 10px rgba(0,0,0,0.8);">Dynamique d’impact d’un ballon</h1>
-<p style="margin: 10px 0 0 0; color: #cbd5e1; max-width: 700px;">
-            Analyse expérimentale de la mécanique des impacts balle-pied à l'aide d'un banc d'essai contrôlé.
-          </p>
+<header class="turbine-hero tipe-hero slide-up delay-1">
+<img alt="Dispositif expérimental d'impact balle-pendule pour l'étude de l'effet pointu" fetchpriority="high" src="../../assets/images/projects/tipe/cover.png"/>
+<div class="turbine-hero-overlay tipe-hero-overlay"></div>
+<div class="turbine-hero-content">
+<span class="turbine-eyebrow">// MÉCANIQUE DES IMPACTS · BIOMÉCANIQUE DU SPORT</span>
+<h1>Dynamique d’impact dans les sports de balle : l’effet « pointu »</h1>
+<p>De la reproduction d’un protocole de recherche universitaire à la modélisation dynamique : démêler cinématique d'impact, temps de contact et biomécanique du tir au football.</p>
+<div class="turbine-hero-actions">
+<a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf">
+<i class="fas fa-download"></i> Télécharger la présentation TIPE (FR)
+</a>
+<a class="turbine-button turbine-button-secondary" href="#experimental-bench">
+Explorer le banc d'essai <i class="fas fa-arrow-down"></i>
+</a>
 </div>
 </div>
-<div class="content-grid">
-<div class="col-8 glass-panel slide-up delay-2">
-<h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 20px;">
-<i class="fas fa-info-circle" style="color: #38bdf8; margin-right: 10px;"></i> Aperçu de la mission
-          </h2>
+</header>
+<section aria-label="Indicateurs clés du projet" class="turbine-metrics slide-up delay-2">
+<article><strong>2×</strong><span>Rapport v₂'/v₁ idéal théorique</span></article>
+<article><strong>≈ 1,2</strong><span>Rapport réel balle/pied mesuré</span></article>
+<article><strong>4</strong><span>Impacteurs testés (6, 12, 24 mm &amp; plaque)</span></article>
+<article><strong>0,27 mm/px</strong><span>Résolution d'étalonnage vidéo</span></article>
+</section>
+<div class="project-overview">
+<section class="turbine-intro glass-panel slide-up delay-2">
+<div>
+<span class="turbine-section-index">01 · PROBLÉMATIQUE &amp; OBJECTIF</span>
+<h2>Démystifier le « pointu » : mythe intuitif vs réalité physique</h2>
+</div>
 <p>
-            Ce projet étudie la mécanique d'impact avec des tests contrôlés et reproductibles pour capturer la dynamique de déformation, de transfert d'énergie et de rebond.
-          </p>
-<p style="margin-top: 15px; color: #374151; line-height: 1.8;">
-<strong>Objectif:</strong> quantifier l'interaction balle-pied et valider des modèles simplifiés à l'aide de données expérimentales.
-          </p>
+Dans les sports de balle et particulièrement au football, une croyance empirique profondément ancrée chez les joueurs soutient que frapper « du pointu » produirait une vitesse de décollage supérieure (« un tir plus puissant »), tandis que le plat du pied garantirait la précision. Ce projet de TIPE (Travail d'Initiative Personnelle Encadré en CPGE) visait à répondre rigoureusement à cette interrogation : la forme et la surface de contact de l’impacteur peuvent-elles, à elles seules, modifier la vitesse de départ de la balle ?
+</p>
+<p>
+Pour trancher, ma démarche d'ingénieur a consisté à <strong>découpler la mécanique du choc de l’exécution gestuelle humaine</strong>. En reproduisant à mon échelle le protocole expérimental d'un chapitre de thèse universitaire de référence (physique du football au LadHyX / École Polytechnique), j’ai conçu un banc d'essai pendulaire reproductible, développé une chaîne d’acquisition vidéo rapide, automatisé le dépouillement cinématique en Python et formulé un modèle dynamique minimal validé par les mesures.
+</p>
+</section>
+<aside aria-label="OUTILS ET MÉTHODES" class="project-tools-panel glass-panel">
+<h3>// OUTILS ET MÉTHODES</h3>
+<ul>
+<li>Banc pendulaire instrumenté</li>
+<li>Impression 3D (PLA)</li>
+<li>Acquisition vidéo rapide</li>
+<li>Python (NumPy, SciPy)</li>
+<li>Calcul d'incertitudes Type B</li>
+<li>Modélisation dynamique du choc</li>
+</ul>
+</aside>
 </div>
-<aside class="project-tools-panel glass-panel col-4" aria-label="OUTILS ET COMPOSANTS"><h3>// OUTILS ET COMPOSANTS</h3><ul><li>Physique expérimentale</li><li>Mécanique d&#x27;impact</li><li>Analyse vidéo</li><li>Modélisation</li></ul></aside>
-<!-- Full case study embedded PDF -->
-<div class="col-12 glass-panel slide-up delay-3" style="padding: 15px;">
-<h2 style="margin-bottom: 20px;">Étude de cas PDF (EN)</h2>
-<iframe class="pdf-embed" src="../../assets/documents/projects/tipe/tipe.pdf" title="Étude de cas sur la dynamique d’impact d’un ballon, en anglais"></iframe>
+<section class="turbine-section slide-up delay-2" id="experimental-bench">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">02 · DISPOSITIF EXPÉRIMENTAL &amp; PROTOTYPAGE</span>
+<h2>Reproduire le protocole de recherche à l'échelle du laboratoire</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+Pour éliminer les biais inhérents à la variabilité humaine (vitesse de frappe instable, décélération musculaire, rotations parasites de cheville), j'ai conçu et assemblé une « jambe » mécanique de type pendule pesant <strong>m₁ = 1,4 kg</strong> pour une longueur <strong>L = 46 cm</strong>, montée sur un bâti vertical rigide guidé de 50 cm. Des têtes d'impact interchangeables ont été modélisées et imprimées en 3D en PLA : trois cylindres de diamètres <strong>2r = 6 mm, 12 mm et 24 mm</strong> (représentant la frappe du pointu à différentes échelles) ainsi qu'une plaque plane large (représentant le plat du pied). Une balle sphérique élastique gonflée à pression contrôlée (p = 0,2 bar / 3 psi) a été percutée à l'équateur pour isoler la dynamique pure du choc avant d'introduire les dissipations d'un vrai ballon de football.
+</p>
+<div class="turbine-gallery turbine-gallery-design">
+<figure class="turbine-figure turbine-figure-tall">
+<button aria-label="Agrandir le schéma du pendule expérimental" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Schéma isométrique de conception du banc pendulaire d'essai" loading="lazy" src="../../assets/images/projects/tipe/pendulum-schema.webp"/>
+</button>
+<figcaption><strong>Schéma de conception mécanique</strong><span>Pendule guidé (L = 46 cm, hauteur 50 cm), axe de rotation et embase stabilisée.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Agrandir la photo du banc d'essai réel" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Banc d'essai réel avec bras oscillant lesté et têtes interchangeables imprimées en 3D" loading="lazy" src="../../assets/images/projects/tipe/test-bench-rig.webp"/>
+</button>
+<figcaption><strong>Banc d'essai instrumenté réel</strong><span>Structure verticale de guidage, bras lesté et têtes orange interchangeables montées à l'extrémité.</span></figcaption>
+</figure>
+<figure class="turbine-figure turbine-figure-accent">
+<button aria-label="Agrandir la photo des têtes d'impact imprimées en 3D" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Impacteurs interchangeables imprimés en 3D : cylindres 6, 12, 24 mm et plaque plane" loading="lazy" src="../../assets/images/projects/tipe/impactor-geometries.webp"/>
+</button>
+<figcaption><strong>Impacteurs interchangeables en PLA</strong><span>Vues de profil et de face : cylindres de 2r = 6, 12, 24 mm (pointu) et plaque plane (plat du pied).</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Agrandir la chronophotographie rapide de l'impact" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Chronophotographie rapide montrant la phase d'approche, le contact et l'éjection de la balle" loading="lazy" src="../../assets/images/projects/tipe/impact-chronophotography.webp"/>
+</button>
+<figcaption><strong>Chronophotographie de l'impact</strong><span>Séquence d'images haute fréquence capturant l'approche pendulaire, le contact élastique et le décollage.</span></figcaption>
+</figure>
+</div>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">03 · CHAÎNE DE MESURE &amp; TRAITEMENT PYTHON</span>
+<h2>Extraction de trajectoires, incertitudes de mesure et régressions</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+Chaque tir a fait l'objet d'un enregistrement vidéo haute vitesse filmé de profil sous éclairage calibré. Pour extraire des métriques objectives, j'ai développé un script d'analyse en Python : les coordonnées de l'impacteur x₁(t) et du centre de la balle x₂(t) sont numérisées image par image sur un intervalle temporel de 50 à 120 ms. L'échelle spatiale est établie à <strong>1 pixel = 0,00027 m</strong>. Une analyse des incertitudes expérimentales de <strong>Type B</strong> (avec largeur de tache de 22 à 50 pixels due au flou cinématique, soit u = 2Δ / √3) a été appliquée sur chaque pointage. Des régressions linéaires par moindres carrés (`scipy.stats.linregress`) isolent précisément la vitesse du pied avant choc (V₁), après choc (V'₁) et la vitesse de projection de la balle (V'₂), tout en délimitant la zone temporelle de contact.
+</p>
+<div class="turbine-gallery turbine-gallery-validation">
+<figure class="turbine-figure turbine-figure-wide">
+<button aria-label="Agrandir les courbes de régression de la balle" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Courbes de position-temps de la balle avec régressions linéaires et identification de la zone de contact pour le cylindre 12 mm et la plaque" loading="lazy" src="../../assets/images/projects/tipe/ball-regression-contact.webp"/>
+</button>
+<figcaption><strong>Trajectoires x₂(t) &amp; zone de contact</strong><span>Points de mesure avec barres d'incertitude et droites de régression linéaire : V'₂ = 4,0 m/s identique pour le cylindre 12 mm et la plaque.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Agrandir la cinématique de l'impacteur" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Courbes position-temps de l'impacteur avant et après collision montrant une vitesse quasi-constante" loading="lazy" src="../../assets/images/projects/tipe/striker-kinematics.webp"/>
+</button>
+<figcaption><strong>Cinématique de l'impacteur x₁(t)</strong><span>Régression avant choc (V₁ = 2,2 m/s) et après choc (V'₁ = 2,0 m/s) montrant un ralentissement minime de l'impacteur lourd.</span></figcaption>
+</figure>
+<figure class="turbine-figure">
+<button aria-label="Agrandir le code d'évaluation des incertitudes en Python" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Code source Python pour le calcul des incertitudes de type B et les régressions linéaires" loading="lazy" src="../../assets/images/projects/tipe/python-analysis-code.webp"/>
+</button>
+<figcaption><strong>Script Python d'analyse</strong><span>Automatisation du dépouillement : étalonnage spatial, calcul d'incertitude-type élargie et régression statistique.</span></figcaption>
+</figure>
+<figure class="turbine-figure turbine-figure-wide turbine-figure-dark">
+<button aria-label="Agrandir la comparaison de déformation de la balle" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Comparaison photographique de la déformation locale de la balle sous l'impact d'un cylindre fin versus une plaque" loading="lazy" src="../../assets/images/projects/tipe/ball-deformation-contact.webp"/>
+</button>
+<figcaption><strong>Morphologie du contact à l'impact</strong><span>Déformation locale profonde et concentrée pour le cylindre fin (pointu) versus écrasement réparti pour la plaque (plat).</span></figcaption>
+</figure>
+</div>
+<div class="turbine-result-callout">
+<div><span>Vitesse mesurée</span><strong>v'₂ = 4,0 m/s</strong></div>
+<p>À une vitesse d'approche du pendule v₁ = 2,2 m/s, la balle décolle à v'₂ = 4,0 m/s. Le rapport mesuré v'₂ / v₁ ≈ 1,82 - 2,0 valide directement le régime de choc quasi-élastique avec impacteur lourd (m₁ ≫ m₂) et la conservation de quantité de mouvement sans dissipation majeure.</p>
+</div>
+</section>
+<section class="turbine-section slide-up" id="results">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">04 · MODÉLISATION PHYSIQUE &amp; ANALYSE DYNAMIQUE</span>
+<h2>Deux conclusions formelles : vitesse invariante, contact modulé</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+L'analyse théorique de la collision repose sur le bilan de quantité de mouvement pendant la brève durée du choc (τ ≈ 10-20 ms). Les forces extérieures étant négligeables sur cet intervalle, on a <strong>m₁ v₁ + m₂ v₂ = m₁ v'₁ + m₂ v'₂</strong>. En introduisant le coefficient de restitution <strong>e = -(v'₂ - v'₁) / (v₂ - v₁)</strong> et pour une balle initialement au repos (v₂ = 0), le rapport d'efficacité de frappe s'écrit analytiquement :
+<br/><br/>
+<strong style="color: #0f172a; font-size: 1.15rem; display: block; text-align: center; margin: 12px 0; font-family: monospace;">v'₂ / v₁ = (1 + e) / (1 + m₂/m₁)</strong>
+Dans la limite d'un impacteur lourd (m₁ ≫ m₂ ⇒ m₂/m₁ ≈ 0,05) et d'un choc élastique (e ≈ 1), le rapport théorique tend vers <strong>2</strong>. Les résultats expérimentaux mettent en évidence deux enseignements majeurs :
+</p>
+<div class="tipe-gallery-two">
+<figure class="turbine-figure turbine-chart">
+<button aria-label="Agrandir le graphe de rapport de vitesse" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Graphe comparatif de la vitesse de la balle en fonction de la vitesse du pied montrant l'indifférence de la forme" loading="lazy" src="../../assets/images/projects/tipe/speed-ratio-comparison.webp"/>
+</button>
+<figcaption><strong>Vitesse de balle v'₂ vs vitesse pied v₁</strong><span>Les points expérimentaux pour le pointu (cercles) et le plat (carrés) se superposent exactement sur la droite v'₂ = 2 v₁ : aucune différence de vitesse !</span></figcaption>
+</figure>
+<figure class="turbine-figure turbine-chart">
+<button aria-label="Agrandir la comparaison de déformation" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button">
+<img alt="Photos de comparaison d'indentation de la balle sous impact" loading="lazy" src="../../assets/images/projects/tipe/ball-deformation-contact.webp"/>
+</button>
+<figcaption><strong>Effet géométrique sur le temps de contact</strong><span>Le temps de contact décroît avec la surface : τ_plaque &lt; τ_24 &lt; τ_12 &lt; τ_6. Modélisé par un oscillateur k(r,p) où τ = π√(m₂/k) ∝ p^(-1/2) r^(-1/4).</span></figcaption>
+</figure>
+</div>
+<div style="margin-top: 24px; padding: 24px 28px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px; box-shadow: 0 10px 30px rgba(17,24,39,0.04);">
+<h3 style="margin-top: 0; font-family: 'Manrope', sans-serif; font-size: 1.15rem; color: #0f172a;">Synthèse des deux conclusions physiques</h3>
+<ul style="margin: 0; padding-left: 20px; color: #475569; line-height: 1.8;">
+<li><strong>1. Invariance de la vitesse de sortie :</strong> À vitesse d'impact V₁ égale, la balle quitte le banc à la même vitesse V'₂ (4,0 m/s), que la tête soit un cylindre de 6 mm, 12 mm, 24 mm ou une plaque plane. <em>Il n'y a donc aucun « effet pointu » intrinsèque sur la vitesse en dynamique pure.</em></li>
+<li><strong>2. Modulation du temps de contact :</strong> Une surface large crée une raideur de contact équivalente k plus forte, réduisant la durée d'interaction (τ ≈ 10 ms). Une petite surface engendre une déformation locale aisée et un contact prolongé (τ ≈ 20 ms).</li>
+</ul>
+</div>
+</section>
+<section class="turbine-section slide-up">
+<div class="turbine-section-heading">
+<span class="turbine-section-index">05 · DU LABORATOIRE AU TERRAIN DE SPORT</span>
+<h2>Démêler physique du ballon et biomécanique du joueur</h2>
+</div>
+<p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
+Pourquoi les footballeurs ressentent-ils alors unanimement le pointu comme un tir « surpuissant » ? En confrontant les mesures du banc pendulaire aux données de tirs humains et aux normes officielles, l'explication relève en réalité de la <strong>biomécanique articulaire</strong> et de la <strong>proprioception</strong> :
+</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 28px;">
+<div style="padding: 24px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px;">
+<span style="display: inline-block; padding: 4px 10px; background: #e0f2fe; color: #0284c7; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">Pertes réelles</span>
+<h3 style="margin: 0 0 10px; font-size: 1.1rem; color: #0f172a;">Ballon FIFA &amp; Déperditions</h3>
+<p style="margin: 0; color: #64748b; font-size: 0.88rem; line-height: 1.65;">
+Un ballon homologué FIFA lâché de 2 m sur acier rebondit entre 1,35 m et 1,55 m, fixant e ∈ [0,82 ; 0,88]. Avec un pied humain (m₁ ≈ 1,2 kg) et un ballon (m₂ = 450 g), le rapport théorique chute à <strong>v'₂/v₁ ≈ 1,34</strong>, puis à <strong>≈ 1,2</strong> en pratique à cause de la flexion de cheville et de la chaussure.
+</p>
+</div>
+<div style="padding: 24px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px;">
+<span style="display: inline-block; padding: 4px 10px; background: #fef3c7; color: #d97706; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">Biomécanique</span>
+<h3 style="margin: 0 0 10px; font-size: 1.1rem; color: #0f172a;">Inertie segmentaire &amp; Vitesse</h3>
+<p style="margin: 0; color: #64748b; font-size: 0.88rem; line-height: 1.65;">
+Le pointu mobilise uniquement le genou et le bas de jambe (faible moment d'inertie, exécution en <strong>0,21 s</strong>). Le plat du pied engage toute la jambe depuis la hanche (inertie double, <strong>0,42 s</strong>). Sous pression défensive, le pointu permet d'atteindre une vitesse de pied v₁ plus grande en un temps record.
+</p>
+</div>
+<div style="padding: 24px; background: #ffffff; border: 1px solid #dce1e7; border-radius: 14px;">
+<span style="display: inline-block; padding: 4px 10px; background: #dcfce7; color: #16a34a; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">Contrôle moteur</span>
+<h3 style="margin: 0 0 10px; font-size: 1.1rem; color: #0f172a;">Arbitrage Vitesse vs Précision</h3>
+<p style="margin: 0; color: #64748b; font-size: 0.88rem; line-height: 1.65;">
+Si la surface n'influe pas sur la vitesse, elle régit le guidage angulaire : la large surface du plat du pied pardonne les erreurs d'alignement avec le centre de gravité de la sphère, expliquant sa suprématie pour le jeu de passe et la finition chirurgicale.
+</p>
 </div>
 </div>
+<figure class="turbine-figure" style="margin: 0 auto; max-width: 980px;">
+<button aria-label="Agrandir la chronophotographie biomécanique du tir au football" class="turbine-media-button" onclick="openLightbox(this.querySelector('img'))" type="button" style="height: auto; padding: 18px; background: #ffffff;">
+<img alt="Chronophotographie décomposant l'exécution biomécanique d'un tir du pointu (0,21 s) versus plat du pied (0,42 s)" loading="lazy" src="../../assets/images/projects/tipe/human-kick-kinematics.webp"/>
+</button>
+<figcaption><strong>Décomposition chronophotographique du geste sportif</strong><span>(a) Pointu : flexion rapide genou-pied (210 ms) pour une frappe spontanée d'urgence. (b) Plat du pied : rotation d'ensemble de la jambe depuis la hanche (420 ms) pour un guidage optimal de trajectoire.</span></figcaption>
+</figure>
+</section>
+<section class="turbine-section turbine-drawing-section slide-up" id="documentation">
+<div class="turbine-section-heading turbine-drawing-heading">
+<div>
+<span class="turbine-section-index">06 · DOSSIER &amp; SUPPORTS</span>
+<h2>Documentation technique et livrables de soutenance</h2>
+</div>
+<a class="turbine-button turbine-button-outline" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf" rel="noopener noreferrer" target="_blank">
+<i class="fas fa-up-right-from-square"></i> Consulter les 31 diapositives (PDF)
+</a>
+</div>
+<div class="tipe-docs-grid">
+<div class="tipe-doc-card">
+<div>
+<span style="font-family: monospace; font-size: 0.8rem; color: #0284c7; font-weight: 700;">// LIVRABLE PRINCIPAL · SOUTENANCE CPGE</span>
+<h3>Présentation complète TIPE (31 slides FR)</h3>
+<p>Support complet de soutenance orale : conception du pendule, campagnes d'essais, régressions Python, calculs d'incertitudes Type B, modélisation dynamique et discussion footballistique.</p>
+</div>
+<a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf" style="align-self: flex-start;">
+<i class="fas fa-file-pdf"></i> Télécharger la présentation (PDF)
+</a>
+</div>
+<div class="tipe-doc-card">
+<div>
+<span style="font-family: monospace; font-size: 0.8rem; color: #ea580c; font-weight: 700;">// EXECUTIVE CASE STUDY · SYNTHÈSE</span>
+<h3>Poster technique condensé (1 page EN)</h3>
+<p>Document de synthèse autonome en anglais : schémas du pendule, photos des impacteurs 3D, graphes de position-temps sous Python et synthèse des conclusions d'ingénierie.</p>
+</div>
+<a class="turbine-button turbine-button-outline" download="TIPE_BALL_IMPACT_DYNAMICS_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/tipe.pdf" style="align-self: flex-start;">
+<i class="fas fa-file-alt"></i> Télécharger le poster condensé (EN)
+</a>
+</div>
+</div>
+</section>
+<section class="turbine-report-cta slide-up">
+<div>
+<span class="turbine-section-index">DOCUMENTATION DU PROJET</span>
+<h2>Explorez l'ensemble des travaux et de la démarche</h2>
+<p>Retrouvez l'intégralité des calculs théoriques, du code Python de traitement et des protocoles de mesure dans le support de présentation.</p>
+</div>
+<a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf">
+<i class="fas fa-download"></i> Télécharger la présentation complète (FR)
+</a>
+</section>
 </main>
 </div>
 <script src="../../assets/js/script.js?v=10"></script>
