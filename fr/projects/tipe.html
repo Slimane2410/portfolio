@@ -58,7 +58,7 @@
 <h1>Dynamique d’impact d’un ballon</h1>
 <div class="tipe-hero-tagline">Étude de l'effet « pointu » : cinématique du choc, temps de contact et biomécanique du tir</div>
 <p>
-De la reproduction d’un banc pendulaire universitaire de recherche à la modélisation dynamique : démêler cinématique d'impact, temps de contact et biomécanique sportive.
+Une démarche expérimentale et numérique complète sur la dynamique d’impact : nourrie par les recherches du LadHyX / École Polytechnique pour isoler cinématique du choc, temps de contact et biomécanique sportive.
 </p>
 <div class="turbine-hero-actions">
 <a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf">
@@ -90,7 +90,7 @@ Explorer le banc d'essai <i class="fas fa-arrow-down"></i>
 Dans les sports de balle et particulièrement au football, une croyance empirique profondément ancrée chez les joueurs soutient que frapper « du pointu » produirait une vitesse de décollage supérieure (« un tir plus puissant »), tandis que le plat du pied garantirait la précision. Ce projet de TIPE (Travail d'Initiative Personnelle Encadré en CPGE) visait à répondre rigoureusement à cette interrogation : la forme et la surface de contact de l’impacteur peuvent-elles, à elles seules, modifier la vitesse de départ de la balle ?
 </p>
 <p>
-Pour trancher, ma démarche d'ingénieur a consisté à <strong>découpler la mécanique du choc de l’exécution gestuelle humaine</strong>. En reproduisant à mon échelle le protocole expérimental d'un chapitre de thèse universitaire de référence (physique du football au LadHyX / École Polytechnique), j’ai conçu un banc d'essai pendulaire reproductible, développé une chaîne d’acquisition vidéo rapide, automatisé le dépouillement cinématique en Python et formulé un modèle dynamique minimal validé par les mesures.
+Pour répondre à cette question, j'ai développé une approche expérimentale et numérique visant à découpler la mécanique du choc de l’exécution gestuelle humaine. En m'appuyant sur les recherches en physique du football menées au LadHyX / École Polytechnique, j’ai conçu et fabriqué un banc d'essai pendulaire reproductible, mis en place une chaîne d'acquisition vidéo rapide, automatisé le traitement cinématique sous Python et développé un modèle dynamique simplifié validé par les mesures expérimentales.
 </p>
 </section>
 <aside aria-label="OUTILS ET MÉTHODES" class="project-tools-panel glass-panel">
@@ -108,7 +108,7 @@ Pour trancher, ma démarche d'ingénieur a consisté à <strong>découpler la m�
 <section class="turbine-section slide-up delay-2" id="experimental-bench">
 <div class="turbine-section-heading">
 <span class="turbine-section-index">02 · DISPOSITIF EXPÉRIMENTAL &amp; PROTOTYPAGE</span>
-<h2>Reproduire le protocole de recherche à l'échelle du laboratoire</h2>
+<h2>Conception et fabrication d'un banc d'essai pendulaire instrumenté</h2>
 </div>
 <p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
 Pour éliminer les biais inhérents à la variabilité humaine (vitesse de frappe instable, décélération musculaire, rotations parasites de cheville), j'ai conçu et assemblé une « jambe » mécanique de type pendule pesant <strong>m₁ = 1,4 kg</strong> pour une longueur <strong>L = 46 cm</strong>, montée sur un bâti vertical rigide guidé de 50 cm. Des têtes d'impact interchangeables ont été modélisées et imprimées en 3D en PLA : trois cylindres de diamètres <strong>2r = 6 mm, 12 mm et 24 mm</strong> (représentant la frappe du pointu à différentes échelles) ainsi qu'une plaque plane large (représentant le plat du pied). Une balle sphérique élastique gonflée à pression contrôlée (p = 0,2 bar / 3 psi) a été percutée à l'équateur pour isoler la dynamique pure du choc avant d'introduire les dissipations d'un vrai ballon de football.
