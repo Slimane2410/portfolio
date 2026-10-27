@@ -58,7 +58,7 @@
 <h1>Ball Impact Dynamics</h1>
 <div class="tipe-hero-tagline">Investigating the "Toe-Kick" effect: collision kinematics, contact duration, and kicking biomechanics</div>
 <p>
-From replicating a university research protocol to dynamic modeling: separating collision kinematics, contact duration, and human biomechanics in athletic strikes.
+An experimental and computational investigation into ball impact dynamics: drawing on research from LadHyX / École Polytechnique to separate collision kinematics, contact duration, and human biomechanics.
 </p>
 <div class="turbine-hero-actions">
 <a class="turbine-button turbine-button-primary" download="PRESENTATION_TIPE_55556_AOUANOUK.pdf" href="../../assets/documents/projects/tipe/presentation-tipe-55556.pdf">
@@ -90,7 +90,7 @@ Explore the Test Bench <i class="fas fa-arrow-down"></i>
 In ball sports and particularly football, an entrenched belief among athletes holds that striking the ball with the toe ("le pointu") yields superior departure speed ("more pure power"), whereas the inside of the foot ("le plat du pied") guarantees precision. This competitive CPGE TIPE research project investigated whether contact geometry alone can intrinsically alter ball launch velocity.
 </p>
 <p>
-To resolve this question, my engineering methodology centered on <strong>decoupling impact mechanics from human motor execution</strong>. By replicating at laboratory scale the experimental protocol of a doctoral reference thesis (football physics at LadHyX / École Polytechnique), I designed a repeatable pendulum test bench, built a high-speed video tracking workflow, automated kinematic data processing in Python, and formulated a minimal dynamic model validated by physical measurements.
+To investigate this question, I developed an experimental and computational approach focused on isolating impact mechanics from human motor execution. Drawing on research in football impact physics conducted at LadHyX / École Polytechnique, I designed and built a repeatable pendulum-based test bench, implemented a high-speed video tracking workflow, automated kinematic data processing in Python, and developed a simplified dynamic model validated against experimental measurements.
 </p>
 </section>
 <aside aria-label="TOOLS AND METHODS" class="project-tools-panel glass-panel">
@@ -108,7 +108,7 @@ To resolve this question, my engineering methodology centered on <strong>decoupl
 <section class="turbine-section slide-up delay-2" id="experimental-bench">
 <div class="turbine-section-heading">
 <span class="turbine-section-index">02 · EXPERIMENTAL RIG &amp; PROTOTYPING</span>
-<h2>Replicating Research Protocol at Laboratory Scale</h2>
+<h2>Custom Pendulum Rig Design &amp; Precision Prototyping</h2>
 </div>
 <p style="margin-bottom: 24px; color: #475569; line-height: 1.75;">
 To eliminate biases inherent to human motor variability (fluctuating foot speeds, muscular deceleration, parasitic ankle flexion), I engineered a mechanical leg based on a compound pendulum weighing <strong>m₁ = 1.4 kg</strong> with length <strong>L = 46 cm</strong>, guided inside a 50 cm vertical structure. Interchangeable impactor heads were modeled and 3D printed in PLA: three cylinders of diameters <strong>2r = 6 mm, 12 mm, and 24 mm</strong> (representing toe-kick geometries at different scales) as well as a wide flat plate (representing the inside of the foot). An elastic spherical ball inflated to controlled overpressure (p = 0.2 bar / 3 psi) was struck equatorially to isolate pure collision dynamics before introducing real football damping.
