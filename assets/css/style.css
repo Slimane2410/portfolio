@@ -867,6 +867,52 @@ p {
   font-weight: 800;
 }
 
+/* Keep the introductory portrait square, independently of the text height. */
+.homepage .home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(33.333%, 320px);
+  grid-template-areas: "copy portrait";
+  align-items: start;
+  gap: 30px;
+  min-width: 0;
+}
+
+.homepage .home-intro-copy {
+  grid-area: copy;
+  min-width: 0;
+}
+
+.homepage .home-portrait {
+  grid-area: portrait;
+  align-self: center;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--border-dim);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.homepage .home-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1199px) {
+  .homepage .home-intro {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "portrait" "copy";
+    gap: 24px;
+  }
+
+  .homepage .home-portrait {
+    max-width: 280px;
+    justify-self: center;
+  }
+}
+
 .homepage .glass-panel {
   background: var(--bg-panel);
   border: 1px solid var(--border-dim);
@@ -880,6 +926,10 @@ p {
   border-color: #c7ced8;
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(16, 24, 40, 0.08);
+}
+
+.homepage .home-intro-copy:hover {
+  transform: none;
 }
 
 .homepage a.featured-card-link {
@@ -1065,6 +1115,10 @@ p {
 @media (max-width: 1024px) {
   .homepage .main-content {
     padding: 36px 24px;
+  }
+
+  .homepage .home-intro {
+    margin-bottom: 24px;
   }
 }
 
