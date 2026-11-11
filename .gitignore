@@ -4,3 +4,7 @@
 .mplcache/
 __pycache__/
 plot_p1_650c_t5.py
+
+# Private presentations stay on this computer
+/Presentations/
+/presentation_interview_Binabik/
