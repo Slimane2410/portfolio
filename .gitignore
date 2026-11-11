@@ -8,3 +8,7 @@ plot_p1_650c_t5.py
 # Local validation and operating-system artifacts
 archive/legacy/system-metadata/
 V1.4_PORTFOLIO_CONTEXT.md
+
+# Private presentations stay on this computer
+/Presentations/
+/presentation_interview_Binabik/
